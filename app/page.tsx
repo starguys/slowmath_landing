@@ -41,10 +41,15 @@ function IconMatch({ color }: { color: string }) {
 function IconPlus({ color }: { color: string }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
-      <circle cx="8" cy="14" r="5" fill={color} fillOpacity=".25" stroke={color} strokeWidth="1.5" />
-      <circle cx="20" cy="14" r="5" fill={color} fillOpacity=".25" stroke={color} strokeWidth="1.5" />
-      <line x1="6" y1="14" x2="22" y2="14" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-      <line x1="14" y1="6" x2="14" y2="22" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      {/* 2 */}
+      <rect x="1" y="9" width="10" height="11" rx="2" fill={color} fillOpacity=".15" stroke={color} strokeWidth="1.4"/>
+      <text x="6" y="17.5" fontSize="7.5" fontWeight="900" fill={color} textAnchor="middle" fontFamily="sans-serif">2</text>
+      {/* + */}
+      <line x1="13" y1="14.5" x2="16" y2="14.5" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+      <line x1="14.5" y1="13" x2="14.5" y2="16" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+      {/* 3 */}
+      <rect x="17" y="9" width="10" height="11" rx="2" fill={color} fillOpacity=".15" stroke={color} strokeWidth="1.4"/>
+      <text x="22" y="17.5" fontSize="7.5" fontWeight="900" fill={color} textAnchor="middle" fontFamily="sans-serif">3</text>
     </svg>
   );
 }
@@ -198,11 +203,12 @@ function IconDotLine({ color }: { color: string }) {
 function IconWrite({ color }: { color: string }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
-      <text x="6" y="20" fontSize="16" fontWeight="900" fill={color} fillOpacity=".25" fontFamily="sans-serif">3</text>
-      <path d="M9 8 C9 8 7 14 9 18" stroke={color} strokeWidth="2" strokeLinecap="round" fill="none" />
-      <path d="M9 13 L13 13" stroke={color} strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="21" cy="10" r="2" fill={color} opacity=".6" />
-      <polyline points="19,10 19,20 23,20" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      {/* 숫자 5 */}
+      <text x="7" y="21" fontSize="18" fontWeight="900" fill={color} fillOpacity=".2" fontFamily="sans-serif">5</text>
+      {/* 펜촉 */}
+      <path d="M18 5 L23 10 L13 20 L9 21 L10 17 Z" fill={color} fillOpacity=".25" stroke={color} strokeWidth="1.3" strokeLinejoin="round"/>
+      <line x1="16" y1="7" x2="21" y2="12" stroke={color} strokeWidth="1" opacity=".5"/>
+      <path d="M9 21 L10 17" stroke={color} strokeWidth="1.3" strokeLinecap="round"/>
     </svg>
   );
 }
@@ -221,12 +227,15 @@ function IconClock({ color }: { color: string }) {
 function IconMultiply({ color }: { color: string }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
-      <rect x="2" y="7" width="7" height="7" rx="1.5" fill={color} fillOpacity=".2" stroke={color} strokeWidth="1.2" />
-      <rect x="11" y="7" width="7" height="7" rx="1.5" fill={color} fillOpacity=".4" stroke={color} strokeWidth="1.2" />
-      <rect x="2" y="16" width="7" height="7" rx="1.5" fill={color} fillOpacity=".55" stroke={color} strokeWidth="1.2" />
-      <rect x="11" y="16" width="7" height="7" rx="1.5" fill={color} fillOpacity=".7" stroke={color} strokeWidth="1.2" />
-      <line x1="22" y1="8" x2="26" y2="12" stroke={color} strokeWidth="2" strokeLinecap="round" />
-      <line x1="26" y1="8" x2="22" y2="12" stroke={color} strokeWidth="2" strokeLinecap="round" />
+      {/* 3 */}
+      <rect x="1" y="9" width="9" height="11" rx="2" fill={color} fillOpacity=".15" stroke={color} strokeWidth="1.4"/>
+      <text x="5.5" y="17.5" fontSize="7.5" fontWeight="900" fill={color} textAnchor="middle" fontFamily="sans-serif">3</text>
+      {/* × */}
+      <line x1="12.5" y1="12.5" x2="15.5" y2="15.5" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+      <line x1="15.5" y1="12.5" x2="12.5" y2="15.5" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+      {/* 4 */}
+      <rect x="18" y="9" width="9" height="11" rx="2" fill={color} fillOpacity=".15" stroke={color} strokeWidth="1.4"/>
+      <text x="22.5" y="17.5" fontSize="7.5" fontWeight="900" fill={color} textAnchor="middle" fontFamily="sans-serif">4</text>
     </svg>
   );
 }
@@ -353,7 +362,7 @@ const apps: App[] = [
     shortDesc: "1부터 100까지 숫자를 보고·듣고·고르며 익혀요",
     value:
       "힌트와 음성 안내 덕분에 아이 혼자서도 도전할 수 있어요. 한국어·한자어 수 이름을 동시에 익혀 학교 수업 준비에 효과적입니다.",
-    tags: ["숫자 인식", "수 이름", "1~100", "음성 안내"],
+    tags: ["1~100", "순서 배열", "수 이름", "빈칸 채우기"],
   },
   {
     slug: "slowmath_dice",
@@ -364,7 +373,7 @@ const apps: App[] = [
     shortDesc: "손가락·주사위·카드 무늬를 세며 수 감각을 키워요",
     value:
       "생활 속 사물을 세는 연습으로 수 감각을 자연스럽게 익힐 수 있어요. 생각 시간 조절로 충동적 답 선택을 막고 천천히 생각하는 습관을 기릅니다.",
-    tags: ["수 세기", "주사위", "손가락 수", "수 감각"],
+    tags: ["손가락 세기", "주사위", "카드 무늬", "수 입력"],
   },
   {
     slug: "slowmath_matching",
@@ -375,40 +384,40 @@ const apps: App[] = [
     shortDesc: "숫자와 점의 개수를 연결하며 수와 양을 연결해요",
     value:
       "숫자 기호와 실제 양을 연결하는 핵심 수 개념을 다질 수 있어요. 순서대로·무작위로 반복하며 자동화 단계까지 이끌어줍니다.",
-    tags: ["수와 양", "숫자 매칭", "수 개념", "반복 학습"],
+    tags: ["수와 양", "수 개념", "1~20", "순서·무작위"],
   },
   {
     slug: "slowmath_easy",
     name: "Easy",
-    korName: "한 자리 덧셈 (쉽게)",
+    korName: "한 자리 덧셈",
     Icon: IconPlus,
     category: "addition",
     shortDesc: "가장 쉬운 단계부터 시작하는 한 자리 덧셈 연습",
     value:
       "덧셈이 처음인 아이도 부담 없이 시작할 수 있도록 4단계로 난이도를 조절해요. 충동 억제 모드로 답을 고르기 전에 충분히 생각하는 습관을 만들어줍니다.",
-    tags: ["기초 덧셈", "단계별 학습", "충동 억제"],
+    tags: ["4단계", "기초부터", "선택형", "1자리 덧셈"],
   },
   {
     slug: "slowmath_circle",
     name: "Circle",
-    korName: "한 자리 덧셈",
+    korName: "한 자리 덧셈 연습",
     Icon: IconTen.bind(null, { color: "#E8924A", n: "+" }),
     category: "addition",
     shortDesc: "고르기·쌓기·채우기 세 가지 방식으로 덧셈을 연습해요",
     value:
       "같은 덧셈을 다양한 형태로 경험해 개념이 더 깊이 자리잡혀요. 시각적 구체물을 활용하기 때문에 추상적 연산이 어려운 아이에게 특히 효과적입니다.",
-    tags: ["한 자리 덧셈", "시각적 학습", "구체물", "다중 표현"],
+    tags: ["3가지 모드", "동그라미", "1~9 합", "시각 조작"],
   },
   {
     slug: "slowmath_plusone",
     name: "Plus One",
     korName: "더하기 1",
-    Icon: IconArrowRight,
+    Icon: ({ color }) => <IconTen color={color} n="+1" />,
     category: "addition",
     shortDesc: "수 배열판·순서 예측·무작위 문제로 +1 덧셈을 익혀요",
     value:
       "'+1은 다음 수'라는 규칙을 수 배열판으로 시각화해 직관적으로 이해할 수 있어요. 1~99 범위까지 단계적으로 넓혀 자신감을 쌓아줍니다.",
-    tags: ["+1 덧셈", "수 배열", "패턴 이해", "단계별 확장"],
+    tags: ["+1 덧셈", "수 배열판", "다음 수 예측", "순서 인식"],
   },
   {
     slug: "slowmath_plustwo",
@@ -419,7 +428,7 @@ const apps: App[] = [
     shortDesc: "2 더하기를 배열판과 건너뛰기로 시각화해서 배워요",
     value:
       "수 배열판에서 두 칸 건너뛰는 패턴이 홀짝 개념과 연결되어 확장 학습이 가능해요. 1~98 범위를 단계별로 정복하며 성취감을 경험합니다.",
-    tags: ["+2 덧셈", "홀짝", "시각화"],
+    tags: ["+2 덧셈", "수 배열판", "홀짝 연결", "무작위"],
   },
   {
     slug: "slowmath_plusthree",
@@ -430,7 +439,7 @@ const apps: App[] = [
     shortDesc: "3 더하기를 여러 학습 모드로 반복 연습해요",
     value:
       "더하기 1·2를 익힌 후 자연스럽게 이어지는 단계로, 수 배열판 애니메이션이 연산 과정을 생생하게 보여줘요. 무작위 문제로 완전 학습을 지원합니다.",
-    tags: ["+3 덧셈", "연산 자동화", "단계 연계"],
+    tags: ["+3 덧셈", "수 배열판", "다음 수 찾기", "무작위"],
   },
   {
     slug: "slowmath_combining",
@@ -441,7 +450,7 @@ const apps: App[] = [
     shortDesc: "두 수를 합쳐 하나의 수를 만드는 수 합성을 연습해요",
     value:
       "덧셈의 의미를 '모은다'는 직관으로 이해할 수 있어요. 드래그 인터랙션으로 손과 눈을 동시에 사용해 더 오래 기억됩니다.",
-    tags: ["수 합성", "모으기", "덧셈 개념", "구체적 조작"],
+    tags: ["수 합성", "드래그", "5·10 범위", "점 표현"],
   },
   {
     slug: "slowmath_splitting",
@@ -452,7 +461,7 @@ const apps: App[] = [
     shortDesc: "하나의 수를 두 부분으로 나누는 수 분해를 연습해요",
     value:
       "뺄셈과 덧셈의 기초가 되는 수 분해 개념을 익힐 수 있어요. 2~9까지 세 단계로 나뉘어 아이 수준에 딱 맞는 도전부터 시작할 수 있습니다.",
-    tags: ["수 분해", "가르기", "덧셈 뺄셈 기초"],
+    tags: ["수 분해", "두 부분", "2~9 범위", "드래그"],
   },
   {
     slug: "slowmath_complement",
@@ -463,7 +472,7 @@ const apps: App[] = [
     shortDesc: "10을 채우는 짝꿍 수(보수)를 세 가지 방식으로 익혀요",
     value:
       "10의 보수는 받아올림 덧셈과 뺄셈의 핵심 개념이에요. 충동 억제 기능과 다양한 연습 모드로 충분히 반복해 완전 학습에 도달할 수 있습니다.",
-    tags: ["10의 보수", "수 관계", "덧셈 준비"],
+    tags: ["10의 보수", "짝꿍 수", "원 시각화", "3가지 모드"],
   },
   {
     slug: "slowmath_comparing",
@@ -474,7 +483,7 @@ const apps: App[] = [
     shortDesc: "크기·길이·높이·두께·양을 비교하며 수학 언어를 익혀요",
     value:
       "'더 크다', '더 짧다'를 수학적 개념과 연결해 줘요. SVG 그림으로 직관적으로 보여주기 때문에 글을 읽지 못해도 학습할 수 있습니다.",
-    tags: ["비교하기", "수학 언어", "크기", "길이"],
+    tags: ["크기 비교", "길이·높이", "두께·깊이", "양 비교"],
   },
   {
     slug: "slowmath_comparing2",
@@ -485,7 +494,7 @@ const apps: App[] = [
     shortDesc: "위·아래·안·밖 등 공간 관계를 비교하며 익혀요",
     value:
       "위치와 공간 언어를 이해하는 것은 수학 문장제의 기초예요. 도형 그림으로 공간 개념을 자연스럽게 내면화할 수 있습니다.",
-    tags: ["공간 비교", "위치 언어", "방향", "공간 인지"],
+    tags: ["공간 위치", "위아래", "안과 밖", "방향 비교"],
   },
   {
     slug: "slowmath_pattern",
@@ -496,7 +505,7 @@ const apps: App[] = [
     shortDesc: "반복되는 규칙에서 빠진 것을 찾는 패턴 인식을 훈련해요",
     value:
       "패턴 인식은 수학적 사고력의 핵심이에요. 과일·색깔·도형 패턴을 단계적으로 학습하고, 선택 잠금 기능으로 사고력을 키워줍니다.",
-    tags: ["패턴 인식", "규칙 찾기", "논리 사고", "시각 변별"],
+    tags: ["규칙 찾기", "빈칸 채우기", "과일·도형", "다음 예측"],
   },
   {
     slug: "slowmath_color",
@@ -507,7 +516,7 @@ const apps: App[] = [
     shortDesc: "색깔 이름을 보고·듣고·고르며 색 인지 능력을 키워요",
     value:
       "발달 지연 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
-    tags: ["색깔 인지", "시각 변별", "언어 발달"],
+    tags: ["색상 인식", "색 이름", "순서 기억", "색 변별"],
   },
   {
     slug: "slowmath_colorcopy",
@@ -518,7 +527,7 @@ const apps: App[] = [
     shortDesc: "제시된 색 격자 패턴을 그대로 따라 만들며 시지각을 훈련해요",
     value:
       "시지각 변별과 작업 기억을 동시에 훈련해요. 2×2부터 5×5까지 격자가 커지고 색의 수도 조절할 수 있어 아이 수준에 맞게 활용 가능합니다.",
-    tags: ["시지각 변별", "색 매칭", "작업 기억", "패턴 복제"],
+    tags: ["색 격자", "패턴 복제", "2×2~5×5", "색 조합"],
   },
   {
     slug: "slowmath_linedraw",
@@ -529,7 +538,7 @@ const apps: App[] = [
     shortDesc: "직선·곡선·나선을 따라 그리며 손의 안정성을 키워요",
     value:
       "글씨 쓰기와 그림 그리기의 기초가 되는 손 조절 능력을 재미있게 훈련해요. 3단계 난이도와 음성 안내로 아이가 포기하지 않고 꾸준히 연습할 수 있도록 돕습니다.",
-    tags: ["소근육 발달", "선 긋기", "손 조절", "쓰기 준비"],
+    tags: ["직선·곡선", "나선 패턴", "소근육", "쓰기 준비"],
   },
   {
     slug: "slowmath_dot2dot",
@@ -540,7 +549,7 @@ const apps: App[] = [
     shortDesc: "번호 순서대로 점을 연결하며 순서 개념과 소근육을 함께 키워요",
     value:
       "숫자 순서를 따라 점을 잇는 활동은 수 순서 개념과 소근육 발달을 동시에 자극해요. 격자 크기와 방향 복잡도를 조절해 아이 수준에 맞게 쓸 수 있습니다.",
-    tags: ["점 잇기", "소근육", "수 순서", "눈-손 협응"],
+    tags: ["점 연결", "번호 순서", "소근육", "방향 설정"],
   },
   {
     slug: "slowmath_numberdraw",
@@ -551,7 +560,7 @@ const apps: App[] = [
     shortDesc: "0~9 숫자를 올바른 순서로 쓰는 법을 연습해요",
     value:
       "숫자 모양을 손으로 직접 써보며 형태를 몸으로 기억할 수 있어요. 점선 안내와 단계적 피드백으로 처음 쓰는 아이도 올바른 필순을 자연스럽게 익힙니다.",
-    tags: ["숫자 쓰기", "필순", "소근육", "형태 인식"],
+    tags: ["0~9 필기", "점선 가이드", "소근육", "획 순서"],
   },
   {
     slug: "slowmath_clock",
@@ -562,7 +571,7 @@ const apps: App[] = [
     shortDesc: "아날로그 시계를 읽는 법을 시·30분·15분 단위로 배워요",
     value:
       "시계 읽기는 생활 독립에 꼭 필요한 기술이에요. 정각부터 시작해 30분·15분·45분으로 점점 세밀해지는 단계로 누구나 따라갈 수 있도록 설계되었습니다.",
-    tags: ["시계 읽기", "시간 개념", "아날로그 시계", "생활 수학"],
+    tags: ["아날로그", "시간 읽기", "정각~45분", "단계 확장"],
   },
   {
     slug: "slowmath_timestables",
@@ -573,7 +582,7 @@ const apps: App[] = [
     shortDesc: "2~9단 구구단을 충분한 생각 시간과 함께 천천히 익혀요",
     value:
       "생각 시간을 충분히 조절할 수 있어 빠른 암기가 어려운 아이도 자기 속도로 구구단을 정복할 수 있어요. 반복 노출을 통해 장기 기억으로 자연스럽게 전환됩니다.",
-    tags: ["구구단", "곱셈", "천천히 배우기", "반복 학습"],
+    tags: ["구구단", "2~9단", "단별 학습", "반복 암기"],
   },
 ];
 
@@ -587,7 +596,7 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="app-card block rounded-2xl overflow-hidden"
+      className="app-card flex flex-col rounded-2xl overflow-hidden"
       style={{
         background: "#FFFFFF",
         boxShadow: "0 2px 12px rgba(45,38,32,0.07)",
@@ -643,7 +652,7 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
         </div>
       </div>
       {/* Body */}
-      <div className="px-5 py-4 flex flex-col gap-3">
+      <div className="px-5 py-4 flex flex-col gap-3" style={{ flex: 1 }}>
         <p
           className="text-sm font-semibold"
           style={{ color: "#4A4035" }}
@@ -656,14 +665,16 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
         >
           {app.value}
         </p>
-        <div className="flex flex-wrap gap-1.5 mt-1">
+        <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
           {app.tags.map((tag) => (
             <span
               key={tag}
-              className="text-xs font-medium rounded-full px-2.5 py-1"
+              className="font-medium rounded-full px-2 py-0.5"
               style={{
+                fontSize: "0.7rem",
                 background: cat.bgColor,
                 color: cat.color,
+                whiteSpace: "nowrap",
               }}
             >
               {tag}
@@ -772,14 +783,15 @@ export default function Page() {
       <header
         style={{
           background: "linear-gradient(160deg, #FFFAF3 0%, #FFF0D8 55%, #FFE8C4 100%)",
-          padding: "80px 24px 72px",
+          padding: "64px 24px 56px",
           borderBottom: "1px solid #EDE0C8",
         }}
       >
-        <div style={{ maxWidth: "860px", margin: "0 auto", textAlign: "center" }}>
-          {/* Brand */}
-          <div className="flex flex-col items-center mb-6 gap-2">
-            <svg viewBox="0 0 120 100" width="110" height="92" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="느린아이 거북이 로고">
+        <div style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
+
+          {/* Logo + Brand */}
+          <div className="flex flex-col items-center mb-5 gap-2">
+            <svg viewBox="0 0 120 100" width="68" height="57" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="느린아이 거북이 로고">
               <ellipse cx="30" cy="72" rx="10" ry="6" fill="#F2DC8C" stroke="#3A9B6A" strokeWidth="2" transform="rotate(-20 30 72)"/>
               <ellipse cx="78" cy="76" rx="10" ry="6" fill="#F2DC8C" stroke="#3A9B6A" strokeWidth="2" transform="rotate(15 78 76)"/>
               <ellipse cx="28" cy="54" rx="9" ry="5.5" fill="#F2DC8C" stroke="#3A9B6A" strokeWidth="2" transform="rotate(-10 28 54)"/>
@@ -801,7 +813,7 @@ export default function Page() {
               <circle cx="100" cy="44" r="3.5" fill="#F0A050" opacity=".4"/>
               <path d="M94 46 Q98 50 103 46" fill="none" stroke="#3A9B6A" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
-            <p className="font-black tracking-tight" style={{ fontSize: "1.25rem", letterSpacing: "-0.02em" }}>
+            <p className="font-black" style={{ fontSize: "1.45rem", letterSpacing: "-0.02em" }}>
               <span style={{ color: "#5A9FD8" }}>느린</span>
               <span style={{ color: "#E8924A" }}>아이</span>
               <span style={{ color: "#2D2620" }}> 시리즈</span>
@@ -810,7 +822,7 @@ export default function Page() {
 
           {/* Slogan */}
           <h1
-            className="font-black mb-5"
+            className="font-black mb-4"
             style={{
               fontSize: "clamp(1.7rem, 4vw, 2.6rem)",
               lineHeight: 1.22,
@@ -823,31 +835,40 @@ export default function Page() {
             <span style={{ color: "#E8924A" }}>한 걸음씩</span> 나아갑니다
           </h1>
 
+          {/* Description */}
           <p
-            className="leading-relaxed mb-8"
             style={{
-              fontSize: "clamp(0.95rem, 1.6vw, 1.05rem)",
+              fontSize: "1rem",
               color: "#7B6545",
-              maxWidth: "640px",
-              margin: "0 auto 32px",
+              lineHeight: 1.7,
+              marginBottom: "32px",
             }}
           >
-            빠름보다 <strong style={{ color: "#4A4035" }}>방향이 중요합니다</strong>.
-            발달 지연·경계선 지능 아동이 자신의 속도로 수학의 기초를{" "}
-            <strong style={{ color: "#4A4035" }}>올바르게</strong> 쌓아갈 수 있도록 설계된 학습 도구 모음입니다.
+            발달 지연·경계선 지능 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를{" "}
+            <strong style={{ color: "#4A4035" }}>올바르게</strong> 쌓도록 설계된 학습 도구입니다.
           </p>
 
-          {/* Keyword badges */}
-          <div style={{ maxWidth: "720px", margin: "0 auto" }} className="flex flex-wrap justify-center gap-2">
-            {seoKeywords.map((kw) => (
+          {/* SEO Keywords */}
+          <div className="flex flex-wrap justify-center gap-2">
+            {[
+              "발달 지연 아동 교육",
+              "경계선 지능 아이 학습",
+              "숫자 쓰기 연습",
+              "수 세기 연습",
+              "덧셈 기초 연습",
+              "시계 보기 연습",
+              "구구단 천천히 배우기",
+              "소근육 발달 훈련",
+              "색깔 인지 학습",
+              "느린 아이 수학 기초",
+            ].map((kw) => (
               <span
                 key={kw}
                 className="text-xs font-medium rounded-full px-3 py-1.5"
                 style={{
-                  background: "rgba(255,255,255,0.75)",
+                  background: "rgba(255,255,255,0.7)",
                   color: "#7B6545",
                   border: "1px solid #E8D8BC",
-                  backdropFilter: "blur(4px)",
                 }}
               >
                 {kw}
