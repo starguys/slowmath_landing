@@ -862,7 +862,7 @@ export default function Page() {
               marginBottom: "32px",
             }}
           >
-            발달 지연·경계선 지능 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를{" "}
+            발달 지연·경계선 지능·학습 장애 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를{" "}
             <strong style={{ color: "#4A4035" }}>올바르게</strong> 쌓도록 설계된 학습 도구입니다.
           </p>
 
