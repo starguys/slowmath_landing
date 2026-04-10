@@ -288,6 +288,7 @@ function IconRepeat() {
 // ─── Data ──────────────────────────────────────────────────────────────────
 
 const BASE = "https://sprit6487.github.io";
+const ASSET_BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 type Category = {
   id: string;
@@ -615,7 +616,7 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
         }}
       >
         <img
-          src={`/screenshots/${app.slug}.png`}
+          src={`${ASSET_BASE}/screenshots/${app.slug}.png`}
           alt={`${app.korName} 메인 화면`}
           loading="lazy"
           style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "auto" }}
