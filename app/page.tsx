@@ -652,7 +652,7 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
         </div>
       </div>
       {/* Screenshot */}
-      <div className="relative overflow-hidden" style={{ height: 168, background: "#F7F4F0", borderBottom: `1px solid ${cat.borderColor}` }}>
+      <div className="relative overflow-hidden" style={{ height: 340, background: "#F7F4F0", borderBottom: `1px solid ${cat.borderColor}` }}>
         <img
           src={`/screenshots/${app.slug}.png`}
           alt={`${app.korName} 메인 화면`}
@@ -735,7 +735,7 @@ function CategorySection({
           {catApps.length}개
         </span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {catApps.map((app) => (
           <AppCard key={app.slug} app={app} cat={cat} />
         ))}
