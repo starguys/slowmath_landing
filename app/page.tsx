@@ -831,7 +831,7 @@ export default function Page() {
               <circle cx="100" cy="44" r="3.5" fill="#F0A050" opacity=".4"/>
               <path d="M94 46 Q98 50 103 46" fill="none" stroke="#3A9B6A" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
-            <p className="font-black" style={{ fontSize: "1.45rem", letterSpacing: "-0.02em" }}>
+            <p className="font-black" style={{ fontSize: "1.6rem", letterSpacing: "-0.02em" }}>
               <span style={{ color: "#5A9FD8" }}>느린</span>
               <span style={{ color: "#E8924A" }}>아이</span>
               <span style={{ color: "#2D2620" }}> 시리즈</span>
@@ -862,8 +862,7 @@ export default function Page() {
               marginBottom: "32px",
             }}
           >
-            발달 지연·경계선 지능·학습 장애 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를{" "}
-            <strong style={{ color: "#4A4035" }}>올바르게</strong> 쌓도록 설계된 학습 도구입니다.
+            발달 지연·경계선 지능·학습 장애 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
           </p>
 
           {/* CTA */}
