@@ -1235,9 +1235,9 @@ export default function Page() {
       >
         <p
           className="font-black text-xl mb-2 tracking-tight"
-          style={{ color: "white", letterSpacing: "-0.03em" }}
+          style={{ letterSpacing: "-0.03em" }}
         >
-          느린아이
+          <span style={{ color: "#5A9FD8" }}>느린</span><span style={{ color: "#E8924A" }}>아이</span>
         </p>
         <p
           className="text-sm leading-relaxed mb-1"
