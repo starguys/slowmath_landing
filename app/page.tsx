@@ -672,14 +672,16 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
           </div>
         </div>
         {/* Body */}
-        <div className="px-4 py-4 flex flex-col gap-3" style={{ flex: 1 }}>
-          <p className="text-sm font-semibold" style={{ color: "#4A4035" }}>
-            {app.shortDesc}
-          </p>
-          <p className="text-sm leading-relaxed" style={{ color: "#7B6545" }}>
-            {app.value}
-          </p>
-          <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
+        <div className="px-4 flex flex-col justify-center gap-4" style={{ flex: 1, paddingTop: "1.25rem", paddingBottom: "1.25rem" }}>
+          <div className="flex flex-col gap-2">
+            <p className="text-sm font-bold leading-snug" style={{ color: "#2D2620" }}>
+              {app.shortDesc}
+            </p>
+            <p className="text-xs leading-relaxed" style={{ color: "#7B6545" }}>
+              {app.value}
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
             {app.tags.map((tag) => (
               <span
                 key={tag}
