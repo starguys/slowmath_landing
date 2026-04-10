@@ -619,7 +619,7 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
           src={`${ASSET_BASE}/screenshots/${app.slug}.png`}
           alt={`${app.korName} 메인 화면`}
           loading="lazy"
-          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "auto" }}
+          style={{ position: "absolute", top: "-90px", left: 0, width: "100%", height: "auto" }}
         />
       </div>
 
@@ -918,6 +918,33 @@ export default function Page() {
         </div>
       </header>
 
+      {/* ── 느린아이란? ── */}
+      <section
+        aria-label="느린아이 소개"
+        style={{ padding: "48px 24px", borderBottom: "1px solid #EDE0C8", background: "white" }}
+      >
+        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
+          <h2
+            className="font-black text-lg mb-3"
+            style={{ color: "#2D2620", letterSpacing: "-0.02em" }}
+          >
+            느린아이란?
+          </h2>
+          <p className="text-sm leading-loose" style={{ color: "#7B6545" }}>
+            느린아이는{" "}
+            <strong style={{ color: "#4A4035" }}>
+              발달 지연·경계선 지능·학습 장애 아동
+            </strong>
+            이 수학의 기초 개념을 스스로 익힐 수 있도록 만들어진 학습 도구 모음입니다.
+            일반 학습 도구가 너무 빠르게 진행되어 아이가 따라가지 못한다는 학부모의 고민에서 시작했습니다.
+            충분한 생각 시간, 단계적 힌트, 음성 안내를 통해{" "}
+            <strong style={{ color: "#4A4035" }}>아이가 스스로 해내는 경험</strong>을 반복하고,
+            그 작은 성공이 독립의 자양분이 되도록 돕습니다.
+            특수교사·언어치료사의 수업 보조 도구로도 활용됩니다.
+          </p>
+        </div>
+      </section>
+
       {/* ── Empathy ── */}
       <section
         aria-label="학부모 공감"
@@ -1056,37 +1083,6 @@ export default function Page() {
 
       {/* ── Main Content ── */}
       <main id="apps" style={{ maxWidth: "1100px", margin: "0 auto", padding: "56px 24px" }}>
-
-        {/* SEO intro */}
-        <div
-          className="rounded-2xl p-7 mb-12"
-          style={{
-            background: "white",
-            border: "1px solid #EDE0C8",
-          }}
-        >
-          <h2
-            className="font-black text-lg mb-3"
-            style={{ color: "#2D2620", letterSpacing: "-0.02em" }}
-          >
-            느린아이란?
-          </h2>
-          <p
-            className="text-sm leading-loose"
-            style={{ color: "#7B6545" }}
-          >
-            느린아이는{" "}
-            <strong style={{ color: "#4A4035" }}>
-              발달 지연·경계선 지능·학습 장애 아동
-            </strong>
-            이 수학의 기초 개념을 스스로 익힐 수 있도록 만들어진 학습 도구 모음입니다.
-            일반 학습 도구가 너무 빠르게 진행되어 아이가 따라가지 못한다는 학부모의 고민에서 시작했습니다.
-            충분한 생각 시간, 단계적 힌트, 음성 안내를 통해{" "}
-            <strong style={{ color: "#4A4035" }}>아이가 스스로 해내는 경험</strong>을 반복하고,
-            그 작은 성공이 독립의 자양분이 되도록 돕습니다.
-            특수교사·언어치료사의 수업 보조 도구로도 활용됩니다.
-          </p>
-        </div>
 
         {/* ── 어디서 시작할까요? ── */}
         <section aria-labelledby="start-heading" className="mb-16">
