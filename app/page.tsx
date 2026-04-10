@@ -596,63 +596,24 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="app-card flex flex-col rounded-2xl overflow-hidden"
+      className="app-card flex rounded-2xl overflow-hidden"
       style={{
         background: "#FFFFFF",
         boxShadow: "0 2px 12px rgba(45,38,32,0.07)",
         border: `1.5px solid ${cat.borderColor}`,
         textDecoration: "none",
+        minHeight: 280,
       }}
     >
-      {/* Header */}
+      {/* Left: Screenshot */}
       <div
-        className="flex items-center gap-3 px-5 py-4"
-        style={{ background: cat.bgColor }}
+        className="relative shrink-0 overflow-hidden"
+        style={{
+          width: "42%",
+          background: "#F7F4F0",
+          borderRight: `1.5px solid ${cat.borderColor}`,
+        }}
       >
-        <div
-          className="flex items-center justify-center rounded-xl shrink-0"
-          style={{
-            width: 46,
-            height: 46,
-            background: "white",
-            boxShadow: `0 2px 8px ${cat.color}30`,
-          }}
-        >
-          <Icon color={cat.color} />
-        </div>
-        <div>
-          <p
-            className="text-xs font-semibold tracking-wide uppercase"
-            style={{ color: cat.color, opacity: 0.75 }}
-          >
-            {app.name}
-          </p>
-          <h3
-            className="text-base font-black"
-            style={{ color: "#2D2620", lineHeight: 1.3 }}
-          >
-            {app.korName}
-          </h3>
-        </div>
-        <div
-          className="ml-auto shrink-0"
-          style={{
-            width: 28,
-            height: 28,
-            borderRadius: "50%",
-            background: cat.color,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M2 6h8M6 2l4 4-4 4" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
-      </div>
-      {/* Screenshot */}
-      <div className="relative overflow-hidden" style={{ height: 340, background: "#F7F4F0", borderBottom: `1px solid ${cat.borderColor}` }}>
         <img
           src={`/screenshots/${app.slug}.png`}
           alt={`${app.korName} 메인 화면`}
@@ -660,35 +621,80 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
           style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "auto" }}
         />
       </div>
-      {/* Body */}
-      <div className="px-5 py-4 flex flex-col gap-3" style={{ flex: 1 }}>
-        <p
-          className="text-sm font-semibold"
-          style={{ color: "#4A4035" }}
+
+      {/* Right: Content */}
+      <div className="flex flex-col" style={{ flex: 1, minWidth: 0 }}>
+        {/* Header */}
+        <div
+          className="flex items-center gap-2 px-4 py-3"
+          style={{ background: cat.bgColor, borderBottom: `1px solid ${cat.borderColor}` }}
         >
-          {app.shortDesc}
-        </p>
-        <p
-          className="text-sm leading-relaxed"
-          style={{ color: "#7B6545" }}
-        >
-          {app.value}
-        </p>
-        <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
-          {app.tags.map((tag) => (
-            <span
-              key={tag}
-              className="font-medium rounded-full px-2 py-0.5"
-              style={{
-                fontSize: "0.7rem",
-                background: cat.bgColor,
-                color: cat.color,
-                whiteSpace: "nowrap",
-              }}
+          <div
+            className="flex items-center justify-center rounded-xl shrink-0"
+            style={{
+              width: 40,
+              height: 40,
+              background: "white",
+              boxShadow: `0 2px 8px ${cat.color}30`,
+            }}
+          >
+            <Icon color={cat.color} />
+          </div>
+          <div className="min-w-0">
+            <p
+              className="text-xs font-semibold tracking-wide uppercase"
+              style={{ color: cat.color, opacity: 0.75 }}
             >
-              {tag}
-            </span>
-          ))}
+              {app.name}
+            </p>
+            <h3
+              className="text-sm font-black"
+              style={{ color: "#2D2620", lineHeight: 1.3 }}
+            >
+              {app.korName}
+            </h3>
+          </div>
+          <div
+            className="ml-auto shrink-0"
+            style={{
+              width: 26,
+              height: 26,
+              borderRadius: "50%",
+              background: cat.color,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+              <path d="M2 6h8M6 2l4 4-4 4" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        </div>
+        {/* Body */}
+        <div className="px-4 py-4 flex flex-col gap-3" style={{ flex: 1 }}>
+          <p className="text-sm font-semibold" style={{ color: "#4A4035" }}>
+            {app.shortDesc}
+          </p>
+          <p className="text-sm leading-relaxed" style={{ color: "#7B6545" }}>
+            {app.value}
+          </p>
+          <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
+            {app.tags.map((tag) => (
+              <span
+                key={tag}
+                className="font-medium rounded-full px-2 py-0.5"
+                style={{
+                  fontSize: "0.7rem",
+                  background: cat.bgColor,
+                  color: cat.color,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </a>
