@@ -37,9 +37,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: "느린아이 | 발달 지연 아동을 위한 수학 학습 도구 21종",
     description:
-      "발달 지연·경계선 지능 아동이 스스로 해내는 경험을 쌓도록 설계된 수학 학습 도구 모음. 학부모가 집에서 바로 활용할 수 있습니다.",
+      "발달 지연·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 올바르게 쌓도록 설계된 학습 도구입니다.",
     locale: "ko_KR",
     type: "website",
+    images: [
+      {
+        url: "https://sprit6487.github.io/slowmath_landing/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "느린아이 시리즈 — 느리지만 올바른 방향으로, 한 걸음씩 나아갑니다",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://sprit6487.github.io/slowmath_landing/og-image.png"],
   },
 };
 
