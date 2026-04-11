@@ -917,9 +917,17 @@ export default function Page() {
             그 작은 성공이 독립의 자양분이 되도록 돕습니다.
             학부모·특수교사·인지치료사의 수업 보조 도구로도 활용됩니다.
           </p>
-          <p className="text-sm mt-4 font-semibold" style={{ color: "#5A9FD8" }}>
-            카이스트 출신, 자폐스펙트럼 발달장애 아이의 아빠가 경험을 바탕으로 직접 만들었습니다.
-          </p>
+          <div
+            className="flex gap-3 mt-5"
+            style={{
+              borderLeft: "3.5px solid #5A9FD8",
+              paddingLeft: "14px",
+            }}
+          >
+            <p className="text-sm font-semibold leading-relaxed" style={{ color: "#5A9FD8" }}>
+              카이스트 출신, 자폐스펙트럼 발달장애 아이의 아빠가 경험을 바탕으로 직접 만들었습니다.
+            </p>
+          </div>
         </div>
       </section>
 
