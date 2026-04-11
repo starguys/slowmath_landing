@@ -610,7 +610,7 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
       <div
         className="relative shrink-0 overflow-hidden"
         style={{
-          width: "38%",
+          width: "46%",
           background: "#F7F4F0",
           borderRight: `1.5px solid ${cat.borderColor}`,
         }}
@@ -628,14 +628,14 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
       <div className="flex flex-col" style={{ flex: 1, minWidth: 0 }}>
         {/* Header */}
         <div
-          className="flex items-center gap-2 px-4 py-5"
+          className="flex items-center gap-1.5 px-3 py-3"
           style={{ background: cat.bgColor, borderBottom: `1px solid ${cat.borderColor}` }}
         >
           <div
             className="flex items-center justify-center rounded-xl shrink-0"
             style={{
-              width: 40,
-              height: 40,
+              width: 32,
+              height: 32,
               background: "white",
               boxShadow: `0 2px 8px ${cat.color}30`,
             }}
@@ -650,7 +650,7 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
               {app.name}
             </p>
             <h3
-              className="text-sm font-black"
+              className="text-xs font-black"
               style={{ color: "#2D2620", lineHeight: 1.3 }}
             >
               {app.korName}
@@ -659,8 +659,8 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
           <div
             className="ml-auto shrink-0"
             style={{
-              width: 26,
-              height: 26,
+              width: 22,
+              height: 22,
               borderRadius: "50%",
               background: cat.color,
               display: "flex",
@@ -674,12 +674,12 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
           </div>
         </div>
         {/* Body */}
-        <div className="px-4 flex flex-col justify-center gap-4" style={{ flex: 1, paddingTop: "1.25rem", paddingBottom: "1.25rem" }}>
-          <div className="flex flex-col gap-2">
-            <p className="text-sm font-bold leading-snug" style={{ color: "#2D2620" }}>
+        <div className="px-3 flex flex-col justify-center gap-3" style={{ flex: 1, paddingTop: "0.875rem", paddingBottom: "0.875rem" }}>
+          <div className="flex flex-col gap-1.5">
+            <p className="text-xs font-bold leading-snug" style={{ color: "#2D2620" }}>
               {app.shortDesc}
             </p>
-            <p className="text-xs leading-relaxed" style={{ color: "#7B6545" }}>
+            <p className="leading-relaxed" style={{ fontSize: "0.7rem", color: "#7B6545" }}>
               {app.value}
             </p>
           </div>
