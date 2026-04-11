@@ -800,7 +800,7 @@ export default function Page() {
 
       {/* ── Hero ── */}
       <header
-        className="px-6 pt-10 pb-10 sm:pt-16 sm:pb-14"
+        className="px-4 pt-10 pb-10 sm:px-6 sm:pt-16 sm:pb-14"
         style={{
           background: "linear-gradient(160deg, #FFFAF3 0%, #FFF0D8 55%, #FFE8C4 100%)",
           borderBottom: "1px solid #EDE0C8",
@@ -857,7 +857,7 @@ export default function Page() {
           {/* Description */}
           <p
             style={{
-              fontSize: "clamp(0.75rem, 2.1vw, 0.875rem)",
+              fontSize: "clamp(0.8rem, 2.4vw, 0.875rem)",
               color: "#7B6545",
               lineHeight: 1.7,
               marginBottom: "32px",
