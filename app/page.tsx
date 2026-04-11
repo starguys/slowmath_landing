@@ -979,7 +979,7 @@ export default function Page() {
             >
               느린아이 시리즈가 함께합니다
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "#7B6545" }}>
+            <p className="text-xs sm:text-sm leading-relaxed" style={{ color: "#7B6545" }}>
               아이 <strong style={{ color: "#E8924A" }}>수준과 속도에 맞게</strong> 설계된 학습 도구로,{" "}
               <strong style={{ color: "#E8924A" }}>작은 성공을 반복</strong>하며
               스스로 해내는 경험을 쌓아갑니다.
