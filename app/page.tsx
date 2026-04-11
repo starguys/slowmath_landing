@@ -1045,26 +1045,25 @@ export default function Page() {
           zIndex: 20,
         }}
       >
-        <div
-          className="flex gap-2 overflow-x-auto sm:flex-wrap sm:justify-center pb-0.5"
-          style={{ maxWidth: "960px", margin: "0 auto" }}
-        >
-          {categories.map((cat) => (
-            <a
-              key={cat.id}
-              href={`#cat-${cat.id}`}
-              className="nav-pill flex items-center gap-1.5 text-xs font-bold rounded-full px-3 sm:px-4 py-2 whitespace-nowrap shrink-0 sm:shrink"
-              style={{
-                background: cat.bgColor,
-                color: cat.color,
-                border: `1px solid ${cat.borderColor}`,
-                textDecoration: "none",
-              }}
-            >
-              <span className="hidden sm:inline-flex"><cat.Icon color={cat.color} /></span>
-              <span>{cat.label}</span>
-            </a>
-          ))}
+        <div className="overflow-hidden">
+          <div className="marquee-track flex gap-3" style={{ width: "max-content" }}>
+            {[...categories, ...categories].map((cat, i) => (
+              <a
+                key={`${cat.id}-${i}`}
+                href={`#cat-${cat.id}`}
+                className="nav-pill flex items-center gap-1.5 text-xs font-bold rounded-full px-4 py-2 whitespace-nowrap shrink-0"
+                style={{
+                  background: cat.bgColor,
+                  color: cat.color,
+                  border: `1px solid ${cat.borderColor}`,
+                  textDecoration: "none",
+                }}
+              >
+                <cat.Icon color={cat.color} />
+                <span>{cat.label}</span>
+              </a>
+            ))}
+          </div>
         </div>
       </nav>
 
