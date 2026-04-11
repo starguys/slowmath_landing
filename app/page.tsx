@@ -483,7 +483,7 @@ const apps: App[] = [
     category: "compare",
     shortDesc: "색깔 이름을 보고·듣고·고르며 색 인지 능력을 키워요",
     value:
-      "발달 지연 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
+      "발달 장애 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
     tags: ["색상 인식", "색 이름", "순서 기억", "색 변별"],
   },
   {
@@ -789,7 +789,7 @@ export default function Page() {
 
   const seoKeywords = [
     "느린 학습자 수학",
-    "발달 지연 아동 교육",
+    "발달 장애 아동 교육",
     "경계선 지능 학습 도구",
     "특수 교육 수학",
     "학습 장애 수학 훈련",
@@ -870,7 +870,7 @@ export default function Page() {
               marginBottom: "32px",
             }}
           >
-            발달 지연·경계선 지능·학습 장애 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
+            발달 장애·경계선 지능·학습 장애 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
           </p>
 
           {/* CTA */}
@@ -914,7 +914,7 @@ export default function Page() {
           <p className="text-sm leading-loose" style={{ color: "#7B6545" }}>
             느린아이는{" "}
             <strong style={{ color: "#4A4035" }}>
-              발달 지연·경계선 지능·학습 장애 아동
+              발달 장애·경계선 지능·학습 장애 아동
             </strong>
             이 수학의 기초 개념을 스스로 익힐 수 있도록 만들어진 학습 도구 모음입니다.
             일반 학습 도구가 너무 빠르게 진행되어 아이가 따라가지 못한다는 학부모의 고민에서 시작했습니다.
@@ -1223,7 +1223,7 @@ export default function Page() {
           className="text-sm leading-relaxed mb-1"
           style={{ color: "#A08870" }}
         >
-          발달 지연·경계선 지능·학습 장애 아동을 위한 수학 학습 도구
+          발달 장애·경계선 지능·학습 장애 아동을 위한 수학 학습 도구
         </p>
       </footer>
     </div>
