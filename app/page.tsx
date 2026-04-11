@@ -597,41 +597,34 @@ function AppCard({ app, cat }: { app: App; cat: Category }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="app-card flex flex-col sm:flex-row rounded-2xl overflow-hidden sm:min-h-[420px]"
+      className="app-card flex rounded-2xl overflow-hidden"
       style={{
         background: "#FFFFFF",
         boxShadow: "0 2px 12px rgba(45,38,32,0.07)",
         border: `1.5px solid ${cat.borderColor}`,
         textDecoration: "none",
+        minHeight: 180,
       }}
     >
-      {/* Top/Left: Screenshot */}
+      {/* Left: Screenshot — always side-by-side */}
       <div
-        className="relative shrink-0 overflow-hidden sm:w-[42%]"
+        className="relative shrink-0 overflow-hidden"
         style={{
+          width: "38%",
           background: "#F7F4F0",
-          borderBottom: `1.5px solid ${cat.borderColor}`,
           borderRight: `1.5px solid ${cat.borderColor}`,
         }}
       >
-        {/* Mobile: fixed-height crop from top */}
         <img
           src={`${ASSET_BASE}/screenshots/${app.slug}.png`}
           alt={`${app.korName} 메인 화면`}
           loading="lazy"
-          className="sm:hidden block w-full"
-          style={{ height: 200, objectFit: "cover", objectPosition: "top center" }}
-        />
-        {/* Desktop: absolute, fills card height from top */}
-        <img
-          src={`${ASSET_BASE}/screenshots/${app.slug}.png`}
-          alt={`${app.korName} 메인 화면`}
-          loading="lazy"
-          className="hidden sm:block absolute top-0 left-0 w-full h-auto"
+          className="absolute inset-0 w-full h-full"
+          style={{ objectFit: "cover", objectPosition: "top center" }}
         />
       </div>
 
-      {/* Bottom/Right: Content */}
+      {/* Right: Content */}
       <div className="flex flex-col" style={{ flex: 1, minWidth: 0 }}>
         {/* Header */}
         <div
