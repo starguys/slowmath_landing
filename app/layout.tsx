@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://sprit6487.github.io/slowmath_landing/og-image.png",
+        url: "https://starguys.github.io/slowmath_landing/og-image.png",
         width: 1200,
         height: 630,
         alt: "느린아이 시리즈 — 느리지만 올바른 방향으로, 한 걸음씩 나아갑니다",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sprit6487.github.io/slowmath_landing/og-image.png"],
+    images: ["https://starguys.github.io/slowmath_landing/og-image.png"],
   },
 };
 
