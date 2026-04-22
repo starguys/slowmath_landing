@@ -1130,6 +1130,113 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ── Real-usage demo video ── */}
+      <section
+        aria-label="아이 학습 실제 모습"
+        className="px-6 py-12 sm:py-16"
+        style={{
+          borderBottom: "1px solid #EDE0C8",
+          background:
+            "linear-gradient(180deg, #FBF6ED 0%, #F7F4F0 100%)",
+        }}
+      >
+        <div
+          style={{ maxWidth: "960px", margin: "0 auto" }}
+          className="grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-10 md:gap-14 items-center"
+        >
+          <div>
+            <p
+              className="font-semibold mb-3"
+              style={{
+                fontSize: "0.72rem",
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                color: "#5A9FD8",
+              }}
+            >
+              In real life
+            </p>
+            <h2
+              className="font-black mb-5 break-keep"
+              style={{
+                fontSize: "clamp(1.35rem, 3.6vw, 1.8rem)",
+                color: "#2D2620",
+                letterSpacing: "-0.02em",
+                lineHeight: 1.3,
+              }}
+            >
+              말보다 먼저,
+              <br />
+              <span style={{ color: "#E8924A" }}>장면으로 보여드릴게요.</span>
+            </h2>
+            <p
+              className="leading-loose break-keep mb-6"
+              style={{ fontSize: "0.95rem", color: "#7B6545" }}
+            >
+              천천히 한 걸음. 화려한 반응 대신, 아이가 자신의 속도에
+              머무는 장면입니다.
+            </p>
+            <ul
+              className="flex flex-col gap-2.5"
+              style={{ fontSize: "0.9rem", color: "#4A4035" }}
+            >
+              <li className="flex items-start gap-2 break-keep">
+                <span
+                  aria-hidden
+                  style={{ color: "#5A9FD8", fontWeight: 900, lineHeight: 1.6 }}
+                >
+                  ·
+                </span>
+                조용한 화면, 충분히 생각할 시간
+              </li>
+              <li className="flex items-start gap-2 break-keep">
+                <span
+                  aria-hidden
+                  style={{ color: "#E8924A", fontWeight: 900, lineHeight: 1.6 }}
+                >
+                  ·
+                </span>
+                틀려도 다시, 작게 반복하며 쌓이는 자신감
+              </li>
+              <li className="flex items-start gap-2 break-keep">
+                <span
+                  aria-hidden
+                  style={{ color: "#4DB87A", fontWeight: 900, lineHeight: 1.6 }}
+                >
+                  ·
+                </span>
+                아이가 스스로 터치하고 확인하는 순간들
+              </li>
+            </ul>
+          </div>
+
+          <div
+            className="relative mx-auto overflow-hidden rounded-2xl"
+            style={{
+              width: "100%",
+              maxWidth: "320px",
+              aspectRatio: "406 / 720",
+              background: "#EDE0C8",
+              boxShadow: "0 22px 48px rgba(45,38,32,0.16)",
+              border: "1px solid #EDE0C8",
+            }}
+          >
+            <video
+              src={`${ASSET_BASE}/video/learning-demo.mp4`}
+              poster={`${ASSET_BASE}/video/learning-demo.jpg`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-label="느린아이 앱으로 학습하는 아이의 실제 모습"
+              className="absolute inset-0 w-full h-full"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── Value Props ── */}
       <section
         aria-label="느린아이 학습 도구의 특징"
@@ -1187,7 +1294,7 @@ export default function Page() {
       >
         <div className="overflow-hidden">
           <div className="marquee-track flex" style={{ width: "max-content" }}>
-            {[...categories, ...categories].map((cat, i) => (
+            {[...categories, ...categories, ...categories, ...categories].map((cat, i) => (
               <a
                 key={`${cat.id}-${i}`}
                 href={`#cat-${cat.id}`}
