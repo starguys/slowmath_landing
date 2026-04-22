@@ -310,6 +310,7 @@ const appEmoji: Record<string, string> = {
   slowmath_number: "🔢",
   slowmath_numberdraw: "5️⃣",
   slowmath_dice: "🎲",
+  slowmath_counting: "🧮",
   slowmath_matching: "🎯",
   slowmath_comparing: "⚖️",
   slowmath_comparing2: "⚖️",
@@ -416,6 +417,19 @@ const apps: App[] = [
     tags: ["손가락 세기", "주사위", "카드 무늬", "수 감각"],
     childEffect: "손가락을 짚으며 수를 세요",
     duration: "3분",
+  },
+  {
+    slug: "slowmath_counting",
+    name: "Counting",
+    korName: "우리말 세기",
+    Icon: IconDots,
+    category: "number",
+    shortDesc: "하나·둘·셋… 우리말로 수를 세는 법을 익혀요",
+    value:
+      "한국어 고유수(한·두·세)와 숫자를 양방향으로 연결하며 생활 속 세기 언어에 익숙해져요. 우리말 → 숫자, 숫자 → 우리말 두 모드로 자연스럽게 반복합니다.",
+    tags: ["우리말 수", "한·두·세", "양방향 연습"],
+    childEffect: "우리말로 수를 세요",
+    duration: "5분",
   },
   {
     slug: "slowmath_matching",
@@ -1109,7 +1123,7 @@ export default function Page() {
                 그 마음, 저희도 알아요.
               </p>
               <p className="leading-relaxed break-keep" style={{ fontSize: "0.85rem", color: "#D9C9B0" }}>
-                그래서 아이의 속도에 맞춘 21개의 작은 연습을 만들었습니다.
+                그래서 아이의 속도에 맞춘 22개의 작은 연습을 만들었습니다.
                 한 화면, 한 걸음, 아이의 속도에 맞춰 천천히 함께 걸어요.
               </p>
             </div>
@@ -1170,7 +1184,7 @@ export default function Page() {
             >
               말보다 먼저,
               <br />
-              <span style={{ color: "#E8924A" }}>장면으로 보여드릴게요.</span>
+              <span style={{ color: "#E8924A" }}>직접 보여드릴게요.</span>
             </h2>
             <p
               className="leading-loose break-keep mb-6"
@@ -1278,90 +1292,6 @@ export default function Page() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 느린아이 시리즈 한눈에 보기 ── */}
-      <section
-        aria-label="전체 학습 도구 목록"
-        className="px-4 sm:px-6 py-10 sm:py-14"
-        style={{ background: "#F7F4F0", borderBottom: "1px solid #EDE0C8" }}
-      >
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2
-            className="text-center font-black"
-            style={{
-              fontSize: "clamp(1.3rem, 3vw, 1.7rem)",
-              color: "#2D2620",
-              letterSpacing: "-0.02em",
-              marginBottom: "6px",
-            }}
-          >
-            <span style={{ color: "#5A9FD8" }}>느린</span>
-            <span style={{ color: "#E8924A" }}>아이</span>
-            <span> 시리즈</span>
-          </h2>
-          <p
-            className="text-center text-sm"
-            style={{ color: "#7B6545", marginBottom: "28px" }}
-          >
-            전체 학습 도구를 한눈에 둘러보세요
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
-            {apps.map((app) => {
-              const emoji = appEmoji[app.slug] ?? "";
-              const cat = categories.find((c) => c.id === app.category)!;
-              return (
-                <a
-                  key={app.slug}
-                  href={`${BASE}/${app.slug}/`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="app-tile flex flex-col items-center justify-center rounded-2xl relative overflow-hidden"
-                  style={{
-                    background: "white",
-                    boxShadow: "0 2px 10px rgba(45,38,32,0.05)",
-                    border: `1px solid ${cat.borderColor}`,
-                    padding: "28px 12px 18px",
-                    textDecoration: "none",
-                    minHeight: 130,
-                  }}
-                  aria-label={`${app.korName} 열기`}
-                >
-                  <span
-                    aria-hidden
-                    className="absolute top-0 left-0 right-0"
-                    style={{ height: 4, background: cat.color }}
-                  />
-                  <span
-                    aria-hidden
-                    className="flex items-center justify-center"
-                    style={{
-                      width: 56,
-                      height: 56,
-                      borderRadius: 16,
-                      background: cat.bgColor,
-                      fontSize: "2rem",
-                      lineHeight: 1,
-                      marginBottom: 12,
-                    }}
-                  >
-                    {emoji}
-                  </span>
-                  <span
-                    className="font-bold text-center break-keep"
-                    style={{
-                      fontSize: "0.88rem",
-                      color: "#2D2620",
-                      letterSpacing: "-0.01em",
-                    }}
-                  >
-                    {app.korName}
-                  </span>
-                </a>
-              );
-            })}
           </div>
         </div>
       </section>
@@ -1528,6 +1458,64 @@ export default function Page() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* ── 느린아이 시리즈 한눈에 보기 ── */}
+        <section aria-labelledby="overview-heading" className="mb-16">
+          <h2
+            id="overview-heading"
+            className="font-black mb-2"
+            style={{ fontSize: "1.2rem", color: "#2D2620", letterSpacing: "-0.02em" }}
+          >
+            전체 학습 도구 한눈에 보기
+          </h2>
+          <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
+            22개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+            {apps.map((app) => {
+              const emoji = appEmoji[app.slug] ?? "";
+              return (
+                <a
+                  key={app.slug}
+                  href={`${BASE}/${app.slug}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="app-tile flex flex-col items-center justify-center rounded-2xl"
+                  style={{
+                    background: "white",
+                    boxShadow: "0 2px 10px rgba(45,38,32,0.05)",
+                    border: "1px solid #EDE0C8",
+                    padding: "24px 12px 18px",
+                    textDecoration: "none",
+                    minHeight: 130,
+                  }}
+                  aria-label={`${app.korName} 열기`}
+                >
+                  <span
+                    aria-hidden
+                    style={{
+                      fontSize: "2rem",
+                      lineHeight: 1,
+                      marginBottom: 14,
+                    }}
+                  >
+                    {emoji}
+                  </span>
+                  <span
+                    className="font-bold text-center break-keep"
+                    style={{
+                      fontSize: "0.88rem",
+                      color: "#2D2620",
+                      letterSpacing: "-0.01em",
+                    }}
+                  >
+                    {app.korName}
+                  </span>
+                </a>
+              );
+            })}
           </div>
         </section>
 
