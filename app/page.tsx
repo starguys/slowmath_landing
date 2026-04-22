@@ -301,6 +301,30 @@ function IconGentle() {
 const BASE = "https://sprit6487.github.io/slowmath_all";
 const ASSET_BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
+const appEmoji: Record<string, string> = {
+  slowmath_color: "🌈",
+  slowmath_linedraw: "✏️",
+  slowmath_dot2dot: "···",
+  slowmath_colorcopy: "🪞",
+  slowmath_pattern: "🧩",
+  slowmath_number: "🔢",
+  slowmath_numberdraw: "5️⃣",
+  slowmath_dice: "🎲",
+  slowmath_matching: "🎯",
+  slowmath_comparing: "⚖️",
+  slowmath_comparing2: "⚖️",
+  slowmath_clock: "🕐",
+  slowmath_combining: "🫱",
+  slowmath_splitting: "✂️",
+  slowmath_complement: "🔟",
+  slowmath_plusone: "1️⃣",
+  slowmath_plustwo: "2️⃣",
+  slowmath_plusthree: "3️⃣",
+  slowmath_easy: "➕",
+  slowmath_circle: "➕",
+  slowmath_timestables: "✖️",
+};
+
 type Category = {
   id: string;
   label: string;
@@ -646,127 +670,123 @@ const apps: App[] = [
 
 function AppCard({ app, cat }: { app: App; cat: Category }) {
   const url = `${BASE}/${app.slug}/`;
-  const { Icon } = app;
+  const emoji = appEmoji[app.slug] ?? "";
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="app-card flex rounded-2xl overflow-hidden"
+      className="app-card flex flex-col rounded-2xl overflow-hidden h-full"
       style={{
         background: "#FFFFFF",
         boxShadow: "0 2px 12px rgba(45,38,32,0.07)",
         border: `1.5px solid ${cat.borderColor}`,
         textDecoration: "none",
-        minHeight: 150,
       }}
     >
-      {/* Left: Screenshot — always side-by-side */}
+      {/* Header: emoji + title */}
       <div
-        className="relative shrink-0 overflow-hidden"
-        style={{
-          width: "46%",
-          background: "#F7F4F0",
-          borderRight: `1.5px solid ${cat.borderColor}`,
-        }}
+        className="flex items-center gap-3 px-4 py-4"
+        style={{ background: cat.bgColor, borderBottom: `1px solid ${cat.borderColor}` }}
       >
-        <img
-          src={`${ASSET_BASE}/screenshots/${app.slug}.png`}
-          alt={`${app.korName} 메인 화면`}
-          loading="lazy"
-          className="absolute inset-0 w-full h-full"
-          style={{ objectFit: "cover", objectPosition: "top center" }}
-        />
+        <span
+          aria-hidden
+          className="shrink-0 flex items-center justify-center"
+          style={{
+            width: 52,
+            height: 52,
+            background: "white",
+            borderRadius: 14,
+            boxShadow: `0 2px 8px ${cat.color}25`,
+            fontSize: "1.9rem",
+            lineHeight: 1,
+          }}
+        >
+          {emoji}
+        </span>
+        <div className="min-w-0 flex-1">
+          <h3
+            className="text-base font-black"
+            style={{ color: "#2D2620", lineHeight: 1.3, letterSpacing: "-0.01em" }}
+          >
+            {app.korName}
+          </h3>
+        </div>
+        <div
+          className="shrink-0"
+          style={{
+            width: 24,
+            height: 24,
+            borderRadius: "50%",
+            background: cat.color,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 6h8M6 2l4 4-4 4" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
       </div>
 
-      {/* Right: Content */}
-      <div className="flex flex-col" style={{ flex: 1, minWidth: 0 }}>
-        {/* Header */}
-        <div
-          className="flex items-center gap-1.5 px-3 py-3"
-          style={{ background: cat.bgColor, borderBottom: `1px solid ${cat.borderColor}` }}
+      {/* Body */}
+      <div className="px-4 py-4 flex flex-col gap-2.5" style={{ flex: 1 }}>
+        <p className="text-sm font-bold leading-snug" style={{ color: "#2D2620" }}>
+          {app.shortDesc}
+        </p>
+
+        <figure
+          className="relative rounded-lg px-4 py-3 m-0"
+          style={{
+            background: cat.bgColor,
+          }}
         >
-          <div
-            className="flex items-center justify-center rounded-xl shrink-0"
+          <span
+            aria-hidden
+            className="absolute font-black select-none"
             style={{
-              width: 32,
-              height: 32,
-              background: "white",
-              boxShadow: `0 2px 8px ${cat.color}30`,
+              color: cat.color,
+              opacity: 0.35,
+              fontSize: "1.6rem",
+              lineHeight: 1,
+              top: 2,
+              left: 6,
+              fontFamily: "Georgia, serif",
             }}
           >
-            <Icon color={cat.color} />
-          </div>
-          <div className="min-w-0">
-            <p
-              className="text-xs font-semibold tracking-wide uppercase"
-              style={{ color: cat.color, opacity: 0.75 }}
-            >
-              {app.name}
-            </p>
-            <h3
-              className="text-xs font-black"
-              style={{ color: "#2D2620", lineHeight: 1.3 }}
-            >
-              {app.korName}
-            </h3>
-          </div>
-          <div
-            className="ml-auto shrink-0"
+            “
+          </span>
+          <blockquote
+            className="font-bold break-keep text-center m-0"
             style={{
-              width: 22,
-              height: 22,
-              borderRadius: "50%",
-              background: cat.color,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              fontSize: "0.82rem",
+              color: cat.color,
+              lineHeight: 1.45,
             }}
           >
-            <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
-              <path d="M2 6h8M6 2l4 4-4 4" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
-        </div>
-        {/* Body */}
-        <div className="px-3 flex flex-col justify-center gap-2.5" style={{ flex: 1, paddingTop: "0.875rem", paddingBottom: "0.875rem" }}>
-          <p className="text-xs font-bold leading-snug" style={{ color: "#2D2620" }}>
-            {app.shortDesc}
-          </p>
+            {app.childEffect}
+          </blockquote>
+          <span
+            aria-hidden
+            className="absolute font-black select-none"
+            style={{
+              color: cat.color,
+              opacity: 0.35,
+              fontSize: "1.6rem",
+              lineHeight: 1,
+              bottom: -4,
+              right: 8,
+              fontFamily: "Georgia, serif",
+            }}
+          >
+            ”
+          </span>
+        </figure>
 
-          {/* 아이 변화 + 하루 N분 */}
-          <div
-            className="flex items-center gap-2 rounded-lg px-2.5 py-1.5"
-            style={{
-              background: cat.bgColor,
-              borderLeft: `2.5px solid ${cat.color}`,
-            }}
-          >
-            <span
-              aria-hidden
-              className="shrink-0 font-black"
-              style={{ color: cat.color, fontSize: "0.72rem", lineHeight: 1 }}
-            >
-              ↳
-            </span>
-            <p
-              className="font-bold break-keep"
-              style={{ fontSize: "0.78rem", color: cat.color, lineHeight: 1.4, flex: 1 }}
-            >
-              {app.childEffect}
-            </p>
-            <span
-              className="shrink-0 font-semibold whitespace-nowrap"
-              style={{ fontSize: "0.66rem", color: cat.color, opacity: 0.72 }}
-            >
-              · 하루 {app.duration}
-            </span>
-          </div>
-
-          <p className="leading-relaxed break-keep" style={{ fontSize: "0.72rem", color: "#7B6545" }}>
-            {app.value}
-          </p>
-        </div>
+        <p className="leading-relaxed break-keep" style={{ fontSize: "0.78rem", color: "#7B6545" }}>
+          {app.value}
+        </p>
       </div>
     </a>
   );
@@ -812,7 +832,7 @@ function CategorySection({
           {catApps.length}개
         </span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
         {catApps.map((app) => (
           <AppCard key={app.slug} app={app} cat={cat} />
         ))}
@@ -1090,7 +1110,7 @@ export default function Page() {
               </p>
               <p className="leading-relaxed break-keep" style={{ fontSize: "0.85rem", color: "#D9C9B0" }}>
                 그래서 아이의 속도에 맞춘 21개의 작은 연습을 만들었습니다.
-                한 화면, 한 걸음, 하루 5분이면 충분해요.
+                한 화면, 한 걸음, 아이의 속도에 맞춰 천천히 함께 걸어요.
               </p>
             </div>
             <a
@@ -1258,6 +1278,90 @@ export default function Page() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 느린아이 시리즈 한눈에 보기 ── */}
+      <section
+        aria-label="전체 학습 도구 목록"
+        className="px-4 sm:px-6 py-10 sm:py-14"
+        style={{ background: "#F7F4F0", borderBottom: "1px solid #EDE0C8" }}
+      >
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <h2
+            className="text-center font-black"
+            style={{
+              fontSize: "clamp(1.3rem, 3vw, 1.7rem)",
+              color: "#2D2620",
+              letterSpacing: "-0.02em",
+              marginBottom: "6px",
+            }}
+          >
+            <span style={{ color: "#5A9FD8" }}>느린</span>
+            <span style={{ color: "#E8924A" }}>아이</span>
+            <span> 시리즈</span>
+          </h2>
+          <p
+            className="text-center text-sm"
+            style={{ color: "#7B6545", marginBottom: "28px" }}
+          >
+            전체 학습 도구를 한눈에 둘러보세요
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+            {apps.map((app) => {
+              const emoji = appEmoji[app.slug] ?? "";
+              const cat = categories.find((c) => c.id === app.category)!;
+              return (
+                <a
+                  key={app.slug}
+                  href={`${BASE}/${app.slug}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="app-tile flex flex-col items-center justify-center rounded-2xl relative overflow-hidden"
+                  style={{
+                    background: "white",
+                    boxShadow: "0 2px 10px rgba(45,38,32,0.05)",
+                    border: `1px solid ${cat.borderColor}`,
+                    padding: "28px 12px 18px",
+                    textDecoration: "none",
+                    minHeight: 130,
+                  }}
+                  aria-label={`${app.korName} 열기`}
+                >
+                  <span
+                    aria-hidden
+                    className="absolute top-0 left-0 right-0"
+                    style={{ height: 4, background: cat.color }}
+                  />
+                  <span
+                    aria-hidden
+                    className="flex items-center justify-center"
+                    style={{
+                      width: 56,
+                      height: 56,
+                      borderRadius: 16,
+                      background: cat.bgColor,
+                      fontSize: "2rem",
+                      lineHeight: 1,
+                      marginBottom: 12,
+                    }}
+                  >
+                    {emoji}
+                  </span>
+                  <span
+                    className="font-bold text-center break-keep"
+                    style={{
+                      fontSize: "0.88rem",
+                      color: "#2D2620",
+                      letterSpacing: "-0.01em",
+                    }}
+                  >
+                    {app.korName}
+                  </span>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
