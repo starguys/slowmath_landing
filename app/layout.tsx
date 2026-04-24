@@ -60,6 +60,17 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "느린아이",
+  alternateName: "느린아이 시리즈",
+  url: "https://www.slowkids.net",
+  logo: "https://www.slowkids.net/icon.png",
+  description:
+    "발달 장애·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -67,7 +78,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={notoSansKR.className}>{children}</body>
+      <body className={notoSansKR.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
