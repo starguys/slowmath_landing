@@ -113,7 +113,7 @@ export default function NotFound() {
             href="/"
             className="inline-flex items-center gap-2 font-black rounded-full"
             style={{
-              background: "#B05A18",
+              background: "#E8924A",
               color: "white",
               padding: "12px 28px",
               fontSize: "0.95rem",
