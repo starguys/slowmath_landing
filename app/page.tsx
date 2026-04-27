@@ -152,9 +152,9 @@ function IconPattern({ color }: { color: string }) {
 function IconPalette({ color }: { color: string }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
-      <circle cx="9" cy="10" r="4.5" fill="#E8924A" opacity=".8" />
+      <circle cx="9" cy="10" r="4.5" fill="#B05A18" opacity=".8" />
       <circle cx="19" cy="10" r="4.5" fill={color} opacity=".7" />
-      <circle cx="14" cy="19" r="4.5" fill="#4DB87A" opacity=".7" />
+      <circle cx="14" cy="19" r="4.5" fill="#1F7E47" opacity=".7" />
       <circle cx="14" cy="14" r="3" fill="white" opacity=".9" />
     </svg>
   );
@@ -163,8 +163,8 @@ function IconPalette({ color }: { color: string }) {
 function IconGrid({ color }: { color: string }) {
   const cells = [
     { x: 3, y: 3, fill: color, op: 0.7 },
-    { x: 13, y: 3, fill: "#E8924A", op: 0.7 },
-    { x: 3, y: 13, fill: "#4DB87A", op: 0.7 },
+    { x: 13, y: 3, fill: "#B05A18", op: 0.7 },
+    { x: 3, y: 13, fill: "#1F7E47", op: 0.7 },
     { x: 13, y: 13, fill: color, op: 0.35 },
   ];
   return (
@@ -246,9 +246,9 @@ function IconMultiply({ color }: { color: string }) {
 function IconHourglass() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
-      <path d="M10 6 H26 L18 18 L26 30 H10 L18 18 Z" fill="#5A9FD8" fillOpacity=".15" stroke="#5A9FD8" strokeWidth="1.8" strokeLinejoin="round" />
-      <path d="M11 7 L25 7 L18 16 Z" fill="#5A9FD8" fillOpacity=".5" />
-      <ellipse cx="18" cy="25" rx="4" ry="3" fill="#5A9FD8" fillOpacity=".4" />
+      <path d="M10 6 H26 L18 18 L26 30 H10 L18 18 Z" fill="#1F75BF" fillOpacity=".15" stroke="#1F75BF" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M11 7 L25 7 L18 16 Z" fill="#1F75BF" fillOpacity=".5" />
+      <ellipse cx="18" cy="25" rx="4" ry="3" fill="#1F75BF" fillOpacity=".4" />
     </svg>
   );
 }
@@ -256,10 +256,10 @@ function IconHourglass() {
 function IconSpeaker() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
-      <rect x="6" y="13" width="8" height="10" rx="2" fill="#4DB87A" fillOpacity=".3" stroke="#4DB87A" strokeWidth="1.8" />
-      <path d="M14 13 L22 8 L22 28 L14 23 Z" fill="#4DB87A" fillOpacity=".5" stroke="#4DB87A" strokeWidth="1.5" strokeLinejoin="round" />
-      <path d="M25 12 C27.5 14.5 27.5 21.5 25 24" stroke="#4DB87A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
-      <path d="M28 9 C32 13 32 23 28 27" stroke="#4DB87A" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity=".5" />
+      <rect x="6" y="13" width="8" height="10" rx="2" fill="#1F7E47" fillOpacity=".3" stroke="#1F7E47" strokeWidth="1.8" />
+      <path d="M14 13 L22 8 L22 28 L14 23 Z" fill="#1F7E47" fillOpacity=".5" stroke="#1F7E47" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M25 12 C27.5 14.5 27.5 21.5 25 24" stroke="#1F7E47" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path d="M28 9 C32 13 32 23 28 27" stroke="#1F7E47" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity=".5" />
     </svg>
   );
 }
@@ -267,11 +267,11 @@ function IconSpeaker() {
 function IconStairs() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
-      <path d="M5 28 H12 V22 H19 V16 H26 V10 H32" stroke="#E8924A" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-      <circle cx="8.5" cy="28" r="2.5" fill="#E8924A" fillOpacity=".4" />
-      <circle cx="15.5" cy="22" r="2.5" fill="#E8924A" fillOpacity=".55" />
-      <circle cx="22.5" cy="16" r="2.5" fill="#E8924A" fillOpacity=".7" />
-      <circle cx="29" cy="10" r="2.5" fill="#E8924A" fillOpacity=".9" />
+      <path d="M5 28 H12 V22 H19 V16 H26 V10 H32" stroke="#B05A18" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <circle cx="8.5" cy="28" r="2.5" fill="#B05A18" fillOpacity=".4" />
+      <circle cx="15.5" cy="22" r="2.5" fill="#B05A18" fillOpacity=".55" />
+      <circle cx="22.5" cy="16" r="2.5" fill="#B05A18" fillOpacity=".7" />
+      <circle cx="29" cy="10" r="2.5" fill="#B05A18" fillOpacity=".9" />
     </svg>
   );
 }
@@ -279,10 +279,10 @@ function IconStairs() {
 function IconRepeat() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
-      <path d="M8 18 C8 12 12 8 18 8 L24 8" stroke="#8B72C8" strokeWidth="2" strokeLinecap="round" fill="none" />
-      <polyline points="20,5 24,8 20,11" stroke="#8B72C8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-      <path d="M28 18 C28 24 24 28 18 28 L12 28" stroke="#8B72C8" strokeWidth="2" strokeLinecap="round" fill="none" />
-      <polyline points="16,31 12,28 16,25" stroke="#8B72C8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <path d="M8 18 C8 12 12 8 18 8 L24 8" stroke="#5C46B5" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <polyline points="20,5 24,8 20,11" stroke="#5C46B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <path d="M28 18 C28 24 24 28 18 28 L12 28" stroke="#5C46B5" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <polyline points="16,31 12,28 16,25" stroke="#5C46B5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
     </svg>
   );
 }
@@ -290,10 +290,10 @@ function IconRepeat() {
 function IconGentle() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
-      <path d="M26 9 A 12 12 0 1 0 26 27 A 10 10 0 0 1 26 9 Z" fill="#D96060" fillOpacity=".2" stroke="#D96060" strokeWidth="1.8" strokeLinejoin="round"/>
-      <circle cx="11" cy="10" r="1.4" fill="#D96060" opacity=".7"/>
-      <circle cx="8" cy="20" r="1" fill="#D96060" opacity=".5"/>
-      <circle cx="30" cy="23" r="1" fill="#D96060" opacity=".5"/>
+      <path d="M26 9 A 12 12 0 1 0 26 27 A 10 10 0 0 1 26 9 Z" fill="#A53838" fillOpacity=".2" stroke="#A53838" strokeWidth="1.8" strokeLinejoin="round"/>
+      <circle cx="11" cy="10" r="1.4" fill="#A53838" opacity=".7"/>
+      <circle cx="8" cy="20" r="1" fill="#A53838" opacity=".5"/>
+      <circle cx="30" cy="23" r="1" fill="#A53838" opacity=".5"/>
     </svg>
   );
 }
@@ -360,7 +360,7 @@ const categories: Category[] = [
     label: "기초 인지",
     subtitle: "눈과 손이 먼저 익숙해지는 시간",
     Icon: IconPencil,
-    color: "#8B72C8",
+    color: "#5C46B5",
     bgColor: "#EDE8F8",
     borderColor: "#BBA8E8",
   },
@@ -369,7 +369,7 @@ const categories: Category[] = [
     label: "수 개념",
     subtitle: "숫자가 '양'으로 보이기 시작할 때",
     Icon: IconNumbers,
-    color: "#5A9FD8",
+    color: "#1F75BF",
     bgColor: "#EBF4FC",
     borderColor: "#B8D8F0",
   },
@@ -378,7 +378,7 @@ const categories: Category[] = [
     label: "수 관계",
     subtitle: "크고 작고, 같고 다름을 읽는 연습",
     Icon: IconScale,
-    color: "#D9A84A",
+    color: "#846119",
     bgColor: "#F8EFD0",
     borderColor: "#E8D098",
   },
@@ -387,7 +387,7 @@ const categories: Category[] = [
     label: "덧셈 전 개념",
     subtitle: "모으고 가르며 수를 만져보는 경험",
     Icon: IconMerge,
-    color: "#4DB87A",
+    color: "#1F7E47",
     bgColor: "#E6F6EE",
     borderColor: "#90D8B0",
   },
@@ -396,7 +396,7 @@ const categories: Category[] = [
     label: "덧셈",
     subtitle: "작은 걸음부터 쌓아올리는 계산",
     Icon: IconPlus,
-    color: "#E8924A",
+    color: "#B05A18",
     bgColor: "#FDF0E3",
     borderColor: "#F0C898",
   },
@@ -405,7 +405,7 @@ const categories: Category[] = [
     label: "뺄셈",
     subtitle: "한 걸음씩 덜어내는 계산",
     Icon: IconSplit,
-    color: "#E87080",
+    color: "#B22F46",
     bgColor: "#FBE0E5",
     borderColor: "#F0B8C0",
   },
@@ -414,7 +414,7 @@ const categories: Category[] = [
     label: "곱셈",
     subtitle: "개념을 이해하는 수의 규칙",
     Icon: IconMultiply,
-    color: "#D96060",
+    color: "#A53838",
     bgColor: "#FAE8E8",
     borderColor: "#E8A8A8",
   },
@@ -694,7 +694,7 @@ const apps: App[] = [
     slug: "slowmath_circle",
     name: "Circle",
     korName: "한 자리 덧셈 연습",
-    Icon: IconTen.bind(null, { color: "#E8924A", n: "+" }),
+    Icon: IconTen.bind(null, { color: "#B05A18", n: "+" }),
     category: "add",
     shortDesc: "고르기·쌓기·채우기 세 가지 방식으로 덧셈을 연습해요",
     value:
@@ -1030,8 +1030,8 @@ export default function Page() {
               <path d="M94 46 Q98 50 103 46" fill="none" stroke="#3A9B6A" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
             <p className="font-black" style={{ fontSize: "1.6rem", letterSpacing: "-0.02em" }}>
-              <span style={{ color: "#5A9FD8" }}>느린</span>
-              <span style={{ color: "#E8924A" }}>아이</span>
+              <span style={{ color: "#1F75BF" }}>느린</span>
+              <span style={{ color: "#B05A18" }}>아이</span>
               <span style={{ color: "#2D2620" }}> 시리즈</span>
             </p>
           </div>
@@ -1046,9 +1046,9 @@ export default function Page() {
               letterSpacing: "-0.03em",
             }}
           >
-            느리지만 <span style={{ color: "#5A9FD8" }}>올바른</span> 방향으로
+            느리지만 <span style={{ color: "#1F75BF" }}>올바른</span> 방향으로
             <br />
-            <span style={{ color: "#E8924A" }}>한 걸음씩</span> 나아갑니다
+            <span style={{ color: "#B05A18" }}>한 걸음씩</span> 나아갑니다
           </h1>
 
           {/* Description */}
@@ -1070,7 +1070,7 @@ export default function Page() {
               href="#apps"
               className="inline-flex items-center gap-2 font-black rounded-full"
               style={{
-                background: "#E8924A",
+                background: "#B05A18",
                 color: "white",
                 padding: "14px 32px",
                 fontSize: "1rem",
@@ -1117,11 +1117,11 @@ export default function Page() {
           <div
             className="flex gap-3 mt-5"
             style={{
-              borderLeft: "3.5px solid #5A9FD8",
+              borderLeft: "3.5px solid #1F75BF",
               paddingLeft: "14px",
             }}
           >
-            <p className="text-sm font-semibold leading-relaxed" style={{ color: "#5A9FD8" }}>
+            <p className="text-sm font-semibold leading-relaxed" style={{ color: "#1F75BF" }}>
               카이스트 출신, 자폐스펙트럼 발달장애 아이의 아빠가 경험을 바탕으로 직접 만들었습니다.
             </p>
           </div>
@@ -1151,7 +1151,7 @@ export default function Page() {
           >
             이런 말, 혼잣말처럼
             <br />
-            <span style={{ color: "#E8924A" }}>해보신 적 있으신가요?</span>
+            <span style={{ color: "#B05A18" }}>해보신 적 있으신가요?</span>
           </h2>
           <p
             className="text-center leading-relaxed mb-10 break-keep"
@@ -1259,7 +1259,7 @@ export default function Page() {
                 fontSize: "0.72rem",
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "#5A9FD8",
+                color: "#1F75BF",
               }}
             >
               In real life
@@ -1275,7 +1275,7 @@ export default function Page() {
             >
               말보다 먼저,
               <br />
-              <span style={{ color: "#E8924A" }}>직접 보여드릴게요.</span>
+              <span style={{ color: "#B05A18" }}>직접 보여드릴게요.</span>
             </h2>
             <p
               className="leading-loose break-keep mb-6"
@@ -1291,7 +1291,7 @@ export default function Page() {
               <li className="flex items-start gap-2 break-keep">
                 <span
                   aria-hidden
-                  style={{ color: "#5A9FD8", fontWeight: 900, lineHeight: 1.6 }}
+                  style={{ color: "#1F75BF", fontWeight: 900, lineHeight: 1.6 }}
                 >
                   ·
                 </span>
@@ -1300,7 +1300,7 @@ export default function Page() {
               <li className="flex items-start gap-2 break-keep">
                 <span
                   aria-hidden
-                  style={{ color: "#E8924A", fontWeight: 900, lineHeight: 1.6 }}
+                  style={{ color: "#B05A18", fontWeight: 900, lineHeight: 1.6 }}
                 >
                   ·
                 </span>
@@ -1309,7 +1309,7 @@ export default function Page() {
               <li className="flex items-start gap-2 break-keep">
                 <span
                   aria-hidden
-                  style={{ color: "#4DB87A", fontWeight: 900, lineHeight: 1.6 }}
+                  style={{ color: "#1F7E47", fontWeight: 900, lineHeight: 1.6 }}
                 >
                   ·
                 </span>
@@ -1439,7 +1439,7 @@ export default function Page() {
                 level: "1단계",
                 label: "숫자와 색깔을 아직 몰라요",
                 desc: "수 감각의 출발점. 숫자 이름·색깔 이름·눈으로 세기부터 시작해요.",
-                color: "#5A9FD8",
+                color: "#1F75BF",
                 bg: "#EBF4FC",
                 border: "#B8D8F0",
                 apps: [
@@ -1452,7 +1452,7 @@ export default function Page() {
                 level: "2단계",
                 label: "연필 쥐기·쓰기가 힘들어요",
                 desc: "글씨 쓰기 전 꼭 필요한 손 조절 능력과 눈-손 협응을 차근차근 키워요.",
-                color: "#E8924A",
+                color: "#B05A18",
                 bg: "#FDF0E3",
                 border: "#F0C898",
                 apps: [
@@ -1465,7 +1465,7 @@ export default function Page() {
                 level: "3단계",
                 label: "비교·규칙 찾기가 어려워요",
                 desc: "크기 비교, 위치 언어, 반복 패턴으로 수학적 사고력의 기초를 닦아요.",
-                color: "#4DB87A",
+                color: "#1F7E47",
                 bg: "#E6F6EE",
                 border: "#90D8B0",
                 apps: [
@@ -1478,7 +1478,7 @@ export default function Page() {
                 level: "4단계",
                 label: "숫자는 알지만 더하기가 어려워요",
                 desc: "수와 양을 연결하고, 합치고 나누는 경험을 통해 덧셈 개념을 쌓아요.",
-                color: "#8B72C8",
+                color: "#5C46B5",
                 bg: "#EDE8F8",
                 border: "#BBA8E8",
                 apps: [
@@ -1628,7 +1628,7 @@ export default function Page() {
           className="font-black text-2xl mb-3 tracking-tight"
           style={{ letterSpacing: "-0.03em" }}
         >
-          <span style={{ color: "#5A9FD8" }}>느린</span><span style={{ color: "#E8924A" }}>아이</span>
+          <span style={{ color: "#1F75BF" }}>느린</span><span style={{ color: "#B05A18" }}>아이</span>
         </p>
         <p
           className="leading-relaxed mb-6 break-keep"
