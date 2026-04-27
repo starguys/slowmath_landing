@@ -323,12 +323,16 @@ const appEmoji: Record<string, string> = {
   slowmath_plusthree: "3️⃣",
   slowmath_easy: "➕",
   slowmath_circle: "➕",
+  slowmath_minusone: "1️⃣",
+  slowmath_minustwo: "2️⃣",
+  slowmath_minusthree: "3️⃣",
   slowmath_timestables: "✖️",
 };
 
 type Category = {
   id: string;
   label: string;
+  subtitle: string;
   Icon: React.ComponentType<{ color: string }>;
   color: string;
   bgColor: string;
@@ -350,41 +354,64 @@ type App = {
 
 const categories: Category[] = [
   {
-    id: "number",
-    label: "수 개념 & 세기",
-    Icon: IconNumbers,
-    color: "#5A9FD8",
-    bgColor: "#EBF4FC",
-    borderColor: "#B8D8F0",
-  },
-  {
-    id: "motor",
-    label: "소근육 & 쓰기 발달",
+    id: "basic",
+    label: "기초 인지",
+    subtitle: "눈과 손이 먼저 익숙해지는 시간",
     Icon: IconPencil,
     color: "#8B72C8",
     bgColor: "#EDE8F8",
     borderColor: "#BBA8E8",
   },
   {
-    id: "compare",
-    label: "비교 & 패턴 인지",
+    id: "number",
+    label: "수 개념",
+    subtitle: "숫자가 '양'으로 보이기 시작할 때",
+    Icon: IconNumbers,
+    color: "#5A9FD8",
+    bgColor: "#EBF4FC",
+    borderColor: "#B8D8F0",
+  },
+  {
+    id: "relation",
+    label: "수 관계",
+    subtitle: "크고 작고, 같고 다름을 읽는 연습",
     Icon: IconScale,
+    color: "#D9A84A",
+    bgColor: "#F8EFD0",
+    borderColor: "#E8D098",
+  },
+  {
+    id: "preadd",
+    label: "덧셈 전 개념",
+    subtitle: "모으고 가르며 수를 만져보는 경험",
+    Icon: IconMerge,
     color: "#4DB87A",
     bgColor: "#E6F6EE",
     borderColor: "#90D8B0",
   },
   {
-    id: "addition",
-    label: "덧셈 & 수 연산",
+    id: "add",
+    label: "덧셈",
+    subtitle: "작은 걸음부터 쌓아올리는 계산",
     Icon: IconPlus,
     color: "#E8924A",
     bgColor: "#FDF0E3",
     borderColor: "#F0C898",
   },
   {
-    id: "advanced",
-    label: "시계 & 곱셈",
-    Icon: IconClock,
+    id: "sub",
+    label: "뺄셈",
+    subtitle: "한 걸음씩 덜어내는 계산",
+    Icon: IconSplit,
+    color: "#E87080",
+    bgColor: "#FBE0E5",
+    borderColor: "#F0B8C0",
+  },
+  {
+    id: "mul",
+    label: "곱셈",
+    subtitle: "개념을 이해하는 수의 규칙",
+    Icon: IconMultiply,
     color: "#D96060",
     bgColor: "#FAE8E8",
     borderColor: "#E8A8A8",
@@ -392,6 +419,74 @@ const categories: Category[] = [
 ];
 
 const apps: App[] = [
+  // ── 기초 인지 ──
+  {
+    slug: "slowmath_color",
+    name: "Color",
+    korName: "색깔 익히기",
+    Icon: IconPalette,
+    category: "basic",
+    shortDesc: "색깔 이름을 보고·듣고·고르며 색 인지 능력을 키워요",
+    value:
+      "발달 장애 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
+    tags: ["색상 인식", "색 이름", "순서 기억", "색 변별"],
+    childEffect: "색 이름이 입에 붙어요",
+    duration: "3분",
+  },
+  {
+    slug: "slowmath_linedraw",
+    name: "Line Draw",
+    korName: "선 긋기",
+    Icon: IconPencil,
+    category: "basic",
+    shortDesc: "직선·곡선·나선을 따라 그리며 손의 안정성을 키워요",
+    value:
+      "글씨 쓰기와 그림 그리기의 기초가 되는 손 조절 능력을 재미있게 훈련해요. 3단계 난이도와 음성 안내로 아이가 포기하지 않고 꾸준히 연습할 수 있도록 돕습니다.",
+    tags: ["직선·곡선", "나선 패턴", "소근육", "쓰기 준비"],
+    childEffect: "선 긋기가 부드러워져요",
+    duration: "5분",
+  },
+  {
+    slug: "slowmath_dot2dot",
+    name: "Dot to Dot",
+    korName: "점선 따라 그리기",
+    Icon: IconDotLine,
+    category: "basic",
+    shortDesc: "주어진 점과 선을 보고 똑같이 따라 그리며 시지각과 소근육을 키워요",
+    value:
+      "예시로 주어진 점-선 연결을 관찰하고 아래 격자에 똑같이 재현하는 활동이에요. 시지각 변별과 손 조절을 동시에 자극하고, 격자 크기·방향 복잡도를 조절해 아이 수준에 맞게 쓸 수 있습니다.",
+    tags: ["점-선 모사", "시지각", "소근육", "격자 난이도"],
+    childEffect: "손과 눈이 함께 움직여요",
+    duration: "5분",
+  },
+  {
+    slug: "slowmath_colorcopy",
+    name: "Color Copy",
+    korName: "똑같이 맞추기",
+    Icon: IconGrid,
+    category: "basic",
+    shortDesc: "제시된 색 격자 패턴을 그대로 따라 만들며 시지각을 훈련해요",
+    value:
+      "시지각 변별과 작업 기억을 동시에 훈련해요. 2×2부터 5×5까지 격자가 커지고 색의 수도 조절할 수 있어 아이 수준에 맞게 활용 가능합니다.",
+    tags: ["색 격자", "패턴 복제", "색 조합"],
+    childEffect: "시각 기억이 조금씩 늘어요",
+    duration: "5분",
+  },
+  {
+    slug: "slowmath_pattern",
+    name: "Pattern",
+    korName: "패턴 연습",
+    Icon: IconPattern,
+    category: "basic",
+    shortDesc: "반복되는 규칙에서 빠진 것을 찾는 패턴 인식을 훈련해요",
+    value:
+      "패턴 인식은 수학적 사고력의 핵심이에요. 과일·색깔·도형 패턴을 단계적으로 학습하고, 선택 잠금 기능으로 사고력을 키워줍니다.",
+    tags: ["규칙 찾기", "빈칸 채우기", "과일·도형", "다음 예측"],
+    childEffect: "다음에 올 것을 스스로 찾아요",
+    duration: "5분",
+  },
+
+  // ── 수 개념 ──
   {
     slug: "slowmath_number",
     name: "Number",
@@ -403,6 +498,19 @@ const apps: App[] = [
       "힌트와 음성 안내 덕분에 아이 혼자서도 도전할 수 있어요. 1부터 100까지 수의 순서 개념을 차근차근 익혀 학교 수업 준비에 효과적입니다.",
     tags: ["1~100", "순서 배열", "수 이름", "빈칸 채우기"],
     childEffect: "숫자를 보고 소리 내 읽어요",
+    duration: "5분",
+  },
+  {
+    slug: "slowmath_numberdraw",
+    name: "Number Draw",
+    korName: "숫자 쓰기",
+    Icon: IconWrite,
+    category: "number",
+    shortDesc: "0~9 숫자를 올바른 순서로 쓰는 법을 연습해요",
+    value:
+      "숫자 모양을 손으로 직접 써보며 형태를 몸으로 기억할 수 있어요. 점선 안내와 단계적 피드백으로 처음 쓰는 아이도 올바른 필순을 자연스럽게 익힙니다.",
+    tags: ["0~9 쓰기", "점선 가이드", "소근육", "획 순서"],
+    childEffect: "획 순서가 자연스러워져요",
     duration: "5분",
   },
   {
@@ -444,77 +552,55 @@ const apps: App[] = [
     childEffect: "숫자와 개수를 연결해요",
     duration: "5분",
   },
+
+  // ── 수 관계 ──
   {
-    slug: "slowmath_easy",
-    name: "Easy",
-    korName: "한 자리 덧셈",
-    Icon: IconPlus,
-    category: "addition",
-    shortDesc: "가장 쉬운 단계부터 시작하는 한 자리 덧셈 연습",
+    slug: "slowmath_comparing",
+    name: "Comparing",
+    korName: "비교하기 기초",
+    Icon: IconScale,
+    category: "relation",
+    shortDesc: "크기·길이·높이·두께·양을 비교하며 수학 언어를 익혀요",
     value:
-      "덧셈이 처음인 아이도 부담 없이 시작할 수 있도록 4단계로 난이도를 조절해요. 충동 억제 모드로 답을 고르기 전에 충분히 생각하는 습관을 만들어줍니다.",
-    tags: ["4단계", "난이도 조절", "선택형", "1자리 덧셈"],
-    childEffect: "+기호를 두려워하지 않아요",
-    duration: "5분",
+      "'더 크다', '더 짧다'를 수학적 개념과 연결해 줘요. 그림으로 직관적으로 보여주기 때문에 글을 읽지 못해도 학습할 수 있습니다.",
+    tags: ["크기 비교", "길이·높이", "두께·깊이", "양 비교"],
+    childEffect: "크다·작다의 말을 써요",
+    duration: "3분",
   },
   {
-    slug: "slowmath_circle",
-    name: "Circle",
-    korName: "한 자리 덧셈 연습",
-    Icon: IconTen.bind(null, { color: "#E8924A", n: "+" }),
-    category: "addition",
-    shortDesc: "고르기·쌓기·채우기 세 가지 방식으로 덧셈을 연습해요",
+    slug: "slowmath_comparing2",
+    name: "Comparing 2",
+    korName: "비교하기 기초 2",
+    Icon: IconLocation,
+    category: "relation",
+    shortDesc: "위·아래·안·밖 등 공간 관계를 비교하며 익혀요",
     value:
-      "같은 덧셈을 다양한 형태로 경험해 개념이 더 깊이 자리잡혀요. 시각적 구체물을 활용하기 때문에 추상적 연산이 어려운 아이에게 특히 효과적입니다.",
-    tags: ["동그라미", "1~9 합", "시각 조작"],
-    childEffect: "답이 자연스럽게 떠올라요",
-    duration: "5분",
+      "위치와 공간 언어를 이해하는 것은 수학 문장제의 기초예요. 도형 그림으로 공간 개념을 자연스럽게 내면화할 수 있습니다.",
+    tags: ["공간 위치", "위아래", "안과 밖", "방향 비교"],
+    childEffect: "위·아래·안·밖을 짚어요",
+    duration: "3분",
   },
   {
-    slug: "slowmath_plusone",
-    name: "Plus One",
-    korName: "더하기 1",
-    Icon: ({ color }) => <IconTen color={color} n="+1" />,
-    category: "addition",
-    shortDesc: "수 배열판·순서 예측·무작위 문제로 +1 덧셈을 익혀요",
+    slug: "slowmath_clock",
+    name: "Clock",
+    korName: "시계 보기",
+    Icon: IconClock,
+    category: "relation",
+    shortDesc: "아날로그·디지털 시계를 읽는 법을 시·30분·15분 단위로 배워요",
     value:
-      "'+1은 다음 수'라는 규칙을 수 배열판으로 시각화해 직관적으로 이해할 수 있어요. 1~99 범위까지 단계적으로 넓혀 자신감을 쌓아줍니다.",
-    tags: ["+1 덧셈", "수 배열판", "다음 수 예측", "순서 인식"],
-    childEffect: "다음 수가 머릿속에 떠올라요",
+      "시계 보기는 생활 독립에 꼭 필요한 기술이에요. 정각부터 시작해 30분·15분·45분으로 점점 세밀해지는 단계로 누구나 따라갈 수 있도록 설계되었습니다.",
+    tags: ["아날로그", "디지털", "시간 읽기", "생활 독립"],
+    childEffect: "시간을 볼 수 있게 되었어요",
     duration: "5분",
   },
-  {
-    slug: "slowmath_plustwo",
-    name: "Plus Two",
-    korName: "더하기 2",
-    Icon: ({ color }) => <IconTen color={color} n="+2" />,
-    category: "addition",
-    shortDesc: "2 더하기를 배열판과 건너뛰기로 시각화해서 배워요",
-    value:
-      "수 배열판에서 두 칸 건너뛰는 패턴이 홀짝 개념과 연결되어 확장 학습이 가능해요. 1~98 범위를 단계별로 정복하며 성취감을 경험합니다.",
-    tags: ["+2 덧셈", "수 배열판", "홀짝 연결", "무작위"],
-    childEffect: "홀짝의 리듬이 눈에 보여요",
-    duration: "5분",
-  },
-  {
-    slug: "slowmath_plusthree",
-    name: "Plus Three",
-    korName: "더하기 3",
-    Icon: ({ color }) => <IconTen color={color} n="+3" />,
-    category: "addition",
-    shortDesc: "3 더하기를 여러 학습 모드로 반복 연습해요",
-    value:
-      "더하기 1·2를 익힌 후 자연스럽게 이어지는 단계로, 수 배열판 애니메이션이 연산 과정을 생생하게 보여줘요. 무작위 문제로 완전 학습을 지원합니다.",
-    tags: ["+3 덧셈", "수 배열판", "무작위"],
-    childEffect: "건너뛰며 수를 세요",
-    duration: "5분",
-  },
+
+  // ── 덧셈 전 개념 ──
   {
     slug: "slowmath_combining",
     name: "Combining",
-    korName: "모으기",
+    korName: "모으기 연습",
     Icon: IconMerge,
-    category: "addition",
+    category: "preadd",
     shortDesc: "두 수를 합쳐 하나의 수를 만드는 수 합성을 연습해요",
     value:
       "덧셈의 의미를 '모은다'는 직관으로 이해할 수 있어요. 드래그 인터랙션으로 손과 눈을 동시에 사용해 더 오래 기억됩니다.",
@@ -525,9 +611,9 @@ const apps: App[] = [
   {
     slug: "slowmath_splitting",
     name: "Splitting",
-    korName: "가르기",
+    korName: "가르기 연습",
     Icon: IconSplit,
-    category: "addition",
+    category: "preadd",
     shortDesc: "하나의 수를 두 부분으로 나누는 수 분해를 연습해요",
     value:
       "뺄셈과 덧셈의 기초가 되는 수 분해 개념을 익힐 수 있어요. 2~9까지 세 단계로 나뉘어 아이 수준에 딱 맞는 도전부터 시작할 수 있습니다.",
@@ -540,7 +626,7 @@ const apps: App[] = [
     name: "Complement",
     korName: "보수 연습",
     Icon: ({ color }) => <IconTen color={color} n="10" />,
-    category: "addition",
+    category: "preadd",
     shortDesc: "10을 채우는 짝꿍 수(보수)를 세 가지 방식으로 익혀요",
     value:
       "10의 보수는 받아올림 덧셈과 뺄셈의 핵심 개념이에요. 충동 억제 기능과 다양한 연습 모드로 충분히 반복해 완전 학습에 도달할 수 있습니다.",
@@ -548,129 +634,122 @@ const apps: App[] = [
     childEffect: "10을 채우는 짝을 찾아요",
     duration: "10분",
   },
+
+  // ── 덧셈 ──
   {
-    slug: "slowmath_color",
-    name: "Color",
-    korName: "색깔 익히기",
-    Icon: IconPalette,
-    category: "compare",
-    shortDesc: "색깔 이름을 보고·듣고·고르며 색 인지 능력을 키워요",
+    slug: "slowmath_plusone",
+    name: "Plus One",
+    korName: "더하기 1",
+    Icon: ({ color }) => <IconTen color={color} n="+1" />,
+    category: "add",
+    shortDesc: "수 배열판·순서 예측·무작위 문제로 +1 덧셈을 익혀요",
     value:
-      "발달 장애 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
-    tags: ["색상 인식", "색 이름", "순서 기억", "색 변별"],
-    childEffect: "색 이름이 입에 붙어요",
-    duration: "3분",
-  },
-  {
-    slug: "slowmath_comparing",
-    name: "Comparing",
-    korName: "비교하기",
-    Icon: IconScale,
-    category: "compare",
-    shortDesc: "크기·길이·높이·두께·양을 비교하며 수학 언어를 익혀요",
-    value:
-      "'더 크다', '더 짧다'를 수학적 개념과 연결해 줘요. 그림으로 직관적으로 보여주기 때문에 글을 읽지 못해도 학습할 수 있습니다.",
-    tags: ["크기 비교", "길이·높이", "두께·깊이", "양 비교"],
-    childEffect: "크다·작다의 말을 써요",
-    duration: "3분",
-  },
-  {
-    slug: "slowmath_comparing2",
-    name: "Comparing 2",
-    korName: "비교하기 2",
-    Icon: IconLocation,
-    category: "compare",
-    shortDesc: "위·아래·안·밖 등 공간 관계를 비교하며 익혀요",
-    value:
-      "위치와 공간 언어를 이해하는 것은 수학 문장제의 기초예요. 도형 그림으로 공간 개념을 자연스럽게 내면화할 수 있습니다.",
-    tags: ["공간 위치", "위아래", "안과 밖", "방향 비교"],
-    childEffect: "위·아래·안·밖을 짚어요",
-    duration: "3분",
-  },
-  {
-    slug: "slowmath_pattern",
-    name: "Pattern",
-    korName: "패턴 연습",
-    Icon: IconPattern,
-    category: "compare",
-    shortDesc: "반복되는 규칙에서 빠진 것을 찾는 패턴 인식을 훈련해요",
-    value:
-      "패턴 인식은 수학적 사고력의 핵심이에요. 과일·색깔·도형 패턴을 단계적으로 학습하고, 선택 잠금 기능으로 사고력을 키워줍니다.",
-    tags: ["규칙 찾기", "빈칸 채우기", "과일·도형", "다음 예측"],
-    childEffect: "다음에 올 것을 스스로 찾아요",
+      "'+1은 다음 수'라는 규칙을 수 배열판으로 시각화해 직관적으로 이해할 수 있어요. 1~99 범위까지 단계적으로 넓혀 자신감을 쌓아줍니다.",
+    tags: ["+1 덧셈", "수 배열판", "다음 수 예측", "순서 인식"],
+    childEffect: "다음 수가 머릿속에 떠올라요",
     duration: "5분",
   },
   {
-    slug: "slowmath_colorcopy",
-    name: "Color Copy",
-    korName: "똑같이 맞추기",
-    Icon: IconGrid,
-    category: "compare",
-    shortDesc: "제시된 색 격자 패턴을 그대로 따라 만들며 시지각을 훈련해요",
+    slug: "slowmath_plustwo",
+    name: "Plus Two",
+    korName: "더하기 2",
+    Icon: ({ color }) => <IconTen color={color} n="+2" />,
+    category: "add",
+    shortDesc: "2 더하기를 배열판과 건너뛰기로 시각화해서 배워요",
     value:
-      "시지각 변별과 작업 기억을 동시에 훈련해요. 2×2부터 5×5까지 격자가 커지고 색의 수도 조절할 수 있어 아이 수준에 맞게 활용 가능합니다.",
-    tags: ["색 격자", "패턴 복제", "색 조합"],
-    childEffect: "시각 기억이 조금씩 늘어요",
+      "수 배열판에서 두 칸 건너뛰는 패턴이 홀짝 개념과 연결되어 확장 학습이 가능해요. 1~98 범위를 단계별로 정복하며 성취감을 경험합니다.",
+    tags: ["+2 덧셈", "수 배열판", "홀짝 연결", "무작위"],
+    childEffect: "홀짝의 리듬이 눈에 보여요",
     duration: "5분",
   },
   {
-    slug: "slowmath_linedraw",
-    name: "Line Draw",
-    korName: "선 긋기",
-    Icon: IconPencil,
-    category: "motor",
-    shortDesc: "직선·곡선·나선을 따라 그리며 손의 안정성을 키워요",
+    slug: "slowmath_plusthree",
+    name: "Plus Three",
+    korName: "더하기 3",
+    Icon: ({ color }) => <IconTen color={color} n="+3" />,
+    category: "add",
+    shortDesc: "3 더하기를 여러 학습 모드로 반복 연습해요",
     value:
-      "글씨 쓰기와 그림 그리기의 기초가 되는 손 조절 능력을 재미있게 훈련해요. 3단계 난이도와 음성 안내로 아이가 포기하지 않고 꾸준히 연습할 수 있도록 돕습니다.",
-    tags: ["직선·곡선", "나선 패턴", "소근육", "쓰기 준비"],
-    childEffect: "선 긋기가 부드러워져요",
+      "더하기 1·2를 익힌 후 자연스럽게 이어지는 단계로, 수 배열판 애니메이션이 연산 과정을 생생하게 보여줘요. 무작위 문제로 완전 학습을 지원합니다.",
+    tags: ["+3 덧셈", "수 배열판", "무작위"],
+    childEffect: "건너뛰며 수를 세요",
     duration: "5분",
   },
   {
-    slug: "slowmath_dot2dot",
-    name: "Dot to Dot",
-    korName: "점선 따라 그리기",
-    Icon: IconDotLine,
-    category: "motor",
-    shortDesc: "주어진 점과 선을 보고 똑같이 따라 그리며 시지각과 소근육을 키워요",
+    slug: "slowmath_easy",
+    name: "Easy",
+    korName: "한 자리 덧셈",
+    Icon: IconPlus,
+    category: "add",
+    shortDesc: "가장 쉬운 단계부터 시작하는 한 자리 덧셈 연습",
     value:
-      "예시로 주어진 점-선 연결을 관찰하고 아래 격자에 똑같이 재현하는 활동이에요. 시지각 변별과 손 조절을 동시에 자극하고, 격자 크기·방향 복잡도를 조절해 아이 수준에 맞게 쓸 수 있습니다.",
-    tags: ["점-선 모사", "시지각", "소근육", "격자 난이도"],
-    childEffect: "손과 눈이 함께 움직여요",
+      "덧셈이 처음인 아이도 부담 없이 시작할 수 있도록 4단계로 난이도를 조절해요. 충동 억제 모드로 답을 고르기 전에 충분히 생각하는 습관을 만들어줍니다.",
+    tags: ["4단계", "난이도 조절", "선택형", "1자리 덧셈"],
+    childEffect: "+기호를 두려워하지 않아요",
     duration: "5분",
   },
   {
-    slug: "slowmath_numberdraw",
-    name: "Number Draw",
-    korName: "숫자 쓰기",
-    Icon: IconWrite,
-    category: "motor",
-    shortDesc: "0~9 숫자를 올바른 순서로 쓰는 법을 연습해요",
+    slug: "slowmath_circle",
+    name: "Circle",
+    korName: "한 자리 덧셈 연습",
+    Icon: IconTen.bind(null, { color: "#E8924A", n: "+" }),
+    category: "add",
+    shortDesc: "고르기·쌓기·채우기 세 가지 방식으로 덧셈을 연습해요",
     value:
-      "숫자 모양을 손으로 직접 써보며 형태를 몸으로 기억할 수 있어요. 점선 안내와 단계적 피드백으로 처음 쓰는 아이도 올바른 필순을 자연스럽게 익힙니다.",
-    tags: ["0~9 쓰기", "점선 가이드", "소근육", "획 순서"],
-    childEffect: "획 순서가 자연스러워져요",
+      "같은 덧셈을 다양한 형태로 경험해 개념이 더 깊이 자리잡혀요. 시각적 구체물을 활용하기 때문에 추상적 연산이 어려운 아이에게 특히 효과적입니다.",
+    tags: ["동그라미", "1~9 합", "시각 조작"],
+    childEffect: "답이 자연스럽게 떠올라요",
+    duration: "5분",
+  },
+
+  // ── 뺄셈 ──
+  {
+    slug: "slowmath_minusone",
+    name: "Minus One",
+    korName: "빼기 1",
+    Icon: ({ color }) => <IconTen color={color} n="-1" />,
+    category: "sub",
+    shortDesc: "수 배열판·이전 수 예측·무작위 문제로 -1 뺄셈을 익혀요",
+    value:
+      "'-1은 바로 앞 수'라는 규칙을 수 배열판으로 시각화해 직관적으로 이해할 수 있어요. 단계적 범위 확장으로 뺄셈에 대한 부담 없이 익힙니다.",
+    tags: ["-1 뺄셈", "수 배열판", "이전 수 예측", "역순 인식"],
+    childEffect: "이전 수를 떠올려요",
     duration: "5분",
   },
   {
-    slug: "slowmath_clock",
-    name: "Clock",
-    korName: "시계 보기",
-    Icon: IconClock,
-    category: "advanced",
-    shortDesc: "아날로그·디지털 시계를 읽는 법을 시·30분·15분 단위로 배워요",
+    slug: "slowmath_minustwo",
+    name: "Minus Two",
+    korName: "빼기 2",
+    Icon: ({ color }) => <IconTen color={color} n="-2" />,
+    category: "sub",
+    shortDesc: "2 빼기를 배열판과 거꾸로 건너뛰기로 시각화해서 배워요",
     value:
-      "시계 보기는 생활 독립에 꼭 필요한 기술이에요. 정각부터 시작해 30분·15분·45분으로 점점 세밀해지는 단계로 누구나 따라갈 수 있도록 설계되었습니다.",
-    tags: ["아날로그", "디지털", "시간 읽기", "생활 독립"],
-    childEffect: "시간을 볼 수 있게 되었어요",
+      "수 배열판에서 두 칸씩 거꾸로 건너뛰는 패턴으로 -2 뺄셈을 직관적으로 이해해요. 단계별 범위 확장으로 자기 속도에 맞게 정복할 수 있습니다.",
+    tags: ["-2 뺄셈", "수 배열판", "거꾸로 세기", "무작위"],
+    childEffect: "거꾸로 두 칸씩 세요",
     duration: "5분",
   },
+  {
+    slug: "slowmath_minusthree",
+    name: "Minus Three",
+    korName: "빼기 3",
+    Icon: ({ color }) => <IconTen color={color} n="-3" />,
+    category: "sub",
+    shortDesc: "3 빼기를 여러 학습 모드로 반복 연습해요",
+    value:
+      "빼기 1·2를 익힌 후 자연스럽게 이어지는 단계로, 수 배열판 애니메이션이 뺄셈 과정을 생생하게 보여줘요. 무작위 문제로 완전 학습을 지원합니다.",
+    tags: ["-3 뺄셈", "수 배열판", "무작위"],
+    childEffect: "거꾸로 세 칸씩 세요",
+    duration: "5분",
+  },
+
+  // ── 곱셈 ──
   {
     slug: "slowmath_timestables",
     name: "Timestables",
-    korName: "구구단",
+    korName: "구구단 연습",
     Icon: IconMultiply,
-    category: "advanced",
+    category: "mul",
     shortDesc: "2~9단 구구단을 충분한 생각 시간과 함께 천천히 익혀요",
     value:
       "생각 시간을 충분히 조절할 수 있어 빠른 암기가 어려운 아이도 자기 속도로 구구단을 정복할 수 있어요. 반복 노출을 통해 장기 기억으로 자연스럽게 전환됩니다.",
@@ -820,31 +899,41 @@ function CategorySection({
       aria-labelledby={`heading-${cat.id}`}
       style={{ scrollMarginTop: 72 }}
     >
-      <div className="flex items-center gap-3 mb-6">
+      <div className="flex items-start gap-3 mb-6">
         <div
-          className="flex items-center justify-center rounded-xl"
+          className="flex items-center justify-center rounded-xl shrink-0 [&_svg]:w-8 [&_svg]:h-8"
           style={{
-            width: 40,
-            height: 40,
+            width: 52,
+            height: 52,
             background: cat.bgColor,
             border: `1.5px solid ${cat.borderColor}`,
           }}
         >
           <Icon color={cat.color} />
         </div>
-        <h2
-          id={`heading-${cat.id}`}
-          className="text-xl font-black"
-          style={{ color: "#2D2620" }}
-        >
-          {cat.label}
-        </h2>
-        <span
-          className="ml-1 text-xs font-bold rounded-full px-3 py-1"
-          style={{ background: cat.bgColor, color: cat.color }}
-        >
-          {catApps.length}개
-        </span>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-2 flex-wrap">
+            <h2
+              id={`heading-${cat.id}`}
+              className="text-xl font-black"
+              style={{ color: "#2D2620", letterSpacing: "-0.02em" }}
+            >
+              {cat.label}
+            </h2>
+            <span
+              className="text-xs font-bold rounded-full px-3 py-1"
+              style={{ background: cat.bgColor, color: cat.color }}
+            >
+              {catApps.length}개
+            </span>
+          </div>
+          <p
+            className="text-sm break-keep"
+            style={{ color: "#7B6545", marginTop: 4 }}
+          >
+            {cat.subtitle}
+          </p>
+        </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
         {catApps.map((app) => (
@@ -1123,7 +1212,7 @@ export default function Page() {
                 그 마음, 저희도 알아요.
               </p>
               <p className="leading-relaxed break-keep" style={{ fontSize: "0.85rem", color: "#D9C9B0" }}>
-                그래서 아이의 속도에 맞춘 22개의 작은 연습을 만들었습니다.
+                그래서 아이의 속도에 맞춘 25개의 작은 연습을 만들었습니다.
                 한 화면, 한 걸음, 아이의 속도에 맞춰 천천히 함께 걸어요.
               </p>
             </div>
@@ -1383,8 +1472,8 @@ export default function Page() {
                 bg: "#E6F6EE",
                 border: "#90D8B0",
                 apps: [
-                  { name: "비교하기", slug: "slowmath_comparing" },
-                  { name: "비교하기 2", slug: "slowmath_comparing2" },
+                  { name: "비교하기 기초", slug: "slowmath_comparing" },
+                  { name: "비교하기 기초 2", slug: "slowmath_comparing2" },
                   { name: "패턴 연습", slug: "slowmath_pattern" },
                 ],
               },
@@ -1397,8 +1486,8 @@ export default function Page() {
                 border: "#BBA8E8",
                 apps: [
                   { name: "숫자 매칭", slug: "slowmath_matching" },
-                  { name: "모으기", slug: "slowmath_combining" },
-                  { name: "가르기", slug: "slowmath_splitting" },
+                  { name: "모으기 연습", slug: "slowmath_combining" },
+                  { name: "가르기 연습", slug: "slowmath_splitting" },
                   { name: "한 자리 덧셈", slug: "slowmath_easy" },
                 ],
               },
@@ -1471,7 +1560,7 @@ export default function Page() {
             전체 학습 도구 한눈에 보기
           </h2>
           <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
-            22개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
+            25개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
             {apps.map((app) => {
