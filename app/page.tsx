@@ -298,6 +298,16 @@ function IconGentle() {
   );
 }
 
+function IconFocus() {
+  return (
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
+      <circle cx="18" cy="18" r="13" stroke="#D9A84A" strokeWidth="1.5" fill="#D9A84A" fillOpacity=".08" strokeDasharray="3 2.5" opacity=".7"/>
+      <circle cx="18" cy="18" r="8" stroke="#D9A84A" strokeWidth="1.8" fill="#D9A84A" fillOpacity=".22"/>
+      <circle cx="18" cy="18" r="3" fill="#D9A84A"/>
+    </svg>
+  );
+}
+
 // ─── Data ──────────────────────────────────────────────────────────────────
 
 const BASE = "https://sprit6487.github.io/slowmath_all";
@@ -975,6 +985,11 @@ export default function Page() {
       Icon: IconGentle,
       title: "감각 배려 설계",
       desc: "번쩍임·갑작스러운 소리 없이, 조용한 화면으로 만들었어요",
+    },
+    {
+      Icon: IconFocus,
+      title: "한 화면, 한 활동",
+      desc: "한 번에 하나의 활동만 담아 산만함 없이 깊게 집중할 수 있어요",
     },
   ];
 
