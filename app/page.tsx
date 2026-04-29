@@ -1372,22 +1372,22 @@ export default function Page() {
           >
             느린아이 학습 도구가 다른 이유
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-5">
             {valueProps.map((v) => (
               <div
                 key={v.title}
-                className="flex flex-col items-center text-center gap-3 rounded-2xl p-5"
+                className="flex flex-col items-center text-center gap-3 rounded-2xl p-5 lg:p-7 lg:gap-4 lg:[&_svg]:w-11 lg:[&_svg]:h-11"
                 style={{ background: "#F7F4F0" }}
               >
                 <v.Icon />
                 <h3
-                  className="font-black text-sm"
+                  className="font-black text-sm lg:text-base"
                   style={{ color: "#2D2620", letterSpacing: "-0.01em" }}
                 >
                   {v.title}
                 </h3>
                 <p
-                  className="leading-relaxed break-keep"
+                  className="leading-relaxed break-keep lg:text-[0.9rem]"
                   style={{ fontSize: "0.8rem", color: "#7B6545", lineHeight: 1.6 }}
                 >
                   {v.desc}
