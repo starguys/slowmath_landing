@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.slowkids.net"),
+  metadataBase: new URL("https://slowkids.net"),
   alternates: {
-    canonical: "https://www.slowkids.net/",
+    canonical: "https://slowkids.net/",
   },
   title: "느린아이 | 한 걸음씩, 아이의 속도로",
   description:
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
 };
 
-const SITE_URL = "https://www.slowkids.net";
+const SITE_URL = "https://slowkids.net";
 const APP_BASE = "https://sprit6487.github.io/slowmath_all";
 
 const organizationJsonLd = {

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
-const BASE_URL = "https://www.slowkids.net";
+const BASE_URL = "https://slowkids.net";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
