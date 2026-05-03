@@ -122,6 +122,15 @@ function IconLocation({ color }: { color: string }) {
   );
 }
 
+function IconCompare({ color }: { color: string }) {
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
+      <rect x="5" y="7" width="6" height="15" rx="1.2" fill={color} fillOpacity=".25" stroke={color} strokeWidth="1.5" />
+      <rect x="17" y="13" width="6" height="9" rx="1.2" fill={color} fillOpacity=".5" stroke={color} strokeWidth="1.5" />
+    </svg>
+  );
+}
+
 function IconPattern({ color }: { color: string }) {
   const shapes = [
     { x: 5, y: 9, type: "circle" },
@@ -326,6 +335,7 @@ const appEmoji: Record<string, string> = {
   slowmath_matching: "🎯",
   slowmath_comparing: "⚖️",
   slowmath_comparing2: "⚖️",
+  slowmath_compare: "📏",
   slowmath_clock: "🕐",
   slowmath_combining: "🫱",
   slowmath_splitting: "✂️",
@@ -591,6 +601,19 @@ const apps: App[] = [
     tags: ["공간 위치", "위아래", "안과 밖", "방향 비교"],
     childEffect: "위·아래·안·밖을 짚어요",
     duration: "3분",
+  },
+  {
+    slug: "slowmath_compare",
+    name: "Compare",
+    korName: "수의 크기",
+    Icon: IconCompare,
+    category: "relation",
+    shortDesc: "두 수·네 수 중 큰 수·작은 수와 부등호를 골라요",
+    value:
+      "수의 대소 관계를 수평선과 막대 차트 힌트로 시각적으로 익혀요. 한 자리·두 자리 모두 지원하며 부등호(<, =, >) 학습까지 단계적으로 이어집니다.",
+    tags: ["크기 비교", "부등호", "한 자리", "두 자리"],
+    childEffect: "큰 수·작은 수를 골라요",
+    duration: "5분",
   },
   {
     slug: "slowmath_clock",
@@ -1230,7 +1253,7 @@ export default function Page() {
                 그 마음, 저희도 알아요.
               </p>
               <p className="leading-relaxed break-keep" style={{ fontSize: "0.85rem", color: "#D9C9B0" }}>
-                그래서 아이의 속도에 맞춘 25개의 작은 연습을 만들었습니다.
+                그래서 아이의 속도에 맞춘 26개의 작은 연습을 만들었습니다.
                 한 화면, 한 걸음, 아이의 속도에 맞춰 천천히 함께 걸어요.
               </p>
             </div>
@@ -1573,7 +1596,7 @@ export default function Page() {
             전체 학습 도구 한눈에 보기
           </h2>
           <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
-            25개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
+            26개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
             {apps.map((app) => {
