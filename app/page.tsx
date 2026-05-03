@@ -608,7 +608,7 @@ const apps: App[] = [
     korName: "수의 크기",
     Icon: IconCompare,
     category: "relation",
-    shortDesc: "두 수·네 수 중 큰 수·작은 수와 부등호를 골라요",
+    shortDesc: "수의 크기를 비교하고 부등호로 표현하는 법을 익혀요",
     value:
       "수의 대소 관계를 수평선과 막대 차트 힌트로 시각적으로 익혀요. 한 자리·두 자리 모두 지원하며 부등호(<, =, >) 학습까지 단계적으로 이어집니다.",
     tags: ["크기 비교", "부등호", "한 자리", "두 자리"],
@@ -1510,6 +1510,7 @@ export default function Page() {
                 apps: [
                   { name: "비교하기 기초", slug: "slowmath_comparing" },
                   { name: "비교하기 기초 2", slug: "slowmath_comparing2" },
+                  { name: "수의 크기", slug: "slowmath_compare" },
                   { name: "패턴 연습", slug: "slowmath_pattern" },
                 ],
               },
