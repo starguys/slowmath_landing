@@ -1679,6 +1679,35 @@ export default function Page() {
           간단하지만 강력한 학습 도구
         </p>
 
+        <nav
+          className="flex items-center justify-center gap-4 mb-2"
+          aria-label="법적 고지"
+        >
+          <a
+            href="/terms"
+            style={{
+              fontSize: "0.82rem",
+              color: "#A89070",
+              textDecoration: "none",
+              letterSpacing: "0.01em",
+            }}
+          >
+            이용약관
+          </a>
+          <span style={{ color: "#A89070", opacity: 0.4, fontSize: "0.82rem" }}>·</span>
+          <a
+            href="/privacy"
+            style={{
+              fontSize: "0.82rem",
+              color: "#A89070",
+              textDecoration: "none",
+              letterSpacing: "0.01em",
+            }}
+          >
+            개인정보처리방침
+          </a>
+        </nav>
+
         <div
           className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 mt-6 pt-6 mb-4"
           style={{ borderTop: "1px solid rgba(217,201,176,0.18)" }}
