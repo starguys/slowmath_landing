@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://slowkids.net/",
   },
-  title: "느린아이 | 한 걸음씩, 아이의 속도로",
+  title: "느린아이 | 한 걸음씩, 아이의 속도로 배우는 수학",
   description:
-    "발달 지연·경계선 지능·학습 장애 아동이 스스로 해내는 경험을 쌓도록 설계된 수학 학습 도구 25종. 숫자 익히기·덧셈·뺄셈·구구단·시계 보기·비교하기·패턴 인지·소근육 발달 훈련까지. 학부모가 집에서 바로 활용할 수 있습니다.",
+    "발달 지연·경계선 지능·학습 장애 아동이 스스로 해내는 경험을 쌓도록 설계된 수학·인지 학습 도구. 숫자 익히기·덧셈·뺄셈·구구단·시계 보기·비교하기·패턴 인지·소근육 발달 훈련까지. 학부모가 집에서 바로 활용할 수 있습니다.",
   keywords: [
     "느린 학습자 수학",
     "발달 지연 아이 수학 학습",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "느린아이 시리즈 — 한 걸음씩, 아이의 속도로",
     description:
-      "발달 지연·경계선 지능·학습 장애 아동이 자기 속도로 수학의 기초를 쌓는 25개 학습 도구. 무료로 바로 사용해보세요.",
+      "발달 지연·경계선 지능·학습 장애 아동이 자기 속도로 수학의 기초를 쌓는 학습 도구. 무료로 바로 사용해보세요.",
     images: ["https://starguys.github.io/slowmath_landing/og-image.png"],
   },
   verification: {
@@ -86,7 +86,7 @@ const websiteJsonLd = {
   url: SITE_URL,
   inLanguage: "ko-KR",
   description:
-    "발달 지연·경계선 지능·학습 장애 아동을 위한 25개의 수학·인지·소근육 학습 도구.",
+    "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지·소근육 학습 도구.",
   publisher: {
     "@type": "Organization",
     name: "느린아이",
@@ -133,7 +133,7 @@ const itemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "느린아이 시리즈 학습 도구",
-  description: "발달 지연·경계선 지능·학습 장애 아동을 위한 25개의 수학·인지 학습 도구",
+  description: "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지 학습 도구",
   numberOfItems: appCatalog.length,
   itemListOrder: "https://schema.org/ItemListOrderAscending",
   itemListElement: appCatalog.map((app, i) => ({
