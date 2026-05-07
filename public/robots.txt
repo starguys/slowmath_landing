@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /_next/
+
+Sitemap: https://slowkids.net/sitemap.xml
 
 #DaumWebMasterTool:c5bdb679701d04460d63adc4676bfae39c43595364dc091b4f4c99068334dea8:gymxscrxoHpb6sqWS7OClA==
