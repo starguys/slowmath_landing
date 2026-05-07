@@ -345,6 +345,7 @@ const appEmoji: Record<string, string> = {
   slowmath_plusthree: "3️⃣",
   slowmath_easy: "➕",
   slowmath_circle: "➕",
+  slowmath_carry: "🆙",
   slowmath_minusone: "1️⃣",
   slowmath_minustwo: "2️⃣",
   slowmath_minusthree: "3️⃣",
@@ -734,6 +735,19 @@ const apps: App[] = [
       "같은 덧셈을 다양한 형태로 경험해 개념이 더 깊이 자리잡혀요. 시각적 구체물을 활용하기 때문에 추상적 연산이 어려운 아이에게 특히 효과적입니다.",
     tags: ["동그라미", "1~9 합", "시각 조작"],
     childEffect: "답이 자연스럽게 떠올라요",
+    duration: "5분",
+  },
+  {
+    slug: "slowmath_carry",
+    name: "Carry",
+    korName: "받아올림 연습",
+    Icon: IconTen.bind(null, { color: "#E8924A", n: "10+" }),
+    category: "add",
+    shortDesc: "가르기와 배열판으로 10을 만들어 받아올림을 익혀요",
+    value:
+      "두 자리 수 덧셈의 핵심인 받아올림을 가르기·보수와 배열판이라는 두 가지 직관적 방법으로 분리해 학습해요. 드래그 인터랙션으로 '10을 만든다'는 감각을 손과 눈으로 함께 익힙니다.",
+    tags: ["받아올림", "10 만들기", "가르기", "배열판", "드래그"],
+    childEffect: "10을 먼저 만들 줄 알아요",
     duration: "5분",
   },
 
@@ -1253,7 +1267,7 @@ export default function Page() {
                 그 마음, 저희도 알아요.
               </p>
               <p className="leading-relaxed break-keep" style={{ fontSize: "0.85rem", color: "#D9C9B0" }}>
-                그래서 아이의 속도에 맞춘 26개의 작은 연습을 만들었습니다.
+                그래서 아이의 속도에 맞춘 27개의 작은 연습을 만들었습니다.
                 한 화면, 한 걸음, 아이의 속도에 맞춰 천천히 함께 걸어요.
               </p>
             </div>
@@ -1597,7 +1611,7 @@ export default function Page() {
             전체 학습 도구 한눈에 보기
           </h2>
           <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
-            26개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
+            27개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
             {apps.map((app) => {
