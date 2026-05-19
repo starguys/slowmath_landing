@@ -1550,8 +1550,8 @@ export default function Page() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 justify-items-center">
             {[
-              { src: `${ASSET_BASE}/video/landing-2.mp4`, label: "느린아이 앱으로 학습하는 아이의 모습 1" },
-              { src: `${ASSET_BASE}/video/landing-4.mp4`, label: "느린아이 앱으로 학습하는 아이의 모습 2" },
+              { src: `${ASSET_BASE}/video/landing-4.mp4`, label: "느린아이 앱으로 학습하는 아이의 모습 1" },
+              { src: `${ASSET_BASE}/video/landing-2.mp4`, label: "느린아이 앱으로 학습하는 아이의 모습 2" },
             ].map((v) => (
               <div
                 key={v.src}
