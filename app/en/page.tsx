@@ -200,14 +200,14 @@ export default function HomeEn() {
           </a>
           <div className="inline-flex overflow-hidden rounded-full border border-[#EDE0C8] text-[11px] font-bold">
             <a
-              href="/"
+              href="/?lang=ko"
               className="px-2.5 py-1.5 text-[#7B6545] transition-colors hover:text-[#2D2620]"
               aria-label="한국어로 보기"
             >
               KR
             </a>
             <a
-              href="/en/"
+              href="/en/?lang=en"
               className="bg-[#2D2620] px-2.5 py-1.5 text-white"
               aria-label="English"
             >

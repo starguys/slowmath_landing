@@ -1167,7 +1167,7 @@ export default function Page() {
         }}
       >
         <a
-          href="/"
+          href="/?lang=ko"
           aria-label="한국어"
           style={{
             padding: "6px 12px",
@@ -1179,7 +1179,7 @@ export default function Page() {
           KR
         </a>
         <a
-          href="/en/"
+          href="/en/?lang=en"
           aria-label="English"
           style={{
             padding: "6px 12px",
