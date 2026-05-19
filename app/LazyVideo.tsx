@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 type Props = {
   src: string;
-  poster: string;
+  poster?: string;
   ariaLabel: string;
   className?: string;
   style?: React.CSSProperties;
