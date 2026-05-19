@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import LazyVideo from "../LazyVideo";
 
 const IOS_APP_URL = "https://apps.apple.com/us/app/id6763979294";
 const SITE_URL = "https://slowkids.net";
 const SITE_URL_EN = `${SITE_URL}/en/`;
+const ASSET_BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   title: "SlowKids — Math at every child's pace",
@@ -368,6 +370,95 @@ export default function HomeEn() {
             <p className="text-sm font-semibold leading-relaxed" style={{ color: "#5A9FD8" }}>
               Built by a KAIST-trained engineer and father of a child on the autism spectrum, from his family's own experience.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Real-usage demo video */}
+      <section
+        aria-label="How a child uses SlowKids"
+        className="px-6 py-12 sm:py-16"
+        style={{
+          borderBottom: "1px solid #EDE0C8",
+          background: "linear-gradient(180deg, #FBF6ED 0%, #F7F4F0 100%)",
+        }}
+      >
+        <div style={{ maxWidth: "960px", margin: "0 auto" }}>
+          <div className="text-center mb-8">
+            <p
+              className="font-semibold mb-3"
+              style={{
+                fontSize: "0.72rem",
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                color: "#5A9FD8",
+              }}
+            >
+              In real life
+            </p>
+            <h2
+              className="font-black mb-5 break-keep"
+              style={{
+                fontSize: "clamp(1.35rem, 3.6vw, 1.8rem)",
+                color: "#2D2620",
+                letterSpacing: "-0.02em",
+                lineHeight: 1.3,
+              }}
+            >
+              Before words —
+              <br />
+              <span style={{ color: "#E8924A" }}>let us show you.</span>
+            </h2>
+            <p
+              className="leading-loose break-keep mb-6"
+              style={{ fontSize: "0.95rem", color: "#7B6545", maxWidth: "560px", margin: "0 auto 1.5rem" }}
+            >
+              One slow step at a time. Instead of flashy reactions, scenes where a child stays at their own pace.
+            </p>
+            <ul
+              className="flex flex-col sm:flex-row sm:justify-center gap-2.5 sm:gap-6"
+              style={{ fontSize: "0.9rem", color: "#4A4035" }}
+            >
+              <li className="flex items-start gap-2 break-keep justify-center">
+                <span aria-hidden style={{ color: "#5A9FD8", fontWeight: 900, lineHeight: 1.6 }}>·</span>
+                A quiet screen, plenty of time to think
+              </li>
+              <li className="flex items-start gap-2 break-keep justify-center">
+                <span aria-hidden style={{ color: "#E8924A", fontWeight: 900, lineHeight: 1.6 }}>·</span>
+                Try again — confidence built from small repetitions
+              </li>
+              <li className="flex items-start gap-2 break-keep justify-center">
+                <span aria-hidden style={{ color: "#4DB87A", fontWeight: 900, lineHeight: 1.6 }}>·</span>
+                Moments the child taps and confirms on their own
+              </li>
+            </ul>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 justify-items-center">
+            {[
+              { src: `${ASSET_BASE}/video/landing-4.mp4`, label: "A child learning with SlowKids 1" },
+              { src: `${ASSET_BASE}/video/landing-2.mp4`, label: "A child learning with SlowKids 2" },
+            ].map((v) => (
+              <div
+                key={v.src}
+                className="relative overflow-hidden rounded-2xl"
+                style={{
+                  width: "100%",
+                  maxWidth: "300px",
+                  aspectRatio: "406 / 720",
+                  background: "#EDE0C8",
+                  boxShadow: "0 22px 48px rgba(45,38,32,0.16)",
+                  border: "1px solid #EDE0C8",
+                }}
+              >
+                <LazyVideo
+                  src={v.src}
+                  ariaLabel={v.label}
+                  className="absolute inset-0 w-full h-full"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
