@@ -657,7 +657,7 @@ const apps: App[] = [
   // ── 수 관계 ──
   {
     slug: "slowmath_comparing",
-    name: "Comparing",
+    name: "Compare",
     korName: "비교하기 기초",
     Icon: IconScale,
     category: "relation",
@@ -670,7 +670,7 @@ const apps: App[] = [
   },
   {
     slug: "slowmath_comparing2",
-    name: "Comparing 2",
+    name: "Compare 2",
     korName: "비교하기 기초 2",
     Icon: IconLocation,
     category: "relation",
