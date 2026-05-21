@@ -4,7 +4,14 @@ export const metadata: Metadata = {
   title: "개인정보 처리방침 | 느린아이",
   description:
     "느린아이 서비스의 개인정보 처리방침입니다. 수집·이용 항목, 보유 기간, 위탁, 정보주체 권리, 보호책임자 안내를 확인할 수 있습니다.",
-  alternates: { canonical: "/privacy" },
+  alternates: {
+    canonical: "/privacy",
+    languages: {
+      ko: "https://slowkids.net/privacy",
+      en: "https://slowkids.net/en/privacy",
+      "x-default": "https://slowkids.net/privacy",
+    },
+  },
   robots: { index: true, follow: true },
 };
 

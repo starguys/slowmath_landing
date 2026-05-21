@@ -4,7 +4,14 @@ export const metadata: Metadata = {
   title: "서비스 이용약관 | 느린아이",
   description:
     "느린아이 서비스의 이용약관입니다. 회원의 권리·의무, 이용권 및 결제, 청약 철회, 환불, 분쟁 해결 등을 안내합니다.",
-  alternates: { canonical: "/terms" },
+  alternates: {
+    canonical: "/terms",
+    languages: {
+      ko: "https://slowkids.net/terms",
+      en: "https://slowkids.net/en/terms",
+      "x-default": "https://slowkids.net/terms",
+    },
+  },
   robots: { index: true, follow: true },
 };
 
