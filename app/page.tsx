@@ -393,11 +393,14 @@ const appEmoji: Record<string, string> = {
   slowmath_easy: "➕",
   slowmath_circle: "➕",
   slowmath_carry: "🆙",
+  slowmath_verticaladd: "🧮",
   slowmath_moneycalc: "💰",
   slowmath_minusone: "1️⃣",
   slowmath_minustwo: "2️⃣",
   slowmath_minusthree: "3️⃣",
   slowmath_borrow: "⬇️",
+  slowmath_verticalsub: "🧮",
+  slowmath_changecalc: "🧾",
   slowmath_timestables: "✖️",
 };
 
@@ -826,6 +829,19 @@ const apps: App[] = [
     duration: "5분",
   },
   {
+    slug: "slowmath_verticaladd",
+    name: "Vertical Add",
+    korName: "세로 덧셈",
+    Icon: IconTen.bind(null, { color: "#E8924A", n: "+" }),
+    category: "add",
+    shortDesc: "두 자리 수 세로 덧셈을 일의 자리부터 차근차근 풀어요",
+    value:
+      "받아올림을 익힌 다음 단계로, 일의 자리·십의 자리를 분리해 풀이 흐름을 시각적으로 보여줘요. 빈칸이 한 칸씩 늘어나며 아이가 스스로 절차를 익힐 수 있도록 돕습니다.",
+    tags: ["세로 덧셈", "두 자리", "받아올림", "단계별 풀이"],
+    childEffect: "세로식 풀이 흐름이 손에 익어요",
+    duration: "7분",
+  },
+  {
     slug: "slowmath_moneycalc",
     name: "Money Calc",
     korName: "돈 계산하기",
@@ -891,6 +907,32 @@ const apps: App[] = [
     tags: ["받아내림", "세로 뺄셈", "두 자리", "단계별 풀이"],
     childEffect: "받아내림의 원리를 보고 풀어요",
     duration: "7분",
+  },
+  {
+    slug: "slowmath_verticalsub",
+    name: "Vertical Sub",
+    korName: "세로 뺄셈",
+    Icon: IconBorrow,
+    category: "sub",
+    shortDesc: "두 자리 수 세로 뺄셈을 일의 자리부터 차근차근 풀어요",
+    value:
+      "받아내림 개념을 익힌 다음 단계로, 일의 자리·십의 자리를 분리해 풀이 흐름을 시각적으로 보여줘요. 빈칸이 한 칸씩 늘어나며 절차적 풀이를 스스로 익힐 수 있습니다.",
+    tags: ["세로 뺄셈", "두 자리", "받아내림", "단계별 풀이"],
+    childEffect: "세로식 뺄셈 절차가 손에 익어요",
+    duration: "7분",
+  },
+  {
+    slug: "slowmath_changecalc",
+    name: "Change Calc",
+    korName: "거스름돈 계산하기",
+    Icon: IconMoneyCalc,
+    category: "sub",
+    shortDesc: "물건값과 낸 돈을 보고 거스름돈을 계산해요",
+    value:
+      "뺄셈을 실생활(돈)로 옮긴 응용 단계. 가격과 낸 돈의 차액으로 거스름돈을 직접 골라보며, 동전·지폐 단위 감각과 뺄셈을 함께 익힙니다.",
+    tags: ["거스름돈", "동전·지폐", "차액", "실생활 응용"],
+    childEffect: "잔돈 감각이 생겨요",
+    duration: "5분",
   },
 
   // ── 곱셈 ──
@@ -1463,7 +1505,7 @@ export default function Page() {
                 그 마음, 저희도 알아요.
               </p>
               <p className="leading-relaxed break-keep" style={{ fontSize: "0.85rem", color: "#D9C9B0" }}>
-                그래서 아이의 속도에 맞춘 31개의 작은 연습을 만들었습니다.
+                그래서 아이의 속도에 맞춘 34개의 작은 연습을 만들었습니다.
                 한 화면, 한 걸음, 아이의 속도에 맞춰 천천히 함께 걸어요.
               </p>
             </div>
@@ -1795,7 +1837,7 @@ export default function Page() {
             전체 학습 도구 한눈에 보기
           </h2>
           <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
-            31개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
+            34개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
             {apps.map((app) => {
