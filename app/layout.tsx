@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     canonical: "https://slowkids.net/",
     languages: {
       ko: "https://slowkids.net/",
-      en: "https://slowkids.net/en/",
+      en: "https://slowkids.net/en",
       "x-default": "https://slowkids.net/",
     },
   },
@@ -183,6 +183,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // output: "export" 정적 빌드라 단일 root layout만 가능 → KO를 기본으로 두고
+  // /en 페이지는 post-build 스크립트(scripts/postbuild-set-en-lang.mjs)가
+  // lang="ko" → lang="en"으로 패치한다
   return (
     <html lang="ko">
       <head>
@@ -205,7 +208,7 @@ export default function RootLayout({
         </noscript>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var sp=new URLSearchParams(location.search);var q=sp.get('lang');if(q==='ko'||q==='en'){localStorage.setItem('lang-pref',q);sp.delete('lang');var qs=sp.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:'')+location.hash);return;}var p=localStorage.getItem('lang-pref');var path=location.pathname;var onEn=path.indexOf('/en')===0;if(!p){var lang=(navigator.language||'').toLowerCase();var preferKo=lang.indexOf('ko')===0;if(!preferKo&&!onEn){location.replace('/en'+(path==='/'?'/':path));return;}}else if(p==='ko'&&onEn){location.replace(path.replace(/^\\/en\\/?/,'/'));return;}else if(p==='en'&&!onEn){location.replace('/en'+(path==='/'?'/':path));return;}}catch(e){}})();`,
+            __html: `(function(){try{var sp=new URLSearchParams(location.search);var q=sp.get('lang');if(q==='ko'||q==='en'){localStorage.setItem('lang-pref',q);sp.delete('lang');var qs=sp.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:'')+location.hash);return;}var p=localStorage.getItem('lang-pref');var path=location.pathname;var onEn=path.indexOf('/en')===0;if(!p){var lang=(navigator.language||'').toLowerCase();var preferKo=lang.indexOf('ko')===0;if(!preferKo&&!onEn){location.replace('/en'+(path==='/'?'':path));return;}}else if(p==='ko'&&onEn){location.replace(path.replace(/^\\/en\\/?/,'/'));return;}else if(p==='en'&&!onEn){location.replace('/en'+(path==='/'?'':path));return;}}catch(e){}})();`,
           }}
         />
         {jsonLdBlocks.map((block, i) => (

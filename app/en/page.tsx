@@ -3,7 +3,7 @@ import LazyVideo from "../LazyVideo";
 
 const IOS_APP_URL = "https://apps.apple.com/us/app/id6763979294";
 const SITE_URL = "https://slowkids.net";
-const SITE_URL_EN = `${SITE_URL}/en/`;
+const SITE_URL_EN = `${SITE_URL}/en`;
 const ASSET_BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {

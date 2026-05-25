@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/postbuild-set-en-lang.mjs",
     "start": "next start",
     "lint": "eslint"
   },
