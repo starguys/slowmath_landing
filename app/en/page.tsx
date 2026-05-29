@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LazyVideo from "../LazyVideo";
+import StoreBadges from "../StoreBadges";
 import SetHtmlLang from "./SetHtmlLang";
 
 const IOS_APP_URL = "https://apps.apple.com/us/app/id6763979294";
@@ -184,7 +185,7 @@ const FAQS = [
   },
   {
     q: "Can I try it on the web first?",
-    a: "Yes. The series is available on iOS, and each module is also previewable on this site. The full experience — saved progress, offline use, parental controls — lives in the app.",
+    a: "Yes. SlowKids is available on both the iOS App Store and Google Play, and each module is also previewable on this site. The full experience — saved progress, offline use, parental controls — lives in the app.",
   },
   {
     q: "Who made this?",
@@ -278,65 +279,7 @@ export default function HomeEn() {
           </p>
 
           <div className="flex flex-col items-center gap-4">
-            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto items-center justify-center">
-              <a
-                href={IOS_APP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Download SlowKids on the App Store"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  background: "#000",
-                  color: "#fff",
-                  padding: "13px 22px",
-                  borderRadius: "12px",
-                  textDecoration: "none",
-                  fontWeight: 600,
-                  letterSpacing: "-0.01em",
-                  minWidth: "210px",
-                  justifyContent: "center",
-                }}
-              >
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden>
-                  <path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74 1.18 0 2.31-.74 3.74-.62 1.51.07 2.65.74 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                </svg>
-                <span style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1.15 }}>
-                  <span style={{ fontSize: "0.72rem", fontWeight: 500, opacity: 0.85 }}>Download on the</span>
-                  <span style={{ fontSize: "1.05rem", fontWeight: 700 }}>App Store</span>
-                </span>
-              </a>
-              <button
-                type="button"
-                disabled
-                aria-label="Google Play coming soon"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  background: "#F0EBE2",
-                  color: "#A8997F",
-                  padding: "13px 22px",
-                  borderRadius: "12px",
-                  border: "none",
-                  fontWeight: 600,
-                  letterSpacing: "-0.01em",
-                  cursor: "not-allowed",
-                  minWidth: "210px",
-                  justifyContent: "center",
-                  fontFamily: "inherit",
-                }}
-              >
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden>
-                  <path fill="#C9BFA8" d="M3.6 21.6V2.4l13.5 9.6L3.6 21.6z" />
-                </svg>
-                <span style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1.15 }}>
-                  <span style={{ fontSize: "0.72rem", fontWeight: 500, opacity: 0.9 }}>Google Play</span>
-                  <span style={{ fontSize: "1.05rem", fontWeight: 700 }}>Coming soon</span>
-                </span>
-              </button>
-            </div>
+            <StoreBadges locale="en" />
             <a
               href="#series"
               style={{
@@ -714,36 +657,14 @@ export default function HomeEn() {
       <section className="px-6 py-14 sm:py-20" style={{ background: "#FFFCF6", borderBottom: "1px solid #EDE0C8" }}>
         <div style={{ maxWidth: "560px", margin: "0 auto", textAlign: "center" }}>
           <h2 className="font-black mb-4" style={{ fontSize: "1.6rem", color: "#2D2620", letterSpacing: "-0.02em" }}>
-            Get SlowKids on the App Store.
+            Get SlowKids on the App Store and Google Play.
           </h2>
           <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
-            iOS — free to download, with in-app purchases for full curriculum access. Google Play version coming soon.
+            Free to download on iOS and Android, with in-app purchases for full curriculum access.
           </p>
-          <a
-            href={IOS_APP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              background: "#000",
-              color: "#fff",
-              padding: "14px 28px",
-              borderRadius: "12px",
-              textDecoration: "none",
-              fontWeight: 600,
-              letterSpacing: "-0.01em",
-            }}
-          >
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden>
-              <path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74 1.18 0 2.31-.74 3.74-.62 1.51.07 2.65.74 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-            </svg>
-            <span style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1.15 }}>
-              <span style={{ fontSize: "0.72rem", fontWeight: 500, opacity: 0.85 }}>Download on the</span>
-              <span style={{ fontSize: "1.05rem", fontWeight: 700 }}>App Store</span>
-            </span>
-          </a>
+          <div className="flex justify-center">
+            <StoreBadges locale="en" />
+          </div>
         </div>
       </section>
 
