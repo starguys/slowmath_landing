@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LazyVideo from "../LazyVideo";
+import SetHtmlLang from "./SetHtmlLang";
 
 const IOS_APP_URL = "https://apps.apple.com/us/app/id6763979294";
 const SITE_URL = "https://slowkids.net";
@@ -194,6 +195,7 @@ const FAQS = [
 export default function HomeEn() {
   return (
     <>
+      <SetHtmlLang lang="en" />
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-[#EDE0C8] bg-[#FFFCF6]/85 backdrop-blur">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-3 sm:px-10 sm:py-4">
