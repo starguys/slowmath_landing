@@ -11,7 +11,7 @@ const ASSET_BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 export const metadata: Metadata = {
   title: "SlowKids — Math at every child's pace",
   description:
-    "SlowKids is a learning series for children who pick up math more slowly. From color recognition to multiplication tables, paced so a child can stay at their own speed. iOS app available now.",
+    "SlowKids is a learning series for children who pick up math more slowly. From color recognition to multiplication tables, paced so a child can stay at their own speed. Now on iOS and Android.",
   alternates: {
     canonical: SITE_URL_EN,
     languages: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SlowKids — Math at every child's pace",
     description:
-      "Small math practices for children who learn slowly — from earliest cognition through multiplication. iOS app available now.",
+      "Small math practices for children who learn slowly — from earliest cognition through multiplication. Now on iOS and Android.",
     locale: "en_US",
     alternateLocale: ["ko_KR"],
     type: "website",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SlowKids — Math at every child's pace",
     description:
-      "Small math practices for children who learn slowly. Available on the App Store.",
+      "Small math practices for children who learn slowly. Available on iOS and Android.",
   },
   itunes: {
     appId: "6763979294",
