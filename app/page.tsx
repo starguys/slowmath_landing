@@ -246,6 +246,18 @@ function IconClock({ color }: { color: string }) {
   );
 }
 
+function IconCalendar({ color }: { color: string }) {
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
+      <rect x="4" y="6" width="20" height="18" rx="2.5" stroke={color} strokeWidth="1.8" fill={color} fillOpacity=".08" />
+      <line x1="4" y1="11" x2="24" y2="11" stroke={color} strokeWidth="1.6" />
+      <line x1="9" y1="3.5" x2="9" y2="8" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="19" y1="3.5" x2="19" y2="8" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <circle cx="14" cy="17.5" r="3.2" stroke={color} strokeWidth="1.6" fill="none" />
+    </svg>
+  );
+}
+
 function IconCoins({ color }: { color: string }) {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
@@ -385,6 +397,7 @@ const appEmoji: Record<string, string> = {
   slowmath_comparing2: "⚖️",
   slowmath_compare: "📏",
   slowmath_clock: "🕐",
+  slowmath_calendar: "📅",
   slowmath_combining: "🫱",
   slowmath_splitting: "✂️",
   slowmath_complement: "🔟",
@@ -706,6 +719,19 @@ const apps: App[] = [
       "시계 보기는 생활 독립에 꼭 필요한 기술이에요. 정각부터 시작해 30분·15분·45분으로 점점 세밀해지는 단계로 누구나 따라갈 수 있도록 설계되었습니다.",
     tags: ["아날로그", "디지털", "시간 읽기", "생활 독립"],
     childEffect: "시간을 볼 수 있게 되었어요",
+    duration: "5분",
+  },
+  {
+    slug: "slowmath_calendar",
+    name: "Calendar",
+    korName: "달력 보기 연습",
+    Icon: IconCalendar,
+    category: "relation",
+    shortDesc: "달력에서 요일·날짜를 고르고 동그라미 친 날을 찾으며 달력 읽기를 익혀요",
+    value:
+      "달력 보기는 시간 감각·일정 이해의 기초예요. 요일 모두 고르기, N번째 요일 고르기, 날짜 고르기, 동그라미 친 날 맞추기까지 단계별로 익히도록 설계되었습니다.",
+    tags: ["요일", "날짜", "달력 읽기", "생활 독립"],
+    childEffect: "달력을 읽을 수 있게 되었어요",
     duration: "5분",
   },
 
