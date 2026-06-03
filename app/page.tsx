@@ -1336,7 +1336,6 @@ export default function Page() {
 
           {/* CTA */}
           <div className="flex flex-col items-center gap-4">
-            <StoreBadges locale="ko" />
             <span
               style={{
                 color: "#1E6FB8",
@@ -1350,6 +1349,7 @@ export default function Page() {
             >
               지금 무료로 시작하기
             </span>
+            <StoreBadges locale="ko" />
           </div>
 
         </div>
