@@ -1337,18 +1337,35 @@ export default function Page() {
           {/* CTA */}
           <div className="flex flex-col items-center gap-4">
             <StoreBadges locale="ko" />
+            {/* 옵션 비교용 — 결정 후 한쪽만 남길 예정 */}
+            {/* 옵션 A: 오렌지 chip (warm 톤 조화) */}
             <span
               style={{
-                color: "#1E6FB8",
-                fontSize: "0.85rem",
-                fontWeight: 700,
-                background: "#E8F2FB",
-                padding: "5px 12px",
+                color: "#B85C00",
+                fontSize: "0.9rem",
+                fontWeight: 800,
+                background: "#FFE8C4",
+                padding: "6px 14px",
                 borderRadius: "999px",
                 letterSpacing: "-0.01em",
               }}
             >
               지금 무료로 시작하기
+            </span>
+            {/* 옵션 C: 블루 outline + 화살표 */}
+            <span
+              style={{
+                color: "#1E6FB8",
+                fontSize: "0.9rem",
+                fontWeight: 700,
+                background: "white",
+                border: "1.5px solid #6BADE8",
+                padding: "5px 14px",
+                borderRadius: "999px",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              지금 무료로 시작하기 →
             </span>
           </div>
 
