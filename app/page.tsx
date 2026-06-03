@@ -1338,34 +1338,35 @@ export default function Page() {
           <div className="flex flex-col items-center gap-4">
             <StoreBadges locale="ko" />
             {/* 옵션 비교용 — 결정 후 한쪽만 남길 예정 */}
-            {/* 옵션 A: 오렌지 chip (warm 톤 조화) */}
+            {/* 옵션 B: 솔리드 브랜드 블루 버튼 */}
             <span
               style={{
-                color: "#B85C00",
+                color: "white",
                 fontSize: "0.9rem",
                 fontWeight: 800,
-                background: "#FFE8C4",
-                padding: "6px 14px",
+                background: "#6BADE8",
+                padding: "8px 18px",
                 borderRadius: "999px",
                 letterSpacing: "-0.01em",
+                boxShadow: "0 2px 10px rgba(107,173,232,0.35)",
               }}
             >
               지금 무료로 시작하기
             </span>
-            {/* 옵션 C: 블루 outline + 화살표 */}
+            {/* 옵션 D: 브랜드 두 색 그라데이션 */}
             <span
               style={{
-                color: "#1E6FB8",
+                color: "white",
                 fontSize: "0.9rem",
-                fontWeight: 700,
-                background: "white",
-                border: "1.5px solid #6BADE8",
-                padding: "5px 14px",
+                fontWeight: 800,
+                background: "linear-gradient(90deg, #6BADE8 0%, #F0A050 100%)",
+                padding: "8px 18px",
                 borderRadius: "999px",
                 letterSpacing: "-0.01em",
+                boxShadow: "0 2px 10px rgba(0,0,0,0.12)",
               }}
             >
-              지금 무료로 시작하기 →
+              지금 무료로 시작하기
             </span>
           </div>
 
