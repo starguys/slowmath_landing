@@ -1340,10 +1340,10 @@ export default function Page() {
             <span
               style={{
                 color: "#1E6FB8",
-                fontSize: "1rem",
-                fontWeight: 800,
+                fontSize: "0.85rem",
+                fontWeight: 700,
                 background: "#E8F2FB",
-                padding: "8px 16px",
+                padding: "5px 12px",
                 borderRadius: "999px",
                 letterSpacing: "-0.01em",
               }}
