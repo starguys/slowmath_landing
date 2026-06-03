@@ -1,5 +1,6 @@
 import LazyVideo from "./LazyVideo";
 import StoreBadges from "./StoreBadges";
+import StickyDownloadBar from "./StickyDownloadBar";
 
 // ─── SVG Icon Components ───────────────────────────────────────────────────
 
@@ -1216,7 +1217,10 @@ export default function Page() {
   ];
 
   return (
-    <div style={{ background: "#F7F4F0", minHeight: "100vh" }}>
+    <div
+      style={{ background: "#F7F4F0", minHeight: "100vh" }}
+      className="pb-20 sm:pb-0"
+    >
 
       {/* Language toggle (floating top-right) */}
       <div
@@ -1332,17 +1336,15 @@ export default function Page() {
           {/* CTA */}
           <div className="flex flex-col items-center gap-4">
             <StoreBadges locale="ko" />
-            <a
-              href="#apps"
+            <span
               style={{
                 color: "#7B6545",
                 fontSize: "0.85rem",
-                textDecoration: "underline",
-                textUnderlineOffset: "3px",
+                fontWeight: 600,
               }}
             >
-              먼저 학습 도구 둘러보기
-            </a>
+              지금 무료로 시작하기
+            </span>
           </div>
 
         </div>
@@ -1952,6 +1954,7 @@ export default function Page() {
           #느린학습자 #발달장애 #경계선지능 #특수교육 #ADHD #자폐스펙트럼
         </p>
       </footer>
+      <StickyDownloadBar />
     </div>
   );
 }
