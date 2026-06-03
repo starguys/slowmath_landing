@@ -1338,9 +1338,13 @@ export default function Page() {
             <StoreBadges locale="ko" />
             <span
               style={{
-                color: "#7B6545",
-                fontSize: "0.85rem",
-                fontWeight: 600,
+                color: "#1E6FB8",
+                fontSize: "1rem",
+                fontWeight: 800,
+                background: "#E8F2FB",
+                padding: "8px 16px",
+                borderRadius: "999px",
+                letterSpacing: "-0.01em",
               }}
             >
               지금 무료로 시작하기
