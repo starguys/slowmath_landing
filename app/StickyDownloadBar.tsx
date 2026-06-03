@@ -1,11 +1,31 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 const IOS_KR = "https://apps.apple.com/kr/app/id6763979294";
 const PLAY_URL =
   "https://play.google.com/store/apps/details?id=com.everydaysummers.slowkids";
 
-const badgeStyle = { height: 40, width: "auto", display: "block" } as const;
+const badgeStyle = { height: 32, width: "auto", display: "block" } as const;
 
-/** 모바일 sticky 하단 다운로드 바 — 데스크탑(sm 이상)에서는 숨김 */
+/** 모바일 sticky 하단 다운로드 바 — hero 보일 땐 숨김, 스크롤해서 hero 벗어나면 노출 */
 export default function StickyDownloadBar() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const hero = document.getElementById("hero");
+    if (!hero) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        // hero가 약간이라도 보이면 숨김, 완전히 벗어나면 노출
+        setVisible(!entries[0].isIntersecting);
+      },
+      { threshold: 0 }
+    );
+    obs.observe(hero);
+    return () => obs.disconnect();
+  }, []);
+
   return (
     <div
       className="sm:hidden"
@@ -25,6 +45,10 @@ export default function StickyDownloadBar() {
         alignItems: "center",
         justifyContent: "center",
         gap: 8,
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(100%)",
+        transition: "opacity 0.25s ease, transform 0.25s ease",
+        pointerEvents: visible ? "auto" : "none",
       }}
     >
       <a
@@ -45,11 +69,15 @@ export default function StickyDownloadBar() {
       </a>
       <span
         style={{
-          color: "#7B6545",
-          fontSize: "0.8rem",
-          fontWeight: 700,
-          marginLeft: 4,
+          color: "#1E6FB8",
+          background: "#E8F2FB",
+          padding: "6px 12px",
+          borderRadius: "999px",
+          fontSize: "0.85rem",
+          fontWeight: 800,
+          letterSpacing: "-0.01em",
           whiteSpace: "nowrap",
+          marginLeft: 2,
         }}
       >
         무료 체험

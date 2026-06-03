@@ -1266,6 +1266,7 @@ export default function Page() {
 
       {/* ── Hero ── */}
       <header
+        id="hero"
         className="px-4 pt-10 pb-10 sm:px-6 sm:pt-16 sm:pb-14"
         style={{
           background: "linear-gradient(160deg, #FFFAF3 0%, #FFF0D8 55%, #FFE8C4 100%)",
