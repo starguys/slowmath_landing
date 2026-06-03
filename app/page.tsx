@@ -1337,33 +1337,15 @@ export default function Page() {
           {/* CTA */}
           <div className="flex flex-col items-center gap-4">
             <StoreBadges locale="ko" />
-            {/* 옵션 비교용 — 결정 후 한쪽만 남길 예정 */}
-            {/* 옵션 B: 솔리드 브랜드 블루 버튼 */}
             <span
               style={{
-                color: "white",
-                fontSize: "0.9rem",
-                fontWeight: 800,
-                background: "#6BADE8",
-                padding: "8px 18px",
+                color: "#1E6FB8",
+                fontSize: "0.85rem",
+                fontWeight: 700,
+                background: "#E8F2FB",
+                padding: "5px 12px",
                 borderRadius: "999px",
                 letterSpacing: "-0.01em",
-                boxShadow: "0 2px 10px rgba(107,173,232,0.35)",
-              }}
-            >
-              지금 무료로 시작하기
-            </span>
-            {/* 옵션 D: 브랜드 두 색 그라데이션 */}
-            <span
-              style={{
-                color: "white",
-                fontSize: "0.9rem",
-                fontWeight: 800,
-                background: "linear-gradient(90deg, #6BADE8 0%, #F0A050 100%)",
-                padding: "8px 18px",
-                borderRadius: "999px",
-                letterSpacing: "-0.01em",
-                boxShadow: "0 2px 10px rgba(0,0,0,0.12)",
               }}
             >
               지금 무료로 시작하기
