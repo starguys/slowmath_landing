@@ -1348,7 +1348,7 @@ export default function Page() {
                 letterSpacing: "-0.01em",
               }}
             >
-              지금 무료로 시작하기
+              지금 무료로 체험하기
             </span>
           </div>
 
