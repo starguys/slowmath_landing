@@ -1388,7 +1388,7 @@ export default function Page() {
             }}
           >
             <p className="text-sm font-semibold leading-relaxed" style={{ color: "#5A9FD8" }}>
-              카이스트 출신, 자폐스펙트럼 발달지연·발달장애 아이의 아빠가 경험을 바탕으로 직접 만들었습니다.
+              카이스트 출신, 자폐스펙트럼 발달장애 아이의 아빠가 경험을 바탕으로 직접 만들었습니다.
             </p>
           </div>
         </div>
