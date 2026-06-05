@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "시계 보기 연습",
     "덧셈 기초 연습",
     "소근육 발달 훈련",
-    "발달 장애 아동 학습",
+    "발달 지연·발달 장애 아동 학습",
     "특수 교사 수업 도구",
     "인지 학습 훈련",
     "색깔 인지 학습",
@@ -83,7 +83,7 @@ const organizationJsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/icon.png`,
   description:
-    "발달 장애·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.",
+    "발달 지연·발달 장애·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.",
 };
 
 const websiteJsonLd = {

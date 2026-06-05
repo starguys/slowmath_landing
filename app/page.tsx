@@ -518,7 +518,7 @@ const apps: App[] = [
     category: "basic",
     shortDesc: "색깔 이름을 보고·듣고·고르며 색 인지 능력을 키워요",
     value:
-      "발달 장애 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
+      "발달 지연·발달 장애 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
     tags: ["색상 인식", "색 이름", "순서 기억", "색 변별"],
     childEffect: "색 이름이 입에 붙어요",
     duration: "3분",
@@ -1203,7 +1203,7 @@ export default function Page() {
 
   const seoKeywords = [
     "느린 학습자 수학",
-    "발달 장애 아동 교육",
+    "발달 지연·발달 장애 아동 교육",
     "경계선 지능 학습 도구",
     "특수 교육 수학",
     "학습 장애 수학 훈련",
@@ -1331,7 +1331,7 @@ export default function Page() {
               wordBreak: "keep-all",
             }}
           >
-            <strong style={{ color: "#4A4035" }}>발달 장애·경계선 지능·학습 장애</strong> 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
+            <strong style={{ color: "#4A4035" }}>발달 지연·발달 장애·경계선 지능·학습 장애</strong> 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
           </p>
 
           {/* CTA */}
@@ -1371,7 +1371,7 @@ export default function Page() {
           <p className="text-sm leading-loose" style={{ color: "#7B6545" }}>
             느린아이는{" "}
             <strong style={{ color: "#4A4035" }}>
-              발달 장애·경계선 지능·학습 장애 아동
+              발달 지연·발달 장애·경계선 지능·학습 장애 아동
             </strong>
             이 수학의 기초 개념을 스스로 익힐 수 있도록 만들어진 학습 도구 모음입니다.{" "}
             <strong style={{ color: "#4A4035" }}>일반 학습 도구가 너무 빠르게</strong> 진행되어 아이가 따라가지 못한다는 학부모의 고민에서 시작했습니다.
@@ -1388,7 +1388,7 @@ export default function Page() {
             }}
           >
             <p className="text-sm font-semibold leading-relaxed" style={{ color: "#5A9FD8" }}>
-              카이스트 출신, 자폐스펙트럼 발달장애 아이의 아빠가 경험을 바탕으로 직접 만들었습니다.
+              카이스트 출신, 자폐스펙트럼 발달지연·발달장애 아이의 아빠가 경험을 바탕으로 직접 만들었습니다.
             </p>
           </div>
         </div>
@@ -1480,7 +1480,7 @@ export default function Page() {
                 그 마음, 저희도 알아요.
               </p>
               <p className="leading-relaxed break-keep" style={{ fontSize: "0.85rem", color: "#D9C9B0" }}>
-                그래서 아이의 속도에 맞춘 34개의 작은 연습을 만들었습니다.
+                그래서 아이의 속도에 맞춘 작은 연습들을 만들었습니다.
                 한 화면, 한 걸음, 아이의 속도에 맞춰 천천히 함께 걸어요.
               </p>
             </div>
@@ -1889,7 +1889,7 @@ export default function Page() {
           className="leading-relaxed mb-6 break-keep"
           style={{ fontSize: "0.9rem", color: "#A08870" }}
         >
-          발달 장애·경계선 지능·학습 장애 아동을 위한
+          발달 지연·발달 장애·경계선 지능·학습 장애 아동을 위한
           <br />
           간단하지만 강력한 학습 도구
         </p>
@@ -1956,7 +1956,7 @@ export default function Page() {
           className="leading-loose mt-6"
           style={{ fontSize: "0.68rem", color: "#A89070", opacity: 0.55, letterSpacing: "0.02em" }}
         >
-          #느린학습자 #발달장애 #경계선지능 #특수교육 #ADHD #자폐스펙트럼
+          #느린학습자 #발달지연 #발달장애 #경계선지능 #특수교육 #ADHD #자폐스펙트럼
         </p>
       </footer>
       <StickyDownloadBar />
