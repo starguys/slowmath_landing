@@ -1331,7 +1331,7 @@ export default function Page() {
               wordBreak: "keep-all",
             }}
           >
-            <strong style={{ color: "#4A4035" }}>발달 지연·발달 장애·경계선 지능·학습 장애</strong> 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
+            <strong style={{ color: "#4A4035" }}>발달 지연·발달 장애·경계선 지능·학습 장애·ADHD</strong> 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
           </p>
 
           {/* CTA */}
@@ -1371,7 +1371,7 @@ export default function Page() {
           <p className="text-sm leading-loose" style={{ color: "#7B6545" }}>
             느린아이는{" "}
             <strong style={{ color: "#4A4035" }}>
-              발달 지연·발달 장애·경계선 지능·학습 장애 아동
+              발달 지연·발달 장애·경계선 지능·학습 장애·ADHD 아동
             </strong>
             이 수학의 기초 개념을 스스로 익힐 수 있도록 만들어진 학습 도구 모음입니다.{" "}
             <strong style={{ color: "#4A4035" }}>일반 학습 도구가 너무 빠르게</strong> 진행되어 아이가 따라가지 못한다는 학부모의 고민에서 시작했습니다.
@@ -1889,7 +1889,7 @@ export default function Page() {
           className="leading-relaxed mb-6 break-keep"
           style={{ fontSize: "0.9rem", color: "#A08870" }}
         >
-          발달 지연·발달 장애·경계선 지능·학습 장애 아동을 위한
+          발달 지연·발달 장애·경계선 지능·학습 장애·ADHD 아동을 위한
           <br />
           간단하지만 강력한 학습 도구
         </p>
