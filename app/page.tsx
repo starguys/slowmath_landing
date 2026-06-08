@@ -399,6 +399,7 @@ const appEmoji: Record<string, string> = {
   slowmath_compare: "📏",
   slowmath_clock: "🕐",
   slowmath_calendar: "📅",
+  slowmath_oddeven: "👯",
   slowmath_combining: "🫱",
   slowmath_splitting: "✂️",
   slowmath_complement: "🔟",
@@ -413,6 +414,7 @@ const appEmoji: Record<string, string> = {
   slowmath_minusone: "1️⃣",
   slowmath_minustwo: "2️⃣",
   slowmath_minusthree: "3️⃣",
+  slowmath_subtract: "➖",
   slowmath_borrow: "⬇️",
   slowmath_verticalsub: "🧮",
   slowmath_changecalc: "🧾",
@@ -735,6 +737,19 @@ const apps: App[] = [
     childEffect: "달력을 읽을 수 있게 되었어요",
     duration: "5분",
   },
+  {
+    slug: "slowmath_oddeven",
+    name: "Odd & Even",
+    korName: "홀수 짝수 익히기",
+    Icon: ({ color }) => <IconTen color={color} n="홀짝" />,
+    category: "relation",
+    shortDesc: "배열판·숫자판·랜덤·짝짓기 4가지 모드로 홀수와 짝수를 익혀요",
+    value:
+      "홀짝 개념은 수 패턴 인지의 출발점이에요. 배열판에서 짝이 맞는지 시각으로 확인하고, 숫자판에서 모두 고르고, 랜덤 숫자를 판별하고, 같은 종류끼리 짝짓는 4단계 모드로 충분히 반복합니다.",
+    tags: ["홀수", "짝수", "수 패턴", "분류"],
+    childEffect: "수의 짝을 직관으로 알아봐요",
+    duration: "5분",
+  },
 
   // ── 덧셈 전 개념 ──
   {
@@ -921,6 +936,19 @@ const apps: App[] = [
       "빼기 1·2를 익힌 후 자연스럽게 이어지는 단계로, 수 배열판 애니메이션이 뺄셈 과정을 생생하게 보여줘요. 무작위 문제로 완전 학습을 지원합니다.",
     tags: ["-3 뺄셈", "수 배열판", "무작위"],
     childEffect: "거꾸로 세 칸씩 세요",
+    duration: "5분",
+  },
+  {
+    slug: "slowmath_subtract",
+    name: "Subtract Practice",
+    korName: "한 자리 뺄셈 연습",
+    Icon: ({ color }) => <IconTen color={color} n="−" />,
+    category: "sub",
+    shortDesc: "드래그·묶기·배열판 세 가지 방식으로 한 자리 뺄셈을 익혀요",
+    value:
+      "동그라미를 바구니에 옮기거나, 묶어서 빼거나, 배열판에서 사선으로 지우는 세 가지 시각화로 뺄셈의 의미를 다각도로 익혀요. 답 검증이 그림과 함께 이뤄져 손과 눈으로 동시에 학습합니다.",
+    tags: ["한 자리 뺄셈", "드래그", "묶음 빼기", "배열판"],
+    childEffect: "수가 줄어드는 걸 눈으로 봐요",
     duration: "5분",
   },
   {
@@ -1812,7 +1840,7 @@ export default function Page() {
             전체 학습 도구 한눈에 보기
           </h2>
           <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
-            34개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
+            37개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
             {apps.map((app) => {

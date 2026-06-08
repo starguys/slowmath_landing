@@ -122,6 +122,7 @@ const appCatalog = [
   { slug: "comparing2", name: "비교하기 기초 2", desc: "위·아래·안·밖 등 공간 관계를 비교하며 익혀요." },
   { slug: "compare", name: "수의 크기", desc: "두 수의 크기를 비교하며 부등호(<, >, =)를 익혀요." },
   { slug: "clock", name: "시계 보기", desc: "아날로그·디지털 시계를 읽는 법을 시·30분·15분 단위로 배워요." },
+  { slug: "oddeven", name: "홀수 짝수 익히기", desc: "배열판·숫자판·랜덤·짝짓기 4가지 모드로 홀수와 짝수를 익혀요." },
   // 덧셈 전 개념
   { slug: "combining", name: "모으기 연습", desc: "두 수를 합쳐 하나의 수를 만드는 수 합성을 연습해요." },
   { slug: "splitting", name: "가르기 연습", desc: "하나의 수를 두 부분으로 나누는 수 분해를 연습해요." },
@@ -138,6 +139,7 @@ const appCatalog = [
   { slug: "minusone", name: "빼기 1", desc: "수 배열판으로 -1 뺄셈을 직관적으로 익혀요." },
   { slug: "minustwo", name: "빼기 2", desc: "2 빼기를 배열판과 거꾸로 건너뛰기로 시각화해서 배워요." },
   { slug: "minusthree", name: "빼기 3", desc: "3 빼기를 여러 학습 모드로 반복 연습해요." },
+  { slug: "subtract", name: "한 자리 뺄셈 연습", desc: "드래그·묶기·배열판 세 가지 방식으로 한 자리 뺄셈을 익혀요." },
   { slug: "borrow", name: "받아내림 연습", desc: "두 자리 뺄셈의 받아내림을 배열판·세로 형식으로 익혀요." },
   // 곱셈
   { slug: "timestables", name: "구구단 연습", desc: "2~9단 구구단을 충분한 생각 시간과 함께 천천히 익혀요." },

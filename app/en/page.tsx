@@ -75,6 +75,7 @@ const STAGES = [
       { emoji: "📏", name: "Size", slug: "compare" },
       { emoji: "🕐", name: "Time", slug: "clock" },
       { emoji: "📅", name: "Calendar", slug: "calendar" },
+      { emoji: "👯", name: "Odd & Even", slug: "oddeven" },
     ],
   },
   {
@@ -109,6 +110,7 @@ const STAGES = [
       { emoji: "1️⃣", name: "−1", slug: "minusone" },
       { emoji: "2️⃣", name: "−2", slug: "minustwo" },
       { emoji: "3️⃣", name: "−3", slug: "minusthree" },
+      { emoji: "➖", name: "Subtract", slug: "subtract" },
       { emoji: "⬇️", name: "Borrowing", slug: "borrow" },
       { emoji: "🧮", name: "Vertical −", slug: "verticalsub" },
     ],
