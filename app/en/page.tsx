@@ -298,17 +298,6 @@ export default function HomeEn() {
             >
               Free trial available
             </span>
-            <a
-              href="#series"
-              style={{
-                color: "#7B6545",
-                fontSize: "0.85rem",
-                textDecoration: "underline",
-                textUnderlineOffset: "3px",
-              }}
-            >
-              Browse the modules first
-            </a>
           </div>
         </div>
       </section>
