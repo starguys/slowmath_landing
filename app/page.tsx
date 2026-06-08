@@ -399,7 +399,7 @@ const appEmoji: Record<string, string> = {
   slowmath_compare: "📏",
   slowmath_clock: "🕐",
   slowmath_calendar: "📅",
-  slowmath_oddeven: "👯",
+  slowmath_oddeven: "🍒",
   slowmath_combining: "🫱",
   slowmath_splitting: "✂️",
   slowmath_complement: "🔟",

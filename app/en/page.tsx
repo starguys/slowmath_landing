@@ -75,7 +75,7 @@ const STAGES = [
       { emoji: "📏", name: "Size", slug: "compare" },
       { emoji: "🕐", name: "Time", slug: "clock" },
       { emoji: "📅", name: "Calendar", slug: "calendar" },
-      { emoji: "👯", name: "Odd & Even", slug: "oddeven" },
+      { emoji: "🍒", name: "Odd & Even", slug: "oddeven" },
     ],
   },
   {
