@@ -9,8 +9,9 @@ const PLAY_URL =
 const badgeStyle = { height: 32, width: "auto", display: "block" } as const;
 
 /** 모바일 sticky 하단 다운로드 바 — hero 보일 땐 숨김, 스크롤해서 hero 벗어나면 노출 */
-export default function StickyDownloadBar() {
+export default function StickyDownloadBar({ locale = "ko" }: { locale?: "ko" | "en" }) {
   const [visible, setVisible] = useState(false);
+  const isKo = locale === "ko";
 
   useEffect(() => {
     const hero = document.getElementById("hero");
@@ -55,7 +56,7 @@ export default function StickyDownloadBar() {
         href={IOS_KR}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="App Store에서 느린아이 다운로드"
+        aria-label={isKo ? "App Store에서 느린아이 다운로드" : "Download SlowKids on the App Store"}
       >
         <img src="/badge-apple.png" alt="Download on the App Store" style={badgeStyle} />
       </a>
@@ -63,7 +64,7 @@ export default function StickyDownloadBar() {
         href={PLAY_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Google Play에서 느린아이 다운로드"
+        aria-label={isKo ? "Google Play에서 느린아이 다운로드" : "Get SlowKids on Google Play"}
       >
         <img src="/badge-google.png" alt="Get it on Google Play" style={badgeStyle} />
       </a>
@@ -80,7 +81,7 @@ export default function StickyDownloadBar() {
           marginLeft: 2,
         }}
       >
-        무료 체험
+        {isKo ? "무료 체험" : "Free trial"}
       </span>
     </div>
   );

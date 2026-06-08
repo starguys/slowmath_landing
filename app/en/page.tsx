@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LazyVideo from "../LazyVideo";
 import StoreBadges from "../StoreBadges";
+import StickyDownloadBar from "../StickyDownloadBar";
 import SetHtmlLang from "./SetHtmlLang";
 
 const IOS_APP_URL = "https://apps.apple.com/us/app/id6763979294";
@@ -230,6 +231,7 @@ export default function HomeEn() {
 
       {/* Hero */}
       <section
+        id="hero"
         className="px-4 pt-10 pb-12 sm:px-6 sm:pt-16 sm:pb-16"
         style={{
           background: "linear-gradient(160deg, #FFFAF3 0%, #FFF0D8 55%, #FFE8C4 100%)",
@@ -283,6 +285,19 @@ export default function HomeEn() {
 
           <div className="flex flex-col items-center gap-4">
             <StoreBadges locale="en" />
+            <span
+              style={{
+                color: "#1E6FB8",
+                fontSize: "0.85rem",
+                fontWeight: 700,
+                background: "#E8F2FB",
+                padding: "5px 12px",
+                borderRadius: "999px",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              Free trial available
+            </span>
             <a
               href="#series"
               style={{
@@ -692,6 +707,8 @@ export default function HomeEn() {
           </p>
         </div>
       </footer>
+
+      <StickyDownloadBar locale="en" />
     </>
   );
 }
