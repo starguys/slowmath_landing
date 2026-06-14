@@ -1917,7 +1917,7 @@ export default function Page() {
           className="leading-relaxed mb-6 break-keep"
           style={{ fontSize: "0.9rem", color: "#A08870" }}
         >
-          발달 지연·발달 장애·경계선 지능·학습 장애·<span style={{ position: "relative", top: "-0.1em" }}>ADHD</span> 아동을 위한
+          발달지연·발달장애·느린학습자·경계선지능 아동을 위한
           <br />
           간단하지만 강력한 학습 도구
         </p>
