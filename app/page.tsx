@@ -1901,7 +1901,7 @@ export default function Page() {
 
       {/* ── Footer ── */}
       <footer
-        className="px-6 py-12 sm:py-14 text-center lazy-section"
+        className="px-6 pt-12 sm:pt-14 pb-28 sm:pb-14 text-center lazy-section"
         style={{
           background: "#2D2620",
           color: "#D9C9B0",
