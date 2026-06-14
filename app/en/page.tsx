@@ -676,7 +676,7 @@ export default function HomeEn() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 pt-10 pb-28 sm:pb-10" style={{ background: "white", color: "#7B6545" }}>
+      <footer className="px-6 pt-10 pb-20 sm:pb-10" style={{ background: "white", color: "#7B6545" }}>
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
           <p className="text-sm mb-2" style={{ color: "#2D2620" }}>
             <strong>EverydaySummer Inc.</strong>
