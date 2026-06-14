@@ -676,25 +676,92 @@ export default function HomeEn() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 pt-10 pb-20 sm:pb-10" style={{ background: "white", color: "#7B6545" }}>
-        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-          <p className="text-sm mb-2" style={{ color: "#2D2620" }}>
-            <strong>EverydaySummer Inc.</strong>
-          </p>
-          <p className="text-xs mb-6">
-            Learning tools at every child's pace. Made in Seoul.
-          </p>
-          <div className="flex flex-wrap gap-4 text-xs">
-            <a href="/terms" className="underline underline-offset-4 hover:text-[#2D2620]">Terms</a>
-            <a href="/privacy" className="underline underline-offset-4 hover:text-[#2D2620]">Privacy</a>
-            <a href="mailto:contact@everydaysummer.net" className="underline underline-offset-4 hover:text-[#2D2620]">
-              contact@everydaysummer.net
-            </a>
-          </div>
-          <p className="mt-8 text-xs" style={{ color: "#A8997F" }}>
-            © {new Date().getFullYear()} EverydaySummer Inc. All rights reserved.
-          </p>
+      <footer
+        className="px-6 py-12 sm:py-14 text-center"
+        style={{
+          background: "#2D2620",
+          color: "#D9C9B0",
+        }}
+      >
+        <p
+          className="font-black text-2xl mb-3 tracking-tight"
+          style={{ letterSpacing: "-0.03em" }}
+        >
+          <span style={{ color: "#5A9FD8" }}>Slow</span><span style={{ color: "#E8924A" }}>Kids</span>
+        </p>
+        <p
+          className="leading-relaxed mb-6 break-keep"
+          style={{ fontSize: "0.9rem", color: "#A08870" }}
+        >
+          Simple but powerful learning tools
+          <br />
+          for children who learn at their own pace
+        </p>
+
+        <nav
+          className="flex items-center justify-center gap-4 mb-2"
+          aria-label="Legal"
+        >
+          <a
+            href="/terms"
+            style={{
+              fontSize: "0.82rem",
+              color: "#A89070",
+              textDecoration: "none",
+              letterSpacing: "0.01em",
+            }}
+          >
+            Terms
+          </a>
+          <span style={{ color: "#A89070", opacity: 0.4, fontSize: "0.82rem" }}>·</span>
+          <a
+            href="/privacy"
+            style={{
+              fontSize: "0.82rem",
+              color: "#A89070",
+              textDecoration: "none",
+              letterSpacing: "0.01em",
+            }}
+          >
+            Privacy
+          </a>
+        </nav>
+
+        <div
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 mt-6 pt-6 mb-4"
+          style={{ borderTop: "1px solid rgba(217,201,176,0.18)" }}
+        >
+          <span
+            className="font-semibold"
+            style={{ fontSize: "0.78rem", color: "#A89070", letterSpacing: "0.04em" }}
+          >
+            Partnership · Feedback
+          </span>
+          <a
+            href="mailto:contact@everydaysummer.net"
+            className="inline-flex items-center gap-1.5 font-bold rounded-full"
+            style={{
+              background: "rgba(245,230,200,0.12)",
+              color: "#F5E6C8",
+              padding: "8px 18px",
+              fontSize: "0.85rem",
+              textDecoration: "none",
+              border: "1px solid rgba(245,230,200,0.25)",
+            }}
+          >
+            contact@everydaysummer.net
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden>
+              <path d="M3 8h10M8 3l5 5-5 5" stroke="#F5E6C8" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
         </div>
+
+        <p
+          className="leading-loose mt-6"
+          style={{ fontSize: "0.68rem", color: "#A89070", opacity: 0.55, letterSpacing: "0.02em" }}
+        >
+          #DevelopmentalDelay #DevelopmentalDisability #SlowLearners #BorderlineIQ #LearningDisability #ADHD #AutismSpectrum #SpecialEducation
+        </p>
       </footer>
 
       <StickyDownloadBar locale="en" />
