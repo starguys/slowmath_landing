@@ -64,6 +64,7 @@ const STAGES = [
       { emoji: "5️⃣", name: "Writing", slug: "numberdraw" },
       { emoji: "🎲", name: "Counting", slug: "dice" },
       { emoji: "🎯", name: "Matching", slug: "matching" },
+      { emoji: "🪙", name: "Coins & bills", slug: "money" },
     ],
   },
   {
@@ -101,6 +102,7 @@ const STAGES = [
       { emoji: "➕", name: "Practice", slug: "circle" },
       { emoji: "🆙", name: "Carrying", slug: "carry" },
       { emoji: "🧮", name: "Vertical +", slug: "verticaladd" },
+      { emoji: "💰", name: "Pay the amount", slug: "moneycalc" },
     ],
   },
   {
@@ -114,6 +116,7 @@ const STAGES = [
       { emoji: "➖", name: "Subtract", slug: "subtract" },
       { emoji: "⬇️", name: "Borrowing", slug: "borrow" },
       { emoji: "🧮", name: "Vertical −", slug: "verticalsub" },
+      { emoji: "🧾", name: "Make change", slug: "changecalc" },
     ],
   },
   {
@@ -589,7 +592,7 @@ export default function HomeEn() {
             The series at a glance
           </p>
           <h2 className="font-black mb-2" style={{ fontSize: "1.5rem", color: "#2D2620", letterSpacing: "-0.02em" }}>
-            7 stages, 30 modules.
+            7 stages, 36 modules.
           </h2>
           <p className="text-sm mb-8" style={{ color: "#7B6545" }}>
             Each stage layers on the previous one. A child can stay on the same module for weeks if they need to.
