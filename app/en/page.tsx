@@ -662,7 +662,7 @@ export default function HomeEn() {
 
       {/* Footer */}
       <footer
-        className="px-6 py-12 sm:py-14 text-center"
+        className="px-6 pt-12 sm:pt-14 pb-24 sm:pb-14 text-center"
         style={{
           background: "#2D2620",
           color: "#D9C9B0",
