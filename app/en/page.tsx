@@ -660,21 +660,6 @@ export default function HomeEn() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="px-6 py-14 sm:py-20" style={{ background: "#FFFCF6", borderBottom: "1px solid #EDE0C8" }}>
-        <div style={{ maxWidth: "560px", margin: "0 auto", textAlign: "center" }}>
-          <h2 className="font-black mb-4" style={{ fontSize: "1.6rem", color: "#2D2620", letterSpacing: "-0.02em" }}>
-            Get SlowKids on the App Store and Google Play.
-          </h2>
-          <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
-            Free to download on iOS and Android, with in-app purchases for full curriculum access.
-          </p>
-          <div className="flex justify-center">
-            <StoreBadges locale="en" />
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer
         className="px-6 py-12 sm:py-14 text-center"
