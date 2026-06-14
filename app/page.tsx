@@ -1359,7 +1359,7 @@ export default function Page() {
               wordBreak: "keep-all",
             }}
           >
-            <strong style={{ color: "#4A4035" }}>발달지연 발달장애 느린학습자 경계선지능</strong> 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
+            <strong style={{ color: "#4A4035" }}>발달지연·발달장애·느린학습자·경계선지능</strong> 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
           </p>
 
           {/* CTA */}
@@ -1984,7 +1984,7 @@ export default function Page() {
           className="leading-loose mt-6"
           style={{ fontSize: "0.68rem", color: "#A89070", opacity: 0.55, letterSpacing: "0.02em" }}
         >
-          #느린학습자 #발달지연 #발달장애 #경계선지능 #학습장애 #특수교육 #ADHD #자폐스펙트럼
+          #발달지연 #발달장애 #느린학습자 #경계선지능 #학습장애 #ADHD #자폐스펙트럼 #특수교육
         </p>
       </footer>
       <StickyDownloadBar />
