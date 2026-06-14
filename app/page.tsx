@@ -1359,7 +1359,7 @@ export default function Page() {
               wordBreak: "keep-all",
             }}
           >
-            <strong style={{ color: "#4A4035" }}>발달 지연·발달 장애·경계선 지능·학습 장애·<span style={{ position: "relative", top: "-0.1em" }}>ADHD</span></strong> 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
+            <strong style={{ color: "#4A4035" }}>발달지연 발달장애 느린학습자 경계선지능</strong> 아동이 <strong style={{ color: "#4A4035" }}>자신의 속도로</strong> 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.
           </p>
 
           {/* CTA */}
