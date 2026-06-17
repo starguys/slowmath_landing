@@ -1424,7 +1424,7 @@ export default function Page() {
 
       {/* ── 전문가 추천사 ── */}
       <section
-        aria-label="발달센터 원장님 추천사"
+        aria-label="특수교육 박사 추천사"
         className="px-6 py-12 sm:py-16 lazy-section"
         style={{
           borderBottom: "1px solid #EDE0C8",
@@ -1437,7 +1437,7 @@ export default function Page() {
             className="text-center font-black mb-10 break-keep"
             style={{ fontSize: "clamp(1.25rem, 3.4vw, 1.65rem)", color: "#C77A00", letterSpacing: "-0.02em", lineHeight: 1.25 }}
           >
-            현장 전문가의 추천
+            특수교육 박사가 추천하는 이유
           </h2>
 
           <figure
