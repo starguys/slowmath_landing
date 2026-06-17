@@ -1422,6 +1422,103 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ── 전문가 추천사 ── */}
+      <section
+        aria-label="발달센터 원장님 추천사"
+        className="px-6 py-12 sm:py-16 lazy-section"
+        style={{
+          borderBottom: "1px solid #EDE0C8",
+          background:
+            "radial-gradient(700px 360px at 85% 0%, rgba(90,159,216,0.06), transparent 60%), linear-gradient(180deg, #FBF6ED 0%, #FFFAF2 100%)",
+        }}
+      >
+        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
+          <p
+            className="text-center font-semibold mb-3"
+            style={{ fontSize: "0.72rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#C77A00" }}
+          >
+            현장 전문가의 추천
+          </p>
+          <h2
+            className="text-center font-black mb-10 break-keep"
+            style={{ fontSize: "clamp(1.3rem, 3.6vw, 1.75rem)", color: "#2D2620", letterSpacing: "-0.02em", lineHeight: 1.3 }}
+          >
+            아동발달센터 원장님의 한마디
+          </h2>
+
+          <figure
+            className="relative rounded-2xl px-7 py-8 sm:px-10 sm:py-10 m-0"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #EDE0C8",
+              boxShadow: "0 2px 12px rgba(45,38,32,0.05)",
+            }}
+          >
+            <span
+              aria-hidden
+              className="absolute font-black select-none"
+              style={{
+                top: -10,
+                left: 18,
+                fontSize: "4rem",
+                lineHeight: 1,
+                color: "#E8924A",
+                opacity: 0.55,
+                fontFamily: "Georgia, serif",
+              }}
+            >
+              &ldquo;
+            </span>
+
+            <blockquote
+              className="m-0 leading-loose break-keep"
+              style={{ fontSize: "0.95rem", color: "#2D2620" }}
+            >
+              <p className="mb-4">
+                다른 아이들보다 더 많은 연습과 반복이 필요한 아이들을 가르쳐 본 경험이 있는
+                학부모님과 선생님들은 공감하실 겁니다. 우리 아이들에게 맞는 학습 교재와 자료를
+                찾기 어렵다는 것을요.
+              </p>
+              <p className="mb-4">
+                잠깐의 흥미를 끌 수 있는 학습 교재는 많지만, 차근차근 익히면서 내실을 다질 수
+                있도록 도와주는 학습 자료들이 부족한 게 항상 아쉬웠습니다.
+              </p>
+              <p className="mb-4">
+                <strong style={{ color: "#2D2620" }}>
+                  그런데 느린아이는 이런 아쉬움과 답답함을 해소시켜 주기에 충분한 수학 학습
+                  앱이라고 생각합니다.
+                </strong>
+              </p>
+              <p className="mb-4">
+                느린 아이를 키우시는 부모님께서 직접 아이를 가르치시면서 만드신 앱이라, 우리
+                아이들의 눈높이에 맞게 꼭 필요한 내용들이 꼼꼼하게 구성되어 있습니다.
+              </p>
+              <p className="mb-4">
+                저 또한 실제 임상 현장에서 아이들이 더 재미있게 공부하고 좋아하는 모습을 보면서,
+                많은 분들께 이 앱을 꼭 추천드리고 싶습니다.
+              </p>
+              <p className="mb-0">
+                또한 느린아이뿐만 아니라 이제 막 기초 인지를 배우기 시작한 아이, 취학 전 기초
+                다지기가 필요한 아이들에게도 아주 유용한 학습 길잡이가 되어 줄 것이라
+                생각합니다.
+              </p>
+            </blockquote>
+
+            <figcaption
+              className="mt-7 pt-5 flex flex-col gap-1"
+              style={{ borderTop: "1px solid #EDE0C8" }}
+            >
+              <span className="font-black" style={{ fontSize: "0.95rem", color: "#2D2620", letterSpacing: "-0.01em" }}>
+                맘앤맘 아동발달셈터 원장
+              </span>
+              <span className="text-sm" style={{ color: "#7B6545" }}>
+                부산대학교 특수교육학과 박사
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* ── Empathy ── */}
       <section
         aria-label="학부모 공감"
