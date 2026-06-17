@@ -1509,7 +1509,7 @@ export default function Page() {
               style={{ borderTop: "1px solid #EDE0C8" }}
             >
               <span className="font-black" style={{ fontSize: "0.95rem", color: "#2D2620", letterSpacing: "-0.01em" }}>
-                맘앤맘 아동발달셈터 원장
+                맘앤맘 아동발달센터 원장
               </span>
               <span className="text-sm" style={{ color: "#7B6545" }}>
                 부산대학교 특수교육학과 박사
