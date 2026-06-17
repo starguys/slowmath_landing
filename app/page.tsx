@@ -1435,7 +1435,7 @@ export default function Page() {
         <div style={{ maxWidth: "760px", margin: "0 auto" }}>
           <h2
             className="text-center font-black mb-10 break-keep"
-            style={{ fontSize: "clamp(1.5rem, 4vw, 2rem)", color: "#C77A00", letterSpacing: "-0.02em", lineHeight: 1.25 }}
+            style={{ fontSize: "clamp(1.25rem, 3.4vw, 1.65rem)", color: "#C77A00", letterSpacing: "-0.02em", lineHeight: 1.25 }}
           >
             현장 전문가의 추천
           </h2>
