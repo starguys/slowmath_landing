@@ -1472,7 +1472,7 @@ export default function Page() {
 
             <blockquote
               className="m-0 leading-loose break-keep"
-              style={{ fontSize: "0.95rem", color: "#2D2620" }}
+              style={{ fontSize: "0.85rem", color: "#2D2620" }}
             >
               <p className="mb-4">
                 다른 아이들보다 더 많은 연습과 반복이 필요한 아이들을 가르쳐 본 경험이 있는
