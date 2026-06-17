@@ -1433,17 +1433,11 @@ export default function Page() {
         }}
       >
         <div style={{ maxWidth: "760px", margin: "0 auto" }}>
-          <p
-            className="text-center font-semibold mb-3"
-            style={{ fontSize: "0.72rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#C77A00" }}
-          >
-            현장 전문가의 추천
-          </p>
           <h2
             className="text-center font-black mb-10 break-keep"
-            style={{ fontSize: "clamp(1.3rem, 3.6vw, 1.75rem)", color: "#2D2620", letterSpacing: "-0.02em", lineHeight: 1.3 }}
+            style={{ fontSize: "clamp(1.5rem, 4vw, 2rem)", color: "#2D2620", letterSpacing: "-0.02em", lineHeight: 1.25 }}
           >
-            아동발달센터 원장님의 한마디
+            현장 전문가의 추천
           </h2>
 
           <figure
