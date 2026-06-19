@@ -1679,7 +1679,7 @@ export default function Page() {
             className="text-center font-black mb-6 break-keep"
             style={{ fontSize: "clamp(1.05rem, 2.6vw, 1.35rem)", color: "#C77A00", letterSpacing: "-0.02em", lineHeight: 1.25 }}
           >
-            특수교육 박사가 추천하는 이유
+            특수교육 전문가가 추천하는 이유
           </h2>
 
           <figure
@@ -1739,14 +1739,23 @@ export default function Page() {
             </blockquote>
 
             <figcaption
-              className="mt-5 pt-4 flex flex-col gap-0.5"
+              className="mt-5 pt-4 flex flex-col"
               style={{ borderTop: "1px solid #EDE0C8" }}
             >
-              <span className="font-black" style={{ fontSize: "0.85rem", color: "#2D2620", letterSpacing: "-0.01em" }}>
+              <span className="font-black" style={{ fontSize: "0.95rem", color: "#2D2620", letterSpacing: "-0.01em", marginBottom: 6 }}>
+                장우영
+              </span>
+              <span style={{ fontSize: "0.75rem", color: "#7B6545", lineHeight: 1.55 }}>
                 맘앤맘 아동발달센터 원장
               </span>
-              <span style={{ fontSize: "0.75rem", color: "#7B6545" }}>
-                부산대학교 특수교육학과 박사
+              <span style={{ fontSize: "0.75rem", color: "#7B6545", lineHeight: 1.55 }}>
+                인지·행동치료사
+              </span>
+              <span style={{ fontSize: "0.75rem", color: "#7B6545", lineHeight: 1.55 }}>
+                부산대 특수교육학 박사
+              </span>
+              <span style={{ fontSize: "0.75rem", color: "#7B6545", lineHeight: 1.55 }}>
+                부산디지털대 외래강사
               </span>
             </figcaption>
           </figure>
