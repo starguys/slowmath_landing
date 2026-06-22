@@ -451,6 +451,7 @@ const appEmoji: Record<string, string> = {
   slowmath_minusone: "1️⃣",
   slowmath_minustwo: "2️⃣",
   slowmath_minusthree: "3️⃣",
+  slowmath_easysub: "➖",
   slowmath_subtract: "➖",
   slowmath_borrow: "⬇️",
   slowmath_verticalsub: "🧮",
@@ -960,6 +961,20 @@ const apps: App[] = [
       "A natural next step after −1 and −2 — number-array animation shows subtraction vividly. Random problems support full mastery.",
     tags: ["−3 subtraction", "Number array", "Random"],
     childEffect: "Counts back three at a time",
+    duration: "5 min",
+  },
+  {
+    // Placeholder — actual subapp will be added later (slug provisional, may change during designer redesign)
+    slug: "slowmath_easysub",
+    name: "Easy Sub",
+    korName: "1-digit subtraction",
+    Icon: IconSplit,
+    category: "sub",
+    shortDesc: "Single-digit subtraction starting from the easiest level",
+    value:
+      "Four difficulty levels make it easy to start even for a first-timer. Impulse-control mode builds the habit of thinking before answering.",
+    tags: ["4 levels", "Difficulty control", "Multiple choice", "1-digit"],
+    childEffect: "No longer afraid of the − sign",
     duration: "5 min",
   },
   {

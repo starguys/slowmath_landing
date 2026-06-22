@@ -414,6 +414,7 @@ const appEmoji: Record<string, string> = {
   slowmath_minusone: "1️⃣",
   slowmath_minustwo: "2️⃣",
   slowmath_minusthree: "3️⃣",
+  slowmath_easysub: "➖",
   slowmath_subtract: "➖",
   slowmath_borrow: "⬇️",
   slowmath_verticalsub: "🧮",
@@ -936,6 +937,20 @@ const apps: App[] = [
       "빼기 1·2를 익힌 후 자연스럽게 이어지는 단계로, 수 배열판 애니메이션이 뺄셈 과정을 생생하게 보여줘요. 무작위 문제로 완전 학습을 지원합니다.",
     tags: ["-3 뺄셈", "수 배열판", "무작위"],
     childEffect: "거꾸로 세 칸씩 세요",
+    duration: "5분",
+  },
+  {
+    // 자리잡기용 — 실제 서브앱은 추후 추가 예정 (slug는 가배치, 디자이너 리뉴얼 시 확정)
+    slug: "slowmath_easysub",
+    name: "Easy Sub",
+    korName: "한 자리 뺄셈",
+    Icon: IconSplit,
+    category: "sub",
+    shortDesc: "가장 쉬운 단계부터 시작하는 한 자리 뺄셈 연습",
+    value:
+      "뺄셈이 처음인 아이도 부담 없이 시작할 수 있도록 4단계로 난이도를 조절해요. 충동 억제 모드로 답을 고르기 전에 충분히 생각하는 습관을 만들어줍니다.",
+    tags: ["4단계", "난이도 조절", "선택형", "1자리 뺄셈"],
+    childEffect: "−기호를 두려워하지 않아요",
     duration: "5분",
   },
   {
@@ -1938,7 +1953,7 @@ export default function Page() {
             전체 학습 도구 한눈에 보기
           </h2>
           <p className="text-sm mb-6" style={{ color: "#7B6545" }}>
-            37개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
+            {apps.length}개 도구를 이모지로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
             {apps.map((app) => {
