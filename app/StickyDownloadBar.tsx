@@ -36,7 +36,7 @@ export default function StickyDownloadBar({ locale = "ko" }: { locale?: "ko" | "
         left: 0,
         right: 0,
         background: "white",
-        borderTop: "1px solid #EDE0C8",
+        borderTop: "1px solid #FFDFA1",
         padding: "8px 12px",
         paddingBottom: "calc(8px + env(safe-area-inset-bottom))",
         boxShadow: "0 -2px 12px rgba(0,0,0,0.06)",
@@ -70,8 +70,8 @@ export default function StickyDownloadBar({ locale = "ko" }: { locale?: "ko" | "
       </a>
       <span
         style={{
-          color: "#1E6FB8",
-          background: "#E8F2FB",
+          color: "#D87F27",
+          background: "#FFEFD0",
           padding: "6px 12px",
           borderRadius: "999px",
           fontSize: "0.85rem",

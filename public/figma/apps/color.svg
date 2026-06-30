@@ -1,0 +1,36 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#222222"/>
+<g id="260628">
+<path d="M-2917.33 -6516C-2917.33 -6517.1 -2916.44 -6518 -2915.33 -6518H3240.67C3241.77 -6518 3242.67 -6517.1 3242.67 -6516V2198C3242.67 2199.1 3241.77 2200 3240.67 2200H-2915.33C-2916.44 2200 -2917.33 2199.1 -2917.33 2198V-6516Z" fill="#555555"/>
+<path d="M-2915.33 -6518V-6517H3240.67V-6518V-6519H-2915.33V-6518ZM3242.67 -6516H3241.67V2198H3242.67H3243.67V-6516H3242.67ZM3240.67 2200V2199H-2915.33V2200V2201H3240.67V2200ZM-2917.33 2198H-2916.33V-6516H-2917.33H-2918.33V2198H-2917.33ZM-2915.33 2200V2199C-2915.89 2199 -2916.33 2198.55 -2916.33 2198H-2917.33H-2918.33C-2918.33 2199.66 -2916.99 2201 -2915.33 2201V2200ZM3242.67 2198H3241.67C3241.67 2198.55 3241.22 2199 3240.67 2199V2200V2201C3242.32 2201 3243.67 2199.66 3243.67 2198H3242.67ZM3240.67 -6518V-6517C3241.22 -6517 3241.67 -6516.55 3241.67 -6516H3242.67H3243.67C3243.67 -6517.66 3242.32 -6519 3240.67 -6519V-6518ZM-2915.33 -6518V-6519C-2916.99 -6519 -2918.33 -6517.66 -2918.33 -6516H-2917.33H-2916.33C-2916.33 -6516.55 -2915.89 -6517 -2915.33 -6517V-6518Z" fill="white" fill-opacity="0.1"/>
+<g id="PC(MO&#235;&#143;&#153;&#236;&#157;&#188;)">
+<rect width="1920" height="8558" transform="translate(-717.333 -6438)" fill="white"/>
+<g id="con">
+<rect width="1920" height="1936" transform="translate(-717.333 -202)" fill="white"/>
+<g id="icons">
+<g id="con_2">
+<rect x="-76.8335" y="-19.5" width="201.667" height="113" rx="15.5" stroke="#DADADA"/>
+<g id="series/01/color">
+<circle id="Ellipse 1179" cx="24.4932" cy="11.2075" r="3.84912" fill="url(#paint0_linear_24_3075)"/>
+<circle id="Ellipse 1180" cx="24.4932" cy="36.8687" r="3.84912" fill="#6BADE8"/>
+<circle id="Ellipse 1181" cx="35.6043" cy="17.6232" r="3.84912" transform="rotate(60 35.6043 17.6232)" fill="url(#paint1_linear_24_3075)"/>
+<circle id="Ellipse 1182" cx="13.3817" cy="30.4533" r="3.84912" transform="rotate(60 13.3817 30.4533)" fill="#F0A050"/>
+<circle id="Ellipse 1183" cx="35.6048" cy="30.4538" r="3.84912" transform="rotate(120 35.6048 30.4538)" fill="#FACE82"/>
+<circle id="Ellipse 1184" cx="13.3817" cy="17.6227" r="3.84912" transform="rotate(120 13.3817 17.6227)" fill="#A6CEF1"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_24_3075" x1="22.8647" y1="9.04239" x2="28.7715" y2="11.0737" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFDFA1"/>
+<stop offset="1" stop-color="#F0A050"/>
+</linearGradient>
+<linearGradient id="paint1_linear_24_3075" x1="33.9758" y1="15.4581" x2="39.8826" y2="17.4894" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C4DEF6"/>
+<stop offset="1" stop-color="#6BADE8"/>
+</linearGradient>
+</defs>
+</svg>
