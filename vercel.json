@@ -8,6 +8,10 @@
     {
       "source": "/shell/:path*",
       "destination": "https://slowmath-all.vercel.app/shell/:path*"
+    },
+    {
+      "source": "/guide/:path*",
+      "destination": "https://slowmath-all.vercel.app/guide/:path*"
     }
   ],
   "headers": [
