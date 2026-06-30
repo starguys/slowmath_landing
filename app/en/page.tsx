@@ -369,6 +369,18 @@ function IconSpeaker() {
   );
 }
 
+function IconGap({ color }: { color: string }) {
+  return (
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
+      <rect x="4" y="22" width="6" height="8" rx="1.5" fill={color} fillOpacity=".55" />
+      <rect x="12" y="18" width="6" height="12" rx="1.5" fill={color} fillOpacity=".75" />
+      <rect x="20" y="14" width="6" height="16" rx="1.5" fill="none" stroke={color} strokeWidth="1.6" strokeDasharray="2 1.5" />
+      <text x="23" y="26" textAnchor="middle" fontSize="9" fontWeight="900" fill={color}>?</text>
+      <rect x="28" y="10" width="6" height="20" rx="1.5" fill={color} />
+    </svg>
+  );
+}
+
 function IconStairs() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
@@ -424,6 +436,7 @@ const appEmoji: Record<string, string> = {
   slowmath_dot2dot: "···",
   slowmath_colorcopy: "🪞",
   slowmath_pattern: "🧩",
+  slowmath_gap: "🪜",
   slowmath_sameshape: "🔷",
   slowmath_number: "🔢",
   slowmath_numberdraw: "5️⃣",
@@ -680,6 +693,19 @@ const apps: App[] = [
       "Builds the core link between number symbols and actual quantities. Practice in order or random, all the way to automatization.",
     tags: ["Number ↔ quantity", "Number concept", "1–20", "Order & random"],
     childEffect: "Links a number with a count",
+    duration: "5 min",
+  },
+  {
+    slug: "slowmath_gap",
+    name: "Number gap",
+    korName: "Number gap",
+    Icon: IconGap,
+    category: "number",
+    shortDesc: "Find the missing number in an even-spaced sequence — discovering numerical patterns",
+    value:
+      "Spot regular gaps like +2, +5, +10 and reason out the missing number. Ten gap sizes, up/down directions, and progressive blank positions build a natural sense of number patterns.",
+    tags: ["Gap 1–10", "Up & down", "Number patterns", "Reasoning"],
+    childEffect: "Notices regular gaps",
     duration: "5 min",
   },
   {
@@ -1795,6 +1821,7 @@ Learning tools designed for children with <strong style={{ color: "#4A4035" }}>d
                   { name: "Compare 2", slug: "slowmath_comparing2" },
                   { name: "Number size", slug: "slowmath_compare" },
                   { name: "Pattern", slug: "slowmath_pattern" },
+                  { name: "Number gap", slug: "slowmath_gap" },
                 ],
               },
               {

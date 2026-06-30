@@ -332,6 +332,18 @@ function IconSpeaker() {
   );
 }
 
+function IconGap({ color }: { color: string }) {
+  return (
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
+      <rect x="4" y="22" width="6" height="8" rx="1.5" fill={color} fillOpacity=".55" />
+      <rect x="12" y="18" width="6" height="12" rx="1.5" fill={color} fillOpacity=".75" />
+      <rect x="20" y="14" width="6" height="16" rx="1.5" fill="none" stroke={color} strokeWidth="1.6" strokeDasharray="2 1.5" />
+      <text x="23" y="26" textAnchor="middle" fontSize="9" fontWeight="900" fill={color}>?</text>
+      <rect x="28" y="10" width="6" height="20" rx="1.5" fill={color} />
+    </svg>
+  );
+}
+
 function IconStairs() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
@@ -387,6 +399,7 @@ const appEmoji: Record<string, string> = {
   slowmath_dot2dot: "···",
   slowmath_colorcopy: "🪞",
   slowmath_pattern: "🧩",
+  slowmath_gap: "🪜",
   slowmath_sameshape: "🔷",
   slowmath_number: "🔢",
   slowmath_numberdraw: "5️⃣",
@@ -656,6 +669,19 @@ const apps: App[] = [
       "숫자 기호와 실제 양을 연결하는 핵심 수 개념을 다질 수 있어요. 순서대로·무작위로 반복하며 자동화 단계까지 이끌어줍니다.",
     tags: ["수와 양", "수 개념", "1~20", "순서·무작위"],
     childEffect: "숫자와 개수를 연결해요",
+    duration: "5분",
+  },
+  {
+    slug: "slowmath_gap",
+    name: "Number gap",
+    korName: "수의 간격",
+    Icon: IconGap,
+    category: "number",
+    shortDesc: "일정한 간격으로 이어지는 수에서 빈 자리에 들어갈 수를 찾아요",
+    value:
+      "2씩·5씩·10씩 같은 일정한 간격을 발견하고 빈 자리의 수를 추론해요. 간격 1~10, 올라가기·내려가기, 빈칸 위치까지 단계별로 깊어지며 자연스럽게 수의 규칙성을 익혀요.",
+    tags: ["간격 1~10", "올라가기·내려가기", "수 규칙", "추론"],
+    childEffect: "일정한 간격을 발견해요",
     duration: "5분",
   },
   {
@@ -1868,6 +1894,7 @@ export default function Page() {
                   { name: "비교하기 기초 2", slug: "slowmath_comparing2" },
                   { name: "수의 크기", slug: "slowmath_compare" },
                   { name: "패턴 연습", slug: "slowmath_pattern" },
+                  { name: "수의 간격", slug: "slowmath_gap" },
                 ],
               },
               {
