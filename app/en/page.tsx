@@ -1075,7 +1075,7 @@ const apps: App[] = [
 // ─── Sub-components ─────────────────────────────────────────────────────────
 
 function AppCard({ app, cat }: { app: App; cat: Category }) {
-  const url = `${BASE}/${app.slug}/`;
+  const url = `${BASE}/${app.slug}/?lang=en`;
   const emoji = appEmoji[app.slug] ?? "";
   return (
     <a
@@ -1872,7 +1872,7 @@ Learning tools designed for children with <strong style={{ color: "#4A4035" }}>d
                     {step.apps.map((app) => (
                       <a
                         key={app.slug}
-                        href={`${BASE}/${app.slug}/`}
+                        href={`${BASE}/${app.slug}/?lang=en`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 font-bold rounded-full px-2.5 py-1"
@@ -1915,7 +1915,7 @@ Learning tools designed for children with <strong style={{ color: "#4A4035" }}>d
               return (
                 <a
                   key={app.slug}
-                  href={`${BASE}/${app.slug}/`}
+                  href={`${BASE}/${app.slug}/?lang=en`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="app-tile flex flex-col items-center justify-center rounded-2xl"
