@@ -58,13 +58,18 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
           </div>
         </div>
 
-        {/* 제휴·피드백 문의 (mailto) */}
-        <a
-          href="mailto:contact@everydaysummer.net"
-          className="flex w-full items-center justify-center rounded-[12px] bg-[#686868] px-4 py-[18px] text-[14px] font-bold leading-[20px] tracking-[-0.2px] text-white transition-colors hover:bg-[#7a7a7a]"
-        >
-          <span className="flex-1 text-center">{t.contact}</span>
-        </a>
+        {/* 제휴·피드백 문의 — 버튼이 아니라 라벨 + 이메일 정보 행 */}
+        <div className="flex w-full items-center justify-between gap-3 rounded-[12px] bg-[#686868] px-4 py-[18px]">
+          <span className="shrink-0 text-[14px] font-bold leading-[20px] tracking-[-0.2px] text-white">
+            {t.contact}
+          </span>
+          <a
+            href="mailto:contact@everydaysummer.net"
+            className="whitespace-nowrap text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
+          >
+            contact@everydaysummer.net
+          </a>
+        </div>
 
         {/* 법적 링크 */}
         <div className="flex w-full items-start gap-2">
