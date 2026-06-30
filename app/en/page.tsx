@@ -12,6 +12,7 @@ import SectionApps from "../_home/SectionApps";
 import SiteFooter from "../_home/SiteFooter";
 import StickyDownloadBar from "../StickyDownloadBar";
 import SetHtmlLang from "./SetHtmlLang";
+import { PracticeModalProvider } from "../_home/PracticeModal";
 
 const SITE_URL = "https://slowkids.net";
 const SITE_URL_EN = `${SITE_URL}/en`;
@@ -58,7 +59,7 @@ const NAV_ITEMS: NavItem[] = [
 
 export default function Page() {
   return (
-    <>
+    <PracticeModalProvider locale="en">
       <SetHtmlLang lang="en" />
       <SiteHeader locale="en" />
       <main>
@@ -74,6 +75,6 @@ export default function Page() {
       </main>
       <SiteFooter locale="en" />
       <StickyDownloadBar locale="en" />
-    </>
+    </PracticeModalProvider>
   );
 }

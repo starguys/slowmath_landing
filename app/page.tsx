@@ -10,6 +10,7 @@ import SectionStart from "./_home/SectionStart";
 import SectionApps from "./_home/SectionApps";
 import SiteFooter from "./_home/SiteFooter";
 import StickyDownloadBar from "./StickyDownloadBar";
+import { PracticeModalProvider } from "./_home/PracticeModal";
 
 // 서브내비 탭(히어로 아래 sticky). Figma navi 는 4탭 균등 세그먼트.
 const NAV_ITEMS: NavItem[] = [
@@ -21,7 +22,7 @@ const NAV_ITEMS: NavItem[] = [
 
 export default function Page() {
   return (
-    <>
+    <PracticeModalProvider locale="ko">
       <SiteHeader locale="ko" />
       <main>
         <SectionHero locale="ko" />
@@ -36,6 +37,6 @@ export default function Page() {
       </main>
       <SiteFooter locale="ko" />
       <StickyDownloadBar locale="ko" />
-    </>
+    </PracticeModalProvider>
   );
 }

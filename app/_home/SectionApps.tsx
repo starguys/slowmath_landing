@@ -1,4 +1,5 @@
-import { APP_ORDER, appName, appHref, iconSrc, type Locale } from "./apps";
+import { APP_ORDER, appName, iconSrc, type Locale } from "./apps";
+import { PracticeLink } from "./PracticeModal";
 
 /**
  * 전체 학습 도구 그리드 (Figma 124:5255, PC=MO 동일).
@@ -42,11 +43,10 @@ export default function SectionApps({ locale = "ko" }: { locale?: Locale }) {
         <ul className="grid w-full grid-cols-3 gap-[16px]">
           {APP_ORDER.map((slug) => (
             <li key={slug} className="flex">
-              <a
-                href={appHref(slug, locale)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex w-full flex-col items-center justify-center gap-[8px] rounded-[16px] border border-[#dadada] py-[20px] text-[#4a4035] transition-colors hover:border-[#f0a050] hover:bg-[#fffbf5]"
+              <PracticeLink
+                slug={slug}
+                locale={locale}
+                className="flex w-full cursor-pointer flex-col items-center justify-center gap-[8px] rounded-[16px] border border-[#dadada] py-[20px] text-[#4a4035] transition-colors hover:border-[#f0a050] hover:bg-[#fffbf5]"
               >
                 <img
                   src={iconSrc(slug)}
@@ -58,7 +58,7 @@ export default function SectionApps({ locale = "ko" }: { locale?: Locale }) {
                 <span className="text-center text-[12px] font-medium leading-[18px]">
                   {appName(slug, locale)}
                 </span>
-              </a>
+              </PracticeLink>
             </li>
           ))}
         </ul>

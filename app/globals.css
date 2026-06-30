@@ -47,6 +47,10 @@ html {
   scroll-behavior: smooth;
   /* sticky 서브내비 높이만큼 앵커 스크롤 오프셋 */
   scroll-padding-top: 64px;
+  /* 모달 등으로 스크롤을 잠글 때(overflow:hidden) 세로 스크롤바가 사라지며
+     콘텐츠가 우측으로 밀리는 현상 방지 — 클래식 스크롤바 환경에서만 거터 예약.
+     (오버레이 스크롤바 환경엔 영향 없음) */
+  scrollbar-gutter: stable;
 }
 
 body {

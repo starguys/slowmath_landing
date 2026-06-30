@@ -1,4 +1,5 @@
-import { appName, appHref, iconSrc, type Locale } from "./apps";
+import { appName, iconSrc, type Locale } from "./apps";
+import { PracticeLink } from "./PracticeModal";
 
 /**
  * "어디서 시작할까요?" 시작점 안내 섹션 (Figma 124:5176, PC=MO 동일).
@@ -150,12 +151,11 @@ export default function SectionStart({ locale = "ko" }: { locale?: Locale }) {
                 {/* 추천 도구 칩 (우) */}
                 <div className="flex min-w-0 flex-1 flex-col gap-2">
                   {meta.tools.map((slug) => (
-                    <a
+                    <PracticeLink
                       key={slug}
-                      href={appHref(slug, locale)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 rounded-[8px] border border-[#dadada] px-4 py-2 transition-colors hover:border-[#f3b373] hover:bg-[#fffbf5]"
+                      slug={slug}
+                      locale={locale}
+                      className="flex cursor-pointer items-center gap-3 rounded-[8px] border border-[#dadada] px-4 py-2 transition-colors hover:border-[#f3b373] hover:bg-[#fffbf5]"
                     >
                       <img
                         src={iconSrc(slug)}
@@ -167,7 +167,7 @@ export default function SectionStart({ locale = "ko" }: { locale?: Locale }) {
                       <span className="min-w-0 text-[12px] font-bold leading-[18px] text-[#4a4035]">
                         {appName(slug, locale)}
                       </span>
-                    </a>
+                    </PracticeLink>
                   ))}
                 </div>
               </article>
