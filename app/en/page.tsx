@@ -13,9 +13,16 @@ import SiteFooter from "../_home/SiteFooter";
 import StickyDownloadBar from "../StickyDownloadBar";
 import SetHtmlLang from "./SetHtmlLang";
 import { PracticeModalProvider } from "../_home/PracticeModal";
+import JsonLd from "../_seo/JsonLd";
 
 const SITE_URL = "https://slowkids.net";
 const SITE_URL_EN = `${SITE_URL}/en`;
+const OG_IMAGE = {
+  url: `${SITE_URL}/og-image.png?v=20260701`,
+  width: 878,
+  height: 443,
+  alt: "SlowKids — slow but in the right direction, one step at a time",
+};
 
 export const metadata: Metadata = {
   title: "SlowKids — Math at every child's pace",
@@ -33,16 +40,19 @@ export const metadata: Metadata = {
     title: "SlowKids — Math at every child's pace",
     description:
       "Small math practices for children who pick up concepts more slowly than peers — from earliest cognition through multiplication tables. Now on iOS and Android.",
+    siteName: "SlowKids",
     locale: "en_US",
     alternateLocale: ["ko_KR"],
     type: "website",
     url: SITE_URL_EN,
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "SlowKids — Math at every child's pace",
     description:
       "Small math practices for children who learn slowly. Available on iOS and Android.",
+    images: [OG_IMAGE.url],
   },
   itunes: {
     appId: "6763979294",
@@ -60,6 +70,7 @@ const NAV_ITEMS: NavItem[] = [
 export default function Page() {
   return (
     <PracticeModalProvider locale="en">
+      <JsonLd locale="en" />
       <SetHtmlLang lang="en" />
       <SiteHeader locale="en" />
       <main>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -40,13 +40,14 @@ export const metadata: Metadata = {
     title: "느린아이 - 한 걸음씩, 아이의 속도로",
     description:
       "발달 지연·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습도구입니다.",
+    siteName: "느린아이",
     locale: "ko_KR",
     type: "website",
     images: [
       {
         url: "https://slowkids.net/og-image.png?v=20260701",
-        width: 1200,
-        height: 630,
+        width: 878,
+        height: 443,
         alt: "느린아이 시리즈 — 느리지만 올바른 방향으로, 한 걸음씩 나아갑니다",
       },
     ],
@@ -72,113 +73,9 @@ export const metadata: Metadata = {
   },
 };
 
-const SITE_URL = "https://slowkids.net";
-const APP_BASE = "https://slowkids.net";
-
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "느린아이",
-  alternateName: "느린아이 시리즈",
-  url: SITE_URL,
-  logo: `${SITE_URL}/icon.png`,
-  description:
-    "발달 지연·발달 장애·경계선 지능·학습 장애·ADHD 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습도구입니다.",
+export const viewport: Viewport = {
+  themeColor: "#FFFBF5",
 };
-
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "느린아이 시리즈",
-  alternateName: "Slow Kids",
-  url: SITE_URL,
-  inLanguage: "ko-KR",
-  description:
-    "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지·소근육 학습도구.",
-  publisher: {
-    "@type": "Organization",
-    name: "느린아이",
-    url: SITE_URL,
-  },
-};
-
-const appCatalog = [
-  // 기초 인지
-  { slug: "color", name: "색깔 익히기", desc: "색깔 이름을 보고·듣고·고르며 색 인지 능력을 키워요." },
-  { slug: "linedraw", name: "선 긋기", desc: "직선·곡선·나선을 따라 그리며 손의 안정성을 키워요." },
-  { slug: "dot2dot", name: "점선 따라 그리기", desc: "주어진 점-선 연결을 따라 그리며 시지각과 소근육을 키워요." },
-  { slug: "colorcopy", name: "똑같이 맞추기", desc: "제시된 색 격자 패턴을 그대로 따라 만들며 시지각을 훈련해요." },
-  { slug: "pattern", name: "패턴 연습", desc: "반복되는 규칙에서 빠진 것을 찾는 패턴 인식을 훈련해요." },
-  { slug: "sameshape", name: "같은 모양 찾기", desc: "여러 모양 중에서 같은 모양과 짝을 찾으며 시지각 변별을 훈련해요." },
-  // 수 개념
-  { slug: "number", name: "숫자 익히기", desc: "1부터 100까지 숫자를 보고·듣고·고르며 익혀요." },
-  { slug: "numberdraw", name: "숫자 쓰기", desc: "0~9 숫자를 올바른 순서로 쓰는 법을 연습해요." },
-  { slug: "dice", name: "세기", desc: "손가락·주사위·카드 무늬를 세며 수 감각을 키워요." },
-  { slug: "counting", name: "우리말 세기", desc: "한 명·두 마리·세 대… 우리말로 세는 말과 숫자를 짝지어요." },
-  { slug: "matching", name: "숫자 매칭", desc: "숫자와 동그라미의 개수를 연결하며 수와 양을 연결해요." },
-  { slug: "money", name: "동전과 지폐", desc: "동전과 지폐의 단위·합산을 익히며 생활 속 수 감각을 키워요." },
-  // 수 관계
-  { slug: "comparing", name: "비교하기 기초", desc: "크기·길이·높이·두께·양을 비교하며 수학 언어를 익혀요." },
-  { slug: "comparing2", name: "비교하기 기초 2", desc: "위·아래·안·밖 등 공간 관계를 비교하며 익혀요." },
-  { slug: "compare", name: "수의 크기", desc: "두 수의 크기를 비교하며 부등호(<, >, =)를 익혀요." },
-  { slug: "clock", name: "시계 보기", desc: "아날로그·디지털 시계를 읽는 법을 시·30분·15분 단위로 배워요." },
-  { slug: "oddeven", name: "홀수 짝수 익히기", desc: "배열판·숫자판·랜덤·짝짓기 4가지 모드로 홀수와 짝수를 익혀요." },
-  // 덧셈 전 개념
-  { slug: "combining", name: "모으기 연습", desc: "두 수를 합쳐 하나의 수를 만드는 수 합성을 연습해요." },
-  { slug: "splitting", name: "가르기 연습", desc: "하나의 수를 두 부분으로 나누는 수 분해를 연습해요." },
-  { slug: "complement", name: "보수 연습", desc: "10을 채우는 짝꿍 수(보수)를 익혀요." },
-  // 덧셈
-  { slug: "plusone", name: "더하기 1", desc: "수 배열판으로 +1 덧셈을 직관적으로 익혀요." },
-  { slug: "plustwo", name: "더하기 2", desc: "2 더하기를 배열판과 건너뛰기로 시각화해서 배워요." },
-  { slug: "plusthree", name: "더하기 3", desc: "3 더하기를 여러 학습 모드로 반복 연습해요." },
-  { slug: "easy", name: "한 자리 덧셈", desc: "가장 쉬운 단계부터 시작하는 한 자리 덧셈 연습." },
-  { slug: "circle", name: "한 자리 덧셈 연습", desc: "고르기·쌓기·채우기 세 가지 방식으로 덧셈을 연습해요." },
-  { slug: "carry", name: "받아올림 연습", desc: "두 자리 덧셈의 받아올림을 배열판·세로 형식으로 익혀요." },
-  { slug: "moneycalc", name: "돈 계산하기", desc: "동전과 지폐로 가격을 맞추거나 합계를 골라요 — 덧셈의 실생활 응용." },
-  // 뺄셈
-  { slug: "minusone", name: "빼기 1", desc: "수 배열판으로 -1 뺄셈을 직관적으로 익혀요." },
-  { slug: "minustwo", name: "빼기 2", desc: "2 빼기를 배열판과 거꾸로 건너뛰기로 시각화해서 배워요." },
-  { slug: "minusthree", name: "빼기 3", desc: "3 빼기를 여러 학습 모드로 반복 연습해요." },
-  { slug: "subtract", name: "한 자리 뺄셈 연습", desc: "드래그·묶기·배열판 세 가지 방식으로 한 자리 뺄셈을 익혀요." },
-  { slug: "borrow", name: "받아내림 연습", desc: "두 자리 뺄셈의 받아내림을 배열판·세로 형식으로 익혀요." },
-  // 곱셈
-  { slug: "timestables", name: "구구단 연습", desc: "2~9단 구구단을 충분한 생각 시간과 함께 천천히 익혀요." },
-];
-
-const itemListJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "느린아이 시리즈 학습도구",
-  description: "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지 학습도구",
-  numberOfItems: appCatalog.length,
-  itemListOrder: "https://schema.org/ItemListOrderAscending",
-  itemListElement: appCatalog.map((app, i) => ({
-    "@type": "ListItem",
-    position: i + 1,
-    item: {
-      "@type": "EducationalApplication",
-      name: app.name,
-      url: `${APP_BASE}/slowmath_${app.slug}/`,
-      applicationCategory: "EducationalApplication",
-      operatingSystem: "Web",
-      inLanguage: "ko-KR",
-      description: app.desc,
-      isAccessibleForFree: true,
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "KRW",
-      },
-      publisher: {
-        "@type": "Organization",
-        name: "느린아이",
-        url: SITE_URL,
-      },
-    },
-  })),
-};
-
-const jsonLdBlocks = [organizationJsonLd, websiteJsonLd, itemListJsonLd];
 
 export default function RootLayout({
   children,
@@ -222,15 +119,7 @@ export default function RootLayout({
             __html: `(function(){try{var sp=new URLSearchParams(location.search);var q=sp.get('lang');if(q==='ko'||q==='en'){localStorage.setItem('lang-pref',q);sp.delete('lang');var qs=sp.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:'')+location.hash);return;}var p=localStorage.getItem('lang-pref');var path=location.pathname;var onEn=path.indexOf('/en')===0;if(p==='ko'&&onEn){location.replace(path.replace(/^\\/en\\/?/,'/'));return;}if(p==='en'&&!onEn){location.replace('/en'+(path==='/'?'':path));return;}}catch(e){}})();`,
           }}
         />
-        {jsonLdBlocks.map((block, i) => (
-          <script
-            key={i}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(block).replace(/</g, "\\u003c"),
-            }}
-          />
-        ))}
+        {/* 구조화 데이터(JSON-LD)는 페이지별로 로케일에 맞춰 렌더한다(app/_seo/JsonLd). */}
         {children}
       </body>
     </html>

@@ -11,6 +11,7 @@ import SectionApps from "./_home/SectionApps";
 import SiteFooter from "./_home/SiteFooter";
 import StickyDownloadBar from "./StickyDownloadBar";
 import { PracticeModalProvider } from "./_home/PracticeModal";
+import JsonLd from "./_seo/JsonLd";
 
 // 서브내비 탭. Figma navi 는 4탭 균등 세그먼트(탭당 ~80px) — 라벨은 한 줄에 들어가게 짧게.
 const NAV_ITEMS: NavItem[] = [
@@ -23,6 +24,7 @@ const NAV_ITEMS: NavItem[] = [
 export default function Page() {
   return (
     <PracticeModalProvider locale="ko">
+      <JsonLd locale="ko" />
       <SiteHeader locale="ko" />
       <main>
         <SectionHero locale="ko" />
