@@ -1,0 +1,36 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" fill="#222222"/>
+<g id="260628">
+<path d="M-3136 -7166C-3136 -7167.1 -3135.1 -7168 -3134 -7168H3022C3023.1 -7168 3024 -7167.1 3024 -7166V1548C3024 1549.1 3023.1 1550 3022 1550H-3134C-3135.1 1550 -3136 1549.1 -3136 1548V-7166Z" fill="#555555"/>
+<path d="M-3134 -7168V-7167H3022V-7168V-7169H-3134V-7168ZM3024 -7166H3023V1548H3024H3025V-7166H3024ZM3022 1550V1549H-3134V1550V1551H3022V1550ZM-3136 1548H-3135V-7166H-3136H-3137V1548H-3136ZM-3134 1550V1549C-3134.55 1549 -3135 1548.55 -3135 1548H-3136H-3137C-3137 1549.66 -3135.66 1551 -3134 1551V1550ZM3024 1548H3023C3023 1548.55 3022.55 1549 3022 1549V1550V1551C3023.66 1551 3025 1549.66 3025 1548H3024ZM3022 -7168V-7167C3022.55 -7167 3023 -7166.55 3023 -7166H3024H3025C3025 -7167.66 3023.66 -7169 3022 -7169V-7168ZM-3134 -7168V-7169C-3135.66 -7169 -3137 -7167.66 -3137 -7166H-3136H-3135C-3135 -7166.55 -3134.55 -7167 -3134 -7167V-7168Z" fill="white" fill-opacity="0.1"/>
+<g id="PC(MO&#235;&#143;&#153;&#236;&#157;&#188;)">
+<rect width="1920" height="8558" transform="translate(-936 -7088)" fill="white"/>
+<g id="con">
+<rect width="1920" height="1936" transform="translate(-936 -852)" fill="white"/>
+<g id="icons">
+<g id="con_2">
+<rect x="-76.8335" y="-19.5" width="201.667" height="113" rx="15.5" stroke="#DADADA"/>
+<g id="series/03/calendar">
+<rect id="Rectangle 1067" x="8" y="8" width="32" height="33" rx="4" fill="url(#paint0_linear_24_3075)"/>
+<path id="Fill 10" d="M17.3658 14C18.1463 14 18.7317 13.4266 18.7317 12.658V7.34379C18.7317 6.57516 18.1463 6 17.3658 6C16.5854 6 16 6.57516 16 7.34379V12.658C16 13.4266 16.5854 14 17.3658 14Z" fill="#6BADE8"/>
+<path id="Fill 11" d="M30.6344 14C31.3971 14 32.0002 13.4266 32.0002 12.658V7.34379C32.0002 6.57516 31.3971 6 30.6344 6C29.8539 6 29.2686 6.57516 29.2686 7.34379V12.658C29.2686 13.4266 29.8539 14 30.6344 14Z" fill="#6BADE8"/>
+<path id="Fill 11_2" d="M10 18.5C10 18.7792 10.5832 19 11.3649 19L36.6333 19C37.415 19 38 18.7792 38 18.5C38 18.2143 37.415 18 36.6333 18L11.3649 18C10.5832 18 10 18.2143 10 18.5Z" fill="#6BADE8"/>
+<rect id="Rectangle 1068" x="13" y="24" width="4" height="4" rx="1" fill="#E1EFFA"/>
+<rect id="Rectangle 1069" x="22" y="24" width="4" height="4" rx="1" fill="#E1EFFA"/>
+<rect id="Rectangle 1070" x="31" y="24" width="4" height="4" rx="1" fill="white"/>
+<rect id="Rectangle 1071" x="13" y="30" width="4" height="4" rx="1" fill="#E1EFFA"/>
+<rect id="Rectangle 1072" x="22" y="30" width="4" height="4" rx="1" fill="#E1EFFA"/>
+<rect id="Rectangle 1073" x="31" y="30" width="4" height="4" rx="1" fill="#E1EFFA"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_24_3075" x1="17.2308" y1="15.2187" x2="41.94" y2="23.4586" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C4DEF6"/>
+<stop offset="1" stop-color="#6BADE8"/>
+</linearGradient>
+</defs>
+</svg>
