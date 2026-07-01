@@ -41,9 +41,9 @@ export default function SectionIntro({ locale = "ko" }: { locale?: Locale }) {
     <section
       id="intro"
       aria-labelledby="intro-heading"
-      className="flex w-full scroll-mt-[64px] flex-col items-center bg-[#ffdfa1] px-6 py-16"
+      className="flex w-full scroll-mt-[64px] flex-col items-center bg-[#ffdfa1] px-4 py-14"
     >
-      <div className="flex w-full max-w-[640px] flex-col items-center gap-4 rounded-[16px] bg-white px-6 py-8">
+      <div className="flex w-full max-w-[640px] flex-col items-center gap-4 rounded-[16px] bg-white px-4 py-8">
         <h2
           id="intro-heading"
           className="w-full text-[20px] font-bold leading-[28px] tracking-[-0.6px] text-[#4a4035]"
@@ -52,7 +52,7 @@ export default function SectionIntro({ locale = "ko" }: { locale?: Locale }) {
         </h2>
 
         <div className="flex w-full items-center justify-center rounded-[8px] border border-[#f0a050] px-4 py-2">
-          <p className="flex-1 text-[16px] font-medium leading-[24px] tracking-[-0.2px] text-[#f0a050]">
+          <p className="flex-1 text-[14px] font-medium leading-[20px] tracking-[-0.2px] text-[#f0a050]">
             {t.emLead}
             <strong className="font-bold">{t.emStrong}</strong>
             {t.emRest}

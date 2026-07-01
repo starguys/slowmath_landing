@@ -108,12 +108,12 @@ export default function SectionDemo({ locale = "ko" }: { locale?: Locale }) {
       aria-labelledby="demo-heading"
       className="lazy-section w-full scroll-mt-[64px] bg-white"
     >
-      <div className="mx-auto w-full max-w-[640px] px-6 py-[72px]">
+      <div className="mx-auto w-full max-w-[640px] px-4 py-[64px]">
         {/* 제목 */}
         <div className="flex flex-col items-center gap-3 text-center text-[#4a4035]">
           <h2
             id="demo-heading"
-            className="text-[32px] font-bold leading-[42px] tracking-[-0.6px]"
+            className="text-[30px] font-bold leading-[42px] tracking-[-0.6px]"
           >
             {t.h1}
             <br />
@@ -131,7 +131,7 @@ export default function SectionDemo({ locale = "ko" }: { locale?: Locale }) {
         {/* 영상 + 포인트 (세로 스택) */}
         <div className="mt-10 flex flex-col items-center gap-10">
           {/* 영상 프레임 */}
-          <div className="w-[320px] shrink-0 overflow-hidden rounded-[16px] shadow-[0_18px_45px_-14px_rgba(43,63,108,0.30)]">
+          <div className="w-full max-w-[320px] shrink-0 overflow-hidden rounded-[16px] shadow-[0_18px_45px_-14px_rgba(43,63,108,0.30)]">
             <LazyVideo
               src={`${ASSET_BASE}/video/landing-4.mp4`}
               poster="/figma/demo/poster.jpg"
@@ -141,11 +141,11 @@ export default function SectionDemo({ locale = "ko" }: { locale?: Locale }) {
           </div>
 
           {/* 3가지 포인트 */}
-          <ul className="flex w-full flex-col gap-3">
+          <ul className="flex w-full flex-col items-center gap-3">
             {t.points.map((p, i) => (
               <li
                 key={p.strong}
-                className="flex items-center gap-4 rounded-[12px] border border-[#f0a050] px-6 py-4"
+                className="flex w-full max-w-[320px] items-center gap-4 rounded-[12px] border border-[#f0a050] px-6 py-4"
               >
                 <span className="shrink-0">{ICONS[i]}</span>
                 <p className="text-[16px] font-medium leading-[24px] tracking-[-0.2px] text-[#4a4035]">

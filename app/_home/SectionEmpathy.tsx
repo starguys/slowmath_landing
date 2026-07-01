@@ -52,10 +52,10 @@ export default function SectionEmpathy({ locale = "ko" }: { locale?: Locale }) {
   const t = C[locale];
   return (
     <section id="empathy" className="w-full scroll-mt-[64px] bg-[#ffefd0]">
-      <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-[40px] px-6 py-[72px]">
+      <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-[40px] px-4 py-[64px]">
         {/* 제목 */}
         <div className="flex w-full flex-col items-center gap-[12px] text-center text-[#4a4035]">
-          <h2 className="w-full text-[32px] font-bold leading-[42px] tracking-[-0.6px]">
+          <h2 className="w-full text-[30px] font-bold leading-[42px] tracking-[-0.6px]">
             <span className="text-[#f0a050]">{t.titleAccent}</span>
             {t.titleRest1}
             <br />
@@ -69,7 +69,7 @@ export default function SectionEmpathy({ locale = "ko" }: { locale?: Locale }) {
         </div>
 
         {/* 인용(부모의 혼잣말) 박스 */}
-        <div className="flex w-full flex-col items-center gap-[16px] rounded-[16px] bg-[#ffdfa1] p-[24px]">
+        <div className="flex w-full flex-col items-center gap-[16px] rounded-[16px] bg-[#ffdfa1] px-[16px] py-[24px]">
           <span className="flex items-center justify-center whitespace-nowrap rounded-full bg-[#f0a050] px-[12px] py-[4px] text-[12px] font-medium leading-[18px] text-white">
             {t.tag}
           </span>
@@ -89,7 +89,7 @@ export default function SectionEmpathy({ locale = "ko" }: { locale?: Locale }) {
         </div>
 
         {/* 마무리(공감) 박스 */}
-        <div className="flex w-full flex-col gap-[16px] rounded-[16px] bg-[#f0a050] px-[24px] pb-[24px] pt-[24px]">
+        <div className="flex w-full flex-col items-end gap-[8px] rounded-[16px] bg-[#f0a050] px-[24px] pb-[12px] pt-[24px]">
           <div className="flex w-full flex-col gap-[8px] text-white">
             <h3 className="text-[18px] font-bold leading-[22px] tracking-[-0.6px]">
               {t.closingHeading}

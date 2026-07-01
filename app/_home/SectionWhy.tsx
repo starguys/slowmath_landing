@@ -45,12 +45,12 @@ export default function SectionWhy({ locale = "ko" }: { locale?: Locale }) {
     <section
       id="why"
       aria-labelledby="why-title"
-      className="w-full scroll-mt-[64px] bg-[#ffefd0] py-[80px]"
+      className="w-full scroll-mt-[64px] bg-[#ffefd0] py-[64px]"
     >
-      <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-[40px] px-6">
+      <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-[40px] px-4">
         <h2
           id="why-title"
-          className="w-full text-center font-bold leading-[42px] tracking-[-0.6px] text-[#4a4035] text-[32px]"
+          className="w-full text-center font-bold leading-[42px] tracking-[-0.6px] text-[#4a4035] text-[30px]"
         >
           {t.heading}
         </h2>
@@ -59,7 +59,7 @@ export default function SectionWhy({ locale = "ko" }: { locale?: Locale }) {
           {t.items.map((item, i) => (
             <li
               key={item.title}
-              className="flex items-center gap-[24px] rounded-[12px] bg-white p-[24px]"
+              className="flex items-center gap-[16px] rounded-[12px] bg-white px-[24px] py-[16px]"
             >
               <img
                 src={ICONS[i]}

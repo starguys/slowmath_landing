@@ -25,7 +25,7 @@ export default function SectionApps({ locale = "ko" }: { locale?: Locale }) {
       aria-labelledby="apps-heading"
       className="lazy-section w-full scroll-mt-[64px] bg-white"
     >
-      <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-[40px] px-6 py-[80px]">
+      <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-[40px] px-4 py-[80px]">
         {/* 제목 */}
         <div className="flex w-full flex-col gap-[4px] text-left text-[#4a4035]">
           <h2
@@ -39,8 +39,8 @@ export default function SectionApps({ locale = "ko" }: { locale?: Locale }) {
           </p>
         </div>
 
-        {/* 아이콘 그리드 (3열) */}
-        <ul className="grid w-full grid-cols-3 gap-[16px]">
+        {/* 아이콘 그리드 (2열) */}
+        <ul className="grid w-full grid-cols-2 gap-[16px]">
           {APP_ORDER.map((slug) => (
             <li key={slug} className="flex">
               <PracticeLink

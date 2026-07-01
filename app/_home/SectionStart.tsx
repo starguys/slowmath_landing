@@ -106,7 +106,7 @@ export default function SectionStart({ locale = "ko" }: { locale?: Locale }) {
       aria-labelledby="start-heading"
       className="lazy-section w-full scroll-mt-[64px] bg-gradient-to-b from-[#fffbf5] to-[#ffefd0]"
     >
-      <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-10 px-6 py-20">
+      <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-10 px-4 py-20">
         {/* 섹션 헤더 */}
         <header className="flex w-full flex-col gap-1 text-[#4a4035]">
           <h2
@@ -120,17 +120,17 @@ export default function SectionStart({ locale = "ko" }: { locale?: Locale }) {
           </p>
         </header>
 
-        {/* 단계 카드 리스트: 세로 스택, 카드 내부는 텍스트|칩 2열 */}
+        {/* 단계 카드 리스트: 세로 스택, 카드 내부는 텍스트(위) + 도구 풀폭 행(아래) */}
         <div className="flex w-full flex-col gap-6">
           {t.tiers.map((tier, i) => {
             const meta = TIER_META[i];
             return (
               <article
                 key={tier.step}
-                className="flex w-full gap-8 rounded-[12px] bg-white p-6"
+                className="flex w-full flex-col gap-8 rounded-[12px] bg-white p-6"
               >
-                {/* 텍스트 블록 (좌) */}
-                <div className="flex min-w-0 flex-1 flex-col gap-4">
+                {/* 텍스트 블록 (위) */}
+                <div className="flex w-full flex-col gap-4">
                   <div className="flex">
                     <span
                       className={`inline-flex items-center justify-center rounded-[100px] px-3 py-1 text-[12px] font-bold leading-[18px] ${meta.badge}`}
@@ -139,23 +139,23 @@ export default function SectionStart({ locale = "ko" }: { locale?: Locale }) {
                     </span>
                   </div>
                   <div className="flex flex-col gap-2 text-[#4a4035]">
-                    <h3 className="text-[20px] font-bold leading-[28px] tracking-[-0.6px]">
+                    <h3 className="text-[24px] font-bold leading-[34px] tracking-[-0.6px]">
                       {tier.title}
                     </h3>
-                    <p className="text-[14px] font-medium leading-[20px] tracking-[-0.2px]">
+                    <p className="text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
                       {tier.subtitle}
                     </p>
                   </div>
                 </div>
 
-                {/* 추천 도구 칩 (우) */}
-                <div className="flex min-w-0 flex-1 flex-col gap-2">
+                {/* 추천 도구 행 (아래, 풀폭) */}
+                <div className="flex w-full flex-col gap-2">
                   {meta.tools.map((slug) => (
                     <PracticeLink
                       key={slug}
                       slug={slug}
                       locale={locale}
-                      className="flex cursor-pointer items-center gap-3 rounded-[8px] border border-[#dadada] px-4 py-2 transition-colors hover:border-[#f3b373] hover:bg-[#fffbf5]"
+                      className="flex w-full cursor-pointer items-center gap-6 rounded-[8px] border border-[#dadada] px-4 py-2 transition-colors hover:border-[#f3b373] hover:bg-[#fffbf5]"
                     >
                       <img
                         src={iconSrc(slug)}
@@ -164,7 +164,7 @@ export default function SectionStart({ locale = "ko" }: { locale?: Locale }) {
                         height={40}
                         className="block size-10 shrink-0"
                       />
-                      <span className="min-w-0 text-[12px] font-bold leading-[18px] text-[#4a4035]">
+                      <span className="min-w-0 text-[14px] font-bold leading-[20px] text-[#4a4035]">
                         {appName(slug, locale)}
                       </span>
                     </PracticeLink>

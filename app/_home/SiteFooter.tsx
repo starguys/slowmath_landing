@@ -41,7 +41,7 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
   const koActive = locale === "ko";
   return (
     <footer className="w-full bg-[#363636]">
-      <div className="mx-auto flex w-full max-w-[688px] flex-col items-center gap-4 px-6 py-14">
+      <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-4 px-4 py-14">
         {/* 브랜드 + 태그라인 */}
         <div className="flex w-full flex-col items-center justify-center gap-2 [word-break:break-word]">
           <p className="w-full font-bold tracking-[-0.6px]">
@@ -58,8 +58,9 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
           </div>
         </div>
 
-        {/* 제휴·피드백 문의 — 버튼이 아니라 라벨 + 이메일 정보 행 */}
-        <div className="flex w-full items-center justify-between gap-3 rounded-[12px] bg-[#686868] px-4 py-[18px]">
+        {/* 제휴·피드백 문의 — 버튼이 아니라 라벨 + 이메일 정보 행.
+            넓은 화면: 좌우 분할 / 좁은 화면(≤~370px): 이메일이 아래로 줄바꿈(잘림 방지) */}
+        <div className="flex w-full flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-[12px] bg-[#686868] px-4 py-[18px]">
           <span className="shrink-0 text-[14px] font-bold leading-[20px] tracking-[-0.2px] text-white">
             {t.contact}
           </span>

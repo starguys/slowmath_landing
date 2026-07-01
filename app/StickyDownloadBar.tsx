@@ -29,7 +29,9 @@ export default function StickyDownloadBar({ locale = "ko" }: { locale?: "ko" | "
 
   return (
     <div
-      className="sm:hidden"
+      // 모바일(700px 미만)에서만 노출. display 는 인라인이 아닌 클래스로 제어해야
+      // 브레이크포인트(700px) hidden 이 인라인 display 에 덮이지 않는다.
+      className="hidden max-sm:flex"
       style={{
         position: "fixed",
         bottom: 0,
@@ -41,7 +43,6 @@ export default function StickyDownloadBar({ locale = "ko" }: { locale?: "ko" | "
         paddingBottom: "calc(8px + env(safe-area-inset-bottom))",
         boxShadow: "0 -2px 12px rgba(0,0,0,0.06)",
         zIndex: 50,
-        display: "flex",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",

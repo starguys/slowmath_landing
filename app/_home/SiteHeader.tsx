@@ -43,7 +43,7 @@ export default function SiteHeader({ locale = "ko" }: { locale?: Locale }) {
           <span className="text-[#4a4035]">{t.wm[2]}</span>
         </a>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 flex-col items-end gap-2">
           <a href={t.apple} target="_blank" rel="noopener noreferrer">
             <img
               src="/badge-apple.png"

@@ -12,11 +12,11 @@ import SiteFooter from "./_home/SiteFooter";
 import StickyDownloadBar from "./StickyDownloadBar";
 import { PracticeModalProvider } from "./_home/PracticeModal";
 
-// 서브내비 탭(히어로 아래 sticky). Figma navi 는 4탭 균등 세그먼트.
+// 서브내비 탭. Figma navi 는 4탭 균등 세그먼트(탭당 ~80px) — 라벨은 한 줄에 들어가게 짧게.
 const NAV_ITEMS: NavItem[] = [
-  { label: "느린아이란?", targetId: "intro" },
+  { label: "느린아이", targetId: "intro" },
   { label: "체험 영상", targetId: "demo" },
-  { label: "어디서 시작?", targetId: "start" },
+  { label: "시작하기", targetId: "start" },
   { label: "전체 도구", targetId: "apps" },
 ];
 

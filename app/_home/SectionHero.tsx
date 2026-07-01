@@ -48,10 +48,10 @@ export default function SectionHero({ locale = "ko" }: { locale?: Locale }) {
       aria-labelledby="hero-heading"
       className="w-full scroll-mt-[64px] bg-gradient-to-b from-[#fffbf5] to-[#ffefd0]"
     >
-      <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-[48px] px-6 py-[72px]">
+      <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-[48px] px-2 py-[72px]">
         <h1
           id="hero-heading"
-          className="text-center font-bold tracking-[-0.6px] text-[#4a4035] text-[32px] leading-[42px]"
+          className="text-center font-bold tracking-[-0.6px] text-[#4a4035] text-[30px] leading-[42px]"
         >
           <span className="block">
             {t.h1[0][0]}
@@ -72,10 +72,10 @@ export default function SectionHero({ locale = "ko" }: { locale?: Locale }) {
               ? "SlowKids turtle character studying on a tablet"
               : "태블릿으로 공부하는 느린아이 거북이 캐릭터"
           }
-          className="h-[210px] w-[258px] object-contain"
+          className="h-[183px] w-[224px] object-contain"
         />
 
-        <div className="flex w-full flex-col items-center gap-[8px] rounded-[12px] bg-white px-[24px] py-[32px] text-center text-[#4a4035]">
+        <div className="flex w-full flex-col items-center gap-[8px] rounded-[12px] bg-white px-[14px] py-[32px] text-center text-[#4a4035]">
           <div className="font-bold tracking-[-0.6px] text-[18px] leading-[22px]">
             <p>
               {t.cardBold[0][0]}

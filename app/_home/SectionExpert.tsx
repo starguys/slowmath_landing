@@ -55,7 +55,7 @@ export default function SectionExpert({ locale = "ko" }: { locale?: Locale }) {
     <section
       id="expert"
       aria-labelledby="expert-heading"
-      className="lazy-section flex w-full scroll-mt-[64px] flex-col items-center bg-[#ffdfa1] px-6 py-20"
+      className="lazy-section flex w-full scroll-mt-[64px] flex-col items-center bg-[#ffdfa1] px-4 py-14"
     >
       <figure className="m-0 flex w-full max-w-[640px] flex-col items-center gap-6 rounded-[16px] bg-white px-6 py-8">
         <h2
@@ -69,7 +69,7 @@ export default function SectionExpert({ locale = "ko" }: { locale?: Locale }) {
           {t.headLine2}
         </h2>
 
-        <blockquote className="m-0 flex w-full flex-col gap-4 text-[14px] font-light leading-[20px] tracking-[-0.2px] text-[#4a4035]">
+        <blockquote className="m-0 flex w-full flex-col gap-5 text-[14px] font-light leading-[20px] tracking-[-0.2px] text-[#4a4035]">
           {t.quote.map((para, i) => (
             <p key={i}>{para}</p>
           ))}
@@ -77,7 +77,7 @@ export default function SectionExpert({ locale = "ko" }: { locale?: Locale }) {
 
         <hr className="m-0 w-full border-0 border-t border-[#e9e2d6]" />
 
-        <figcaption className="flex w-full items-center justify-center gap-2 px-2 text-[#4a4035]">
+        <figcaption className="flex w-full items-center justify-center gap-2 text-[#4a4035]">
           <p className="flex-1 text-[16px] font-bold leading-[24px] tracking-[-0.2px]">
             {t.name}
           </p>

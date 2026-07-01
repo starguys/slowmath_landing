@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* 모바일/데스크탑 경계: 700px 로 통일 (Tailwind 기본 sm=640 → 700 재정의).
+   sm: 변형은 700px 이상에서 적용된다 — 예: StickyDownloadBar 의 sm:hidden 은
+   700px 미만(모바일)에서만 하단 다운로드 바를 노출한다. */
+@theme {
+  --breakpoint-sm: 700px;
+}
+
 /*
   느린아이 랜딩 — 2026 리디자인 디자인 시스템
   Figma 변수(오렌지/블루 팔레트 + Pretendard 타이포)를 그대로 토큰화.
