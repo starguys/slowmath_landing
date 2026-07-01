@@ -627,14 +627,14 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       subtitle: "개념을 이해하는 수의 규칙",
       name: "구구단 연습",
       short: "2~9단 구구단을 충분한 생각 시간과 함께 천천히 익혀요",
-      long: "생각 시간을 충분히 조절할 수 있어 빠른 암기가 어려운 아이도 자기 속도로 구구단을 정복할 수 있어요. 2단부터 9단까지 순서대로 밟아가며 자주 틀리는 문제를 다시 만나 자기 속도로 완성해 나갑니다.",
+      long: "생각 시간을 충분히 조절할 수 있어 빠른 암기가 어려운 아이도 자기 속도로 구구단을 정복할 수 있어요. 2단부터 9단까지 차례로 밟아가며 각 단을 자기 속도로 하나씩 완성해 나갑니다.",
     },
     en: {
       category: "Multiplication",
       subtitle: "The number rules behind the concept",
       name: "Timestables",
       short: "2–9 times tables, learned slowly with enough thinking time",
-      long: "Thinking time is fully adjustable, so even a child who struggles to memorize quickly can master the times tables at their own pace. Working through the 2s to the 9s in order and revisiting the tricky ones lets each child finish in their own rhythm.",
+      long: "Thinking time is fully adjustable, so even a child who struggles to memorize quickly can master the times tables at their own pace. Working through the 2s to the 9s in order, each child completes one table at a time at their own rhythm.",
     },
   },
 };
