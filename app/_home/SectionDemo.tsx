@@ -89,7 +89,7 @@ const C: Record<Locale, DemoCopy> = {
     h2: "직접 보여드릴게요!",
     subA: "천천히 한 걸음. 화려한 반응 대신,",
     subB: "아이가 ",
-    subStrong: "자신의 속도에 머무는 장면",
+    subStrong: "자신의 속도로 나아가는 장면",
     subC: "입니다.",
     videoLabel: "느린아이 앱으로 학습하는 아이의 모습",
     points: [
@@ -103,7 +103,7 @@ const C: Record<Locale, DemoCopy> = {
     h2: "let us show you!",
     subA: "One slow step at a time.",
     subB: "Instead of flashy reactions, ",
-    subStrong: "scenes where a child stays at their own pace",
+    subStrong: "scenes where a child moves forward at their own pace",
     subC: ".",
     videoLabel: "A child learning with the SlowKids app",
     points: [
