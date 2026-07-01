@@ -195,14 +195,14 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       subtitle: "숫자가 ‘양’으로 보이기 시작할 때",
       name: "수의 간격",
       short: "일정한 간격의 빈 자리 수를 맞춰보세요",
-      long: "가로 배열의 빈 자리를 채우며 수의 규칙을 익혀요. 아이가 익숙한 간격으로 충분히 연습한 뒤 다른 간격으로 차근차근 넘어가고, 정방향·역방향과 힌트 보임·숨김을 조절해 아이 수준에 딱 맞게 반복할 수 있어요.",
+      long: "빠진 자리 수를 찾으며 수의 순서와 간격 감각을 자연스럽게 익힐 수 있어요. 익숙한 간격에서 시작해 다양한 간격으로 넓혀가며 아이가 스스로 규칙을 발견하도록 돕습니다.",
     },
     en: {
       category: "Number Sense",
       subtitle: "When numbers start to look like 'amounts'",
       name: "Number Gap",
       short: "Fill in the missing numbers in an evenly spaced row",
-      long: "Fill the gaps in a horizontal row to grasp the rule behind the sequence. Start with a gap size the child is comfortable with, then move on to other gaps step by step. Direction (forward/backward) and hint visibility adjust to fit each child's level.",
+      long: "Filling in missing numbers grows a natural feel for the order and spacing of numbers. Starting from a familiar gap and expanding to new ones lets the child discover the rule on their own.",
     },
   },
   slowmath_money: {
