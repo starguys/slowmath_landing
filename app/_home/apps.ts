@@ -65,3 +65,111 @@ export const APP_ORDER: string[] = Object.keys(APP_NAMES);
 export function appName(slug: string, locale: Locale) {
   return APP_NAMES[slug]?.[locale] ?? slug;
 }
+
+/** 카테고리 키 — slowmath_all/shell/apps.js 와 동일한 8분류 중 데모 제외한 7개 */
+export type Category =
+  | "foundations"
+  | "number-sense"
+  | "number-relations"
+  | "pre-addition"
+  | "addition"
+  | "subtraction"
+  | "multiplication";
+
+/** 카테고리 노출 순서 + 다국어 이름/부제 (부제 문구는 shell/apps.js 와 동일) */
+export const CATEGORIES: {
+  key: Category;
+  name: { ko: string; en: string };
+  desc: { ko: string; en: string };
+}[] = [
+  {
+    key: "foundations",
+    name: { ko: "기초 인지", en: "Foundations" },
+    desc: { ko: "눈과 손이 먼저 익숙해지는 시간", en: "Eyes and hands first" },
+  },
+  {
+    key: "number-sense",
+    name: { ko: "수 개념", en: "Number sense" },
+    desc: { ko: "숫자가 ‘양’으로 보이기 시작할 때", en: "When numbers become amounts" },
+  },
+  {
+    key: "number-relations",
+    name: { ko: "수 관계", en: "Number relations" },
+    desc: { ko: "크고 작고, 같고 다름을 읽는 연습", en: "Bigger, smaller, same, different" },
+  },
+  {
+    key: "pre-addition",
+    name: { ko: "덧셈 전 개념", en: "Pre-addition" },
+    desc: { ko: "모으고 가르며 수를 만져보는 경험", en: "Combining and splitting numbers" },
+  },
+  {
+    key: "addition",
+    name: { ko: "덧셈", en: "Addition" },
+    desc: { ko: "작은 걸음부터 쌓아올리는 계산", en: "Building from small steps" },
+  },
+  {
+    key: "subtraction",
+    name: { ko: "뺄셈", en: "Subtraction" },
+    desc: { ko: "한 걸음씩 덜어내는 계산", en: "Taking away, one step at a time" },
+  },
+  {
+    key: "multiplication",
+    name: { ko: "곱셈", en: "Multiplication" },
+    desc: { ko: "개념을 이해하는 수의 규칙", en: "Patterns in numbers" },
+  },
+];
+
+/** slug → 카테고리 매핑 (shell/apps.js 와 동일 분류. oddeven 은 apps.js 상 수 관계) */
+export const APP_CATEGORY: Record<string, Category> = {
+  slowmath_color: "foundations",
+  slowmath_linedraw: "foundations",
+  slowmath_dot2dot: "foundations",
+  slowmath_colorcopy: "foundations",
+  slowmath_pattern: "foundations",
+  slowmath_sameshape: "foundations",
+
+  slowmath_number: "number-sense",
+  slowmath_numberdraw: "number-sense",
+  slowmath_dice: "number-sense",
+  slowmath_counting: "number-sense",
+  slowmath_matching: "number-sense",
+  slowmath_money: "number-sense",
+
+  slowmath_comparing: "number-relations",
+  slowmath_comparing2: "number-relations",
+  slowmath_compare: "number-relations",
+  slowmath_clock: "number-relations",
+  slowmath_calendar: "number-relations",
+  slowmath_oddeven: "number-relations",
+
+  slowmath_combining: "pre-addition",
+  slowmath_splitting: "pre-addition",
+  slowmath_complement: "pre-addition",
+
+  slowmath_plusone: "addition",
+  slowmath_plustwo: "addition",
+  slowmath_plusthree: "addition",
+  slowmath_easy: "addition",
+  slowmath_circle: "addition",
+  slowmath_carry: "addition",
+  slowmath_verticaladd: "addition",
+  slowmath_moneycalc: "addition",
+
+  slowmath_minusone: "subtraction",
+  slowmath_minustwo: "subtraction",
+  slowmath_minusthree: "subtraction",
+  slowmath_subtract: "subtraction",
+  slowmath_borrow: "subtraction",
+  slowmath_verticalsub: "subtraction",
+  slowmath_changecalc: "subtraction",
+
+  slowmath_timestables: "multiplication",
+};
+
+/** 카테고리별로 그룹화된 APP_ORDER (원본 노출 순서 보존, 카테고리 내부에서도 원본 순서 유지) */
+export function appsByCategory(): { category: Category; slugs: string[] }[] {
+  return CATEGORIES.map(({ key }) => ({
+    category: key,
+    slugs: APP_ORDER.filter((slug) => APP_CATEGORY[slug] === key),
+  }));
+}
