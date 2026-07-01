@@ -11,7 +11,7 @@ export function appHref(slug: string, locale: Locale) {
   return locale === "en" ? `/${slug}/?lang=en` : `/${slug}/`;
 }
 
-/** 37개 학습 도구의 한/영 이름 (Figma 124:5255 시안 라벨 기준) */
+/** 37개 학습도구의 한/영 이름 (Figma 124:5255 시안 라벨 기준) */
 export const APP_NAMES: Record<string, { ko: string; en: string }> = {
   // 기초 인지
   slowmath_color: { ko: "색깔 익히기", en: "Color recognition" },

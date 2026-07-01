@@ -72,7 +72,7 @@ const C = {
 } as const;
 
 /**
- * "느린아이 학습 도구가 다른 이유" (Figma 142:16850).
+ * "느린아이 학습도구가 다른 이유" (Figma 142:16850).
  * 콘텐츠 640px 중앙정렬 — 아이콘 좌측 카드. 모바일 1열 / 데스크탑(696~) 2열 그리드.
  */
 export default function SectionWhy({ locale = "ko" }: { locale?: Locale }) {

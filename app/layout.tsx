@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   },
   title: "느린아이 | 아이의 속도로 배우는 기초 수학 연습",
   description:
-    "발달 지연·경계선 지능·학습 장애 아동이 스스로 해내는 경험을 쌓도록 설계된 수학·인지 학습 도구. 숫자 익히기·덧셈·뺄셈·구구단·시계 보기·비교하기·패턴 인지·소근육 발달 훈련까지. 학부모가 집에서 바로 활용할 수 있습니다.",
+    "발달 지연·경계선 지능·학습 장애 아동이 스스로 해내는 경험을 쌓도록 설계된 수학·인지 학습도구. 숫자 익히기·덧셈·뺄셈·구구단·시계 보기·비교하기·패턴 인지·소근육 발달 훈련까지. 학부모가 집에서 바로 활용할 수 있습니다.",
   keywords: [
     "느린 학습자 수학",
     "발달 지연 아이 수학 학습",
-    "경계선 지능 학습 도구",
+    "경계선 지능 학습도구",
     "특수 교육 수학",
     "학습 장애 수학 훈련",
     "느린 아이 학습 지원",
@@ -34,12 +34,12 @@ export const metadata: Metadata = {
     "색깔 인지 학습",
     "패턴 인식 훈련",
     "수 세기 연습",
-    "아동 수학 학습 도구",
+    "아동 수학 학습도구",
   ],
   openGraph: {
     title: "느린 아이를 위한 수학 학습 도우미",
     description:
-      "발달 지연·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.",
+      "발달 지연·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습도구입니다.",
     locale: "ko_KR",
     type: "website",
     images: [
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "느린아이 시리즈 — 한 걸음씩, 아이의 속도로",
     description:
-      "발달 지연·경계선 지능·학습 장애 아동이 자기 속도로 수학의 기초를 쌓는 학습 도구. App Store에서 만나보세요.",
+      "발달 지연·경계선 지능·학습 장애 아동이 자기 속도로 수학의 기초를 쌓는 학습도구. App Store에서 만나보세요.",
     images: ["https://slowkids.net/og-image.png?v=20260701"],
   },
   verification: {
@@ -83,7 +83,7 @@ const organizationJsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/icon.png`,
   description:
-    "발달 지연·발달 장애·경계선 지능·학습 장애·ADHD 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.",
+    "발달 지연·발달 장애·경계선 지능·학습 장애·ADHD 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습도구입니다.",
 };
 
 const websiteJsonLd = {
@@ -94,7 +94,7 @@ const websiteJsonLd = {
   url: SITE_URL,
   inLanguage: "ko-KR",
   description:
-    "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지·소근육 학습 도구.",
+    "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지·소근육 학습도구.",
   publisher: {
     "@type": "Organization",
     name: "느린아이",
@@ -148,8 +148,8 @@ const appCatalog = [
 const itemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "느린아이 시리즈 학습 도구",
-  description: "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지 학습 도구",
+  name: "느린아이 시리즈 학습도구",
+  description: "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지 학습도구",
   numberOfItems: appCatalog.length,
   itemListOrder: "https://schema.org/ItemListOrderAscending",
   itemListElement: appCatalog.map((app, i) => ({
