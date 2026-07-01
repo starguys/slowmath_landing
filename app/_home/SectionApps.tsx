@@ -9,7 +9,7 @@ import { PracticeLink } from "./PracticeModal";
  */
 const C = {
   ko: {
-    heading: "전체 학습 도구 한눈에 보기",
+    heading: "전체 학습도구 한눈에 보기",
     subtitle: "카테고리별로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요",
   },
   en: {

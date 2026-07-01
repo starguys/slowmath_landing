@@ -12,7 +12,7 @@ const ICONS = [
 
 const C = {
   ko: {
-    heading: "느린아이 학습 도구가 다른 이유",
+    heading: "느린아이 학습도구가 다른 이유",
     items: [
       {
         title: "단계별 난이도",
