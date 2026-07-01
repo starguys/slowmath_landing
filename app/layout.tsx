@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "아동 수학 학습도구",
   ],
   openGraph: {
-    title: "느린 아이를 위한 수학 학습 도우미",
+    title: "느린아이 - 한 걸음씩, 아이의 속도로",
     description:
       "발달 지연·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습도구입니다.",
     locale: "ko_KR",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "느린아이 시리즈 — 한 걸음씩, 아이의 속도로",
+    title: "느린아이 - 한 걸음씩, 아이의 속도로",
     description:
       "발달 지연·경계선 지능·학습 장애 아동이 자기 속도로 수학의 기초를 쌓는 학습도구. App Store에서 만나보세요.",
     images: ["https://slowkids.net/og-image.png?v=20260701"],
