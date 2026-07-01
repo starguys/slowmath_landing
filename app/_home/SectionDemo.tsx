@@ -65,11 +65,25 @@ function IconTouch() {
 
 const ICONS = [<IconQuiet key="q" />, <IconRepeat key="r" />, <IconTouch key="t" />];
 
+// 포인트 카드 한 줄 = 세그먼트 배열({ a: true } 는 주황 볼드 강조). 줄바꿈은 Figma(142:16825) 시안대로 <p> 단위 고정.
+type Seg = { t: string; a?: boolean };
+type DemoCopy = {
+  h1: string;
+  h2: string;
+  subA: string;
+  subB: string;
+  subStrong: string;
+  subC: string;
+  videoLabel: string;
+  points: Seg[][][];
+};
+
 /**
- * 데모 (Figma 124:5085, PC=MO 동일). 단일 컬럼 중앙정렬(640px) — 영상 위 + 포인트 아래 스택.
- * 아이콘은 로케일 공통, 텍스트만 ko/en 분기.
+ * 데모 (Figma 142:16820). 단일 컬럼 중앙정렬(640px) — 영상 위 + 포인트 아래 스택.
+ * 아이콘은 로케일 공통, 텍스트만 ko/en 분기. 포인트 문구는 줄 단위 세그먼트로 보관해
+ * Figma 의 줄바꿈(각 카드 2줄)을 그대로 재현한다.
  */
-const C = {
+const C: Record<Locale, DemoCopy> = {
   ko: {
     h1: "말보다 먼저,",
     h2: "직접 보여드릴게요!",
@@ -79,9 +93,9 @@ const C = {
     subC: "입니다.",
     videoLabel: "느린아이 앱으로 학습하는 아이의 모습",
     points: [
-      { pre: "조용한 화면, 충분히 ", strong: "생각할 시간", post: "" },
-      { pre: "틀려도 다시, 작게 반복하며 ", strong: "쌓이는 자신감", post: "" },
-      { pre: "", strong: "아이가 스스로", post: " 터치하고 확인하는 순간들" },
+      [[{ t: "조용한 화면," }], [{ t: "충분히 " }, { t: "생각할 시간", a: true }]],
+      [[{ t: "틀려도 다시, 작게 반복하며" }], [{ t: "쌓이는 자신감", a: true }]],
+      [[{ t: "아이가 스스로", a: true }, { t: " 터치하고" }], [{ t: "확인하는 순간들" }]],
     ],
   },
   en: {
@@ -93,12 +107,12 @@ const C = {
     subC: ".",
     videoLabel: "A child learning with the SlowKids app",
     points: [
-      { pre: "A quiet screen, plenty of ", strong: "time to think", post: "" },
-      { pre: "Try again — ", strong: "confidence built from small repetitions", post: "" },
-      { pre: "Moments the child ", strong: "taps and confirms on their own", post: "" },
+      [[{ t: "A quiet screen, plenty of " }, { t: "time to think", a: true }]],
+      [[{ t: "Try again — " }, { t: "confidence built from small repetitions", a: true }]],
+      [[{ t: "Moments the child " }, { t: "taps and confirms on their own", a: true }]],
     ],
   },
-} as const;
+};
 
 export default function SectionDemo({ locale = "ko" }: { locale?: Locale }) {
   const t = C[locale];
@@ -142,17 +156,26 @@ export default function SectionDemo({ locale = "ko" }: { locale?: Locale }) {
 
           {/* 3가지 포인트 */}
           <ul className="flex w-full flex-col items-center gap-3">
-            {t.points.map((p, i) => (
+            {t.points.map((lines, i) => (
               <li
-                key={p.strong}
+                key={i}
                 className="flex w-full max-w-[320px] items-center gap-4 rounded-[12px] border border-[#f0a050] px-6 py-4"
               >
                 <span className="shrink-0">{ICONS[i]}</span>
-                <p className="text-[16px] font-medium leading-[24px] tracking-[-0.2px] text-[#4a4035]">
-                  {p.pre}
-                  <span className="font-bold text-[#f0a050]">{p.strong}</span>
-                  {p.post}
-                </p>
+                <div className="min-w-0 flex-1 text-[16px] font-medium leading-[24px] tracking-[-0.2px] text-[#4a4035] [word-break:break-word]">
+                  {lines.map((line, j) => (
+                    <p key={j}>
+                      {line.map((seg, k) => (
+                        <span
+                          key={k}
+                          className={seg.a ? "font-bold text-[#f0a050]" : undefined}
+                        >
+                          {seg.t}
+                        </span>
+                      ))}
+                    </p>
+                  ))}
+                </div>
               </li>
             ))}
           </ul>

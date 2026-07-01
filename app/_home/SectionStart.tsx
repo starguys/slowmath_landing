@@ -6,6 +6,8 @@ import { PracticeLink } from "./PracticeModal";
  * 단계별(1~4단계) 추천 카드 — 단계 배지 + 제목/부제 + 추천 도구 칩(Figma 일러스트 아이콘).
  * 콘텐츠 640px 중앙정렬. 모바일 카드 1열 스택 / 데스크탑(696~) 2×2 그리드. ko/en 은 locale 분기.
  */
+// 카드 제목/부제는 줄 단위 배열로 보관해 Figma(142:16915)의 줄바꿈을 그대로 재현한다.
+// (한글: 부제 3줄 고정, 3·4단계 제목 2줄 / 영어: 한 줄로 두고 자연 줄바꿈)
 const C = {
   ko: {
     heading: "어디서 시작할까요?",
@@ -13,26 +15,23 @@ const C = {
     tiers: [
       {
         step: "1단계",
-        title: "숫자와 색깔을 아직 몰라요",
-        subtitle: "수 감각의 출발점! 숫자 이름·색깔 이름·눈으로 세기부터 시작해요.",
+        titleLines: ["숫자와 색깔을 아직 몰라요"],
+        subLines: ["수 감각의 출발점!", "숫자 이름·색깔 이름·눈으로", "세기부터 시작해요."],
       },
       {
         step: "2단계",
-        title: "연필 쥐기·쓰기가 힘들어요",
-        subtitle:
-          "글씨 쓰기 전 꼭 필요한 손 조절 능력과 눈-손 협응을 차근차근 키워요.",
+        titleLines: ["연필 쥐기·쓰기가 힘들어요"],
+        subLines: ["글씨 쓰기 전 꼭 필요한", "손 조절 능력과 눈-손 협응을", "차근차근 키워요."],
       },
       {
         step: "3단계",
-        title: "비교·규칙 찾기가 어려워요",
-        subtitle:
-          "크기 비교, 위치 언어, 반복 패턴으로 수학적 사고력의 기초를 닦아요.",
+        titleLines: ["비교·규칙 찾기가", "어려워요"],
+        subLines: ["크기 비교, 위치 언어,", "반복 패턴으로 수학적", "사고력의 기초를 닦아요."],
       },
       {
         step: "4단계",
-        title: "숫자는 알지만 더하기가 어려워요",
-        subtitle:
-          "수와 양을 연결하고, 합치고 나누는 경험을 통해 덧셈 개념을 쌓아요.",
+        titleLines: ["숫자는 알지만", "더하기가 어려워요"],
+        subLines: ["수와 양을 연결하고, 합치고", "나누는 경험을 통해 덧셈", "개념을 쌓아요."],
       },
     ],
   },
@@ -42,27 +41,31 @@ const C = {
     tiers: [
       {
         step: "Stage 1",
-        title: "Numbers and colors are still new",
-        subtitle:
+        titleLines: ["Numbers and colors are still new"],
+        subLines: [
           "Where number sense begins — names of numbers, names of colors, counting by eye.",
+        ],
       },
       {
         step: "Stage 2",
-        title: "Holding a pencil, writing is hard",
-        subtitle:
+        titleLines: ["Holding a pencil, writing is hard"],
+        subLines: [
           "Build the hand control and eye-hand coordination needed before letters and numbers.",
+        ],
       },
       {
         step: "Stage 3",
-        title: "Comparison and pattern finding is hard",
-        subtitle:
+        titleLines: ["Comparison and pattern finding is hard"],
+        subLines: [
           "Size comparison, position words, and repeating patterns — the base of math thinking.",
+        ],
       },
       {
         step: "Stage 4",
-        title: "Numbers are known, but adding is hard",
-        subtitle:
+        titleLines: ["Numbers are known, but adding is hard"],
+        subLines: [
           "Connect numbers with amounts; combine and split to build the idea of addition.",
+        ],
       },
     ],
   },
@@ -138,12 +141,20 @@ export default function SectionStart({ locale = "ko" }: { locale?: Locale }) {
                       {tier.step}
                     </span>
                   </div>
-                  <div className="flex flex-col gap-2 text-[#4a4035]">
+                  <div className="flex flex-col gap-2 text-[#4a4035] [word-break:break-word]">
                     <h3 className="text-[24px] font-bold leading-[34px] tracking-[-0.6px]">
-                      {tier.title}
+                      {tier.titleLines.map((line, k) => (
+                        <span key={k} className="block">
+                          {line}
+                        </span>
+                      ))}
                     </h3>
                     <p className="text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
-                      {tier.subtitle}
+                      {tier.subLines.map((line, k) => (
+                        <span key={k} className="block">
+                          {line}
+                        </span>
+                      ))}
                     </p>
                   </div>
                 </div>

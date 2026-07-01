@@ -1,44 +1,73 @@
 import { type Locale } from "./apps";
 
+// 서브카드 한 줄 = 색/굵기 세그먼트 배열. 줄바꿈은 Figma(142:16782) 시안과 동일하게 <p> 단위로 고정.
+type Seg = { t: string; c?: "o" | "b"; bold?: boolean };
+type HeroCopy = {
+  h1: string[][];
+  cardLines: Seg[][];
+  descLines: Seg[][];
+};
+
 /**
- * 히어로 (Figma 124:5044, PC=MO 동일). 단일 컬럼 중앙정렬(640px), 모바일 사이즈.
+ * 히어로 (Figma 142:16779). 단일 컬럼 중앙정렬(640px).
  * 그라데이션 배경 + 슬로건 + 거북이 마스코트 + 흰 서브카드. ko/en 은 locale 분기.
- * h1/카드 강조 텍스트는 [pre, accent, post] 3분할로 보관해 색 강조를 유지한다.
+ * h1 은 [pre, accent, post] 3분할, 서브카드 문구는 줄 단위 세그먼트로 보관해
+ * 색 강조와 함께 Figma 의 줄바꿈(굵은 문구 3줄 / 설명 3줄)을 그대로 재현한다.
  */
-const C = {
+const C: Record<Locale, HeroCopy> = {
   ko: {
     h1: [
       ["느리지만 ", "올바른 방향", "으로"],
       ["", "한 걸음씩", " 나아갑니다"],
     ],
-    cardBold: [
-      ["카이스트 출신, 자폐스펙트럼 ", "발달장애 아이의 아빠", "가"],
-      ["경험을 바탕으로 직접 만든 ", "느린아이", ""],
+    cardLines: [
+      [{ t: "카이스트 출신, 자폐스펙트럼" }],
+      [{ t: "발달장애 아이의 아빠", c: "o" }, { t: "가" }],
+      [{ t: "경험을 바탕으로 직접 만든 " }, { t: "느린아이", c: "b" }],
     ],
-    descBold: "발달지연·발달장애·느린학습자·경계선지능 아동",
-    descMid: "이 자신의 속도로",
-    descLine2: "수학의 기초를 차근차근 쌓도록 설계된 학습 도구입니다.",
+    descLines: [
+      [
+        { t: "발달지연·발달장애·느린학습자·경계선지능 아동", bold: true },
+        { t: "이" },
+      ],
+      [{ t: "자신의 속도로 수학의 기초를 차근차근 쌓도록" }],
+      [{ t: "설계된 학습 도구입니다." }],
+    ],
   },
   en: {
     h1: [
       ["Slowly but in ", "the right direction", ","],
       ["", "one step", " at a time"],
     ],
-    cardBold: [
+    cardLines: [
       [
-        "Made by a KAIST-trained engineer, the ",
-        "father of a child on the autism spectrum",
-        ",",
+        { t: "Made by a KAIST-trained engineer, the " },
+        { t: "father of a child on the autism spectrum", c: "o" },
+        { t: "," },
       ],
-      ["who built ", "SlowKids", " from his own family's experience"],
+      [
+        { t: "who built " },
+        { t: "SlowKids", c: "b" },
+        { t: " from his own family's experience" },
+      ],
     ],
-    descBold:
-      "children with developmental delays, developmental disabilities, slow learning, or borderline intelligence",
-    descMid: "",
-    descLine2:
-      "— learning tools designed to build the foundations of math step by step, at their own pace.",
+    descLines: [
+      [
+        {
+          t: "children with developmental delays, developmental disabilities, slow learning, or borderline intelligence",
+          bold: true,
+        },
+      ],
+      [
+        {
+          t: "— learning tools designed to build the foundations of math step by step, at their own pace.",
+        },
+      ],
+    ],
   },
-} as const;
+};
+
+const ACCENT = { o: "text-[#f0a050]", b: "text-[#6bade8]" } as const;
 
 export default function SectionHero({ locale = "ko" }: { locale?: Locale }) {
   const t = C[locale];
@@ -75,25 +104,28 @@ export default function SectionHero({ locale = "ko" }: { locale?: Locale }) {
           className="h-[183px] w-[224px] object-contain"
         />
 
-        <div className="flex w-full flex-col items-center gap-[8px] rounded-[12px] bg-white px-[14px] py-[32px] text-center text-[#4a4035]">
-          <div className="font-bold tracking-[-0.6px] text-[18px] leading-[22px]">
-            <p>
-              {t.cardBold[0][0]}
-              <span className="text-[#f0a050]">{t.cardBold[0][1]}</span>
-              {t.cardBold[0][2]}
-            </p>
-            <p>
-              {t.cardBold[1][0]}
-              <span className="text-[#6bade8]">{t.cardBold[1][1]}</span>
-              {t.cardBold[1][2]}
-            </p>
+        <div className="flex w-full flex-col items-center gap-[8px] rounded-[12px] bg-white px-[14px] py-[32px] text-center text-[#4a4035] [word-break:break-word]">
+          <div className="w-full font-bold tracking-[-0.6px] text-[18px] leading-[22px]">
+            {t.cardLines.map((line, i) => (
+              <p key={i}>
+                {line.map((seg, j) => (
+                  <span key={j} className={seg.c ? ACCENT[seg.c] : undefined}>
+                    {seg.t}
+                  </span>
+                ))}
+              </p>
+            ))}
           </div>
-          <div className="font-medium tracking-[-0.2px] opacity-70 text-[14px] leading-[20px]">
-            <p>
-              <span className="font-bold">{t.descBold}</span>
-              {t.descMid}
-            </p>
-            <p>{t.descLine2}</p>
+          <div className="w-full font-medium tracking-[-0.2px] opacity-70 text-[14px] leading-[20px]">
+            {t.descLines.map((line, i) => (
+              <p key={i}>
+                {line.map((seg, j) => (
+                  <span key={j} className={seg.bold ? "font-bold" : undefined}>
+                    {seg.t}
+                  </span>
+                ))}
+              </p>
+            ))}
           </div>
         </div>
       </div>

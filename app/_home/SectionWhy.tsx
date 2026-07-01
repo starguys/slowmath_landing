@@ -14,23 +14,59 @@ const C = {
   ko: {
     heading: "느린아이 학습 도구가 다른 이유",
     items: [
-      { title: "단계별 난이도", desc: "아이의 현재 수준에서 시작해 작은 성공을 쌓으며 올라가요" },
-      { title: "반복 학습 설계", desc: "같은 개념을 여러 방식으로 반복해 더 오래, 더 깊이 기억해요" },
-      { title: "답 고르기 전, 충분한 생각 시간", desc: "생각 시간을 조절할 수 있어 충동적 선택을 줄여줘요" },
-      { title: "음성 안내 지원", desc: "글을 읽지 못하는 아이도 소리만으로 혼자 학습할 수 있어요" },
-      { title: "감각 배려 설계", desc: "번쩍임·갑작스러운 소리 없이, 조용한 화면으로 만들었어요" },
-      { title: "한 화면, 한 활동", desc: "한 번에 하나의 활동만 담아 산만함 없이 집중할 수 있어요" },
+      {
+        title: "단계별 난이도",
+        desc: "아이의 현재 수준에서 시작해 작은 성공을 쌓으며 올라가요",
+      },
+      {
+        title: "반복 학습 설계",
+        desc: "같은 개념을 여러 방식으로 반복해 더 오래, 더 깊이 기억해요",
+      },
+      {
+        title: "충분한 생각 시간",
+        desc: "답 고르기 전, 생각 시간을 조절할 수 있어 충동적 선택을 줄여줘요",
+      },
+      {
+        title: "음성 안내 지원",
+        desc: "글을 읽지 못하는 아이도 소리만으로 혼자 학습할 수 있어요",
+      },
+      {
+        title: "감각 배려 설계",
+        desc: "번쩍임·갑작스러운 소리 없이, 조용한 화면으로 만들었어요",
+      },
+      {
+        title: "한 화면, 한 활동",
+        desc: "한 번에 하나의 활동만 담아 산만함 없이 집중할 수 있어요",
+      },
     ],
   },
   en: {
     heading: "Why SlowKids learning tools are different",
     items: [
-      { title: "Staged difficulty", desc: "Starts where the child is right now and builds up through small wins" },
-      { title: "Repetition by design", desc: "The same concept practiced from many angles, settling longer and deeper" },
-      { title: "Enough thinking time", desc: "An adjustable wait before answering reduces impulsive picks" },
-      { title: "Voice guidance", desc: "Prompts read aloud, so non-readers can work on their own" },
-      { title: "Quiet by design", desc: "No flashing screens, no jarring sound effects — a calm screen" },
-      { title: "One screen, one task", desc: "Just one activity at a time so attention can settle without competition" },
+      {
+        title: "Staged difficulty",
+        desc: "Starts where the child is right now and builds up through small wins",
+      },
+      {
+        title: "Repetition by design",
+        desc: "The same concept practiced from many angles, settling longer and deeper",
+      },
+      {
+        title: "Enough thinking time",
+        desc: "An adjustable wait before answering reduces impulsive picks",
+      },
+      {
+        title: "Voice guidance",
+        desc: "Prompts read aloud, so non-readers can work on their own",
+      },
+      {
+        title: "Quiet by design",
+        desc: "No flashing screens, no jarring sound effects — a calm screen",
+      },
+      {
+        title: "One screen, one task",
+        desc: "Just one activity at a time so attention can settle without competition",
+      },
     ],
   },
 } as const;
