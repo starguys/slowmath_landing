@@ -214,9 +214,12 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
+        {/* 언어 라우팅: 기본은 항상 KO. 브라우저 언어로 자동 전환하지 않고,
+            사용자가 명시적으로 고른 경우(?lang= 쿼리 또는 저장된 lang-pref)에만
+            KO(/) ↔ EN(/en) 경로를 맞춘다. (영어 방문자는 /en 링크·hreflang 로 진입) */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var sp=new URLSearchParams(location.search);var q=sp.get('lang');if(q==='ko'||q==='en'){localStorage.setItem('lang-pref',q);sp.delete('lang');var qs=sp.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:'')+location.hash);return;}var p=localStorage.getItem('lang-pref');var path=location.pathname;var onEn=path.indexOf('/en')===0;if(!p){var lang=(navigator.language||'').toLowerCase();var preferKo=lang.indexOf('ko')===0;if(!preferKo&&!onEn){location.replace('/en'+(path==='/'?'':path));return;}}else if(p==='ko'&&onEn){location.replace(path.replace(/^\\/en\\/?/,'/'));return;}else if(p==='en'&&!onEn){location.replace('/en'+(path==='/'?'':path));return;}}catch(e){}})();`,
+            __html: `(function(){try{var sp=new URLSearchParams(location.search);var q=sp.get('lang');if(q==='ko'||q==='en'){localStorage.setItem('lang-pref',q);sp.delete('lang');var qs=sp.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:'')+location.hash);return;}var p=localStorage.getItem('lang-pref');var path=location.pathname;var onEn=path.indexOf('/en')===0;if(p==='ko'&&onEn){location.replace(path.replace(/^\\/en\\/?/,'/'));return;}if(p==='en'&&!onEn){location.replace('/en'+(path==='/'?'':path));return;}}catch(e){}})();`,
           }}
         />
         {jsonLdBlocks.map((block, i) => (
