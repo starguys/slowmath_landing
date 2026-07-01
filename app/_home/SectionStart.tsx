@@ -2,9 +2,9 @@ import { appName, iconSrc, type Locale } from "./apps";
 import { PracticeLink } from "./PracticeModal";
 
 /**
- * "어디서 시작할까요?" 시작점 안내 섹션 (Figma 124:5176, PC=MO 동일).
+ * "어디서 시작할까요?" 시작점 안내 섹션 (Figma 142:16911).
  * 단계별(1~4단계) 추천 카드 — 단계 배지 + 제목/부제 + 추천 도구 칩(Figma 일러스트 아이콘).
- * 단일 컬럼 중앙정렬(640px), 카드 세로 스택, 카드 내부는 텍스트|칩 2열. ko/en 은 locale 분기.
+ * 콘텐츠 640px 중앙정렬. 모바일 카드 1열 스택 / 데스크탑(696~) 2×2 그리드. ko/en 은 locale 분기.
  */
 const C = {
   ko: {
@@ -120,8 +120,8 @@ export default function SectionStart({ locale = "ko" }: { locale?: Locale }) {
           </p>
         </header>
 
-        {/* 단계 카드 리스트: 세로 스택, 카드 내부는 텍스트(위) + 도구 풀폭 행(아래) */}
-        <div className="flex w-full flex-col gap-6">
+        {/* 단계 카드: 모바일 세로 스택 / 데스크탑(696~) 2×2 그리드. 카드 내부는 텍스트(위) + 도구 풀폭 행(아래) */}
+        <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
           {t.tiers.map((tier, i) => {
             const meta = TIER_META[i];
             return (
@@ -148,8 +148,10 @@ export default function SectionStart({ locale = "ko" }: { locale?: Locale }) {
                   </div>
                 </div>
 
-                {/* 추천 도구 행 (아래, 풀폭) */}
-                <div className="flex w-full flex-col gap-2">
+                {/* 추천 도구 행 (아래, 풀폭). 데스크탑(696~) 2×2 그리드에선 같은 행의 카드
+                    높이가 같아지므로, mt-auto 로 도구 묶음을 카드 하단에 붙여 정렬한다
+                    (제목 줄 수가 달라 텍스트 높이가 다른 카드끼리도 도구가 바닥에서 정렬됨). */}
+                <div className="flex w-full flex-col gap-2 sm:mt-auto">
                   {meta.tools.map((slug) => (
                     <PracticeLink
                       key={slug}

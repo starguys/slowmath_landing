@@ -7,7 +7,8 @@ const GOOGLE_URL =
 
 /**
  * 상단 브랜드 바(헤더). 좌측 워드마크 + 우측 앱스토어/구글플레이 배지.
- * 단일 컬럼 레이아웃(PC=MO 동일, 콘텐츠 640px 중앙정렬). ko/en 분기(워드마크·iOS 지역 URL).
+ * 콘텐츠 640px 중앙정렬. 배지는 모바일(<696) 세로 스택 / 데스크탑(696~) 가로.
+ * ko/en 분기(워드마크·iOS 지역 URL).
  */
 const C = {
   ko: {
@@ -43,7 +44,7 @@ export default function SiteHeader({ locale = "ko" }: { locale?: Locale }) {
           <span className="text-[#4a4035]">{t.wm[2]}</span>
         </a>
 
-        <div className="flex shrink-0 flex-col items-end gap-2">
+        <div className="flex shrink-0 flex-col items-end gap-2 sm:flex-row sm:items-center">
           <a href={t.apple} target="_blank" rel="noopener noreferrer">
             <img
               src="/badge-apple.png"

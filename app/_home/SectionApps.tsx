@@ -2,9 +2,9 @@ import { APP_ORDER, appName, iconSrc, type Locale } from "./apps";
 import { PracticeLink } from "./PracticeModal";
 
 /**
- * 전체 학습 도구 그리드 (Figma 124:5255, PC=MO 동일).
+ * 전체 학습 도구 그리드 (Figma 142:16990).
  * Figma 시안 37개 타일 — 전용 일러스트 아이콘(/figma/apps/<slug>.svg) + 이름, 타일 전체가 앱으로 링크.
- * 단일 컬럼 중앙정렬(640px), 3열 그리드. ko/en 은 locale prop 으로 분기.
+ * 콘텐츠 640px 중앙정렬. 모바일 2열 / 데스크탑(696~) 5열 그리드. ko/en 은 locale prop 으로 분기.
  */
 const C = {
   ko: {
@@ -39,8 +39,8 @@ export default function SectionApps({ locale = "ko" }: { locale?: Locale }) {
           </p>
         </div>
 
-        {/* 아이콘 그리드 (2열) */}
-        <ul className="grid w-full grid-cols-2 gap-[16px]">
+        {/* 아이콘 그리드: 모바일 2열 / 데스크탑(696~) 5열 */}
+        <ul className="grid w-full grid-cols-2 gap-[16px] sm:grid-cols-5">
           {APP_ORDER.map((slug) => (
             <li key={slug} className="flex">
               <PracticeLink

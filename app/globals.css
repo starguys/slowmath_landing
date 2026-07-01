@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-/* 모바일/데스크탑 경계: 700px 로 통일 (Tailwind 기본 sm=640 → 700 재정의).
-   sm: 변형은 700px 이상에서 적용된다 — 예: StickyDownloadBar 의 sm:hidden 은
-   700px 미만(모바일)에서만 하단 다운로드 바를 노출한다. */
+/* 모바일/데스크탑 경계: 696px (데스크탑 = 696px~, 모바일 = 0~695px).
+   sm: 변형은 696px 이상(데스크탑)에서 적용된다 — 예: StickyDownloadBar 의
+   max-sm:flex 는 696px 미만(모바일)에서만 하단 다운로드 바를 노출한다. */
 @theme {
-  --breakpoint-sm: 700px;
+  --breakpoint-sm: 696px;
 }
 
 /*

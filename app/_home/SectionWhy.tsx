@@ -36,8 +36,8 @@ const C = {
 } as const;
 
 /**
- * "느린아이 학습 도구가 다른 이유" (Figma 124:5115, PC=MO 동일).
- * 단일 컬럼 중앙정렬(640px) — 아이콘 좌측 카드 세로 리스트.
+ * "느린아이 학습 도구가 다른 이유" (Figma 142:16850).
+ * 콘텐츠 640px 중앙정렬 — 아이콘 좌측 카드. 모바일 1열 / 데스크탑(696~) 2열 그리드.
  */
 export default function SectionWhy({ locale = "ko" }: { locale?: Locale }) {
   const t = C[locale];
@@ -55,7 +55,7 @@ export default function SectionWhy({ locale = "ko" }: { locale?: Locale }) {
           {t.heading}
         </h2>
 
-        <ul className="flex w-full flex-col gap-[16px]">
+        <ul className="grid w-full grid-cols-1 gap-[16px] sm:grid-cols-2">
           {t.items.map((item, i) => (
             <li
               key={item.title}

@@ -58,18 +58,16 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
           </div>
         </div>
 
-        {/* 제휴·피드백 문의 — 버튼이 아니라 라벨 + 이메일 정보 행.
+        {/* 제휴·피드백 문의 — 버튼도 링크도 아닌 정보용 UI(라벨 + 이메일 텍스트).
+            이메일은 클릭 대상이 아니라 표시용이므로 pointer 커서·hover 효과 없음(span).
             넓은 화면: 좌우 분할 / 좁은 화면(≤~370px): 이메일이 아래로 줄바꿈(잘림 방지) */}
         <div className="flex w-full flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-[12px] bg-[#686868] px-4 py-[18px]">
           <span className="shrink-0 text-[14px] font-bold leading-[20px] tracking-[-0.2px] text-white">
             {t.contact}
           </span>
-          <a
-            href="mailto:contact@everydaysummer.net"
-            className="whitespace-nowrap text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
-          >
+          <span className="whitespace-nowrap text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada]">
             contact@everydaysummer.net
-          </a>
+          </span>
         </div>
 
         {/* 법적 링크 */}
