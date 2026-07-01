@@ -541,6 +541,22 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "A natural next step after −1 and −2, with number-array animation that shows the subtraction vividly. Random problems support full mastery.",
     },
   },
+  slowmath_easysub: {
+    ko: {
+      category: "뺄셈",
+      subtitle: "한 걸음씩 덜어내는 계산",
+      name: "한 자리 뺄셈",
+      short: "가장 쉬운 단계부터 시작하는 한 자리 뺄셈 연습",
+      long: "뺄셈이 처음인 아이도 부담 없이 시작할 수 있도록 4단계로 난이도를 조절해요. 충동 억제 모드로 답을 고르기 전에 충분히 생각하는 습관을 만들어줍니다.",
+    },
+    en: {
+      category: "Subtraction",
+      subtitle: "Calculation, one step removed at a time",
+      name: "Easy Sub",
+      short: "1-digit subtraction starting from the easiest level",
+      long: "Four difficulty levels let even a child new to subtraction start without pressure. An impulse-control mode builds the habit of thinking it through before choosing an answer.",
+    },
+  },
   slowmath_subtract: {
     ko: {
       category: "뺄셈",
