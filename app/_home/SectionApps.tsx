@@ -5,7 +5,7 @@ import { PracticeLink } from "./PracticeModal";
  * 전체 학습 도구 그리드 (Figma 142:16990).
  * shell/apps.js 와 동일한 7개 카테고리(기초 인지 → 수 개념 → 수 관계 → 덧셈 전 개념 → 덧셈 → 뺄셈 → 곱셈)로
  * 나눠서, 각 카테고리별 소제목 + 부제 아래에 아이콘 그리드를 반복 렌더링한다.
- * 콘텐츠 640px 중앙정렬. 모바일 2열 / 데스크탑(696~) 5열 그리드. ko/en 은 locale prop 으로 분기.
+ * 콘텐츠 640px 중앙정렬. 모바일 2열 / 데스크탑(696~) 4열 그리드. ko/en 은 locale prop 으로 분기.
  */
 const C = {
   ko: {
@@ -62,8 +62,8 @@ export default function SectionApps({ locale = "ko" }: { locale?: Locale }) {
                   </p>
                 </div>
 
-                {/* 아이콘 그리드: 모바일 2열 / 데스크탑(696~) 5열 */}
-                <ul className="grid w-full grid-cols-2 gap-[16px] sm:grid-cols-5">
+                {/* 아이콘 그리드: 모바일 2열 / 데스크탑(696~) 4열 */}
+                <ul className="grid w-full grid-cols-2 gap-[16px] sm:grid-cols-4">
                   {slugs.map((slug) => (
                     <li key={slug} className="flex">
                       <PracticeLink
