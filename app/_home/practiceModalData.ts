@@ -547,14 +547,14 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       subtitle: "한 걸음씩 덜어내는 계산",
       name: "한 자리 뺄셈",
       short: "가장 쉬운 단계부터 시작하는 한 자리 뺄셈 연습",
-      long: "뺄셈이 처음인 아이도 부담 없이 시작할 수 있도록 4단계로 난이도를 조절해요. 충동 억제 모드로 답을 고르기 전에 충분히 생각하는 습관을 만들어줍니다.",
+      long: "덜어내는 감각을 그림으로 시각화하며 한 자리 뺄셈의 의미를 자연스럽게 익힐 수 있어요. 4단계 난이도로 부담 없이 시작해 충동 억제 모드로 아이가 자기 속도에 맞게 정복해 나갑니다.",
     },
     en: {
       category: "Subtraction",
       subtitle: "Calculation, one step removed at a time",
       name: "Easy Sub",
       short: "1-digit subtraction starting from the easiest level",
-      long: "Four difficulty levels let even a child new to subtraction start without pressure. An impulse-control mode builds the habit of thinking it through before choosing an answer.",
+      long: "Visualizes the feeling of taking away one at a time, so single-digit subtraction settles in naturally. Four difficulty levels ease children in without pressure, while an impulse-control mode lets them work at their own pace.",
     },
   },
   slowmath_subtract: {
