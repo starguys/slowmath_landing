@@ -6,7 +6,6 @@ import SectionIntro from "../_home/SectionIntro";
 import SectionEmpathy from "../_home/SectionEmpathy";
 import SectionDemo from "../_home/SectionDemo";
 import SectionWhy from "../_home/SectionWhy";
-import SectionExpert from "../_home/SectionExpert";
 import SectionStart from "../_home/SectionStart";
 import SectionApps from "../_home/SectionApps";
 import SiteFooter from "../_home/SiteFooter";
@@ -80,7 +79,6 @@ export default function Page() {
         <SectionEmpathy locale="en" />
         <SectionDemo locale="en" />
         <SectionWhy locale="en" />
-        <SectionExpert locale="en" />
         <SectionStart locale="en" />
         <SectionApps locale="en" />
       </main>
