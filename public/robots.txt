@@ -3,6 +3,12 @@ Allow: /
 # Googlebot이 페이지를 렌더링하려면 빌드 산출물(JS/CSS chunks) 접근이 필요 → /_next/static/ 명시적 허용
 Allow: /_next/static/
 Disallow: /_next/
+# 슬로매스 서브앱은 랜딩 iframe/앱 쉘 안에서만 열리는 학습 도구.
+# 직접 URL 은 Vercel rewrite 로 slowmath-all.vercel.app(Basic Auth) 을 프록시 → 크롤러엔 401/리다이렉트로 잡힘.
+# 색인 대상이 아니므로 크롤 차단하여 GSC 오탐을 줄인다.
+Disallow: /slowmath_
+# 앱 쉘 자바스크립트/CSS 도 크롤할 필요 없음
+Disallow: /shell/
 
 Sitemap: https://slowkids.net/sitemap.xml
 
