@@ -191,15 +191,15 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
   },
   slowmath_gap: {
     ko: {
-      category: "수 개념",
-      subtitle: "숫자가 ‘양’으로 보이기 시작할 때",
+      category: "수 관계",
+      subtitle: "크고 작고, 같고 다름을 읽는 연습",
       name: "수의 간격",
       short: "일정한 간격의 빈 자리 수를 맞춰보세요",
       long: "빠진 자리 수를 찾으며 수의 순서와 간격 감각을 자연스럽게 익힐 수 있어요. 익숙한 간격에서 시작해 다양한 간격으로 넓혀가며 아이가 스스로 규칙을 발견하도록 돕습니다.",
     },
     en: {
-      category: "Number Sense",
-      subtitle: "When numbers start to look like 'amounts'",
+      category: "Number Relations",
+      subtitle: "Reading bigger, smaller, same, and different",
       name: "Number Gap",
       short: "Fill in the missing numbers in an evenly spaced row",
       long: "Filling in missing numbers grows a natural feel for the order and spacing of numbers. Starting from a familiar gap and expanding to new ones lets the child discover the rule on their own.",

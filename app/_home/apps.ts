@@ -26,7 +26,6 @@ export const APP_NAMES: Record<string, { ko: string; en: string }> = {
   slowmath_dice: { ko: "세기", en: "Counting" },
   slowmath_counting: { ko: "우리말 세기", en: "Korean counting" },
   slowmath_matching: { ko: "숫자 매칭", en: "Number matching" },
-  slowmath_gap: { ko: "수의 간격", en: "Number gap" },
   slowmath_money: { ko: "동전과 지폐", en: "Coins & bills" },
   // 수 관계
   slowmath_comparing: { ko: "비교하기 기초 1", en: "Compare basics 1" },
@@ -35,6 +34,7 @@ export const APP_NAMES: Record<string, { ko: string; en: string }> = {
   slowmath_clock: { ko: "시계 보기", en: "Reading the clock" },
   slowmath_calendar: { ko: "달력 보기 연습", en: "Reading the calendar" },
   slowmath_oddeven: { ko: "홀수 짝수 익히기", en: "Odd & Even" },
+  slowmath_gap: { ko: "수의 간격", en: "Number gap" },
   // 덧셈 전 개념
   slowmath_combining: { ko: "모으기 연습", en: "Combining numbers" },
   slowmath_splitting: { ko: "가르기 연습", en: "Splitting numbers" },
@@ -135,7 +135,6 @@ export const APP_CATEGORY: Record<string, Category> = {
   slowmath_dice: "number-sense",
   slowmath_counting: "number-sense",
   slowmath_matching: "number-sense",
-  slowmath_gap: "number-sense",
   slowmath_money: "number-sense",
 
   slowmath_comparing: "number-relations",
@@ -144,6 +143,7 @@ export const APP_CATEGORY: Record<string, Category> = {
   slowmath_clock: "number-relations",
   slowmath_calendar: "number-relations",
   slowmath_oddeven: "number-relations",
+  slowmath_gap: "number-relations",
 
   slowmath_combining: "pre-addition",
   slowmath_splitting: "pre-addition",
