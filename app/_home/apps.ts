@@ -65,9 +65,10 @@ export const APP_NAMES: Record<string, { ko: string; en: string }> = {
 /** 전체 도구 그리드 노출 순서 (Figma 시안 37개 순서) */
 export const APP_ORDER: string[] = Object.keys(APP_NAMES);
 
-/** 한국어 학습 전용 앱 — 영어 랜딩 카탈로그에서 제외
- *  slowmath_koreannum(한글 숫자) 은 인터페이스가 다국어화되어 en 랜딩에도 노출한다. */
-export const APPS_HIDDEN_IN_EN: ReadonlySet<string> = new Set<string>([]);
+/** 한국어 학습 전용 앱 — 영어 랜딩 카탈로그에서 제외 */
+export const APPS_HIDDEN_IN_EN: ReadonlySet<string> = new Set([
+  "slowmath_koreannum",
+]);
 
 export function appName(slug: string, locale: Locale) {
   return APP_NAMES[slug]?.[locale] ?? slug;
