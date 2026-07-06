@@ -65,6 +65,11 @@ export const APP_NAMES: Record<string, { ko: string; en: string }> = {
 /** 전체 도구 그리드 노출 순서 (Figma 시안 37개 순서) */
 export const APP_ORDER: string[] = Object.keys(APP_NAMES);
 
+/** 한국어 학습 전용 앱 — 영어 랜딩 카탈로그에서 제외 */
+export const APPS_HIDDEN_IN_EN: ReadonlySet<string> = new Set([
+  "slowmath_koreannum",
+]);
+
 export function appName(slug: string, locale: Locale) {
   return APP_NAMES[slug]?.[locale] ?? slug;
 }
@@ -172,10 +177,15 @@ export const APP_CATEGORY: Record<string, Category> = {
   slowmath_timestables: "multiplication",
 };
 
-/** 카테고리별로 그룹화된 APP_ORDER (원본 노출 순서 보존, 카테고리 내부에서도 원본 순서 유지) */
-export function appsByCategory(): { category: Category; slugs: string[] }[] {
+/** 카테고리별로 그룹화된 APP_ORDER (원본 노출 순서 보존, 카테고리 내부에서도 원본 순서 유지)
+ *  locale='en' 이면 APPS_HIDDEN_IN_EN 에 포함된 한국어 전용 앱은 제외한다. */
+export function appsByCategory(locale: Locale = "ko"): { category: Category; slugs: string[] }[] {
   return CATEGORIES.map(({ key }) => ({
     category: key,
-    slugs: APP_ORDER.filter((slug) => APP_CATEGORY[slug] === key),
+    slugs: APP_ORDER.filter((slug) => {
+      if (APP_CATEGORY[slug] !== key) return false;
+      if (locale === "en" && APPS_HIDDEN_IN_EN.has(slug)) return false;
+      return true;
+    }),
   }));
 }

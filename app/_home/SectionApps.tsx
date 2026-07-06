@@ -20,7 +20,7 @@ const C = {
 
 export default function SectionApps({ locale = "ko" }: { locale?: Locale }) {
   const t = C[locale];
-  const groups = appsByCategory();
+  const groups = appsByCategory(locale);
   const catMeta = Object.fromEntries(CATEGORIES.map((c) => [c.key, c])) as Record<
     (typeof CATEGORIES)[number]["key"],
     (typeof CATEGORIES)[number]
