@@ -25,6 +25,7 @@ export const APP_NAMES: Record<string, { ko: string; en: string }> = {
   slowmath_numberdraw: { ko: "숫자 쓰기", en: "Writing numbers" },
   slowmath_dice: { ko: "세기", en: "Counting" },
   slowmath_counting: { ko: "우리말 세기", en: "Korean counting" },
+  slowmath_koreannum: { ko: "한글 숫자", en: "Korean numbers" },
   slowmath_matching: { ko: "숫자 매칭", en: "Number matching" },
   slowmath_money: { ko: "동전과 지폐", en: "Coins & bills" },
   // 수 관계
@@ -134,6 +135,7 @@ export const APP_CATEGORY: Record<string, Category> = {
   slowmath_numberdraw: "number-sense",
   slowmath_dice: "number-sense",
   slowmath_counting: "number-sense",
+  slowmath_koreannum: "number-sense",
   slowmath_matching: "number-sense",
   slowmath_money: "number-sense",
 

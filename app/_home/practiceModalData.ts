@@ -173,6 +173,22 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "In Korean, the counting word changes with the thing being counted — 'han myeong' for people, 'han mari' for animals, 'han dae' for cars. Children learn naturally by pairing the Korean words with their numbers, like 'han myeong ↔ 1 myeong' and 'du mari ↔ 2 mari'.",
     },
   },
+  slowmath_koreannum: {
+    ko: {
+      category: "수 개념",
+      subtitle: "숫자가 ‘양’으로 보이기 시작할 때",
+      name: "한글 숫자",
+      short: "숫자와 우리말 수(하나·둘·셋·열·스물…)를 짝지어 익혀요",
+      long: "1부터 100까지의 숫자를 우리말 수사와 연결하며 익힐 수 있어요. '하나~열'부터 '아흔~백'까지 11단계로 나누어 아이 수준에 맞게 시작할 수 있고, 숫자→우리말과 우리말→숫자 두 방향으로 번갈아 연습해 양방향으로 자연스럽게 자리 잡습니다.",
+    },
+    en: {
+      category: "Number Sense",
+      subtitle: "When numbers start to look like 'amounts'",
+      name: "Korean Numbers",
+      short: "Pair numbers with their native Korean words (hana, dul, set, yeol, seumul…)",
+      long: "Connect digits from 1 to 100 with their native Korean number words. Eleven stages from 'hana–yeol' to 'aheun–baek' let each child start at their level, and problems alternate between digit→word and word→digit so both directions settle in naturally.",
+    },
+  },
   slowmath_matching: {
     ko: {
       category: "수 개념",
