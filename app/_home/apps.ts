@@ -36,6 +36,7 @@ export const APP_NAMES: Record<string, { ko: string; en: string }> = {
   slowmath_calendar: { ko: "달력 보기 연습", en: "Reading the calendar" },
   slowmath_oddeven: { ko: "홀수 짝수 익히기", en: "Odd & Even" },
   slowmath_gap: { ko: "수의 간격", en: "Number gap" },
+  slowmath_gap2: { ko: "수의 간격 연습", en: "Number gap practice" },
   // 덧셈 전 개념
   slowmath_combining: { ko: "모으기 연습", en: "Combining numbers" },
   slowmath_splitting: { ko: "가르기 연습", en: "Splitting numbers" },
@@ -151,6 +152,7 @@ export const APP_CATEGORY: Record<string, Category> = {
   slowmath_calendar: "number-relations",
   slowmath_oddeven: "number-relations",
   slowmath_gap: "number-relations",
+  slowmath_gap2: "number-relations",
 
   slowmath_combining: "pre-addition",
   slowmath_splitting: "pre-addition",

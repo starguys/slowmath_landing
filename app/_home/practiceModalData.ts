@@ -221,6 +221,22 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "Filling in missing numbers grows a natural feel for the order and spacing of numbers. Starting from a familiar gap and expanding to new ones lets the child discover the rule on their own.",
     },
   },
+  slowmath_gap2: {
+    ko: {
+      category: "수 관계",
+      subtitle: "크고 작고, 같고 다름을 읽는 연습",
+      name: "수의 간격 연습",
+      short: "예시를 보고 같은 간격으로 숫자판을 색칠해 보세요",
+      long: "숫자판에 몇 개의 힌트 칸이 미리 색칠되어 있어요. 같은 간격으로 이어지는 나머지 칸을 색으로 채우며 규칙을 스스로 발견하도록 돕습니다. 간격(1~10)과 범위(1~50 / 1~100)를 자유롭게 골라 아이 수준에 맞게 사용할 수 있어요.",
+    },
+    en: {
+      category: "Number Relations",
+      subtitle: "Reading bigger, smaller, same, and different",
+      name: "Number Gap Practice",
+      short: "Look at the hints and color the rest of the board at the same gap",
+      long: "A few hint cells are pre-colored on the number board. The child colors the remaining cells at the same gap, discovering the rule on their own. The gap (1–10) and range (1–50 or 1–100) can be adjusted to match each child's level.",
+    },
+  },
   slowmath_money: {
     ko: {
       category: "수 개념",
