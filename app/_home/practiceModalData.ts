@@ -29,6 +29,22 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "Color names can be hard for children with developmental delays or disabilities. By moving step by step from simple recognition to sequence memory, this builds a solid color vocabulary.",
     },
   },
+  slowmath_shape: {
+    ko: {
+      category: "기초 인지",
+      subtitle: "눈과 손이 먼저 익숙해지는 시간",
+      name: "도형 익히기",
+      short: "세모·네모·동그라미 중에서 문제와 같은 도형을 골라요",
+      long: "같은 크기끼리 고르는 기본부터 크기가 다르거나 회전된 도형까지 네 단계로 나누어 도형 감각을 키워요. 크기·회전이 달라도 같은 도형이라는 걸 알아보는 힘이 자연스럽게 자리 잡습니다.",
+    },
+    en: {
+      category: "Foundations",
+      subtitle: "Where eyes and hands get familiar first",
+      name: "Shapes",
+      short: "Pick the shape that matches the question — triangle, square, or circle",
+      long: "Four modes — from same-size basics to different sizes and rotated shapes — build shape sense step by step. Children naturally learn that a shape stays the same even when its size or angle changes.",
+    },
+  },
   slowmath_linedraw: {
     ko: {
       category: "기초 인지",

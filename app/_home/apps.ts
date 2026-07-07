@@ -15,6 +15,7 @@ export function appHref(slug: string, locale: Locale) {
 export const APP_NAMES: Record<string, { ko: string; en: string }> = {
   // 기초 인지
   slowmath_color: { ko: "색깔 익히기", en: "Color recognition" },
+  slowmath_shape: { ko: "도형 익히기", en: "Shapes" },
   slowmath_linedraw: { ko: "선 긋기", en: "Line drawing" },
   slowmath_dot2dot: { ko: "점선 따라 그리기", en: "Dot to dot" },
   slowmath_colorcopy: { ko: "똑같이 맞추기", en: "Pattern copy" },
@@ -131,6 +132,7 @@ export const CATEGORIES: {
 /** slug → 카테고리 매핑 (shell/apps.js 와 동일 분류. oddeven 은 apps.js 상 수 관계) */
 export const APP_CATEGORY: Record<string, Category> = {
   slowmath_color: "foundations",
+  slowmath_shape: "foundations",
   slowmath_linedraw: "foundations",
   slowmath_dot2dot: "foundations",
   slowmath_colorcopy: "foundations",

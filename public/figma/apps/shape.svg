@@ -1,0 +1,15 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="16" y="16" width="18" height="18" rx="3" fill="url(#shape_blue_grad)"/>
+  <polygon points="4,36 20,36 12,22" fill="#F0A050"/>
+  <circle cx="36" cy="14" r="7" fill="url(#shape_orange_grad)"/>
+  <defs>
+    <linearGradient id="shape_blue_grad" x1="12" y1="16" x2="26" y2="36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C4DEF6"/>
+      <stop offset="1" stop-color="#6BADE8"/>
+    </linearGradient>
+    <linearGradient id="shape_orange_grad" x1="30" y1="9" x2="42" y2="18" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFDFA1"/>
+      <stop offset="1" stop-color="#F0A050"/>
+    </linearGradient>
+  </defs>
+</svg>
