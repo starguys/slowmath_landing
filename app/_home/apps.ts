@@ -62,6 +62,7 @@ export const APP_NAMES: Record<string, { ko: string; en: string }> = {
   slowmath_changecalc: { ko: "거스름돈 계산하기", en: "Counting change" },
   // 곱셈
   slowmath_timestables: { ko: "구구단 연습", en: "Times tables" },
+  slowmath_easymul: { ko: "한 자리 곱셈", en: "1-digit multiplication" },
 };
 
 /** 전체 도구 그리드 노출 순서 (Figma 시안 37개 순서) */
@@ -179,6 +180,7 @@ export const APP_CATEGORY: Record<string, Category> = {
   slowmath_changecalc: "subtraction",
 
   slowmath_timestables: "multiplication",
+  slowmath_easymul: "multiplication",
 };
 
 /** 카테고리별로 그룹화된 APP_ORDER (원본 노출 순서 보존, 카테고리 내부에서도 원본 순서 유지)

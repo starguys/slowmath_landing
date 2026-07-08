@@ -685,4 +685,20 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "Thinking time is fully adjustable, so even a child who struggles to memorize quickly can master the times tables at their own pace. Working through the 2s to the 9s in order, each child completes one table at a time at their own rhythm.",
     },
   },
+  slowmath_easymul: {
+    ko: {
+      category: "곱셈",
+      subtitle: "개념을 이해하는 수의 규칙",
+      name: "한 자리 곱셈",
+      short: "1~5·1~9 곱셈부터 세로 곱셈까지 세 단계로 곱하는 감각을 익혀요",
+      long: "가장 쉬운 1~5 범위부터 시작해 1~9로 넓혀가고, 마지막 세로 한 자리 × 한 자리에서는 답의 일의 자리와 십의 자리를 하나씩 골라요. 필기 곱셈과 같은 순서로 진행돼 종이로 옮길 때도 자연스럽습니다.",
+    },
+    en: {
+      category: "Multiplication",
+      subtitle: "The number rules behind the concept",
+      name: "1-digit multiplication",
+      short: "Three steps — 1–5, 1–9, and vertical — to grow multiplication sense",
+      long: "Start with the easiest 1–5 range, expand to 1–9, then finish with vertical single-digit multiplication where the child picks the ones digit and then the tens digit of the answer. The order matches paper computation, so it transfers naturally to written math later.",
+    },
+  },
 };
