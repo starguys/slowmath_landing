@@ -701,4 +701,20 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "Start with the easiest 1–5 range, expand to 1–9, then finish with vertical single-digit multiplication where the child picks the ones digit and then the tens digit of the answer. The order matches paper computation, so it transfers naturally to written math later.",
     },
   },
+  slowmath_fraction: {
+    ko: {
+      category: "나눗셈",
+      subtitle: "전체를 똑같이 나누는 감각",
+      name: "분수 익히기",
+      short: "원·막대·묶음·수직선 네 모양으로 분수를 눈으로 익혀요",
+      long: "전체를 몇 개로 똑같이 나눴는지, 그 중 몇 개가 색칠되었는지 두 번 세는 방식으로 분수 감각을 잡아요. 원(넓이)·막대(길이)·묶음(개수)·수직선(위치) 네 모양이 서로 다른 인지 방식을 보완해 주고, 분자 범위(1 → 1~10)를 단계별로 넓혀 가며 익힐 수 있습니다.",
+    },
+    en: {
+      category: "Division",
+      subtitle: "A feel for sharing the whole",
+      name: "Fractions",
+      short: "Four shapes — circle, bar, set, and number line — to see fractions",
+      long: "Kids learn fractions by counting twice: how many equal parts is the whole split into, and how many are colored. Four shapes — circle (area), bar (length), set (count), and number line (position) — reinforce the same idea from different angles, and the numerator range (1 → 1–10) widens step by step.",
+    },
+  },
 };

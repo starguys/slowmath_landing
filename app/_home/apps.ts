@@ -63,6 +63,8 @@ export const APP_NAMES: Record<string, { ko: string; en: string }> = {
   // 곱셈
   slowmath_timestables: { ko: "구구단 연습", en: "Times tables" },
   slowmath_easymul: { ko: "한 자리 곱셈", en: "1-digit multiplication" },
+  // 나눗셈
+  slowmath_fraction: { ko: "분수 익히기", en: "Fractions" },
 };
 
 /** 전체 도구 그리드 노출 순서 (Figma 시안 37개 순서) */
@@ -77,7 +79,7 @@ export function appName(slug: string, locale: Locale) {
   return APP_NAMES[slug]?.[locale] ?? slug;
 }
 
-/** 카테고리 키 — slowmath_all/shell/apps.js 와 동일한 8분류 중 데모 제외한 7개 */
+/** 카테고리 키 — slowmath_all/shell/apps.js 와 동일한 8분류 중 데모 제외한 8개 */
 export type Category =
   | "foundations"
   | "number-sense"
@@ -85,7 +87,8 @@ export type Category =
   | "pre-addition"
   | "addition"
   | "subtraction"
-  | "multiplication";
+  | "multiplication"
+  | "division";
 
 /** 카테고리 노출 순서 + 다국어 이름/부제 (부제 문구는 shell/apps.js 와 동일) */
 export const CATEGORIES: {
@@ -127,6 +130,11 @@ export const CATEGORIES: {
     key: "multiplication",
     name: { ko: "곱셈", en: "Multiplication" },
     desc: { ko: "개념을 이해하는 수의 규칙", en: "Patterns in numbers" },
+  },
+  {
+    key: "division",
+    name: { ko: "나눗셈", en: "Division" },
+    desc: { ko: "전체를 똑같이 나누는 감각", en: "A feel for sharing the whole" },
   },
 ];
 
@@ -181,6 +189,8 @@ export const APP_CATEGORY: Record<string, Category> = {
 
   slowmath_timestables: "multiplication",
   slowmath_easymul: "multiplication",
+
+  slowmath_fraction: "division",
 };
 
 /** 카테고리별로 그룹화된 APP_ORDER (원본 노출 순서 보존, 카테고리 내부에서도 원본 순서 유지)
