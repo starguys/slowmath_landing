@@ -701,6 +701,22 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "Start with the easiest 1–5 range, expand to 1–9, then finish with vertical single-digit multiplication where the child picks the ones digit and then the tens digit of the answer. The order matches paper computation, so it transfers naturally to written math later.",
     },
   },
+  slowmath_fractioncompare: {
+    ko: {
+      category: "수 관계",
+      subtitle: "크고 작고, 같고 다름을 읽는 연습",
+      name: "분수의 크기",
+      short: "두 분수 · 네 분수 · 부등호까지 세 방식으로 분수 크기를 비교해요",
+      long: "같은 분모끼리 시작해 다른 분모로 넓혀 가며 분수의 크기 감각을 잡아요. 원(면적)·막대(길이)·수직선(위치) 세 가지 힌트가 서로 다른 관점에서 크기를 보여주고, 큰 수·작은 수 → 가장 큰/작은 수 → 부등호(＜ ＝ ＞) 고르기 순서로 난이도가 자연스럽게 올라갑니다.",
+    },
+    en: {
+      category: "Number relations",
+      subtitle: "Bigger, smaller, same, different",
+      name: "Compare fractions",
+      short: "Compare two, four, or with an inequality sign — three levels of practice",
+      long: "Start with same-denominator pairs, then move to different denominators. Three hint types — circle (area), bar (length), and number line (position) — show size from different angles. Difficulty steps up naturally: pick the bigger/smaller, pick the biggest/smallest of four, then choose the correct inequality sign (＜ ＝ ＞).",
+    },
+  },
   slowmath_fraction: {
     ko: {
       category: "수 개념",
