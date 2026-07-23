@@ -19,6 +19,7 @@ export const APP_NAMES: Record<string, { ko: string; en: string }> = {
   slowmath_linedraw: { ko: "선 긋기", en: "Line drawing" },
   slowmath_dot2dot: { ko: "점선 따라 그리기", en: "Dot to dot" },
   slowmath_colorcopy: { ko: "똑같이 맞추기", en: "Pattern copy" },
+  slowmath_oppositematch: { ko: "반대로 맞추기", en: "Opposite match" },
   slowmath_pattern: { ko: "패턴 연습", en: "Pattern practice" },
   slowmath_sameshape: { ko: "같은 모양 찾기", en: "Same shape finder" },
   // 수 개념
@@ -139,6 +140,7 @@ export const APP_CATEGORY: Record<string, Category> = {
   slowmath_linedraw: "foundations",
   slowmath_dot2dot: "foundations",
   slowmath_colorcopy: "foundations",
+  slowmath_oppositematch: "foundations",
   slowmath_pattern: "foundations",
   slowmath_sameshape: "foundations",
 

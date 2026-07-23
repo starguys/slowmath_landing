@@ -93,6 +93,22 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "Trains visual discrimination and working memory at the same time. Grids grow from 2×2 to 5×5 and the number of colors is adjustable, so it fits each child's level.",
     },
   },
+  slowmath_oppositematch: {
+    ko: {
+      category: "기초 인지",
+      subtitle: "눈과 손이 먼저 익숙해지는 시간",
+      name: "반대로 맞추기",
+      short: "원본에서 비어 있는 자리를 찾아 내 답에 채우는 역상 맞추기",
+      long: "원본과 똑같이 색칠하는 대신, 원본에서 비어 있는 자리를 찾아 내 답에 채워요. '무엇이 없는지'를 알아채는 시지각과 공간 파악을 함께 훈련합니다. 4칸부터 25칸까지 격자를 늘려 가며 아이 속도에 맞춥니다.",
+    },
+    en: {
+      category: "Foundations",
+      subtitle: "Where eyes and hands get familiar first",
+      name: "Opposite Match",
+      short: "Find the empty spots in the original and fill them in your grid",
+      long: "Instead of copying the original, children fill the cells that were empty in it. Trains visual perception of 'what's missing' and spatial awareness. Grids grow from 4 cells to 25 to match each child's pace.",
+    },
+  },
   slowmath_pattern: {
     ko: {
       category: "기초 인지",
