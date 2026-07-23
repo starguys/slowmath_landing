@@ -47,7 +47,7 @@ const C: Record<Locale, HeroCopy> = {
       ],
       [
         { t: "who built " },
-        { t: "SlowKids", c: "b" },
+        { t: "LittleSteps", c: "b" },
         { t: " from his own family's experience" },
       ],
     ],
@@ -98,7 +98,7 @@ export default function SectionHero({ locale = "ko" }: { locale?: Locale }) {
           src="/figma/hero/mascot.png"
           alt={
             locale === "en"
-              ? "SlowKids turtle character studying on a tablet"
+              ? "LittleSteps turtle character studying on a tablet"
               : "태블릿으로 공부하는 느린아이 거북이 캐릭터"
           }
           className="h-[183px] w-[224px] object-contain"

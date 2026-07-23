@@ -57,7 +57,7 @@ export default function StickyDownloadBar({ locale = "ko" }: { locale?: "ko" | "
         href={IOS_KR}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={isKo ? "App Store에서 느린아이 다운로드" : "Download SlowKids on the App Store"}
+        aria-label={isKo ? "App Store에서 느린아이 다운로드" : "Download LittleSteps on the App Store"}
       >
         <img src="/badge-apple.png" alt="Download on the App Store" style={badgeStyle} />
       </a>
@@ -65,7 +65,7 @@ export default function StickyDownloadBar({ locale = "ko" }: { locale?: "ko" | "
         href={PLAY_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={isKo ? "Google Play에서 느린아이 다운로드" : "Get SlowKids on Google Play"}
+        aria-label={isKo ? "Google Play에서 느린아이 다운로드" : "Get LittleSteps on Google Play"}
       >
         <img src="/badge-google.png" alt="Get it on Google Play" style={badgeStyle} />
       </a>

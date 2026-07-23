@@ -31,7 +31,7 @@ export default function StoreBadges({ locale = "ko" }: { locale?: "ko" | "en" })
       href={ko ? IOS_KR : IOS_US}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={ko ? "App Store에서 느린아이 다운로드" : "Download SlowKids on the App Store"}
+      aria-label={ko ? "App Store에서 느린아이 다운로드" : "Download LittleSteps on the App Store"}
     >
       <img src="/badge-apple.png" alt="Download on the App Store" style={imgStyle} />
     </a>

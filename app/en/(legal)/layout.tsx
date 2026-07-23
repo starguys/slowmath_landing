@@ -7,7 +7,7 @@ const SITE_URL = "https://slowkids.net";
 // 영어 기본값을 이 레이아웃에서 지정한다. title/description 은 생략해 각 페이지 값으로 폴백된다.
 export const metadata: Metadata = {
   openGraph: {
-    siteName: "SlowKids",
+    siteName: "LittleSteps",
     locale: "en_US",
     alternateLocale: ["ko_KR"],
     type: "website",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.png?v=20260701`,
         width: 878,
         height: 443,
-        alt: "SlowKids — slow but in the right direction, one step at a time",
+        alt: "LittleSteps — slow but in the right direction, one step at a time",
       },
     ],
   },

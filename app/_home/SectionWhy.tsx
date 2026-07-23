@@ -41,7 +41,7 @@ const C = {
     ],
   },
   en: {
-    heading: "Why SlowKids learning tools are different",
+    heading: "Why LittleSteps learning tools are different",
     items: [
       {
         title: "Staged difficulty",

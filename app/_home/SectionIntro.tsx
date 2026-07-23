@@ -19,11 +19,11 @@ const C = {
     b2Line2: "학부모·특수교사·인지치료사의 수업 보조 도구로도 활용됩니다.",
   },
   en: {
-    heading: "What is SlowKids?",
+    heading: "What is LittleSteps?",
     emLead: "Standard learning tools move so fast that children can't keep up — ",
-    emStrong: "SlowKids began with that very worry from parents.",
+    emStrong: "LittleSteps began with that very worry from parents.",
     emRest: "",
-    b1Lead: "SlowKids is a set of learning tools designed for ",
+    b1Lead: "LittleSteps is a set of learning tools designed for ",
     b1Strong:
       "children with developmental delays, developmental disabilities, slow learning, or borderline intelligence",
     b1Rest: " to pick up the basics of math on their own.",

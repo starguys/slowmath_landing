@@ -65,10 +65,10 @@ function organizationLd(locale: Locale): JsonLdNode {
   return {
     "@type": "Organization",
     "@id": ORG_ID,
-    name: en ? "SlowKids" : "느린아이",
+    name: en ? "LittleSteps" : "느린아이",
     alternateName: en
       ? ["느린아이", "느린아이 시리즈"]
-      : ["느린아이 시리즈", "SlowKids"],
+      : ["느린아이 시리즈", "LittleSteps"],
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
@@ -88,8 +88,8 @@ function websiteLd(locale: Locale): JsonLdNode {
   return {
     "@type": "WebSite",
     "@id": SITE_ID,
-    name: en ? "SlowKids" : "느린아이 시리즈",
-    alternateName: en ? "느린아이" : "SlowKids",
+    name: en ? "LittleSteps" : "느린아이 시리즈",
+    alternateName: en ? "느린아이" : "LittleSteps",
     url: en ? `${SITE_URL}/en` : SITE_URL,
     inLanguage: en ? "en-US" : "ko-KR",
     description: en
@@ -104,7 +104,7 @@ function appLd(locale: Locale): JsonLdNode {
   return {
     "@type": "MobileApplication",
     "@id": APP_ID,
-    name: en ? "SlowKids — Math at every child's pace" : "느린아이",
+    name: en ? "LittleSteps — Math at every child's pace" : "느린아이",
     operatingSystem: "iOS, Android",
     applicationCategory: "EducationalApplication",
     inLanguage: en ? "en-US" : "ko-KR",
@@ -132,7 +132,7 @@ function videoLd(locale: Locale): JsonLdNode {
     "@type": "VideoObject",
     "@id": VIDEO_ID,
     name: en
-      ? "A child learning with the SlowKids app"
+      ? "A child learning with the LittleSteps app"
       : "느린아이 앱으로 학습하는 아이의 모습",
     description: en
       ? "A quiet screen and small repetitions — moments where a child taps and confirms at their own pace."
@@ -150,7 +150,7 @@ function itemListLd(locale: Locale): JsonLdNode {
   return {
     "@type": "ItemList",
     "@id": `${en ? `${SITE_URL}/en` : `${SITE_URL}/`}#toollist`,
-    name: en ? "SlowKids learning tools" : "느린아이 시리즈 학습도구",
+    name: en ? "LittleSteps learning tools" : "느린아이 시리즈 학습도구",
     description: en
       ? "Math and cognition tools for children with developmental delays, borderline intelligence, or learning difficulties."
       : "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지 학습도구",

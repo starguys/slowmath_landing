@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 const SITE_URL = "https://slowkids.net";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | SlowKids",
+  title: "Terms of Service | LittleSteps",
   description:
-    "SlowKids Terms of Service — member rights and obligations, passes and payments, withdrawal of subscription, refunds, dispute resolution.",
+    "LittleSteps Terms of Service — member rights and obligations, passes and payments, withdrawal of subscription, refunds, dispute resolution.",
   alternates: {
     canonical: `${SITE_URL}/en/terms`,
     languages: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function TermsEnPage() {
   return (
     <>
-      <h1>SlowKids Terms of Service</h1>
+      <h1>LittleSteps Terms of Service</h1>
       <p className="legal-meta"><strong>Effective</strong>: 2026-04-28</p>
       <p className="legal-meta"><strong>Last revised</strong>: 2026-05-14</p>
       <p className="legal-meta" style={{ color: "#8C8070" }}>
@@ -33,14 +33,14 @@ export default function TermsEnPage() {
       <p>
         These Terms govern the rights, obligations, and responsibilities between
         EverydaySummer Inc. (the &quot;Company&quot;) and the members using the
-        SlowKids learning service (the &quot;Service&quot;), as well as other
+        LittleSteps learning service (the &quot;Service&quot;), as well as other
         matters necessary for the use of the Service.
       </p>
 
       <h2>Article 2 (Definitions)</h2>
       <p>The following terms shall have the meanings ascribed to them below:</p>
       <ol>
-        <li><strong>Service</strong>: all educational content provided by the Company under the &quot;SlowKids&quot; name through mobile apps (Android, iOS) and the web.</li>
+        <li><strong>Service</strong>: all educational content provided by the Company under the &quot;LittleSteps&quot; name through mobile apps (Android, iOS) and the web.</li>
         <li><strong>Member</strong>: an individual, or such individual&apos;s legal guardian, who has entered into a service agreement with the Company.</li>
         <li><strong>User</strong>: a Member and any minor child whom the Member has authorised to use the Service.</li>
         <li><strong>Pass</strong>: a paid right to use the Service or specific learning content for a defined period.</li>

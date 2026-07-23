@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 const SITE_URL = "https://slowkids.net";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | SlowKids",
+  title: "Privacy Policy | LittleSteps",
   description:
-    "SlowKids Privacy Policy — items collected and purpose of use, retention period, processors, rights of data subjects, contact for the protection officer.",
+    "LittleSteps Privacy Policy — items collected and purpose of use, retention period, processors, rights of data subjects, contact for the protection officer.",
   alternates: {
     canonical: `${SITE_URL}/en/privacy`,
     languages: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function PrivacyEnPage() {
   return (
     <>
-      <h1>SlowKids Privacy Policy</h1>
+      <h1>LittleSteps Privacy Policy</h1>
       <p className="legal-meta"><strong>Effective</strong>: 2026-04-28</p>
       <p className="legal-meta"><strong>Last revised</strong>: 2026-04-28</p>
       <p className="legal-meta" style={{ color: "#8C8070" }}>

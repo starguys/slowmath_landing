@@ -20,11 +20,11 @@ const OG_IMAGE = {
   url: `${SITE_URL}/og-image.png?v=20260701`,
   width: 878,
   height: 443,
-  alt: "SlowKids — slow but in the right direction, one step at a time",
+  alt: "LittleSteps — slow but in the right direction, one step at a time",
 };
 
 export const metadata: Metadata = {
-  title: "SlowKids — Math at every child's pace",
+  title: "LittleSteps — Math at every child's pace",
   description:
     "Learning tools for children with developmental delays, developmental disabilities, slow learning, or borderline intelligence — to build math foundations at their own pace. Now on iOS and Android.",
   alternates: {
@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "SlowKids — Math at every child's pace",
+    title: "LittleSteps — Math at every child's pace",
     description:
       "Small math practices for children who pick up concepts more slowly than peers — from earliest cognition through multiplication tables. Now on iOS and Android.",
-    siteName: "SlowKids",
+    siteName: "LittleSteps",
     locale: "en_US",
     alternateLocale: ["ko_KR"],
     type: "website",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SlowKids — Math at every child's pace",
+    title: "LittleSteps — Math at every child's pace",
     description:
       "Small math practices for children who learn slowly. Available on iOS and Android.",
     images: [OG_IMAGE.url],

@@ -21,11 +21,11 @@ const C = {
   },
   en: {
     home: "/en",
-    homeLabel: "SlowKids Series home",
-    wm: ["Slow", "Kids", " Series"],
+    homeLabel: "LittleSteps home",
+    wm: ["Little", "Steps", ""],
     apple: APPLE_US,
-    appleAlt: "Download SlowKids on the App Store",
-    googleAlt: "Get SlowKids on Google Play",
+    appleAlt: "Download LittleSteps on the App Store",
+    googleAlt: "Get LittleSteps on Google Play",
   },
 } as const;
 

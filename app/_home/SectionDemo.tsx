@@ -105,7 +105,7 @@ const C: Record<Locale, DemoCopy> = {
     subB: "Instead of flashy reactions, ",
     subStrong: "scenes where a child moves forward at their own pace",
     subC: ".",
-    videoLabel: "A child learning with the SlowKids app",
+    videoLabel: "A child learning with the LittleSteps app",
     points: [
       [[{ t: "A quiet screen, plenty of " }, { t: "time to think", a: true }]],
       [[{ t: "Try again — " }, { t: "confidence built from small repetitions", a: true }]],
