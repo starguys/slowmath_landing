@@ -26,7 +26,7 @@ const OG_IMAGE = {
 export const metadata: Metadata = {
   title: "LittleSteps — Math at every child's pace",
   description:
-    "Learning tools for children with developmental delays, developmental disabilities, slow learning, or borderline intelligence — to build math foundations at their own pace. Now on iOS and Android.",
+    "Learning tools for children with developmental delays, developmental disabilities, slow learning, borderline intelligence, and other slower learners — to build math foundations at their own pace. Now on iOS and Android.",
   alternates: {
     canonical: SITE_URL_EN,
     languages: {
