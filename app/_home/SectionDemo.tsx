@@ -101,7 +101,7 @@ const C: Record<Locale, DemoCopy> = {
   en: {
     h1: "Before words,",
     h2: "let us show you!",
-    subA: "One step at a time.",
+    subA: "One right step at a time.",
     subB: "Instead of flashy reactions, ",
     subStrong: "scenes where a child moves forward at their own pace",
     subC: ".",
