@@ -8,7 +8,7 @@ import { type Locale } from "./apps";
 const C = {
   ko: {
     wm: ["느린", "아이"],
-    tagline1: "발달지연·발달장애·느린학습자·경계선지능 아동을 위한",
+    tagline1: "발달지연·발달장애·느린학습자·경계선지능 등 느린아이들을 위한",
     tagline2: "간단하지만 강력한 학습도구",
     contact: "제휴 · 피드백 문의",
     terms: "이용약관",
@@ -21,7 +21,7 @@ const C = {
   en: {
     wm: ["Slow", "Kids"],
     tagline1:
-      "For children with developmental delays, developmental disabilities, slow learning, or borderline intelligence",
+      "For children with developmental delays, developmental disabilities, slow learning, borderline intelligence, and other slower learners",
     tagline2: "Simple but powerful learning tools",
     contact: "Partnership · Feedback",
     terms: "Terms",

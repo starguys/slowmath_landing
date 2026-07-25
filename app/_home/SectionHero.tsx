@@ -27,8 +27,8 @@ const C: Record<Locale, HeroCopy> = {
     ],
     descLines: [
       [
-        { t: "발달지연·발달장애·느린학습자·경계선지능 아동", bold: true },
-        { t: "이" },
+        { t: "발달지연·발달장애·느린학습자·경계선지능 등 느린아이", bold: true },
+        { t: "들이" },
       ],
       [{ t: "자신의 속도로 수학의 기초를 차근차근 쌓도록" }],
       [{ t: "설계된 학습도구입니다." }],
@@ -54,7 +54,7 @@ const C: Record<Locale, HeroCopy> = {
     descLines: [
       [
         {
-          t: "children with developmental delays, developmental disabilities, slow learning, or borderline intelligence",
+          t: "children with developmental delays, developmental disabilities, slow learning, borderline intelligence, and other slower learners",
           bold: true,
         },
       ],
