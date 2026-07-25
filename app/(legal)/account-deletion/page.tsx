@@ -22,7 +22,7 @@ export default function AccountDeletionPage() {
 
       <h2>제1조 (대상 서비스)</h2>
       <ul>
-        <li><strong>앱 이름</strong>: 느린아이 (Slow Kids)</li>
+        <li><strong>앱 이름</strong>: 느린아이 (LittleSteps)</li>
         <li><strong>개발사</strong>: 주식회사 에브리데이썸머</li>
         <li><strong>웹사이트</strong>: https://slowkids.net</li>
         <li><strong>지원 플랫폼</strong>: Google Play (Android), Apple App Store (iOS), 웹</li>

@@ -186,7 +186,7 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       subtitle: "When numbers start to look like 'amounts'",
       name: "Counting",
       short: "Count fingers, dice pips, and card suits — building number sense",
-      long: "Counting everyday objects builds number sense naturally. Adjustable thinking time prevents impulsive answers and grows the habit of thinking slowly.",
+      long: "Counting everyday objects builds number sense naturally. Adjustable thinking time prevents impulsive answers and grows the habit of thinking carefully.",
     },
   },
   slowmath_counting: {
@@ -650,7 +650,7 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       subtitle: "Calculation, one step removed at a time",
       name: "Borrow",
       short: "Borrowing subtraction, solved step by step",
-      long: "Shows slowly, through decomposing the expression and grouping marks, how borrowing happens when subtracting one or two digits from a two-digit number. The first problem starts with a single blank and gradually adds more, so the child learns the flow on their own.",
+      long: "Shows step by step, through decomposing the expression and grouping marks, how borrowing happens when subtracting one or two digits from a two-digit number. The first problem starts with a single blank and gradually adds more, so the child learns the flow on their own.",
     },
   },
   slowmath_verticalsub: {
@@ -697,7 +697,7 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       category: "Multiplication",
       subtitle: "The number rules behind the concept",
       name: "Timestables",
-      short: "2–9 times tables, learned slowly with enough thinking time",
+      short: "2–9 times tables, learned at their own pace with enough thinking time",
       long: "Thinking time is fully adjustable, so even a child who struggles to memorize quickly can master the times tables at their own pace. Working through the 2s to the 9s in order, each child completes one table at a time at their own rhythm.",
     },
   },

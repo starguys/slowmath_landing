@@ -36,7 +36,7 @@ const C: Record<Locale, HeroCopy> = {
   },
   en: {
     h1: [
-      ["Slowly but in ", "the right direction", ","],
+      ["Steady but in ", "the right direction", ","],
       ["", "one step", " at a time"],
     ],
     cardLines: [
@@ -54,7 +54,7 @@ const C: Record<Locale, HeroCopy> = {
     descLines: [
       [
         {
-          t: "children with developmental delays, developmental disabilities, slow learning, borderline intelligence, and other slower learners",
+          t: "children with developmental delays, developmental disabilities, learning differences, borderline intelligence, and other kids who learn at their own pace",
           bold: true,
         },
       ],

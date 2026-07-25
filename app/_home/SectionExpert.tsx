@@ -35,9 +35,9 @@ const C = {
       "Any parent or teacher who has worked with children who need more practice and repetition than their peers will understand: it's genuinely hard to find learning materials and resources that fit our kids.",
       "There's no shortage of materials that grab a child's attention for a moment, but I always felt the lack of resources that help them build real, lasting mastery step by step.",
       "LittleSteps, I believe, is a math learning app more than capable of relieving that frustration.",
-      "Because it was built by a parent of a slow-learning child while actually teaching their own child, it's carefully put together around exactly what our kids need, at their level.",
+      "Because it was built by a parent of a child who learns at their own pace while actually teaching their own child, it's carefully put together around exactly what our kids need, at their level.",
       "In my own clinical practice I've watched children study with more joy and genuinely enjoy it — which is why I wholeheartedly recommend this app to so many families.",
-      "And not only for slow learners — I think it makes an excellent learning guide for children just beginning basic cognition, and for any child who needs to firm up the fundamentals before starting school.",
+      "And not only for kids who learn at their own pace — I think it makes an excellent learning guide for children just beginning basic cognition, and for any child who needs to firm up the fundamentals before starting school.",
     ],
     name: "Jang Woo-young",
     credentials: [

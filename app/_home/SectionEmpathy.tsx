@@ -43,7 +43,7 @@ const C = {
     closingHeading: "We hear you.",
     closingLead: "That's why we made small practices paced to your child.",
     closingLead2: "One screen, one step — ",
-    closingStrong: "walking slowly, together, at your child's pace.",
+    closingStrong: "walking together, at your child's pace.",
     cta: "Learn more",
   },
 } as const;

@@ -93,7 +93,7 @@ function websiteLd(locale: Locale): JsonLdNode {
     url: en ? `${SITE_URL}/en` : SITE_URL,
     inLanguage: en ? "en-US" : "ko-KR",
     description: en
-      ? "Math, cognition, and fine-motor learning tools for children who learn more slowly than peers."
+      ? "Math, cognition, and fine-motor learning tools for children who learn at their own pace."
       : "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지·소근육 학습도구.",
     publisher: { "@id": ORG_ID },
   };
@@ -109,7 +109,7 @@ function appLd(locale: Locale): JsonLdNode {
     applicationCategory: "EducationalApplication",
     inLanguage: en ? "en-US" : "ko-KR",
     description: en
-      ? "Learning tools for children with developmental delays, developmental disabilities, slow learning, or borderline intelligence — to build math foundations at their own pace."
+      ? "Learning tools for children with developmental delays, developmental disabilities, learning differences, borderline intelligence, and other kids who learn at their own pace — to build math foundations step by step."
       : "발달 지연·발달 장애·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 쌓도록 설계된 학습 앱입니다.",
     url: en ? `${SITE_URL}/en` : SITE_URL,
     downloadUrl: en ? APPLE_US : APPLE_KR,

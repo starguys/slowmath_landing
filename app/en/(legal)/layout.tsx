@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.png?v=20260701`,
         width: 878,
         height: 443,
-        alt: "LittleSteps — slow but in the right direction, one step at a time",
+        alt: "LittleSteps — steady but in the right direction, one step at a time",
       },
     ],
   },

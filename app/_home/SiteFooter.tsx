@@ -19,16 +19,16 @@ const C = {
     hashtags2: "#학습장애 #ADHD #자폐스펙트럼 #특수교육",
   },
   en: {
-    wm: ["Slow", "Kids"],
+    wm: ["Little", "Steps"],
     tagline1:
-      "For children with developmental delays, developmental disabilities, slow learning, borderline intelligence, and other slower learners",
+      "For children with developmental delays, developmental disabilities, learning differences, borderline intelligence, and other kids who learn at their own pace",
     tagline2: "Simple but powerful learning tools",
     contact: "Partnership · Feedback",
     terms: "Terms",
     privacy: "Privacy",
     termsHref: "/en/terms",
     privacyHref: "/en/privacy",
-    hashtags1: "#DevelopmentalDelay #DevelopmentalDisability #SlowLearners #BorderlineIQ",
+    hashtags1: "#DevelopmentalDelay #DevelopmentalDisability #LearningDifferences #BorderlineIQ",
     hashtags2: "#LearningDisability #ADHD #AutismSpectrum #SpecialEducation",
   },
 } as const;
