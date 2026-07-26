@@ -24,7 +24,7 @@ const OG_IMAGE = {
 };
 
 export const metadata: Metadata = {
-  title: "LittleSteps — Math at every child's pace",
+  title: "LittleSteps — One right step at a time",
   description:
     "Learning tools for children with developmental delays, developmental disabilities, learning differences, borderline intelligence, and other kids who learn at their own pace — to build math foundations step by step. Now on iOS and Android.",
   alternates: {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "LittleSteps — Math at every child's pace",
+    title: "LittleSteps — One right step at a time",
     description:
       "Small math practices for children who pick up concepts at their own pace — from earliest cognition through multiplication tables. Now on iOS and Android.",
     siteName: "LittleSteps",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LittleSteps — Math at every child's pace",
+    title: "LittleSteps — One right step at a time",
     description:
       "Small math practices for children who learn at their own pace. Available on iOS and Android.",
     images: [OG_IMAGE.url],

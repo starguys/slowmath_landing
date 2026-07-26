@@ -104,7 +104,7 @@ function appLd(locale: Locale): JsonLdNode {
   return {
     "@type": "MobileApplication",
     "@id": APP_ID,
-    name: en ? "LittleSteps — Math at every child's pace" : "느린아이",
+    name: en ? "LittleSteps — One right step at a time" : "느린아이",
     operatingSystem: "iOS, Android",
     applicationCategory: "EducationalApplication",
     inLanguage: en ? "en-US" : "ko-KR",
