@@ -17,7 +17,7 @@ import JsonLd from "../_seo/JsonLd";
 const SITE_URL = "https://slowkids.net";
 const SITE_URL_EN = `${SITE_URL}/en`;
 const OG_IMAGE = {
-  url: `${SITE_URL}/og-image.png?v=20260701`,
+  url: `${SITE_URL}/og-image-en.png?v=20260726`,
   width: 878,
   height: 443,
   alt: "LittleSteps — steady but in the right direction, one step at a time",
