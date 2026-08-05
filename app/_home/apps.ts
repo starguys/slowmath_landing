@@ -11,7 +11,7 @@ export function appHref(slug: string, locale: Locale) {
   return locale === "en" ? `/${slug}/?lang=en` : `/${slug}/`;
 }
 
-/** 37개 학습도구의 한/영 이름 (Figma 124:5255 시안 라벨 기준) */
+/** 학습도구의 한/영 이름 (Figma 124:5255 시안 라벨 기준, verticalmul 추가) */
 export const APP_NAMES: Record<string, { ko: string; en: string }> = {
   // 기초 인지
   slowmath_color: { ko: "색깔 익히기", en: "Color recognition" },
@@ -66,9 +66,10 @@ export const APP_NAMES: Record<string, { ko: string; en: string }> = {
   // 곱셈
   slowmath_timestables: { ko: "구구단 연습", en: "Times tables" },
   slowmath_easymul: { ko: "한 자리 곱셈", en: "1-digit multiplication" },
+  slowmath_verticalmul: { ko: "세로 곱셈", en: "Vertical multiplication" },
 };
 
-/** 전체 도구 그리드 노출 순서 (Figma 시안 37개 순서) */
+/** 전체 도구 그리드 노출 순서 (Figma 시안 순서 + verticalmul) */
 export const APP_ORDER: string[] = Object.keys(APP_NAMES);
 
 /** 한국어 학습 전용 앱 — 영어 랜딩 카탈로그에서 제외 */
@@ -187,6 +188,7 @@ export const APP_CATEGORY: Record<string, Category> = {
 
   slowmath_timestables: "multiplication",
   slowmath_easymul: "multiplication",
+  slowmath_verticalmul: "multiplication",
 };
 
 /** 카테고리별로 그룹화된 APP_ORDER (원본 노출 순서 보존, 카테고리 내부에서도 원본 순서 유지)

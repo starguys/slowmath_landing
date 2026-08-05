@@ -717,6 +717,22 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "Start with the easiest 1–5 range, expand to 1–9, then finish with vertical single-digit multiplication where the child picks the ones digit and then the tens digit of the answer. The order matches paper computation, so it transfers naturally to written math later.",
     },
   },
+  slowmath_verticalmul: {
+    ko: {
+      category: "곱셈",
+      subtitle: "개념을 이해하는 수의 규칙",
+      name: "세로 곱셈",
+      short: "한 자리·두 자리 세로 곱셈을 두 줄로 나눠 차근차근 풀어요",
+      long: "한 자리 × 한 자리 구구단 단계에서 두 자리 × 한 자리·두 자리 × 두 자리까지 자리수를 넓혀 가요. 큰 수는 일의 자리와 십의 자리를 따로 곱해 두 줄로 쓴 뒤 더하고, 받아올림 값도 위쪽 작은 칸에 먼저 채워요. 필기 곱셈과 같은 순서라 종이로 옮길 때도 자연스럽습니다.",
+    },
+    en: {
+      category: "Multiplication",
+      subtitle: "The number rules behind the concept",
+      name: "Vertical multiplication",
+      short: "Vertical multiplication in two rows — from 1-digit to 2-digit",
+      long: "Grow from 1-digit × 1-digit up through 2-digit × 1-digit and 2-digit × 2-digit. For bigger numbers, the ones and tens digits are multiplied separately into two rows and then added, with carry values filled first into small boxes above. The order matches paper computation, so it transfers naturally to written math.",
+    },
+  },
   slowmath_fractioncompare: {
     ko: {
       category: "수 관계",
