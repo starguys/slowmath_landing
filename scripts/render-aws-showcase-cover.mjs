@@ -265,7 +265,7 @@ const html = `<!doctype html>
       </p>
       <div class="product-tag">
         <span class="product-icon">🐢</span>
-        <span class="product-text">SlowKids Series<span class="url">slowkids.net</span></span>
+        <span class="product-text">LittleSteps Series<span class="url">slowkids.net</span></span>
       </div>
     </div>
 
