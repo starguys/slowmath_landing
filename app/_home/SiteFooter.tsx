@@ -1,4 +1,5 @@
 import { type Locale } from "./apps";
+import LangSwitcher from "./LangSwitcher";
 
 /**
  * 다크 푸터 (Figma 124:5371, PC=MO 동일). 단일 컬럼 중앙정렬(콘텐츠 640px).
@@ -95,27 +96,7 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
             <p>{t.hashtags1}</p>
             <p>{t.hashtags2}</p>
           </div>
-          <nav
-            aria-label={locale === "en" ? "Language" : "언어 선택"}
-            className="flex shrink-0 items-center overflow-hidden rounded-[8px]"
-          >
-            <a
-              href="/?lang=ko"
-              aria-label="한국어"
-              aria-current={koActive ? "page" : undefined}
-              className={`flex flex-col items-center justify-center px-4 py-2 text-[12px] font-bold leading-[18px] ${koActive ? ACTIVE : INACTIVE}`}
-            >
-              KR
-            </a>
-            <a
-              href="/en/?lang=en"
-              aria-label="English"
-              aria-current={!koActive ? "page" : undefined}
-              className={`flex flex-col items-center justify-center px-4 py-2 text-[12px] font-bold leading-[18px] ${!koActive ? ACTIVE : INACTIVE}`}
-            >
-              EN
-            </a>
-          </nav>
+          <LangSwitcher koActive={koActive} activeCls={ACTIVE} inactiveCls={INACTIVE} />
         </div>
       </div>
     </footer>
