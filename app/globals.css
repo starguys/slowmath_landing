@@ -72,6 +72,14 @@ body {
   word-break: keep-all;
 }
 
+/* JA site-wide: 일본어는 문자 사이 스페이스가 없어 keep-all 이면 아무 데도 안 끊겨 가로 오버플로.
+   body 에 normal + overflow-wrap:anywhere 로 어디서든 wrap 가능하게 (자식들도 상속).
+   postbuild 스크립트가 /jp/*.html 을 lang="ja" 로 패치하므로 초기 렌더부터 적용. */
+html[lang="ja"] body {
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
 /* 뷰포트 밖 섹션의 layout/paint 비용 절감 (LCP·렌더). placeholder 높이로 CLS 방지. */
 .lazy-section {
   content-visibility: auto;
