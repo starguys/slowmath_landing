@@ -110,3 +110,18 @@
     padding: 6px 8px;
   }
 }
+/* JA: 문자 사이 스페이스가 없어 word-break: keep-all 이면 줄바꿈 불가 → 가로 오버플로.
+   normal + overflow-wrap:anywhere 로 어디서든 wrap 되게 (긴 라틴 단어 "LittleSteps" 등 포함).
+   테이블은 fixed 레이아웃으로 컬럼 폭이 컨텐츠 따라 늘어나지 않게 고정. */
+:lang(ja) .legal-article p,
+:lang(ja) .legal-article li,
+:lang(ja) .legal-article th,
+:lang(ja) .legal-article td,
+:lang(ja) .legal-article .legal-intro {
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+:lang(ja) .legal-article table {
+  table-layout: fixed;
+  max-width: 100%;
+}
