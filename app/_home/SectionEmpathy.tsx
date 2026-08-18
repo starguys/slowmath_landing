@@ -46,6 +46,25 @@ const C = {
     closingStrong: "walking together, at your child's pace.",
     cta: "Learn more",
   },
+  ja: {
+    titleAccent: "こんな言葉、",
+    titleRest1: "ひとりごとのように",
+    titleRest2: "つぶやいたことはありませんか?",
+    sub1: "何十回と聞いてきた話かもしれません。",
+    sub2: "それでもこの言葉は、いつも新しく胸に刺さります。",
+    tag: "Before we begin",
+    worries: [
+      { lead: "ドリルを買っても ", strong: "2ページ進むと泣いてしまいます" },
+      { lead: "1から10まで、何ヶ月も ", strong: "同じところで止まっています" },
+      { lead: "一度まちがえると ", strong: "もうやろうとしません" },
+      { lead: "同学年の教材は速すぎて、", strong: "年少向けは幼すぎるんです" },
+    ],
+    closingHeading: "その気持ち、私たちにも分かります",
+    closingLead: "だから、子どものペースに合わせた小さな練習を作りました。",
+    closingLead2: "1画面、1ステップ。",
+    closingStrong: "子どものペースに合わせて、ゆっくり一緒に歩きます",
+    cta: "詳しく見る",
+  },
 } as const;
 
 export default function SectionEmpathy({ locale = "ko" }: { locale?: Locale }) {

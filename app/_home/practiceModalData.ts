@@ -10,7 +10,7 @@ export type ModalText = {
 
 /**
  * practice 모달(팝업) 콘텐츠 — Figma 123:5481 팝업 카드 기준.
- * ko: Figma 시안 텍스트, en: 기존 /en 카피 기반 번역. slug(slowmath_ 포함) 키.
+ * ko: Figma 시안 텍스트, en: /en 카피, ja: /jp 번역. slug(slowmath_ 포함) 키.
  */
 export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
   slowmath_color: {
@@ -28,6 +28,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "See, hear, and pick color names — building color awareness step by step",
       long: "Color names can be hard for children with developmental delays or disabilities. By moving step by step from simple recognition to sequence memory, this builds a solid color vocabulary.",
     },
+    ja: {
+      category: "基礎認知",
+      subtitle: "目と手が先に慣れていく時間",
+      name: "色を覚える",
+      short: "色の名前を見て・聞いて・選びながら、色を認識する力を育てます",
+      long: "自分のペースで学ぶ子にとって、色の名前はむずかしいことがあります。単純な認識から順序の記憶まで段階的に挑戦して、色の語彙をしっかり積み上げます。",
+    },
   },
   slowmath_shape: {
     ko: {
@@ -43,6 +50,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Shapes",
       short: "Pick the shape that matches the question — triangle, square, or circle",
       long: "Four modes — from same-size basics to different sizes and rotated shapes — build shape sense step by step. Children naturally learn that a shape stays the same even when its size or angle changes.",
+    },
+    ja: {
+      category: "基礎認知",
+      subtitle: "目と手が先に慣れていく時間",
+      name: "形を覚える",
+      short: "三角・四角・丸の中から、問題と同じ形を選びます",
+      long: "同じ大きさで選ぶ基本から、大きさが違ったり回転した形まで4段階に分けて形の感覚を育てます。大きさや向きが変わっても同じ形だと分かる力が、自然と身についていきます。",
     },
   },
   slowmath_linedraw: {
@@ -60,6 +74,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Trace straight lines, curves, and spirals to steady the hand",
       long: "Playfully trains the hand-control skills that underlie writing and drawing. Three difficulty levels and voice guidance help a child keep practicing without giving up.",
     },
+    ja: {
+      category: "基礎認知",
+      subtitle: "目と手が先に慣れていく時間",
+      name: "線を引く",
+      short: "直線・曲線・らせんをなぞって、手の安定性を育てます",
+      long: "文字書きや絵をかく土台となる手の調整力を、楽しくトレーニングします。3段階の難易度と音声ガイドで、子どもがあきらめずに練習を続けられるよう手助けします。",
+    },
   },
   slowmath_dot2dot: {
     ko: {
@@ -75,6 +96,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Dot to Dot",
       short: "Watch a dot-and-line example and recreate it on a grid below — visual perception and fine motor at once",
       long: "Children observe a sample dot-and-line drawing and reproduce it exactly on the grid below. It stimulates visual discrimination and hand control together, and grid size and directional complexity adjust to each child's level.",
+    },
+    ja: {
+      category: "基礎認知",
+      subtitle: "目と手が先に慣れていく時間",
+      name: "点をつなぐ",
+      short: "示された点と線をよく見て、同じようになぞりながら視知覚と小さな筋力を育てます",
+      long: "見本の点と線のつなぎ方を観察し、下のマスに同じように再現する活動です。視知覚の見分けと手の調整を同時に刺激し、マスの大きさや向きの複雑さを調整して子どもの水準に合わせて使えます。",
     },
   },
   slowmath_colorcopy: {
@@ -92,6 +120,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Recreate the shown color-grid pattern to train visual perception",
       long: "Trains visual discrimination and working memory at the same time. Grids grow from 2×2 to 5×5 and the number of colors is adjustable, so it fits each child's level.",
     },
+    ja: {
+      category: "基礎認知",
+      subtitle: "目と手が先に慣れていく時間",
+      name: "そっくり",
+      short: "示された色のマス模様をそのまま再現して視知覚を鍛えます",
+      long: "視知覚の見分けとワーキングメモリを同時に鍛えます。マスは2×2から5×5まで大きくなり、色の数も調整できるので、お子さんの水準に合わせて使えます。",
+    },
   },
   slowmath_oppositematch: {
     ko: {
@@ -107,6 +142,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Opposite Match",
       short: "Find the empty spots in the original and fill them in your grid",
       long: "Children fill the cells that were empty in the original. Trains visual perception of 'what's missing' and spatial awareness. Grids grow from 4 cells to 25 to match each child's pace.",
+    },
+    ja: {
+      category: "基礎認知",
+      subtitle: "目と手が先に慣れていく時間",
+      name: "反対ぬり",
+      short: "元の絵で空いている場所を見つけて、自分の答えに塗る反転マッチング",
+      long: "元の絵で空いているマスを見つけて、自分の答えに塗ります。「何がないか」に気づく視知覚と空間把握を一緒に鍛えます。4マスから25マスまで大きさを増やしながら、子どものペースに合わせます。",
     },
   },
   slowmath_pattern: {
@@ -124,6 +166,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Find what's missing in a repeating rule — pattern recognition practice",
       long: "Pattern recognition is at the heart of mathematical thinking. Children work through fruit, color, and shape patterns step by step, while a selection-lock feature builds reasoning skills.",
     },
+    ja: {
+      category: "基礎認知",
+      subtitle: "目と手が先に慣れていく時間",
+      name: "パターン",
+      short: "くり返しのきまりから、抜けているものを見つけるパターン認識の練習",
+      long: "パターン認識は算数的な思考力の中心です。果物・色・形のパターンを段階的に学び、選択ロック機能で考える力を育てます。",
+    },
   },
   slowmath_sameshape: {
     ko: {
@@ -139,6 +188,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Same Shape",
       short: "Find same shapes and pairs among many — visual discrimination practice",
       long: "Uses ten shapes, from square, triangle, and circle to star, heart, and pentagon, to build shape discrimination. Children progress through single and group picking, color discrimination, and pair finding to train visual processing.",
+    },
+    ja: {
+      category: "基礎認知",
+      subtitle: "目と手が先に慣れていく時間",
+      name: "同じ形さがし",
+      short: "たくさんの形の中から同じ形やペアを見つけて、視知覚の見分けを鍛えます",
+      long: "四角・三角・丸から星・ハート・五角形まで10種類の形を使って、形を見分ける力を育てます。単一・グループ選び、色の見分け、ペア探しまで段階的に挑戦し、視知覚の処理を鍛えます。",
     },
   },
   slowmath_number: {
@@ -156,6 +212,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "See, hear, and pick numbers from 1 to 100",
       long: "Hints and voice guidance let a child try on their own. Learning the order of numbers from 1 to 100 step by step is great preparation for school.",
     },
+    ja: {
+      category: "数の概念",
+      subtitle: "数字が「量」に見え始めるとき",
+      name: "数字を覚える",
+      short: "1から100までの数字を見て・聞いて・選びながら覚えます",
+      long: "ヒントと音声ガイドのおかげで、子どもがひとりでも挑戦できます。1から100までの数の順序の概念を少しずつ身につけていくので、就学準備にも役立ちます。",
+    },
   },
   slowmath_numberdraw: {
     ko: {
@@ -171,6 +234,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Number Draw",
       short: "Practice writing 0–9 in the correct stroke order",
       long: "By tracing the shape of each digit by hand, children remember the form through their body. Dotted guides and step-by-step feedback help even first-time writers pick up the correct stroke order naturally.",
+    },
+    ja: {
+      category: "数の概念",
+      subtitle: "数字が「量」に見え始めるとき",
+      name: "数字を書く",
+      short: "0〜9の数字を正しい書き順で書く練習をします",
+      long: "数字の形を手で書きながら、体で形を覚えていけます。点線ガイドと段階的なフィードバックで、はじめて書く子どもも正しい書き順を自然に身につけられます。",
     },
   },
   slowmath_dice: {
@@ -188,6 +258,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Count fingers, dice pips, and card suits — building number sense",
       long: "Counting everyday objects builds number sense naturally. Adjustable thinking time prevents impulsive answers and grows the habit of thinking carefully.",
     },
+    ja: {
+      category: "数の概念",
+      subtitle: "数字が「量」に見え始めるとき",
+      name: "かぞえる",
+      short: "指・サイコロ・カードの模様をかぞえながら、数の感覚を育てます",
+      long: "身のまわりの物をかぞえる練習で、数の感覚を自然に身につけられます。考える時間を調整することで衝動的な回答を防ぎ、ゆっくり考える習慣を育てます。",
+    },
   },
   slowmath_counting: {
     ko: {
@@ -203,6 +280,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Korean Counters",
       short: "Pair Korean counting words like 'one person, two animals, three cars' with their numbers",
       long: "In Korean, the counting word changes with the thing being counted — 'han myeong' for people, 'han mari' for animals, 'han dae' for cars. Children learn naturally by pairing the Korean words with their numbers, like 'han myeong ↔ 1 myeong' and 'du mari ↔ 2 mari'.",
+    },
+    ja: {
+      category: "数の概念",
+      subtitle: "数字が「量」に見え始めるとき",
+      name: "韓国語の数え方",
+      short: "「한 명(1人)」「두 마리(2匹)」など、韓国語の数え方と数字をペアにします",
+      long: "韓国語では、人は「명」、動物は「마리」、車は「대」のように、物ごとに数え方が違います。「한 명 ↔ 1명」「두 마리 ↔ 2마리」のように韓国語と数字をペアにしながら自然に身につけます。",
     },
   },
   slowmath_koreannum: {
@@ -220,6 +304,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Pair numbers with their native Korean words (hana, dul, set, yeol, seumul…)",
       long: "Connect digits from 1 to 100 with their native Korean number words. Eleven stages from 'hana–yeol' to 'aheun–baek' let each child start at their level, and problems alternate between digit→word and word→digit so both directions settle in naturally.",
     },
+    ja: {
+      category: "数の概念",
+      subtitle: "数字が「量」に見え始めるとき",
+      name: "ハングル数字",
+      short: "数字と韓国固有語の数(하나・둘・셋・열・스물…)をペアにして覚えます",
+      long: "1から100までの数字を韓国語固有の数詞とつなげて覚えます。「하나〜열」から「아흔〜백」まで11段階に分かれているので子どもの水準から始められ、数字→ハングル、ハングル→数字の両方向で交互に練習することで両向きに自然に身につきます。",
+    },
   },
   slowmath_matching: {
     ko: {
@@ -235,6 +326,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Matching",
       short: "Connect numbers with the right count of circles — linking symbol and quantity",
       long: "Solidifies the core number concept of linking number symbols with actual quantities. Starting with ordered problems and moving into random layouts lets the link between digit and count settle in naturally.",
+    },
+    ja: {
+      category: "数の概念",
+      subtitle: "数字が「量」に見え始めるとき",
+      name: "数のマッチング",
+      short: "数字と丸の個数をつなげて、数と量を結びつけます",
+      long: "数字の記号と実際の量を結びつける、数概念の中心をしっかり固めます。順番に並んだ問題から始めて、ランダム配置まで進むことで、数字と個数のつながりが自然に身につきます。",
     },
   },
   slowmath_gap: {
@@ -252,6 +350,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Fill in the missing numbers in an evenly spaced row",
       long: "Filling in missing numbers grows a natural feel for the order and spacing of numbers. Starting from a familiar gap and expanding to new ones lets the child discover the rule on their own.",
     },
+    ja: {
+      category: "数の関係",
+      subtitle: "大きさ・同じ・違いを読みとる練習",
+      name: "数の間隔",
+      short: "一定の間隔で空いている数を当ててみましょう",
+      long: "抜けている数を見つけながら、数の順序と間隔の感覚を自然に身につけます。慣れた間隔から始めて色々な間隔に広げていき、子どもが自分できまりを見つけられるよう助けます。",
+    },
   },
   slowmath_gap2: {
     ko: {
@@ -267,6 +372,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Number Gap Practice",
       short: "Look at the hints and color the rest of the board at the same gap",
       long: "A few hint cells are pre-colored on the number board. The child colors the remaining cells at the same gap, discovering the rule on their own. The gap (1–10) and range (1–50 or 1–100) can be adjusted to match each child's level.",
+    },
+    ja: {
+      category: "数の関係",
+      subtitle: "大きさ・同じ・違いを読みとる練習",
+      name: "数の間隔 練習",
+      short: "見本を見て、同じ間隔で数字表を塗ってみましょう",
+      long: "数字表にいくつかのヒントのマスがあらかじめ塗ってあります。同じ間隔で続く残りのマスを色で塗りながら、きまりを自分で見つけられるよう助けます。間隔(1〜10)と範囲(1〜50 / 1〜100)を自由に選べて、お子さんの水準に合わせて使えます。",
     },
   },
   slowmath_money: {
@@ -284,6 +396,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Learn the shapes and names of Korean coins and bills",
       long: "Children learn naturally by pairing 10, 50, 100, and 500 won coins and 1,000, 5,000, 10,000, and 50,000 won bills with their pictures and names.",
     },
+    ja: {
+      category: "数の概念",
+      subtitle: "数字が「量」に見え始めるとき",
+      name: "硬貨と紙幣",
+      short: "韓国の硬貨と紙幣の形と名前を覚えます",
+      long: "10・50・100・500ウォンの硬貨と、1,000・5,000・10,000・50,000ウォンの紙幣を、絵と名前でペアにしながら自然に覚えます。",
+    },
   },
   slowmath_comparing: {
     ko: {
@@ -299,6 +418,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Compare",
       short: "Compare size, length, height, thickness, and quantity — math language",
       long: "Connects 'bigger' and 'shorter' to mathematical concepts. Because everything is shown intuitively with pictures, children can learn even before they can read.",
+    },
+    ja: {
+      category: "数の関係",
+      subtitle: "大きさ・同じ・違いを読みとる練習",
+      name: "くらべる 1",
+      short: "大きさ・長さ・高さ・厚さ・量をくらべながら、算数のことばを身につけます",
+      long: "「大きい」「短い」を算数の概念とつなげます。絵で直感的に見せるので、文字が読めなくても学習できます。",
     },
   },
   slowmath_comparing2: {
@@ -316,6 +442,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Compare spatial relations — above, below, inside, outside",
       long: "Understanding position and spatial language is the foundation for word problems. Shape illustrations let children internalize spatial concepts naturally.",
     },
+    ja: {
+      category: "数の関係",
+      subtitle: "大きさ・同じ・違いを読みとる練習",
+      name: "くらべる 2",
+      short: "上・下・中・外など、空間の関係をくらべながら覚えます",
+      long: "位置や空間のことばを理解することは、算数の文章題の土台になります。形の絵を通して、空間の概念を自然に身につけていけます。",
+    },
   },
   slowmath_compare: {
     ko: {
@@ -331,6 +464,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Compare",
       short: "Compare number sizes and express them with inequality signs",
       long: "Children learn greater-than and less-than relationships visually with number-line and bar-chart hints. Both single and two digits are supported, leading step by step up to inequality signs (<, =, >).",
+    },
+    ja: {
+      category: "数の関係",
+      subtitle: "大きさ・同じ・違いを読みとる練習",
+      name: "数の大小",
+      short: "数の大小をくらべて、不等号で表す方法を身につけます",
+      long: "数の大小関係を、数直線と棒グラフのヒントで視覚的に身につけます。1桁も2桁も対応していて、不等号(<, =, >)の学習まで段階的につながります。",
     },
   },
   slowmath_clock: {
@@ -348,6 +488,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Read analog and digital clocks — hour, half, and quarter",
       long: "Telling time is an essential skill for daily independence. It starts at o'clock and grows finer through half past, quarter past, and quarter to, designed so every child can follow.",
     },
+    ja: {
+      category: "数の関係",
+      subtitle: "大きさ・同じ・違いを読みとる練習",
+      name: "時計の読み方",
+      short: "アナログ・デジタル時計の読み方を、正時・30分・15分の単位で学びます",
+      long: "時計を読むことは、生活の自立に欠かせない力です。正時から始めて30分・15分・45分へと少しずつ細かくなる段階で、誰でもついていけるよう設計されています。",
+    },
   },
   slowmath_calendar: {
     ko: {
@@ -363,6 +510,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Calendar",
       short: "Pick days of the week and dates, find the circled day — calendar reading",
       long: "Calendar reading is the foundation for time sense and understanding schedules. It progresses through picking all of one weekday, picking the Nth weekday, picking a date, and finding the circled day.",
+    },
+    ja: {
+      category: "数の関係",
+      subtitle: "大きさ・同じ・違いを読みとる練習",
+      name: "カレンダーの練習",
+      short: "カレンダーで曜日や日にちを選び、丸の付いた日を見つけながらカレンダーの読み方を覚えます",
+      long: "カレンダーを読むことは、時間感覚と予定を理解する土台になります。曜日をすべて選ぶ、N番目の曜日を選ぶ、日にちを選ぶ、丸の付いた日を当てるまで、段階的に身につけられるよう設計されています。",
     },
   },
   slowmath_oddeven: {
@@ -380,6 +534,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Learn odd and even through array, number board, random, and pair modes",
       long: "Odd and even is the starting point for recognizing number patterns. Children get plenty of repetition across four modes: visually checking pairs on an array, picking them all on a number board, judging random numbers, and matching like with like.",
     },
+    ja: {
+      category: "数の関係",
+      subtitle: "大きさ・同じ・違いを読みとる練習",
+      name: "奇数と偶数",
+      short: "配列盤・数字盤・ランダム・ペア合わせの4モードで、奇数と偶数を身につけます",
+      long: "奇数と偶数の概念は、数のパターン認識のスタート地点です。配列盤でペアが合うかを目で確かめ、数字盤ですべて選び、ランダムな数を見分け、同じ種類どうしをペアにする4段階のモードでたっぷりくり返します。",
+    },
   },
   slowmath_combining: {
     ko: {
@@ -395,6 +556,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Combining",
       short: "Combine two numbers into one — number composition",
       long: "Children grasp the meaning of addition through the intuition of 'putting together'. Drag interaction uses hand and eye at once, so it stays in memory longer.",
+    },
+    ja: {
+      category: "たしざんの前に",
+      subtitle: "あつめて・わけて、数を手で感じる時間",
+      name: "あつめる",
+      short: "2つの数を合わせて1つの数にする、数の合成を練習します",
+      long: "たし算の意味を「あつめる」という直感で理解できます。ドラッグ操作で手と目を同時に使うので、記憶に長く残ります。",
     },
   },
   slowmath_splitting: {
@@ -412,6 +580,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Split one number into two parts — number decomposition",
       long: "Builds the number-decomposition concept that underlies both subtraction and addition. Divided into three levels from 2 to 9, it lets each child start at just the right challenge.",
     },
+    ja: {
+      category: "たしざんの前に",
+      subtitle: "あつめて・わけて、数を手で感じる時間",
+      name: "わける",
+      short: "1つの数を2つの部分にわける、数の分解を練習します",
+      long: "ひき算とたし算の土台となる、数の分解の概念を身につけられます。2〜9まで3段階に分かれているので、お子さんにちょうどよい挑戦から始められます。",
+    },
   },
   slowmath_complement: {
     ko: {
@@ -427,6 +602,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Complement",
       short: "Find the partner number that fills 10 — three ways",
       long: "Complements of 10 are a core concept for carrying in addition and subtraction. An impulse-control feature and varied practice modes give enough repetition to reach full mastery.",
+    },
+    ja: {
+      category: "たしざんの前に",
+      subtitle: "あつめて・わけて、数を手で感じる時間",
+      name: "10の組",
+      short: "10になる相棒の数(補数)を、3つのやり方で身につけます",
+      long: "10の補数は、くり上がりのたし算やひき算の中心となる概念です。衝動を抑える機能と多彩な練習モードで、たっぷりくり返して完全な習得までたどりつけます。",
     },
   },
   slowmath_plusone: {
@@ -444,6 +626,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Number arrays, order prediction, and random problems — +1 addition",
       long: "The rule that '+1 is the next number' is visualized on a number array for intuitive understanding. The range expands step by step up to 1–99, building confidence along the way.",
     },
+    ja: {
+      category: "たしざん",
+      subtitle: "小さな一歩から積み上げる計算",
+      name: "+1",
+      short: "数の配列盤・順序予測・ランダム問題で+1のたし算を身につけます",
+      long: "「+1は次の数」というきまりを数の配列盤で目に見える形にして、直感的に理解できます。1〜99の範囲まで段階的に広げながら、自信を積み上げます。",
+    },
   },
   slowmath_plustwo: {
     ko: {
@@ -459,6 +648,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Plus Two",
       short: "Visualize +2 with the number array and skip counting",
       long: "The two-step skip pattern on the number array connects to odd and even, opening up extended learning. Children conquer the 1–98 range step by step and feel a sense of achievement.",
+    },
+    ja: {
+      category: "たしざん",
+      subtitle: "小さな一歩から積み上げる計算",
+      name: "+2",
+      short: "2をたす計算を、配列盤と2つとびで目に見える形にして学びます",
+      long: "配列盤で2マスとびのパターンが奇数・偶数の概念とつながり、発展的な学習ができます。1〜98の範囲を段階ごとに攻略しながら、達成感を感じられます。",
     },
   },
   slowmath_plusthree: {
@@ -476,6 +672,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Practice +3 across multiple learning modes",
       long: "A natural next step after +1 and +2, with number-array animation that shows the computation vividly. Random problems support full mastery.",
     },
+    ja: {
+      category: "たしざん",
+      subtitle: "小さな一歩から積み上げる計算",
+      name: "+3",
+      short: "3をたす計算を、いくつかの学習モードでくり返し練習します",
+      long: "+1・+2を身につけたあと自然につながる段階で、配列盤のアニメーションが計算の流れをいきいきと見せてくれます。ランダム問題で完全な習得まで支えます。",
+    },
   },
   slowmath_easy: {
     ko: {
@@ -491,6 +694,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Easy",
       short: "Single-digit addition starting from the easiest level",
       long: "Four difficulty levels let even a child new to addition start without pressure. An impulse-control mode builds the habit of thinking it through before choosing an answer.",
+    },
+    ja: {
+      category: "たしざん",
+      subtitle: "小さな一歩から積み上げる計算",
+      name: "1けた たしざん",
+      short: "いちばんやさしい段階から始める1桁のたし算練習",
+      long: "たし算がはじめての子でも負担なく始められるよう、4段階で難易度を調整します。衝動を抑えるモードで、答えを選ぶ前にじゅうぶんに考える習慣を育てます。",
     },
   },
   slowmath_circle: {
@@ -508,6 +718,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Pick, stack, and fill — three ways to practice addition",
       long: "Experiencing the same addition in varied forms lets the concept settle more deeply. Because it uses visual concretes, it is especially effective for children who struggle with abstract calculation.",
     },
+    ja: {
+      category: "たしざん",
+      subtitle: "小さな一歩から積み上げる計算",
+      name: "たしざん練習",
+      short: "選ぶ・積む・埋める、3つのやり方でたし算を練習します",
+      long: "同じたし算をいろいろな形で経験することで、概念がより深く身につきます。目に見える具体物を使うので、抽象的な計算がむずかしい子に特に効果的です。",
+    },
   },
   slowmath_carry: {
     ko: {
@@ -523,6 +740,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Carry",
       short: "Make 10 by splitting and on the array — carrying practice",
       long: "Carrying, the core of two-digit addition, is learned through two intuitive approaches kept separate: splitting/complements and the number array. Drag interaction builds the felt sense of 'making 10' with hand and eye together.",
+    },
+    ja: {
+      category: "たしざん",
+      subtitle: "小さな一歩から積み上げる計算",
+      name: "くりあがり",
+      short: "分解と配列盤で10を作りながら、くり上がりを身につけます",
+      long: "2桁のたし算の中心となる「くり上がり」を、分解・補数と配列盤という2つの直感的な方法に分けて学びます。ドラッグ操作で「10を作る」感覚を、手と目で一緒に身につけます。",
     },
   },
   slowmath_verticaladd: {
@@ -540,6 +764,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Solve two-digit vertical addition from the ones place up",
       long: "The step after carrying — the ones and tens places are separated so the flow of the solution is visible. Blanks increase one at a time, helping the child master the procedure on their own.",
     },
+    ja: {
+      category: "たしざん",
+      subtitle: "小さな一歩から積み上げる計算",
+      name: "筆算 たしざん",
+      short: "2桁の筆算のたし算を、一の位から少しずつ解きます",
+      long: "くり上がりを身につけた次の段階で、一の位・十の位を分けて解き方の流れを目に見える形で見せます。空欄が一つずつ増えていくので、子どもが自分で手順を身につけられるよう助けます。",
+    },
   },
   slowmath_moneycalc: {
     ko: {
@@ -555,6 +786,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Money Calc",
       short: "Pay a price with coins and bills, or pick the total",
       long: "An applied stage that moves classroom addition into real life (money). Children practice both directions — gathering money to match a price tag, and matching a price to the money gathered — across three difficulties: coins only, bills only, and coins with bills.",
+    },
+    ja: {
+      category: "たしざん",
+      subtitle: "小さな一歩から積み上げる計算",
+      name: "金額を払う",
+      short: "硬貨と紙幣で値段を合わせたり、合計を選んだりします",
+      long: "教室でのたし算を実生活(お金)に移した応用の段階。値札を見てお金を集める / 集めたお金を見て値段を当てる、の両方向を、硬貨だけ・紙幣だけ・硬貨と紙幣の3つの難易度でくり返し練習します。",
     },
   },
   slowmath_minusone: {
@@ -572,6 +810,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Number arrays, previous-number prediction, and random — −1 subtraction",
       long: "The rule that '−1 is the number just before' is visualized on a number array for intuitive understanding. Gradual range expansion lets children learn subtraction without feeling burdened.",
     },
+    ja: {
+      category: "ひきざん",
+      subtitle: "一歩ずつ取り除いていく計算",
+      name: "−1",
+      short: "配列盤・前の数の予測・ランダム問題で−1のひき算を身につけます",
+      long: "「−1はすぐ前の数」というきまりを配列盤で目に見える形にして、直感的に理解できます。段階的な範囲の広がりで、ひき算に負担を感じずに身につけられます。",
+    },
   },
   slowmath_minustwo: {
     ko: {
@@ -587,6 +832,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Minus Two",
       short: "Visualize −2 with the array and reverse skip counting",
       long: "The pattern of skipping back two at a time on the number array makes −2 subtraction intuitive. Step-by-step range expansion lets children conquer it at their own pace.",
+    },
+    ja: {
+      category: "ひきざん",
+      subtitle: "一歩ずつ取り除いていく計算",
+      name: "−2",
+      short: "2をひく計算を、配列盤と逆向きの2つとびで目に見える形にして学びます",
+      long: "配列盤で2マスずつ逆向きにとぶパターンで、−2のひき算を直感的に理解できます。段階ごとに範囲を広げていくので、自分のペースで攻略できます。",
     },
   },
   slowmath_minusthree: {
@@ -604,6 +856,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Practice −3 across multiple learning modes",
       long: "A natural next step after −1 and −2, with number-array animation that shows the subtraction vividly. Random problems support full mastery.",
     },
+    ja: {
+      category: "ひきざん",
+      subtitle: "一歩ずつ取り除いていく計算",
+      name: "−3",
+      short: "3をひく計算を、いくつかの学習モードでくり返し練習します",
+      long: "−1・−2を身につけたあと自然につながる段階で、配列盤のアニメーションがひき算の流れをいきいきと見せてくれます。ランダム問題で完全な習得まで支えます。",
+    },
   },
   slowmath_easysub: {
     ko: {
@@ -619,6 +878,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Easy Sub",
       short: "1-digit subtraction starting from the easiest level",
       long: "Visualizes the feeling of taking away one at a time, so single-digit subtraction settles in naturally. Four difficulty levels ease children in without pressure, growing from very small numbers to larger ones so subtraction becomes a familiar new idea.",
+    },
+    ja: {
+      category: "ひきざん",
+      subtitle: "一歩ずつ取り除いていく計算",
+      name: "1けた ひきざん",
+      short: "いちばんやさしい段階から始める1桁のひき算練習",
+      long: "取り除く感覚を絵で見える形にしながら、1桁のひき算の意味を自然に身につけられます。4段階の難易度で負担なく始められ、小さな数から少しずつ大きくなる問題で、ひき算という新しい概念に慣れていきます。",
     },
   },
   slowmath_subtract: {
@@ -636,6 +902,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Drag, group, and array — three ways to do 1-digit subtraction",
       long: "Three visualizations — moving circles into a basket, grouping and taking away, or slashing them out on an array — teach the meaning of subtraction from many angles. Answer-checking happens alongside the pictures, so hand and eye learn together.",
     },
+    ja: {
+      category: "ひきざん",
+      subtitle: "一歩ずつ取り除いていく計算",
+      name: "ひきざん練習",
+      short: "ドラッグ・くくり・配列盤の3つのやり方で、1桁のひき算を身につけます",
+      long: "丸をかごに移す、くくって取り除く、配列盤で斜線で消す、の3つの見せ方でひき算の意味をいろいろな角度から身につけます。答え合わせが絵と一緒に行われるので、手と目で同時に学べます。",
+    },
   },
   slowmath_borrow: {
     ko: {
@@ -651,6 +924,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Borrow",
       short: "Borrowing subtraction, solved step by step",
       long: "Shows step by step, through decomposing the expression and grouping marks, how borrowing happens when subtracting one or two digits from a two-digit number. The first problem starts with a single blank and gradually adds more, so the child learns the flow on their own.",
+    },
+    ja: {
+      category: "ひきざん",
+      subtitle: "一歩ずつ取り除いていく計算",
+      name: "くりさがり",
+      short: "くり下がりが必要なひき算を、段階ごとに少しずつ解きます",
+      long: "2桁から1桁・2桁をひくとき、くり下がりがどのように起きるかを、式の分解とくくりの印でゆっくり見せます。最初の問題は空欄1つから始まり、少しずつ空欄が増えていくので、解き方の流れを自分で身につけていきます。",
     },
   },
   slowmath_verticalsub: {
@@ -668,6 +948,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Solve two-digit vertical subtraction from the ones place up",
       long: "The step after borrowing — the ones and tens places are separated so the flow of the solution is visible. Blanks increase one at a time, so the child masters the step-by-step procedure on their own.",
     },
+    ja: {
+      category: "ひきざん",
+      subtitle: "一歩ずつ取り除いていく計算",
+      name: "筆算 ひきざん",
+      short: "2桁の筆算のひき算を、一の位から少しずつ解きます",
+      long: "くり下がりの概念を身につけた次の段階で、一の位・十の位を分けて解き方の流れを目に見える形で見せます。空欄が一つずつ増えていくので、手順に沿った解き方を自分で身につけられます。",
+    },
   },
   slowmath_changecalc: {
     ko: {
@@ -683,6 +970,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Change Calc",
       short: "Look at the price and the money paid, pick the change",
       long: "An applied stage that moves subtraction into real life (money). Children pick the change themselves as the difference between the price and the money paid, building a sense for coin and bill units alongside subtraction.",
+    },
+    ja: {
+      category: "ひきざん",
+      subtitle: "一歩ずつ取り除いていく計算",
+      name: "おつりの計算",
+      short: "商品の値段と払ったお金を見て、おつりを計算します",
+      long: "ひき算を実生活(お金)に移した応用の段階。値段と払ったお金の差額としておつりを自分で選びながら、硬貨・紙幣の単位の感覚とひき算を一緒に身につけます。",
     },
   },
   slowmath_timestables: {
@@ -700,6 +994,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "2–9 times tables, learned at their own pace with enough thinking time",
       long: "Thinking time is fully adjustable, so even a child who struggles to memorize quickly can master the times tables at their own pace. Working through the 2s to the 9s in order, each child completes one table at a time at their own rhythm.",
     },
+    ja: {
+      category: "かけざん",
+      subtitle: "概念で理解する数のきまり",
+      name: "九九",
+      short: "2の段〜9の段の九九を、じゅうぶんな考える時間と一緒にゆっくり身につけます",
+      long: "考える時間をたっぷり調整できるので、すばやい暗記がむずかしい子でも自分のペースで九九を攻略できます。2の段から9の段まで順番に踏んでいきながら、それぞれの段を自分のペースで一つずつ仕上げていきます。",
+    },
   },
   slowmath_easymul: {
     ko: {
@@ -715,6 +1016,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "1-digit multiplication",
       short: "Three steps — 1–5, 1–9, and vertical — to grow multiplication sense",
       long: "Start with the easiest 1–5 range, expand to 1–9, then finish with vertical single-digit multiplication where the child picks the ones digit and then the tens digit of the answer. The order matches paper computation, so it transfers naturally to written math later.",
+    },
+    ja: {
+      category: "かけざん",
+      subtitle: "概念で理解する数のきまり",
+      name: "1けた かけざん",
+      short: "1〜5・1〜9のかけ算から筆算のかけ算まで、3段階でかける感覚を身につけます",
+      long: "いちばんやさしい1〜5の範囲から始めて1〜9に広げていき、最後の筆算の1桁×1桁では答えの一の位と十の位を一つずつ選びます。筆記のかけ算と同じ順番で進むので、紙に移すときも自然です。",
     },
   },
   slowmath_verticalmul: {
@@ -732,6 +1040,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Vertical multiplication in two rows — from 1-digit to 2-digit",
       long: "Grow from 1-digit × 1-digit up through 2-digit × 1-digit and 2-digit × 2-digit. For bigger numbers, the ones and tens digits are multiplied separately into two rows and then added, with carry values filled first into small boxes above. The order matches paper computation, so it transfers naturally to written math.",
     },
+    ja: {
+      category: "かけざん",
+      subtitle: "概念で理解する数のきまり",
+      name: "筆算 かけざん",
+      short: "1桁・2桁の筆算のかけ算を、2行に分けて少しずつ解きます",
+      long: "1桁×1桁の九九の段階から、2桁×1桁・2桁×2桁まで桁数を広げていきます。大きな数は一の位と十の位を別々にかけて2行に書いてからたし合わせ、くり上がりの値も上の小さなマスに先に入れます。筆記のかけ算と同じ順番なので、紙に移すときも自然です。",
+    },
   },
   slowmath_fractioncompare: {
     ko: {
@@ -748,6 +1063,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "Compare two, four, or with an inequality sign — three levels of practice",
       long: "Start with same-denominator pairs, then move to different denominators. Three hint types — circle (area), bar (length), and number line (position) — show size from different angles. Difficulty steps up naturally: pick the bigger/smaller, pick the biggest/smallest of four, then choose the correct inequality sign (＜ ＝ ＞).",
     },
+    ja: {
+      category: "数の関係",
+      subtitle: "大きさ・同じ・違いを読みとる練習",
+      name: "分数の大小",
+      short: "2つの分数・4つの分数・不等号まで、3つのやり方で分数の大小をくらべます",
+      long: "同じ分母どうしから始めて、違う分母へと広げながら、分数の大小の感覚をつかみます。円(面積)・棒(長さ)・数直線(位置)の3つのヒントが違う観点から大小を見せてくれます。大きい数・小さい数を選ぶ → 4つの中でいちばん大きい/小さいものを選ぶ → 不等号(＜ ＝ ＞)を選ぶ、の順で難易度が自然に上がっていきます。",
+    },
   },
   slowmath_fraction: {
     ko: {
@@ -763,6 +1085,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "Fractions",
       short: "Four shapes — circle, bar, set, and number line — to see fractions",
       long: "Kids learn fractions by counting twice: how many equal parts is the whole split into, and how many are colored. Four shapes — circle (area), bar (length), set (count), and number line (position) — reinforce the same idea from different angles, and the numerator range (1 → 1–10) widens step by step.",
+    },
+    ja: {
+      category: "数の概念",
+      subtitle: "数字が「量」に見え始めるとき",
+      name: "分数を覚える",
+      short: "円・棒・グループ・数直線の4つの形で、分数を目で覚えます",
+      long: "全体をいくつに等しく分けたか、その中でいくつが塗られているかを2回かぞえるやり方で、分数の感覚をつかみます。円(面積)・棒(長さ)・グループ(個数)・数直線(位置)の4つの形が違う認知のしかたを補い合い、分子の範囲(1 → 1〜10)を段階的に広げながら身につけます。",
     },
   },
 };

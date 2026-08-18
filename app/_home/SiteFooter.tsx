@@ -32,6 +32,19 @@ const C = {
     hashtags1: "#DevelopmentalDelay #DevelopmentalDisability #LearningDifferences #BorderlineIQ",
     hashtags2: "#LearningDisability #ADHD #AutismSpectrum #SpecialEducation",
   },
+  ja: {
+    wm: ["Little", "Steps"],
+    tagline1:
+      "発達のゆっくりな子・発達障害・境界知能など、自分のペースで学ぶ子のための",
+    tagline2: "シンプルで力強い学習ツール",
+    contact: "提携・フィードバック",
+    terms: "利用規約",
+    privacy: "プライバシー",
+    termsHref: "/jp/terms",
+    privacyHref: "/jp/privacy",
+    hashtags1: "#発達ゆっくり #発達障害 #境界知能 #学習障害",
+    hashtags2: "#ADHD #自閉スペクトラム #特別支援教育 #算数",
+  },
 } as const;
 
 const ACTIVE = "bg-[#f4f4f4] text-[#1c1c1e]";
@@ -39,7 +52,6 @@ const INACTIVE = "bg-[#686868] text-[#b4b4b4]";
 
 export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
   const t = C[locale];
-  const koActive = locale === "ko";
   return (
     <footer className="w-full bg-[#363636]">
       <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-4 px-4 py-14">
@@ -96,7 +108,7 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
             <p>{t.hashtags1}</p>
             <p>{t.hashtags2}</p>
           </div>
-          <LangSwitcher koActive={koActive} activeCls={ACTIVE} inactiveCls={INACTIVE} />
+          <LangSwitcher locale={locale} activeCls={ACTIVE} inactiveCls={INACTIVE} />
         </div>
       </div>
     </footer>

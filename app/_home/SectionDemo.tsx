@@ -112,6 +112,20 @@ const C: Record<Locale, DemoCopy> = {
       [[{ t: "Moments the child " }, { t: "taps and confirms on their own", a: true }]],
     ],
   },
+  ja: {
+    h1: "言葉より先に、",
+    h2: "見ていただきますね!",
+    subA: "ゆっくり一歩ずつ。派手な演出のかわりに、",
+    subB: "子どもが ",
+    subStrong: "自分のペースで進んでいく場面",
+    subC: "です。",
+    videoLabel: "LittleStepsアプリで学ぶ子どもの様子",
+    points: [
+      [[{ t: "静かな画面と、" }, { t: "十分な考える時間", a: true }]],
+      [[{ t: "まちがえても、小さな繰り返しから" }], [{ t: "積み上がる自信", a: true }]],
+      [[{ t: "子どもが自分で", a: true }, { t: " タッチして" }], [{ t: "確かめる瞬間" }]],
+    ],
+  },
 };
 
 export default function SectionDemo({ locale = "ko" }: { locale?: Locale }) {

@@ -12,16 +12,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const homeLangs = {
     ko: BASE_URL,
     en: `${BASE_URL}/en`,
+    ja: `${BASE_URL}/jp`,
     "x-default": BASE_URL,
   };
   const privacyLangs = {
     ko: `${BASE_URL}/privacy`,
     en: `${BASE_URL}/en/privacy`,
+    ja: `${BASE_URL}/jp/privacy`,
     "x-default": `${BASE_URL}/privacy`,
   };
   const termsLangs = {
     ko: `${BASE_URL}/terms`,
     en: `${BASE_URL}/en/terms`,
+    ja: `${BASE_URL}/jp/terms`,
     "x-default": `${BASE_URL}/terms`,
   };
   return [
@@ -34,6 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/en`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: homeLangs },
+    },
+    {
+      url: `${BASE_URL}/jp`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.9,
@@ -54,6 +64,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: privacyLangs },
     },
     {
+      url: `${BASE_URL}/jp/privacy`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "yearly",
+      priority: 0.5,
+      alternates: { languages: privacyLangs },
+    },
+    {
       url: `${BASE_URL}/terms`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "yearly",
@@ -62,6 +79,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/en/terms`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "yearly",
+      priority: 0.5,
+      alternates: { languages: termsLangs },
+    },
+    {
+      url: `${BASE_URL}/jp/terms`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "yearly",
       priority: 0.5,

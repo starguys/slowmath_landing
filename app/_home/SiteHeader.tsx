@@ -2,6 +2,7 @@ import { type Locale } from "./apps";
 
 const APPLE_KR = "https://apps.apple.com/kr/app/id6763979294";
 const APPLE_US = "https://apps.apple.com/us/app/id6763979294";
+const APPLE_JP = "https://apps.apple.com/jp/app/id6763979294";
 const GOOGLE_URL =
   "https://play.google.com/store/apps/details?id=com.everydaysummers.slowkids";
 
@@ -26,6 +27,14 @@ const C = {
     apple: APPLE_US,
     appleAlt: "Download LittleSteps on the App Store",
     googleAlt: "Get LittleSteps on Google Play",
+  },
+  ja: {
+    home: "/jp",
+    homeLabel: "LittleStepsホーム",
+    wm: ["Little", "Steps", ""],
+    apple: APPLE_JP,
+    appleAlt: "App StoreでLittleStepsをダウンロード",
+    googleAlt: "Google PlayでLittleStepsを入手",
   },
 } as const;
 

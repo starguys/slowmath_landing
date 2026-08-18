@@ -33,6 +33,20 @@ const C = {
     b2Line2:
       "Used by parents, special education teachers, and cognitive therapists alike.",
   },
+  ja: {
+    heading: "LittleStepsとは?",
+    emLead: "一般的な学習教材は進み方が速すぎて、子どもがついていけないという ",
+    emStrong: "保護者の悩みから生まれました。",
+    emRest: "",
+    b1Lead: "LittleStepsは、",
+    b1Strong:
+      "発達のゆっくりな子・発達障害・境界知能など、自分のペースで学ぶ子",
+    b1Rest: "たちが算数の基礎を自分で身につけられるように作られた学習ツール集です。",
+    b2Lead: "十分な考える時間、段階的なヒント、音声ガイドを通して ",
+    b2Strong: "子どもが自分でやり遂げる経験をくり返し",
+    b2Rest: "、その小さな成功が自立の栄養になるよう手助けします。",
+    b2Line2: "保護者・特別支援の先生・認知療育の先生の授業補助ツールとしても使えます。",
+  },
 } as const;
 
 export default function SectionIntro({ locale = "ko" }: { locale?: Locale }) {

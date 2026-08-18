@@ -65,6 +65,28 @@ const C: Record<Locale, HeroCopy> = {
       ],
     ],
   },
+  ja: {
+    h1: [
+      ["ゆっくりでも ", "正しい方向", "へ、"],
+      ["", "一歩ずつ", "進んでいきます"],
+    ],
+    cardLines: [
+      [{ t: "KAIST出身、自閉スペクトラム・" }],
+      [{ t: "発達障害の子の父親", c: "o" }, { t: "が" }],
+      [{ t: "自身の経験から作った " }, { t: "LittleSteps", c: "b" }],
+    ],
+    descLines: [
+      [
+        {
+          t: "発達のゆっくりな子・発達障害・境界知能など、自分のペースで学ぶ子",
+          bold: true,
+        },
+        { t: "たちが" },
+      ],
+      [{ t: "自分のペースで算数の基礎を少しずつ積み上げられるよう" }],
+      [{ t: "設計された学習ツールです。" }],
+    ],
+  },
 };
 
 const ACCENT = { o: "text-[#f0a050]", b: "text-[#6bade8]" } as const;
@@ -99,7 +121,9 @@ export default function SectionHero({ locale = "ko" }: { locale?: Locale }) {
           alt={
             locale === "en"
               ? "LittleSteps turtle character studying on a tablet"
-              : "태블릿으로 공부하는 느린아이 거북이 캐릭터"
+              : locale === "ja"
+                ? "タブレットで学習するLittleStepsのカメのキャラクター"
+                : "태블릿으로 공부하는 느린아이 거북이 캐릭터"
           }
           className="h-[183px] w-[224px] object-contain"
         />

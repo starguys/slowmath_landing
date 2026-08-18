@@ -1,17 +1,33 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { type Locale } from "./_home/apps";
 
 const IOS_KR = "https://apps.apple.com/kr/app/id6763979294";
+const IOS_US = "https://apps.apple.com/us/app/id6763979294";
+const IOS_JP = "https://apps.apple.com/jp/app/id6763979294";
 const PLAY_URL =
   "https://play.google.com/store/apps/details?id=com.everydaysummers.slowkids";
 
 const badgeStyle = { height: 32, width: "auto", display: "block" } as const;
 
 /** 모바일 sticky 하단 다운로드 바 — hero 보일 땐 숨김, 스크롤해서 hero 벗어나면 노출 */
-export default function StickyDownloadBar({ locale = "ko" }: { locale?: "ko" | "en" }) {
+export default function StickyDownloadBar({ locale = "ko" }: { locale?: Locale }) {
   const [visible, setVisible] = useState(false);
   const isKo = locale === "ko";
+  const isJa = locale === "ja";
+  const iosHref = isKo ? IOS_KR : isJa ? IOS_JP : IOS_US;
+  const appleAria = isKo
+    ? "App Store에서 느린아이 다운로드"
+    : isJa
+      ? "App StoreでLittleStepsをダウンロード"
+      : "Download LittleSteps on the App Store";
+  const googleAria = isKo
+    ? "Google Play에서 느린아이 다운로드"
+    : isJa
+      ? "Google PlayでLittleStepsを入手"
+      : "Get LittleSteps on Google Play";
+  const badgeLabel = isKo ? "무료 체험" : isJa ? "無料体験" : "Free trial";
 
   useEffect(() => {
     const hero = document.getElementById("hero");
@@ -54,10 +70,10 @@ export default function StickyDownloadBar({ locale = "ko" }: { locale?: "ko" | "
       }}
     >
       <a
-        href={IOS_KR}
+        href={iosHref}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={isKo ? "App Store에서 느린아이 다운로드" : "Download LittleSteps on the App Store"}
+        aria-label={appleAria}
       >
         <img src="/badge-apple.png" alt="Download on the App Store" style={badgeStyle} />
       </a>
@@ -65,7 +81,7 @@ export default function StickyDownloadBar({ locale = "ko" }: { locale?: "ko" | "
         href={PLAY_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={isKo ? "Google Play에서 느린아이 다운로드" : "Get LittleSteps on Google Play"}
+        aria-label={googleAria}
       >
         <img src="/badge-google.png" alt="Get it on Google Play" style={badgeStyle} />
       </a>
@@ -82,7 +98,7 @@ export default function StickyDownloadBar({ locale = "ko" }: { locale?: "ko" | "
           marginLeft: 2,
         }}
       >
-        {isKo ? "무료 체험" : "Free trial"}
+        {badgeLabel}
       </span>
     </div>
   );

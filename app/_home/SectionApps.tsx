@@ -16,6 +16,10 @@ const C = {
     heading: "All learning tools at a glance",
     subtitle: "Browse by category and open any one you'd like to try",
   },
+  ja: {
+    heading: "すべての学習ツールを一目で",
+    subtitle: "カテゴリごとに眺めて、気になるものをそのまま開けます",
+  },
 } as const;
 
 export default function SectionApps({ locale = "ko" }: { locale?: Locale }) {

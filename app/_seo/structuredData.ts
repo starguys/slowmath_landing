@@ -1,15 +1,17 @@
 // 페이지별(로케일별) 구조화 데이터(JSON-LD) 빌더.
-// output:"export" + 단일 root layout 이라 layout 에서 넣으면 /en 도 KO 데이터가 나가므로,
-// 각 랜딩 페이지(/·/en)가 자기 언어의 @graph 를 직접 렌더한다. (JsonLd 서버 컴포넌트)
+// output:"export" + 단일 root layout 이라 layout 에서 넣으면 /en·/jp 도 KO 데이터가 나가므로,
+// 각 랜딩 페이지(/·/en·/jp)가 자기 언어의 @graph 를 직접 렌더한다. (JsonLd 서버 컴포넌트)
 import { APP_NAMES, APP_ORDER, appHref, type Locale } from "../_home/apps";
 
 const SITE_URL = "https://slowkids.net";
 const OG_IMAGE = `${SITE_URL}/og-image.png?v=20260701`;
+const OG_IMAGE_EN = `${SITE_URL}/og-image-en.png?v=20260726`;
 
 // 실제 스토어 주소 (사용자 제공)
 const APPLE_US =
   "https://apps.apple.com/us/app/slowkids-math-at-kids-pace/id6763979294";
 const APPLE_KR = "https://apps.apple.com/kr/app/id6763979294";
+const APPLE_JP = "https://apps.apple.com/jp/app/id6763979294";
 const PLAY =
   "https://play.google.com/store/apps/details?id=com.everydaysummers.slowkids";
 
@@ -58,17 +60,81 @@ const KO_DESC: Record<string, string> = {
   timestables: "2~9단 구구단을 충분한 생각 시간과 함께 천천히 익혀요.",
 };
 
+// 개별 학습도구 JA 설명(있는 것만). 없는 slug 는 description 을 생략한다.
+const JA_DESC: Record<string, string> = {
+  color: "色の名前を見て・聞いて・選びながら、色を認識する力を育てます。",
+  linedraw: "直線・曲線・らせんをなぞって、手の安定性を育てます。",
+  dot2dot: "示された点と線のつなぎ方をなぞって、視知覚と小さな筋力を育てます。",
+  colorcopy: "示された色のマス模様をそのまま再現しながら視知覚を鍛えます。",
+  pattern: "くり返しのきまりから、抜けているものを見つけるパターン認識の練習です。",
+  sameshape: "たくさんの形の中から同じ形やペアを見つけて、視知覚の見分けを鍛えます。",
+  number: "1から100までの数字を見て・聞いて・選びながら覚えます。",
+  numberdraw: "0〜9の数字を正しい書き順で書く練習をします。",
+  dice: "指・サイコロ・カードの模様をかぞえながら、数の感覚を育てます。",
+  matching: "数字と丸の個数をつなげて、数と量を結びつけます。",
+  gap: "一定の間隔で空いている数を当てながら、数の順序と間隔の感覚を身につけます。",
+  money: "硬貨と紙幣の単位や合計を身につけて、生活の中の数感覚を育てます。",
+  comparing: "大きさ・長さ・高さ・厚さ・量をくらべながら、算数のことばを身につけます。",
+  comparing2: "上・下・中・外など、空間の関係をくらべながら身につけます。",
+  compare: "2つの数の大小をくらべながら、不等号(<, >, =)を身につけます。",
+  clock: "アナログ・デジタル時計の読み方を、正時・30分・15分の単位で学びます。",
+  oddeven: "配列盤・数字盤・ランダム・ペア合わせの4モードで、奇数と偶数を身につけます。",
+  combining: "2つの数を合わせて1つの数にする、数の合成を練習します。",
+  splitting: "1つの数を2つの部分にわける、数の分解を練習します。",
+  complement: "10になる相棒の数(補数)を身につけます。",
+  plusone: "数の配列盤で+1のたし算を直感的に身につけます。",
+  plustwo: "2をたす計算を、配列盤と2つとびで目に見える形にして学びます。",
+  plusthree: "3をたす計算を、いくつかの学習モードでくり返し練習します。",
+  easy: "いちばんやさしい段階から始める1桁のたし算練習。",
+  circle: "選ぶ・積む・埋めるの3つのやり方でたし算を練習します。",
+  carry: "2桁のたし算のくり上がりを、配列盤と筆算の形式で身につけます。",
+  moneycalc: "硬貨と紙幣で値段を合わせたり、合計を選んだり — たし算の実生活応用。",
+  minusone: "数の配列盤で−1のひき算を直感的に身につけます。",
+  minustwo: "2をひく計算を、配列盤と逆向きの2つとびで目に見える形にして学びます。",
+  minusthree: "3をひく計算を、いくつかの学習モードでくり返し練習します。",
+  subtract: "ドラッグ・くくり・配列盤の3つのやり方で1桁のひき算を身につけます。",
+  borrow: "2桁のひき算のくり下がりを、配列盤と筆算の形式で身につけます。",
+  timestables: "2の段〜9の段の九九を、じゅうぶんな考える時間と一緒にゆっくり身につけます。",
+};
+
 type JsonLdNode = Record<string, unknown>;
+
+function localeTag(locale: Locale): string {
+  if (locale === "en") return "en-US";
+  if (locale === "ja") return "ja-JP";
+  return "ko-KR";
+}
+
+function currency(locale: Locale): string {
+  if (locale === "en") return "USD";
+  if (locale === "ja") return "JPY";
+  return "KRW";
+}
+
+function appleStore(locale: Locale): string {
+  if (locale === "en") return APPLE_US;
+  if (locale === "ja") return APPLE_JP;
+  return APPLE_KR;
+}
+
+function pageUrl(locale: Locale): string {
+  if (locale === "en") return `${SITE_URL}/en`;
+  if (locale === "ja") return `${SITE_URL}/jp`;
+  return SITE_URL;
+}
 
 function organizationLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
+  const ja = locale === "ja";
   return {
     "@type": "Organization",
     "@id": ORG_ID,
-    name: en ? "LittleSteps" : "느린아이",
+    name: en || ja ? "LittleSteps" : "느린아이",
     alternateName: en
       ? ["느린아이", "느린아이 시리즈"]
-      : ["느린아이 시리즈", "LittleSteps"],
+      : ja
+        ? ["느린아이", "LittleSteps シリーズ"]
+        : ["느린아이 시리즈", "LittleSteps"],
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
@@ -78,48 +144,60 @@ function organizationLd(locale: Locale): JsonLdNode {
     },
     description: en
       ? "Learning tools designed for children with developmental delays, developmental disabilities, borderline intelligence, learning disabilities, or ADHD — to build math foundations at their own pace."
-      : "발달 지연·발달 장애·경계선 지능·학습 장애·ADHD 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습도구입니다.",
+      : ja
+        ? "発達のゆっくりな子・発達障害・境界知能・学習障害・ADHDのお子さんが、自分のペースで算数の基礎を少しずつ積み上げられるよう設計された学習ツールです。"
+        : "발달 지연·발달 장애·경계선 지능·학습 장애·ADHD 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습도구입니다.",
     sameAs: [APPLE_US, PLAY],
   };
 }
 
 function websiteLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
+  const ja = locale === "ja";
   return {
     "@type": "WebSite",
     "@id": SITE_ID,
-    name: en ? "LittleSteps" : "느린아이 시리즈",
-    alternateName: en ? "느린아이" : "LittleSteps",
-    url: en ? `${SITE_URL}/en` : SITE_URL,
-    inLanguage: en ? "en-US" : "ko-KR",
+    name: en || ja ? "LittleSteps" : "느린아이 시리즈",
+    alternateName: en || ja ? "느린아이" : "LittleSteps",
+    url: pageUrl(locale),
+    inLanguage: localeTag(locale),
     description: en
       ? "Math, cognition, and fine-motor learning tools for children who learn at their own pace."
-      : "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지·소근육 학습도구.",
+      : ja
+        ? "自分のペースで学ぶ子のための、算数・認知・小さな筋力の学習ツール。"
+        : "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지·소근육 학습도구.",
     publisher: { "@id": ORG_ID },
   };
 }
 
 function appLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
+  const ja = locale === "ja";
   return {
     "@type": "MobileApplication",
     "@id": APP_ID,
-    name: en ? "LittleSteps — One right step at a time" : "느린아이",
+    name: en
+      ? "LittleSteps — One right step at a time"
+      : ja
+        ? "LittleSteps — 正しい方向へ、一歩ずつ"
+        : "느린아이",
     operatingSystem: "iOS, Android",
     applicationCategory: "EducationalApplication",
-    inLanguage: en ? "en-US" : "ko-KR",
+    inLanguage: localeTag(locale),
     description: en
       ? "Learning tools for children with developmental delays, developmental disabilities, learning differences, borderline intelligence, and other kids who learn at their own pace — to build math foundations step by step."
-      : "발달 지연·발달 장애·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 쌓도록 설계된 학습 앱입니다.",
-    url: en ? `${SITE_URL}/en` : SITE_URL,
-    downloadUrl: en ? APPLE_US : APPLE_KR,
-    installUrl: en ? APPLE_US : APPLE_KR,
+      : ja
+        ? "発達のゆっくりな子・発達障害・境界知能など、自分のペースで学ぶ子のための、算数の基礎を一歩ずつ積み上げる学習ツールです。"
+        : "발달 지연·발달 장애·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 쌓도록 설계된 학습 앱입니다.",
+    url: pageUrl(locale),
+    downloadUrl: appleStore(locale),
+    installUrl: appleStore(locale),
     sameAs: [APPLE_US, PLAY],
-    image: OG_IMAGE,
+    image: en || ja ? OG_IMAGE_EN : OG_IMAGE,
     offers: {
       "@type": "Offer",
       price: "0",
-      priceCurrency: en ? "USD" : "KRW",
+      priceCurrency: currency(locale),
     },
     author: { "@id": ORG_ID },
     publisher: { "@id": ORG_ID },
@@ -128,37 +206,49 @@ function appLd(locale: Locale): JsonLdNode {
 
 function videoLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
+  const ja = locale === "ja";
   return {
     "@type": "VideoObject",
     "@id": VIDEO_ID,
     name: en
       ? "A child learning with the LittleSteps app"
-      : "느린아이 앱으로 학습하는 아이의 모습",
+      : ja
+        ? "LittleStepsアプリで学ぶ子どもの様子"
+        : "느린아이 앱으로 학습하는 아이의 모습",
     description: en
       ? "A quiet screen and small repetitions — moments where a child taps and confirms at their own pace."
-      : "조용한 화면에서 작은 반복을 통해 아이가 스스로 터치하고 확인하며 자신의 속도로 학습하는 모습입니다.",
+      : ja
+        ? "静かな画面と小さなくり返し — 子どもが自分のペースでタッチして確かめる瞬間です。"
+        : "조용한 화면에서 작은 반복을 통해 아이가 스스로 터치하고 확인하며 자신의 속도로 학습하는 모습입니다.",
     thumbnailUrl: [`${SITE_URL}/figma/demo/poster.jpg`],
     uploadDate: "2026-06-30",
     contentUrl: `${SITE_URL}/video/landing-4.mp4`,
-    inLanguage: en ? "en-US" : "ko-KR",
+    inLanguage: localeTag(locale),
     publisher: { "@id": ORG_ID },
   };
 }
 
 function itemListLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
+  const ja = locale === "ja";
   return {
     "@type": "ItemList",
-    "@id": `${en ? `${SITE_URL}/en` : `${SITE_URL}/`}#toollist`,
-    name: en ? "LittleSteps learning tools" : "느린아이 시리즈 학습도구",
+    "@id": `${pageUrl(locale)}${locale === "ko" ? "/" : ""}#toollist`,
+    name: en
+      ? "LittleSteps learning tools"
+      : ja
+        ? "LittleSteps 学習ツール"
+        : "느린아이 시리즈 학습도구",
     description: en
       ? "Math and cognition tools for children with developmental delays, borderline intelligence, or learning difficulties."
-      : "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지 학습도구",
+      : ja
+        ? "自分のペースで学ぶ子のための、算数・認知の学習ツール。"
+        : "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지 학습도구",
     numberOfItems: APP_ORDER.length,
     itemListOrder: "https://schema.org/ItemListOrderAscending",
     itemListElement: APP_ORDER.map((slug, i) => {
       const bare = slug.replace(/^slowmath_/, "");
-      const desc = en ? undefined : KO_DESC[bare];
+      const desc = en ? undefined : ja ? JA_DESC[bare] : KO_DESC[bare];
       return {
         "@type": "ListItem",
         position: i + 1,
@@ -168,13 +258,13 @@ function itemListLd(locale: Locale): JsonLdNode {
           url: `${SITE_URL}${appHref(slug, locale)}`,
           applicationCategory: "EducationalApplication",
           operatingSystem: "Web",
-          inLanguage: en ? "en-US" : "ko-KR",
+          inLanguage: localeTag(locale),
           isAccessibleForFree: true,
           ...(desc ? { description: desc } : {}),
           offers: {
             "@type": "Offer",
             price: "0",
-            priceCurrency: en ? "USD" : "KRW",
+            priceCurrency: currency(locale),
           },
           publisher: { "@id": ORG_ID },
         },

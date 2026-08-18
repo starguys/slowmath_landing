@@ -56,7 +56,8 @@ export function PracticeModalProvider({
   }, [slug, close]);
 
   const content = slug ? MODAL_CONTENT[slug]?.[locale] : null;
-  const labelKo = locale === "en" ? "Close" : "닫기";
+  const closeLabel =
+    locale === "en" ? "Close" : locale === "ja" ? "閉じる" : "닫기";
 
   return (
     <PracticeModalContext.Provider value={{ open }}>
@@ -89,7 +90,7 @@ export function PracticeModalProvider({
                 ref={closeRef}
                 type="button"
                 onClick={close}
-                aria-label={labelKo}
+                aria-label={closeLabel}
                 className="flex size-[32px] shrink-0 items-center justify-center rounded-full text-[#4a4035] transition-colors hover:bg-[#f4f4f4]"
               >
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
