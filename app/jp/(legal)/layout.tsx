@@ -35,7 +35,7 @@ export default function LegalJpLayout({ children }: { children: React.ReactNode 
             boxShadow: "0 12px 36px rgba(45,38,32,0.06)",
             border: "1px solid #EDE0C8",
           }}
-          className="legal-article"
+          className="legal-article legal-article--ja"
         >
           {children}
         </article>
