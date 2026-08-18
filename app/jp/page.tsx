@@ -16,14 +16,8 @@ import JsonLd from "../_seo/JsonLd";
 
 const SITE_URL = "https://slowkids.net";
 const SITE_URL_JP = `${SITE_URL}/jp`;
-// 전용 JA OG 이미지가 없어 EN 이미지를 폴백으로 재사용(그래픽은 중립).
-// 전용 og-image-ja.png 가 준비되면 여기와 (legal)/layout.tsx, structuredData.ts 를 함께 교체.
-const OG_IMAGE = {
-  url: `${SITE_URL}/og-image-en.png?v=20260726`,
-  width: 878,
-  height: 443,
-  alt: "LittleSteps — 正しい方向へ、一歩ずつ",
-};
+// og:image / twitter:image 은 app/jp/opengraph-image.tsx · twitter-image.tsx 파일 컨벤션이
+// 빌드 타임에 자동 생성·주입한다. 명시적 images 필드를 두지 않음.
 
 export const metadata: Metadata = {
   title: "LittleSteps — 正しい方向へ、一歩ずつ",
@@ -47,14 +41,12 @@ export const metadata: Metadata = {
     alternateLocale: ["ko_KR", "en_US"],
     type: "website",
     url: SITE_URL_JP,
-    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "LittleSteps — 正しい方向へ、一歩ずつ",
     description:
       "自分のペースで学ぶ子のための小さな算数練習。iOSとAndroidで利用できます。",
-    images: [OG_IMAGE.url],
   },
   itunes: {
     appId: "6763979294",
