@@ -111,17 +111,18 @@
   }
 }
 /* JA: 문자 사이 스페이스가 없어 word-break: keep-all 이면 줄바꿈 불가 → 가로 오버플로.
-   normal + overflow-wrap:anywhere 로 어디서든 wrap 되게 (긴 라틴 단어 "LittleSteps" 등 포함).
-   테이블은 fixed 레이아웃으로 컬럼 폭이 컨텐츠 따라 늘어나지 않게 고정. */
-:lang(ja) .legal-article p,
-:lang(ja) .legal-article li,
-:lang(ja) .legal-article th,
-:lang(ja) .legal-article td,
-:lang(ja) .legal-article .legal-intro {
-  word-break: normal;
-  overflow-wrap: anywhere;
+   .legal-article 안의 모든 요소에 강제 wrap. 테이블은 auto layout + max-width 로 부모에 맞춤. */
+:lang(ja) .legal-article,
+:lang(ja) .legal-article * {
+  word-break: normal !important;
+  overflow-wrap: anywhere !important;
 }
 :lang(ja) .legal-article table {
-  table-layout: fixed;
-  max-width: 100%;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+:lang(ja) .legal-article th,
+:lang(ja) .legal-article td {
+  /* 컨텐츠가 부모 폭을 밀어내지 못하게 min-width 0 명시 (flex/grid 자식 아니지만 안전차원). */
+  min-width: 0 !important;
 }
