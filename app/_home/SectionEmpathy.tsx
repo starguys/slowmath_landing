@@ -8,7 +8,7 @@ const C = {
     titleRest2: "해보신 적 있으신가요?",
     sub1: "수십 번 들어본 이야기일지도 모릅니다.",
     sub2: "하지만 이 말들은 언제나 새롭게 아픕니다.",
-    tag: "Before we begin",
+    tag: "시작하기 전에",
     worries: [
       { lead: "학습지를 사도 ", strong: "두 장 넘기면 울어버려요" },
       { lead: "숫자 1부터 10까지, 몇 달째 ", strong: "같은 자리에 머물러 있어요" },
