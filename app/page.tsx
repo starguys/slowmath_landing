@@ -33,9 +33,9 @@ export default function Page() {
         <SectionIntro locale="ko" />
         <SectionEmpathy locale="ko" />
         <SectionDemo locale="ko" />
+        <SectionReviews locale="ko" />
         <SectionWhy locale="ko" />
         <SectionExpert locale="ko" />
-        <SectionReviews locale="ko" />
         <SectionStart locale="ko" />
         <SectionApps locale="ko" />
       </main>
