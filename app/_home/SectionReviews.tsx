@@ -31,7 +31,15 @@ const C = {
         authorName: "prayforyou35",
         authorMeta: "네이버 블로그 후기",
       } as Review,
-      null,
+      {
+        photo: "/reviews/prayforyou35-2.png",
+        photoAlt: "느린아이 앱으로 수 개념 연습 중인 아이",
+        quote:
+          "특히 좋았던 건 한 영역을 충분히 반복할 수 있다는 점이었어요. 다른 앱들은 한두 문제 풀면 바로 다음 단계로 넘어가는데, 느린아이는 비슷한 유형을 여러 번 연습할 수 있어서 기초가 부족한 우리 아이한테 딱 필요했어요. 며칠 지나니 '이건 할 수 있어'라는 말이 나오기 시작했고, 예전엔 덧셈만 봐도 머뭇거리던 아이가 손가락으로 하나씩 세어가며 끝까지 풀어보려는 모습이 보였어요.",
+        rating: 5,
+        authorName: "실사용 부모님",
+        authorMeta: "네이버 블로그 후기",
+      } as Review,
       null,
     ] as (Review | null)[],
   },
