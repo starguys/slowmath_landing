@@ -14,6 +14,12 @@ type Review = {
   authorName: string;
   authorMeta: string;  // 예: "4세 아이 엄마"
   authorAvatar?: string; // 없으면 이니셜 원형
+  // 사진 크롭 위치 오버라이드 (기본: "50% 0%" = top)
+  // Y 값 ↑ → 이미지 위로 시프트 → 얼굴이 프레임에서 위로 이동
+  // Y 값 ↓ → 이미지 아래로 시프트 → 얼굴이 프레임에서 아래로 이동
+  photoObjectPosition?: string;
+  // 사진 컨테이너 상단 여백(px) — 소스 이미지에 여백이 없는데 얼굴 위쪽 공간이 필요할 때
+  photoPadTop?: number;
 };
 
 const C = {
@@ -30,6 +36,9 @@ const C = {
         rating: 5,
         authorName: "prayforyou35",
         authorMeta: "네이버 블로그 후기",
+        // 원본에서 얼굴이 이미지 중하단에 있어 top 크롭이면 얼굴이 프레임 아래쪽
+        // → Y를 올려 이미지 위로 시프트, 얼굴을 프레임 상단쪽으로 이동
+        photoObjectPosition: "50% 65%",
       } as Review,
       {
         photo: "/reviews/prayforyou35-2.png",
@@ -48,6 +57,9 @@ const C = {
         rating: 5,
         authorName: "ckdgus5290",
         authorMeta: "네이버 블로그 후기",
+        // 원본은 얼굴이 이미지 최상단 → top 크롭이면 머리카락이 프레임 위 edge에 붙음
+        // → 컨테이너 위쪽 흰 여백을 넣어 얼굴 위쪽 breathing room 확보
+        photoPadTop: 28,
       } as Review,
     ] as (Review | null)[],
   },
@@ -120,14 +132,18 @@ function ReviewCard({ review, emptyLabel }: { review: Review | null; emptyLabel:
   return (
     <figure className="m-0 flex w-full flex-col overflow-hidden rounded-[14px] border border-[#efe9de] bg-white">
       {/* photo — 없으면 오렌지 그라디언트 폴백 */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-[#ffe7c6] to-[#fbc98f]">
+      <div
+        className="relative aspect-[4/3] w-full overflow-hidden bg-white"
+        style={review.photoPadTop ? { paddingTop: review.photoPadTop } : undefined}
+      >
         {review.photo ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={review.photo}
             alt={review.photoAlt}
             loading="lazy"
-            className="h-full w-full object-cover object-top"
+            className="h-full w-full object-cover"
+            style={{ objectPosition: review.photoObjectPosition ?? "50% 0%" }}
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center" aria-hidden="true">
