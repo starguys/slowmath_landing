@@ -38,7 +38,7 @@ export const APP_NAMES: Record<string, { ko: string; en: string; ja: string }> =
   slowmath_comparing2: { ko: "비교하기 기초 2", en: "Compare basics 2", ja: "くらべる 2" },
   slowmath_compare: { ko: "수의 크기", en: "Number size", ja: "数の大小" },
   slowmath_clock: { ko: "시계 보기", en: "Reading the clock", ja: "時計の読み方" },
-  slowmath_calendar: { ko: "달력 보기 연습", en: "Reading the calendar", ja: "カレンダーの練習" },
+  slowmath_calendar: { ko: "달력 보기", en: "Reading the calendar", ja: "カレンダーの練習" },
   slowmath_oddeven: { ko: "홀수 짝수 익히기", en: "Odd & Even", ja: "奇数と偶数" },
   slowmath_gap: { ko: "수의 간격", en: "Number gap", ja: "数の間隔" },
   slowmath_gap2: { ko: "수의 간격 연습", en: "Number gap practice", ja: "数の間隔 練習" },

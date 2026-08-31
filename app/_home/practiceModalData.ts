@@ -500,7 +500,7 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
     ko: {
       category: "수 관계",
       subtitle: "크고 작고, 같고 다름을 읽는 연습",
-      name: "달력 보기 연습",
+      name: "달력 보기",
       short: "달력에서 요일·날짜를 고르고 동그라미 친 날을 찾으며 달력 읽기를 익혀요",
       long: "달력 보기는 시간 감각·일정 이해의 기초예요. 요일 모두 고르기, N번째 요일 고르기, 날짜 고르기, 동그라미 친 날 맞추기까지 단계별로 익히도록 설계되었습니다.",
     },
