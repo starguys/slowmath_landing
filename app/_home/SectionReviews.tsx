@@ -35,9 +35,6 @@ const C = {
         rating: 5,
         authorName: "ckdgus5290",
         authorMeta: "네이버 블로그 후기",
-        // 원본은 얼굴이 이미지 최상단 → top 크롭이면 머리카락이 프레임 위 edge에 붙음
-        // → 컨테이너 위쪽 흰 여백을 넣어 얼굴 위쪽 breathing room 확보
-        photoPadTop: 28,
       } as Review,
       {
         photo: "/reviews/prayforyou35-2.png",
@@ -57,9 +54,8 @@ const C = {
         rating: 5,
         authorName: "prayforyou35",
         authorMeta: "네이버 블로그 후기",
-        // 원본에서 얼굴이 이미지 중하단에 있어 top 크롭이면 얼굴이 프레임 아래쪽
-        // → Y를 올려 이미지 위로 시프트, 얼굴을 프레임 상단쪽으로 이동
-        photoObjectPosition: "50% 65%",
+        // 얼굴이 프레임에서 약간 아래쪽으로 자리잡도록 크롭 위치 미세조정
+        photoObjectPosition: "50% 50%",
       } as Review,
     ] as (Review | null)[],
   },
