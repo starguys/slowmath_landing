@@ -23,15 +23,14 @@ const C = {
     empty: "곧 만나요",
     reviews: [
       {
-        // TODO: 사진 파일을 /public/reviews/prayforyou35.jpg 로 저장한 뒤 아래 라인 활성화
-        // photo: "/reviews/prayforyou35.jpg",
-        photoAlt: "느린아이 앱을 태블릿으로 사용 중인 아이",
-        // TODO: prayforyou35 님 블로그 원문에서 발췌해서 교체
-        //   원본: https://blog.naver.com/prayforyou35/224350355842
-        quote: "여기에 블로그 후기 본문이 들어갑니다. (임시 텍스트 — 원문에서 인상 깊은 2~3문장을 뽑아 교체해주세요.)",
+        photo: "/reviews/prayforyou35.png",
+        photoAlt: "느린아이 앱으로 거스름돈 만들기 연습 중인 아이",
+        // 원본 블로그: https://blog.naver.com/prayforyou35/224350355842
+        quote:
+          "첫 번째로 해본 건 거스름돈 만들기 문제였어요. 290원짜리 물건을 사고 1000원을 냈을 때 거스름돈을 동전으로 직접 만들어보는 문제였는데, 십원·오십원·백원·오백원 동전을 하나씩 눌러가며 스스로 계산해보는 방식이라 그냥 답만 입력하는 것보다 돈의 개념, 수개념을 체득하는 데 훨씬 도움이 되는 것 같았어요.",
         rating: 5,
         authorName: "prayforyou35",
-        authorMeta: "블로그 후기",
+        authorMeta: "네이버 블로그 후기",
       } as Review,
       null,
       null,
