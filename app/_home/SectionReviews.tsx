@@ -19,7 +19,6 @@ type Review = {
 const C = {
   ko: {
     heading: "실제로 써보신 부모님들의 이야기",
-    subheading: "블로그·SNS에 남겨주신 후기를 그대로 담았습니다",
     empty: "곧 만나요",
     reviews: [
       {
@@ -38,7 +37,6 @@ const C = {
   },
   en: {
     heading: "What parents actually say",
-    subheading: "Real reviews left on blogs and social media",
     empty: "Coming soon",
     reviews: [
       {
@@ -56,7 +54,6 @@ const C = {
   },
   ja: {
     heading: "実際に使ってみた保護者の声",
-    subheading: "ブログ・SNSに寄せられたレビューをそのまま。",
     empty: "近日公開",
     reviews: [
       {
@@ -174,9 +171,6 @@ export default function SectionReviews({ locale = "ko" }: { locale?: Locale }) {
           >
             {t.heading}
           </h2>
-          <p className="text-[13px] font-light leading-[18px] text-[#8c8070]">
-            {t.subheading}
-          </p>
         </header>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
