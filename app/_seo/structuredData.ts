@@ -4,7 +4,7 @@
 import { APP_NAMES, APP_ORDER, appHref, type Locale } from "../_home/apps";
 
 const SITE_URL = "https://slowkids.net";
-const OG_IMAGE = `${SITE_URL}/og-image.png?v=20260701`;
+const OG_IMAGE = `${SITE_URL}/og-image-mascot.png?v=20260901`;
 const OG_IMAGE_EN = `${SITE_URL}/og-image-en.png?v=20260726`;
 // JA OG 이미지는 app/jp/opengraph-image.tsx 가 빌드 타임에 정적 PNG 로 생성
 // (실제 파일은 /jp/opengraph-image 로 서빙, 확장자 없음). JSON-LD 용 안정 URL.
