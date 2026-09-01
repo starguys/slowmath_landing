@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://slowkids.net/og-image-mascot.png?v=20260901b",
+        url: "https://slowkids.net/og-image-mascot.png?v=20260901c",
         width: 1200,
         height: 1200,
         alt: "느린아이 시리즈 마스코트 — 태블릿을 들고 있는 거북이 캐릭터",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "느린아이 - 한 걸음씩, 아이의 속도로",
     description:
       "발달지연·발달장애·느린학습자·경계선지능 등 느린아이들이 자기 속도로 수학의 기초를 쌓는 학습도구. App Store에서 만나보세요.",
-    images: ["https://slowkids.net/og-image-mascot.png?v=20260901b"],
+    images: ["https://slowkids.net/og-image-mascot.png?v=20260901c"],
   },
   verification: {
     other: {
