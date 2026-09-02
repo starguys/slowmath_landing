@@ -19,6 +19,8 @@ const C = {
     related: "관련 서비스",
     typingLabel: "느린아이 타자연습",
     typingUrl: "typing.slowkids.net",
+    honeypotLabel: "느린아이 혜택찾기",
+    honeypotUrl: "honeypot.slowkids.net",
     hashtags1: "#발달지연 #발달장애 #느린학습자 #경계선지능",
     hashtags2: "#학습장애 #ADHD #자폐스펙트럼 #특수교육",
   },
@@ -35,6 +37,8 @@ const C = {
     related: "Related",
     typingLabel: "LittleSteps Typing Practice",
     typingUrl: "typing.slowkids.net",
+    honeypotLabel: "LittleSteps Benefit Finder",
+    honeypotUrl: "honeypot.slowkids.net",
     hashtags1: "#DevelopmentalDelay #DevelopmentalDisability #LearningDifferences #BorderlineIQ",
     hashtags2: "#LearningDisability #ADHD #AutismSpectrum #SpecialEducation",
   },
@@ -51,6 +55,8 @@ const C = {
     related: "関連サービス",
     typingLabel: "LittleSteps タイピング練習",
     typingUrl: "typing.slowkids.net",
+    honeypotLabel: "LittleSteps 制度・支援ガイド",
+    honeypotUrl: "honeypot.slowkids.net",
     hashtags1: "#発達ゆっくり #発達障害 #境界知能 #学習障害",
     hashtags2: "#ADHD #自閉スペクトラム #特別支援教育 #算数",
   },
@@ -93,20 +99,29 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
         </div>
 
         {/* 관련 서비스 (백링크 + 사용자 유입 경로) */}
-        <a
-          href="https://typing.slowkids.net"
-          target="_blank"
-          rel="noreferrer"
-          className="flex w-full flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-[12px] bg-[#686868] px-4 py-[18px] transition-colors hover:bg-[#7a7a7a]"
-        >
-          <span className="shrink-0 text-[14px] font-bold leading-[20px] tracking-[-0.2px] text-white">
+        <div className="flex w-full flex-col gap-2 rounded-[12px] bg-[#686868] px-4 py-[16px]">
+          <span className="text-[14px] font-bold leading-[20px] tracking-[-0.2px] text-white">
             {t.related}
           </span>
-          <span className="flex items-center gap-1.5 whitespace-nowrap text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada]">
+          <a
+            href="https://typing.slowkids.net"
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-wrap items-center gap-1.5 text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
+          >
             {t.typingLabel} · {t.typingUrl}
             <span aria-hidden="true">→</span>
-          </span>
-        </a>
+          </a>
+          <a
+            href="https://honeypot.slowkids.net"
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-wrap items-center gap-1.5 text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
+          >
+            {t.honeypotLabel} · {t.honeypotUrl}
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
 
         {/* 법적 링크 */}
         <div className="flex w-full items-start gap-2">
