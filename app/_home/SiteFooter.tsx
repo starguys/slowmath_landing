@@ -104,21 +104,21 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
             {t.related}
           </span>
           <a
-            href="https://typing.slowkids.net"
-            target="_blank"
-            rel="noreferrer"
-            className="flex flex-wrap items-center gap-1.5 text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
-          >
-            {t.typingLabel} · {t.typingUrl}
-            <span aria-hidden="true">→</span>
-          </a>
-          <a
             href="https://honeypot.slowkids.net"
             target="_blank"
             rel="noreferrer"
             className="flex flex-wrap items-center gap-1.5 text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
           >
             {t.honeypotLabel} · {t.honeypotUrl}
+            <span aria-hidden="true">→</span>
+          </a>
+          <a
+            href="https://typing.slowkids.net"
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-wrap items-center gap-1.5 text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
+          >
+            {t.typingLabel} · {t.typingUrl}
             <span aria-hidden="true">→</span>
           </a>
         </div>
