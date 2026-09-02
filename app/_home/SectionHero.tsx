@@ -128,7 +128,7 @@ export default function SectionHero({ locale = "ko" }: { locale?: Locale }) {
           className="h-[183px] w-[224px] object-contain"
         />
 
-        <div className="flex w-full flex-col items-center gap-[8px] rounded-[12px] bg-white px-[14px] py-[32px] text-center text-[#4a4035] [word-break:break-word]">
+        <div className="flex w-full flex-col items-center gap-[8px] rounded-[12px] bg-white px-[14px] py-[32px] text-center text-[#4a4035] [word-break:keep-all]">
           <div className="w-full font-bold tracking-[-0.6px] text-[18px] leading-[22px]">
             {t.cardLines.map((line, i) => (
               <p key={i}>
