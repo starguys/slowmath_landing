@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "느린아이 - 한 걸음씩, 아이의 속도로",
     description:
-      "발달지연·발달장애·느린학습자·경계선지능 등 느린아이들이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습도구입니다.",
+      "발달지연·발달장애·느린학습자·경계선지능 등 느린아이들이 자신의 속도로 기초 인지와 기초 수학을 차근차근 연습하도록 설계된 학습도구입니다.",
     siteName: "느린아이",
     locale: "ko_KR",
     type: "website",

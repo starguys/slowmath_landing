@@ -149,7 +149,7 @@ function organizationLd(locale: Locale): JsonLdNode {
       ? "Learning tools designed for children with developmental delays, developmental disabilities, borderline intelligence, learning disabilities, or ADHD — to build math foundations at their own pace."
       : ja
         ? "発達のゆっくりな子・発達障害・境界知能・学習障害・ADHDのお子さんが、自分のペースで算数の基礎を少しずつ積み上げられるよう設計された学習ツールです。"
-        : "발달 지연·발달 장애·경계선 지능·학습 장애·ADHD 아동이 자신의 속도로 수학의 기초를 차근차근 쌓도록 설계된 학습도구입니다.",
+        : "발달 지연·발달 장애·경계선 지능·학습 장애·ADHD 아동이 자신의 속도로 기초 인지와 기초 수학을 차근차근 연습하도록 설계된 학습도구입니다.",
     sameAs: [APPLE_US, PLAY],
   };
 }
