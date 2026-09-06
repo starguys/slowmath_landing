@@ -29,6 +29,7 @@ const VIDEO_ID = `${SITE_URL}/#demo-video`;
 const KO_DESC: Record<string, string> = {
   color: "색깔 이름을 보고·듣고·고르며 색 인지 능력을 키워요.",
   linedraw: "직선·곡선·나선을 따라 그리며 손의 안정성을 키워요.",
+  shapedraw: "가이드를 보고 원·사각형·별 같은 도형을 직접 따라 그려요.",
   dot2dot: "주어진 점-선 연결을 따라 그리며 시지각과 소근육을 키워요.",
   colorcopy: "제시된 색 격자 패턴을 그대로 따라 만들며 시지각을 훈련해요.",
   pattern: "반복되는 규칙에서 빠진 것을 찾는 패턴 인식을 훈련해요.",
@@ -67,6 +68,7 @@ const KO_DESC: Record<string, string> = {
 const JA_DESC: Record<string, string> = {
   color: "色の名前を見て・聞いて・選びながら、色を認識する力を育てます。",
   linedraw: "直線・曲線・らせんをなぞって、手の安定性を育てます。",
+  shapedraw: "ガイドを見ながら、丸・四角・星などの図形をなぞって描きます。",
   dot2dot: "示された点と線のつなぎ方をなぞって、視知覚と小さな筋力を育てます。",
   colorcopy: "示された色のマス模様をそのまま再現しながら視知覚を鍛えます。",
   pattern: "くり返しのきまりから、抜けているものを見つけるパターン認識の練習です。",

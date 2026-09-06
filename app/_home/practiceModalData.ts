@@ -82,6 +82,29 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "文字書きや絵をかく土台となる手の調整力を、楽しくトレーニングします。3段階の難易度と音声ガイドで、子どもがあきらめずに練習を続けられるよう手助けします。",
     },
   },
+  slowmath_shapedraw: {
+    ko: {
+      category: "기초 인지",
+      subtitle: "눈과 손이 먼저 익숙해지는 시간",
+      name: "도형 그리기",
+      short: "가이드를 보고 원·사각형·별 같은 도형을 직접 따라 그려요",
+      long: "여덟 가지 도형을 골라 가이드 위에 손으로 따라 그립니다. 연한 선을 덧그리는 방식과 점선을 이어 그리는 방식 중에 고를 수 있어, 아이의 손 조절 수준에 맞춰 천천히 올려갈 수 있어요.",
+    },
+    en: {
+      category: "Foundations",
+      subtitle: "Where eyes and hands get familiar first",
+      name: "Shape Drawing",
+      short: "Trace circles, squares, stars and more, following an on-screen guide",
+      long: "Pick from eight shapes and trace them by hand over a guide. Choose between drawing over a soft outline or joining a dotted path, so the challenge can rise gently with the child's hand control.",
+    },
+    ja: {
+      category: "基礎認知",
+      subtitle: "目と手が先に慣れていく時間",
+      name: "図形を描く",
+      short: "ガイドを見ながら、丸・四角・星などの図形をなぞって描きます",
+      long: "8種類の図形から選び、ガイドの上を手でなぞって描きます。うすい線をなぞる方法と、点線をつないで描く方法を選べるので、子どもの手の調整力に合わせて少しずつ進められます。",
+    },
+  },
   slowmath_dot2dot: {
     ko: {
       category: "기초 인지",
