@@ -121,7 +121,7 @@ const TIER_META = [
   },
   {
     badge: "bg-[#6bade8] text-white",
-    tools: ["slowmath_linedraw", "slowmath_dot2dot", "slowmath_numberdraw"],
+    tools: ["slowmath_linedraw", "slowmath_shapedraw", "slowmath_numberdraw"],
   },
   {
     badge: "bg-[#ffefd0] text-[#d87f27]",
