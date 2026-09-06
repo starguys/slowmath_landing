@@ -119,6 +119,15 @@ export const CATEGORIES: {
     },
   },
   {
+    key: "number-sense",
+    name: { ko: "수 개념", en: "Number sense", ja: "数の概念" },
+    desc: {
+      ko: "숫자가 ‘양’으로 보이기 시작할 때",
+      en: "When numbers become amounts",
+      ja: "数字が「量」に見え始めるとき",
+    },
+  },
+  {
     key: "time-calendar-money",
     name: {
       ko: "시계·달력·화폐",
@@ -129,15 +138,6 @@ export const CATEGORIES: {
       ko: "시간과 돈을 생활 속에서 익히는 시간",
       en: "Time and money in real life",
       ja: "時間とお金を暮らしの中で学ぶ時間",
-    },
-  },
-  {
-    key: "number-sense",
-    name: { ko: "수 개념", en: "Number sense", ja: "数の概念" },
-    desc: {
-      ko: "숫자가 ‘양’으로 보이기 시작할 때",
-      en: "When numbers become amounts",
-      ja: "数字が「量」に見え始めるとき",
     },
   },
   {
