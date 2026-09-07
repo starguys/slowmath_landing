@@ -9,7 +9,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "느린아이 — 아이의 속도로 배우는 기초 수학",
     short_name: "느린아이",
     description:
-      "발달이 느린 아이가 자신의 속도로 수학의 기초를 쌓도록 설계된 수학·인지 학습도구.",
+      "발달 지연·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 쌓도록 설계된 수학·인지 학습도구.",
     start_url: "/",
     display: "standalone",
     background_color: "#FFFBF5",

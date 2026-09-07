@@ -151,7 +151,7 @@ function organizationLd(locale: Locale): JsonLdNode {
       ? "Learning tools designed for children with developmental delays, developmental disabilities, borderline intelligence, learning disabilities, or ADHD — to build math foundations at their own pace."
       : ja
         ? "発達のゆっくりな子・発達障害・境界知能・学習障害・ADHDのお子さんが、自分のペースで算数の基礎を少しずつ積み上げられるよう設計された学習ツールです。"
-        : "발달 지연·경계선 지능·ADHD 아동이 자신의 속도로 기초 인지와 기초 수학을 차근차근 연습하도록 설계된 학습도구입니다.",
+        : "발달 지연·발달 장애·경계선 지능·학습 장애·ADHD 아동이 자신의 속도로 기초 인지와 기초 수학을 차근차근 연습하도록 설계된 학습도구입니다.",
     sameAs: [APPLE_US, PLAY],
   };
 }
@@ -170,7 +170,7 @@ function websiteLd(locale: Locale): JsonLdNode {
       ? "Math, cognition, and fine-motor learning tools for children who learn at their own pace."
       : ja
         ? "自分のペースで学ぶ子のための、算数・認知・小さな筋力の学習ツール。"
-        : "발달이 느린 아이를 위한 수학·인지·소근육 학습도구.",
+        : "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지·소근육 학습도구.",
     publisher: { "@id": ORG_ID },
   };
 }
@@ -193,7 +193,7 @@ function appLd(locale: Locale): JsonLdNode {
       ? "Learning tools for children with developmental delays, developmental disabilities, learning differences, borderline intelligence, and other kids who learn at their own pace — to build math foundations step by step."
       : ja
         ? "発達のゆっくりな子・発達障害・境界知能など、自分のペースで学ぶ子のための、算数の基礎を一歩ずつ積み上げる学習ツールです。"
-        : "발달 지연·경계선 지능 아동이 자신의 속도로 수학의 기초를 쌓도록 설계된 학습 앱입니다.",
+        : "발달 지연·발달 장애·경계선 지능·학습 장애 아동이 자신의 속도로 수학의 기초를 쌓도록 설계된 학습 앱입니다.",
     url: pageUrl(locale),
     downloadUrl: appleStore(locale),
     installUrl: appleStore(locale),
@@ -248,7 +248,7 @@ function itemListLd(locale: Locale): JsonLdNode {
       ? "Math and cognition tools for children with developmental delays, borderline intelligence, or learning difficulties."
       : ja
         ? "自分のペースで学ぶ子のための、算数・認知の学習ツール。"
-        : "발달이 느린 아이를 위한 수학·인지 학습도구",
+        : "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지 학습도구",
     numberOfItems: APP_ORDER.length,
     itemListOrder: "https://schema.org/ItemListOrderAscending",
     itemListElement: APP_ORDER.map((slug, i) => {
