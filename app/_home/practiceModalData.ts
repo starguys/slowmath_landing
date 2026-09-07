@@ -19,7 +19,7 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       subtitle: "눈과 손이 먼저 익숙해지는 시간",
       name: "색깔 익히기",
       short: "색깔이름을 보고 듣고 고르며 색 인지 능력을 키워요",
-      long: "발달 지연·발달 장애 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
+      long: "발달이 느린 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
     },
     en: {
       category: "Foundations",

@@ -9,7 +9,7 @@ import LangSwitcher from "./LangSwitcher";
 const C = {
   ko: {
     wm: ["느린", "아이"],
-    tagline1: "발달지연·발달장애·느린학습자·경계선지능 등 느린아이들을 위한",
+    tagline1: "발달지연·느린학습자·경계선지능 등 느린아이들을 위한",
     tagline2: "간단하지만 강력한 학습도구",
     contact: "제휴 · 피드백 문의",
     terms: "이용약관",
