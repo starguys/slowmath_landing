@@ -98,30 +98,33 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
           </span>
         </div>
 
-        {/* 관련 서비스 (백링크 + 사용자 유입 경로) */}
-        <div className="flex w-full flex-col gap-2 rounded-[12px] bg-[#686868] px-4 py-[16px]">
-          <span className="text-[14px] font-bold leading-[20px] tracking-[-0.2px] text-white">
-            {t.related}
-          </span>
-          <a
-            href="https://honeypot.slowkids.net"
-            target="_blank"
-            rel="noreferrer"
-            className="flex flex-wrap items-center gap-1.5 text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
-          >
-            {t.honeypotLabel} · {t.honeypotUrl}
-            <span aria-hidden="true">→</span>
-          </a>
-          <a
-            href="https://typing.slowkids.net"
-            target="_blank"
-            rel="noreferrer"
-            className="flex flex-wrap items-center gap-1.5 text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
-          >
-            {t.typingLabel} · {t.typingUrl}
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
+        {/* 관련 서비스 (백링크 + 사용자 유입 경로) — 두 서비스 모두 한국어 전용이라
+            영어·일본어 페이지에서는 내보내지 않는다 */}
+        {locale === "ko" && (
+          <div className="flex w-full flex-col gap-2 rounded-[12px] bg-[#686868] px-4 py-[16px]">
+            <span className="text-[14px] font-bold leading-[20px] tracking-[-0.2px] text-white">
+              {t.related}
+            </span>
+            <a
+              href="https://honeypot.slowkids.net"
+              target="_blank"
+              rel="noreferrer"
+              className="flex flex-wrap items-center gap-1.5 text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
+            >
+              {t.honeypotLabel} · {t.honeypotUrl}
+              <span aria-hidden="true">→</span>
+            </a>
+            <a
+              href="https://typing.slowkids.net"
+              target="_blank"
+              rel="noreferrer"
+              className="flex flex-wrap items-center gap-1.5 text-[13px] font-medium leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
+            >
+              {t.typingLabel} · {t.typingUrl}
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        )}
 
         {/* 법적 링크 */}
         <div className="flex w-full items-start gap-2">
