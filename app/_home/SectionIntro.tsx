@@ -25,13 +25,13 @@ const C = {
     emRest: "",
     b1Lead: "LittleSteps is a set of learning tools designed for ",
     b1Strong:
-      "children with developmental delays, developmental disabilities, learning differences, borderline intelligence, and other kids who learn at their own pace",
-    b1Rest: " to pick up the basics of math on their own.",
+      "children with developmental delays, borderline intellectual functioning, slower learners, or any child who learns more slowly than their peers",
+    b1Rest: " to pick up the basics of cognition and math on their own.",
     b2Lead: "With enough thinking time, layered hints, and voice guidance, ",
     b2Strong: "children get to do it themselves",
     b2Rest: " — and that small success becomes the seed of independence.",
     b2Line2:
-      "Used by parents, special education teachers, and cognitive therapists alike.",
+      "Used not only by parents but also by special education teachers and cognitive therapists as a classroom aid.",
   },
   ja: {
     heading: "LittleStepsとは?",
@@ -40,12 +40,12 @@ const C = {
     emRest: "",
     b1Lead: "LittleStepsは、",
     b1Strong:
-      "発達のゆっくりな子・発達障害・境界知能など、自分のペースで学ぶ子",
-    b1Rest: "たちが算数の基礎を自分で身につけられるように作られた学習ツール集です。",
+      "発達がゆっくりな子・境界知能・学習がゆっくりな子、または同年代よりゆっくり学ぶ子",
+    b1Rest: "が認知の基礎と算数の基礎を自分で身につけられるように作られた学習ツール集です。",
     b2Lead: "十分な考える時間、段階的なヒント、音声ガイドを通して ",
     b2Strong: "子どもが自分でやり遂げる経験をくり返し",
     b2Rest: "、その小さな成功が自立の栄養になるよう手助けします。",
-    b2Line2: "保護者・特別支援の先生・認知療育の先生の授業補助ツールとしても使えます。",
+    b2Line2: "保護者だけでなく、特別支援の先生・認知療育の先生の授業補助ツールとしても使えます。",
   },
 } as const;
 

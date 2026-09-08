@@ -55,13 +55,13 @@ const C: Record<Locale, HeroCopy> = {
     descLines: [
       [
         {
-          t: "children with developmental delays, developmental disabilities, learning differences, borderline intelligence, and other kids who learn at their own pace",
+          t: "Children with developmental delays, borderline intellectual functioning, slower learners, or any child who learns more slowly than their peers",
           bold: true,
         },
       ],
       [
         {
-          t: "— learning tools designed to build the foundations of math step by step, at their own pace.",
+          t: "— learning tools designed to practise basic cognition and early math step by step, at their own pace.",
         },
       ],
     ],
@@ -79,13 +79,13 @@ const C: Record<Locale, HeroCopy> = {
     descLines: [
       [
         {
-          t: "発達のゆっくりな子・発達障害・境界知能など、自分のペースで学ぶ子",
+          t: "発達がゆっくりな子・境界知能・学習がゆっくりな子、または同年代よりゆっくり学ぶ子",
           bold: true,
         },
-        { t: "たちが" },
+        { t: "が" },
       ],
-      [{ t: "自分のペースで算数の基礎を少しずつ積み上げられるよう" }],
-      [{ t: "設計された学習ツールです。" }],
+      [{ t: "自分のペースで認知の基礎と算数の基礎を少しずつ" }],
+      [{ t: "練習できるよう設計された学習ツールです。" }],
     ],
   },
 };
