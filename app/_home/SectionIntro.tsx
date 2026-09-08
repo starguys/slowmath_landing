@@ -25,7 +25,7 @@ const C = {
     emRest: "",
     b1Lead: "LittleSteps is a set of learning tools designed for ",
     b1Strong:
-      "children with developmental delays, borderline intellectual functioning, slower learners, or any child who learns more slowly than their peers",
+      "children with developmental delays, borderline intellectual functioning, or any child who learns more slowly than their peers",
     b1Rest: " to pick up the basics of cognition and math on their own.",
     b2Lead: "With enough thinking time, layered hints, and voice guidance, ",
     b2Strong: "children get to do it themselves",

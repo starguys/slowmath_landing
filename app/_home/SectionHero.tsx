@@ -55,7 +55,7 @@ const C: Record<Locale, HeroCopy> = {
     descLines: [
       [
         {
-          t: "Children with developmental delays, borderline intellectual functioning, slower learners, or any child who learns more slowly than their peers",
+          t: "Children with developmental delays, borderline intellectual functioning, or any child who learns more slowly than their peers",
           bold: true,
         },
       ],
