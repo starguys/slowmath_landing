@@ -1,19 +1,29 @@
 import type { Metadata } from "next";
 import "../../(legal)/legal.css";
 
+const SITE_URL = "https://slowkids.net";
+
 // /jp 법률 페이지들이 루트 layout 의 한국어 OG/Twitter(og:locale ko_KR 등)를 상속하지 않도록
 // 일본어 기본값을 이 레이아웃에서 지정한다. title/description 은 생략해 각 페이지 값으로 폴백된다.
-// og:image / twitter:image 은 app/jp/opengraph-image.tsx · twitter-image.tsx 가 세그먼트
-// 전체(/jp, /jp/terms, /jp/privacy)를 커버하므로 여기서는 명시하지 않는다.
+// OG 이미지는 네 언어가 같은 마스코트 이미지를 쓴다 (글자가 없어 언어 중립).
 export const metadata: Metadata = {
   openGraph: {
     siteName: "LittleSteps",
     locale: "ja_JP",
     alternateLocale: ["ko_KR", "en_US"],
     type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/og-image-mascot.png?v=20260901c`,
+        width: 1200,
+        height: 1200,
+        alt: "LittleStepsのマスコット — タブレットを持ったカメのキャラクター",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: [`${SITE_URL}/og-image-mascot.png?v=20260901c`],
   },
 };
 

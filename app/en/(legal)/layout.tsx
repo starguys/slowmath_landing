@@ -13,16 +13,16 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${SITE_URL}/og-image-en.png?v=20260726`,
-        width: 878,
-        height: 443,
-        alt: "LittleSteps — steady but in the right direction, one step at a time",
+        url: `${SITE_URL}/og-image-mascot.png?v=20260901c`,
+        width: 1200,
+        height: 1200,
+        alt: "LittleSteps mascot — a turtle character holding a tablet",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: [`${SITE_URL}/og-image-en.png?v=20260726`],
+    images: [`${SITE_URL}/og-image-mascot.png?v=20260901c`],
   },
 };
 

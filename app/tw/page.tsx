@@ -16,8 +16,13 @@ import JsonLd from "../_seo/JsonLd";
 
 const SITE_URL = "https://slowkids.net";
 const SITE_URL_TW = `${SITE_URL}/tw`;
-// og:image / twitter:image 은 app/tw/opengraph-image.tsx · twitter-image.tsx 파일 컨벤션이
-// 빌드 타임에 자동 생성·주입한다. 명시적 images 필드를 두지 않음.
+// OG 이미지는 네 언어가 같은 마스코트 이미지를 쓴다 (글자가 없어 언어 중립).
+const OG_IMAGE = {
+  url: `${SITE_URL}/og-image-mascot.png?v=20260901c`,
+  width: 1200,
+  height: 1200,
+  alt: "LittleSteps 吉祥物 — 拿著平板的烏龜角色",
+};
 
 export const metadata: Metadata = {
   title: "LittleSteps — 雖然慢，但方向是對的",
@@ -42,12 +47,14 @@ export const metadata: Metadata = {
     alternateLocale: ["ko_KR", "en_US", "ja_JP"],
     type: "website",
     url: SITE_URL_TW,
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "LittleSteps — 雖然慢，但方向是對的",
     description:
       "為照自己的速度學習的孩子打造的小小數學練習。iOS 與 Android 都能使用。",
+    images: [OG_IMAGE.url],
   },
   itunes: {
     appId: "6763979294",
