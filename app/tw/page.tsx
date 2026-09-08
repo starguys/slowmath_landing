@@ -16,6 +16,8 @@ import JsonLd from "../_seo/JsonLd";
 
 const SITE_URL = "https://slowkids.net";
 const SITE_URL_TW = `${SITE_URL}/tw`;
+// og:image / twitter:image 은 app/tw/opengraph-image.tsx · twitter-image.tsx 파일 컨벤션이
+// 빌드 타임에 자동 생성·주입한다. 명시적 images 필드를 두지 않음.
 
 export const metadata: Metadata = {
   title: "LittleSteps — 雖然慢，但方向是對的",
