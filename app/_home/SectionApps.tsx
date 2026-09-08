@@ -12,6 +12,10 @@ const C = {
     heading: "전체 학습도구 한눈에 보기",
     subtitle: "카테고리별로 훑어보고 관심 가는 것을 바로 열어볼 수 있어요",
   },
+  zh: {
+    heading: "所有學習工具一次看完",
+    subtitle: "依分類瀏覽，看到有興趣的就能直接打開",
+  },
   en: {
     heading: "All learning tools at a glance",
     subtitle: "Browse by category and open any one you'd like to try",

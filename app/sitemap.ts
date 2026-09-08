@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 홈 canonical/hreflang 은 Next 가 슬래시 없이 정규화(https://slowkids.net)하므로 sitemap 도 맞춘다.
   const homeLangs = {
     ko: BASE_URL,
+    "zh-Hant": `${BASE_URL}/tw`,
     en: `${BASE_URL}/en`,
     ja: `${BASE_URL}/jp`,
     "x-default": BASE_URL,
@@ -33,6 +34,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 1.0,
+      alternates: { languages: homeLangs },
+    },
+    {
+      url: `${BASE_URL}/tw`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.9,
       alternates: { languages: homeLangs },
     },
     {

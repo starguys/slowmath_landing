@@ -10,7 +10,8 @@ export type ModalText = {
 
 /**
  * practice 모달(팝업) 콘텐츠 — Figma 123:5481 팝업 카드 기준.
- * ko: Figma 시안 텍스트, en: /en 카피, ja: /jp 번역. slug(slowmath_ 포함) 키.
+ * ko: Figma 시안 텍스트, zh: /tw 번역, en: /en 카피, ja: /jp 번역.
+ * slug(slowmath_ 포함) 키.
  */
 export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
   slowmath_color: {
@@ -20,6 +21,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "색깔 익히기",
       short: "색깔이름을 보고 듣고 고르며 색 인지 능력을 키워요",
       long: "발달이 느린 아이에게 색깔 이름은 어려울 수 있어요. 단순 인식부터 순서 기억까지 단계적으로 도전해 색 어휘를 탄탄하게 쌓아줍니다.",
+    },
+    zh: {
+      category: "基礎認知",
+      subtitle: "眼睛和雙手先熟悉的時間",
+      name: "認識顏色",
+      short: "看色名、聽色名、選色卡，一步步培養辨色能力",
+      long: "對學得慢的孩子來說，顏色的名稱可能不容易。從單純的辨認到記住順序，分階段挑戰，把顏色詞彙紮實地累積起來。",
     },
     en: {
       category: "Foundations",
@@ -44,6 +52,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "세모·네모·동그라미 중에서 문제와 같은 도형을 골라요",
       long: "같은 크기끼리 고르는 기본부터 크기가 다르거나 회전된 도형까지 네 단계로 나누어 도형 감각을 키워요. 크기·회전이 달라도 같은 도형이라는 걸 알아보는 힘이 자연스럽게 자리 잡습니다.",
     },
+    zh: {
+      category: "基礎認知",
+      subtitle: "眼睛和雙手先熟悉的時間",
+      name: "認識形狀",
+      short: "在三角形、正方形、圓形中選出和題目一樣的形狀",
+      long: "從挑選同樣大小的基本題，到大小不同或旋轉過的形狀，分成四個階段培養形狀感。即使大小和角度不同也認得出是同一個形狀，這份能力會自然生根。",
+    },
     en: {
       category: "Foundations",
       subtitle: "Where eyes and hands get familiar first",
@@ -66,6 +81,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "선 긋기",
       short: "직선·곡선·나선을 따라 그리며 손의 안정성을 키워요",
       long: "글씨 쓰기와 그림 그리기의 기초가 되는 손 조절 능력을 재미있게 훈련해요. 3단계 난이도와 음성 안내로 아이가 포기하지 않고 꾸준히 연습할 수 있도록 돕습니다.",
+    },
+    zh: {
+      category: "基礎認知",
+      subtitle: "眼睛和雙手先熟悉的時間",
+      name: "畫線",
+      short: "沿著直線、曲線、螺旋描畫，練出穩定的手部控制",
+      long: "把寫字與畫圖的基礎——手部控制——變成有趣的練習。三段難度與語音引導，讓孩子不放棄，能持續練下去。",
     },
     en: {
       category: "Foundations",
@@ -90,6 +112,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "가이드를 보고 원·사각형·별 같은 도형을 직접 따라 그려요",
       long: "여덟 가지 도형을 골라 가이드 위에 손으로 따라 그립니다. 연한 선을 덧그리는 방식과 점선을 이어 그리는 방식 중에 고를 수 있어, 아이의 손 조절 수준에 맞춰 천천히 올려갈 수 있어요.",
     },
+    zh: {
+      category: "基礎認知",
+      subtitle: "眼睛和雙手先熟悉的時間",
+      name: "畫圖形",
+      short: "看著輔助線，親手描出圓形、方形、星形等圖形",
+      long: "從八種圖形中選一個，沿著輔助線用手描畫。可以選擇描淡線或連虛線兩種方式，配合孩子的手部控制程度慢慢往上調。",
+    },
     en: {
       category: "Foundations",
       subtitle: "Where eyes and hands get familiar first",
@@ -112,6 +141,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "점선 따라 그리기",
       short: "주어진 점과 선을 보고 똑같이 따라 그리며 시지각과 소근육을 키워요",
       long: "예시로 주어진 점-선 연결을 관찰하고 아래 격자에 똑같이 재현하는 활동이에요. 시지각 변별과 손 조절을 동시에 자극하고, 격자 크기·방향 복잡도를 조절해 아이 수준에 맞게 쓸 수 있습니다.",
+    },
+    zh: {
+      category: "基礎認知",
+      subtitle: "眼睛和雙手先熟悉的時間",
+      name: "連點成線",
+      short: "看著給定的點與線照著畫，同時練視知覺和小肌肉",
+      long: "觀察範例中的連點方式，在下方格子裡照樣重現。同時刺激視知覺辨別與手部控制，還能調整格子大小與方向的複雜度，配合孩子的程度使用。",
     },
     en: {
       category: "Foundations",
@@ -136,6 +172,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "제시된 색 격자 패턴을 그대로 따라 만들며 시지각을 훈련해요",
       long: "시지각 변별과 작업 기억을 동시에 훈련해요. 2×2부터 5×5까지 격자가 커지고 색의 수도 조절할 수 있어 아이 수준에 맞게 활용 가능합니다.",
     },
+    zh: {
+      category: "基礎認知",
+      subtitle: "眼睛和雙手先熟悉的時間",
+      name: "一模一樣",
+      short: "照著範例的顏色格子做出一樣的圖案，訓練視知覺",
+      long: "同時訓練視知覺辨別與工作記憶。格子從 2×2 到 5×5 逐步變大，顏色數量也能調整，配合孩子的程度使用。",
+    },
     en: {
       category: "Foundations",
       subtitle: "Where eyes and hands get familiar first",
@@ -158,6 +201,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "반대로 맞추기",
       short: "원본에서 비어 있는 자리를 찾아 내 답에 채우는 역상 맞추기",
       long: "원본에서 비어 있는 자리를 찾아 내 답에 채워요. '무엇이 없는지'를 알아채는 시지각과 공간 파악을 함께 훈련합니다. 4칸부터 25칸까지 격자를 늘려 가며 아이 속도에 맞춥니다.",
+    },
+    zh: {
+      category: "基礎認知",
+      subtitle: "眼睛和雙手先熟悉的時間",
+      name: "相反上色",
+      short: "找出範例中空著的位置，在自己的格子裡補上",
+      long: "找出範例中空著的位置，在自己的答案裡補上。一起訓練「察覺少了什麼」的視知覺與空間掌握。格子從 4 格增加到 25 格，配合孩子的速度。",
     },
     en: {
       category: "Foundations",
@@ -182,6 +232,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "반복되는 규칙에서 빠진 것을 찾는 패턴 인식을 훈련해요",
       long: "패턴 인식은 수학적 사고력의 핵심이에요. 과일·색깔·도형 패턴을 단계적으로 학습하고, 선택 잠금 기능으로 사고력을 키워줍니다.",
     },
+    zh: {
+      category: "基礎認知",
+      subtitle: "眼睛和雙手先熟悉的時間",
+      name: "規律",
+      short: "在重複的規律中找出少了的那一個，訓練規律辨識",
+      long: "辨識規律是數學思考的核心。依水果、顏色、形狀的順序分階段學習，並用選項鎖定功能培養思考力。",
+    },
     en: {
       category: "Foundations",
       subtitle: "Where eyes and hands get familiar first",
@@ -204,6 +261,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "같은 모양 찾기",
       short: "여러 모양 중에서 같은 모양과 짝을 찾으며 시지각 변별을 훈련해요",
       long: "네모·세모·동그라미부터 별·하트·오각형까지 10가지 도형을 활용해 모양을 변별하는 능력을 키워요. 단일·그룹 고르기, 색깔 변별, 짝꿍 찾기까지 단계적으로 도전하며 시지각 처리를 훈련합니다.",
+    },
+    zh: {
+      category: "基礎認知",
+      subtitle: "眼睛和雙手先熟悉的時間",
+      name: "找相同形狀",
+      short: "在許多形狀中找出相同的形狀與配對，訓練視知覺辨別",
+      long: "運用方形、三角形、圓形到星形、愛心、五邊形等十種圖形，培養辨別形狀的能力。從單一與群組挑選、顏色辨別到配對，分階段挑戰，訓練視知覺處理。",
     },
     en: {
       category: "Foundations",
@@ -228,6 +292,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "1부터 100까지 숫자를 보고·듣고·고르며 익혀요",
       long: "힌트와 음성 안내 덕분에 아이 혼자서도 도전할 수 있어요. 1부터 100까지 수의 순서 개념을 차근차근 익혀 학교 수업 준비에 효과적입니다.",
     },
+    zh: {
+      category: "數的概念",
+      subtitle: "數字開始看起來像「量」的時候",
+      name: "認識數字",
+      short: "從 1 到 100，看數字、聽數字、選數字",
+      long: "有提示與語音引導，孩子自己也能挑戰。從 1 到 100 一步步熟悉數的順序概念，對銜接學校課程很有幫助。",
+    },
     en: {
       category: "Number Sense",
       subtitle: "When numbers start to look like 'amounts'",
@@ -250,6 +321,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "숫자 쓰기",
       short: "0~9 숫자를 올바른 순서로 쓰는 법을 연습해요",
       long: "숫자 모양을 손으로 직접 써보며 형태를 몸으로 기억할 수 있어요. 점선 안내와 단계적 피드백으로 처음 쓰는 아이도 올바른 필순을 자연스럽게 익힙니다.",
+    },
+    zh: {
+      category: "數的概念",
+      subtitle: "數字開始看起來像「量」的時候",
+      name: "寫數字",
+      short: "練習用正確的筆順書寫 0~9",
+      long: "親手寫出數字的形狀，用身體記住它。有虛線引導與階段式回饋，第一次動筆的孩子也能自然學會正確筆順。",
     },
     en: {
       category: "Number Sense",
@@ -274,6 +352,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "손가락·주사위·카드 무늬를 세며 수 감각을 키워요",
       long: "생활 속 사물을 세는 연습으로 수 감각을 자연스럽게 익힐 수 있어요. 생각 시간 조절로 충동적 답 선택을 막고 천천히 생각하는 습관을 기릅니다.",
     },
+    zh: {
+      category: "數的概念",
+      subtitle: "數字開始看起來像「量」的時候",
+      name: "數一數",
+      short: "數手指、骰子、紙牌花色，培養數感",
+      long: "透過數生活中的東西，自然培養數感。可調整思考時間，避免衝動作答，養成慢慢思考的習慣。",
+    },
     en: {
       category: "Number Sense",
       subtitle: "When numbers start to look like 'amounts'",
@@ -296,6 +381,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "우리말 세기",
       short: "한 명·두 마리·세 대… 우리말로 세는 말과 숫자를 짝지어요",
       long: "사람은 '한 명', 동물은 '한 마리', 차는 '한 대'처럼 사물마다 우리말로 세는 말이 달라요. '한 명 ↔ 1명', '두 마리 ↔ 2마리'처럼 우리말과 숫자를 짝지으며 자연스럽게 익혀요.",
+    },
+    zh: {
+      category: "數的概念",
+      subtitle: "數字開始看起來像「量」的時候",
+      name: "韓語數數",
+      short: "一位、兩隻、三台⋯⋯把韓語量詞和數字配成對",
+      long: "人用「한 명」、動物用「한 마리」、車用「한 대」，每種東西的韓語量詞都不一樣。像「한 명 ↔ 1명」「두 마리 ↔ 2마리」這樣把韓語和數字配成對，自然而然地學會。",
     },
     en: {
       category: "Number Sense",
@@ -320,6 +412,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "숫자와 우리말 수(하나·둘·셋·열·스물…)를 짝지어 익혀요",
       long: "1부터 100까지의 숫자를 우리말 수사와 연결하며 익힐 수 있어요. '하나~열'부터 '아흔~백'까지 11단계로 나누어 아이 수준에 맞게 시작할 수 있고, 숫자→우리말과 우리말→숫자 두 방향으로 번갈아 연습해 양방향으로 자연스럽게 자리 잡습니다.",
     },
+    zh: {
+      category: "數的概念",
+      subtitle: "數字開始看起來像「量」的時候",
+      name: "韓文數字",
+      short: "把數字和韓語固有數詞（하나·둘·셋·열·스물⋯）配成對",
+      long: "把 1 到 100 的數字和韓語固有數詞連起來學。從「하나~열」到「아흔~백」分成十一個階段，可以配合孩子的程度開始，並用數字→韓語、韓語→數字兩個方向交替練習，雙向都能自然掌握。",
+    },
     en: {
       category: "Number Sense",
       subtitle: "When numbers start to look like 'amounts'",
@@ -342,6 +441,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "숫자 매칭",
       short: "숫자와 동그라미의 개수를 연결하며 수와 양을 연결해요",
       long: "숫자 기호와 실제 양을 연결하는 핵심 수 개념을 다질 수 있어요. 순서대로 나열된 문제에서 시작해 무작위 배치까지 넘어가며 숫자와 개수의 연결이 자연스럽게 자리 잡습니다.",
+    },
+    zh: {
+      category: "數的概念",
+      subtitle: "數字開始看起來像「量」的時候",
+      name: "數字配對",
+      short: "把數字和圓點的數量連起來，把數和量接在一起",
+      long: "打穩「數字符號對應實際數量」這個核心概念。從按順序排列的題目開始，再進到隨機排列，數字與數量的連結會自然生根。",
     },
     en: {
       category: "Number Sense",
@@ -366,6 +472,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "일정한 간격의 빈 자리 수를 맞춰보세요",
       long: "빠진 자리 수를 찾으며 수의 순서와 간격 감각을 자연스럽게 익힐 수 있어요. 익숙한 간격에서 시작해 다양한 간격으로 넓혀가며 아이가 스스로 규칙을 발견하도록 돕습니다.",
     },
+    zh: {
+      category: "數的關係",
+      subtitle: "讀懂大小與異同的練習",
+      name: "數的間隔",
+      short: "在等距的數列中補上空著的數",
+      long: "找出缺少的數，自然熟悉數的順序與間隔感。從熟悉的間隔開始，再擴展到各種間隔，幫助孩子自己發現規律。",
+    },
     en: {
       category: "Number Relations",
       subtitle: "Reading bigger, smaller, same, and different",
@@ -388,6 +501,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "수의 간격 연습",
       short: "예시를 보고 같은 간격으로 숫자판을 색칠해 보세요",
       long: "숫자판에 몇 개의 힌트 칸이 미리 색칠되어 있어요. 같은 간격으로 이어지는 나머지 칸을 색으로 채우며 규칙을 스스로 발견하도록 돕습니다. 간격(1~10)과 범위(1~50 / 1~100)를 자유롭게 골라 아이 수준에 맞게 사용할 수 있어요.",
+    },
+    zh: {
+      category: "數的關係",
+      subtitle: "讀懂大小與異同的練習",
+      name: "數的間隔 練習",
+      short: "看著範例，用相同的間隔把數字板塗上顏色",
+      long: "數字板上會先塗好幾個提示格。孩子用顏色填滿以相同間隔延續的其他格子，自己發現規律。間隔（1~10）與範圍（1~50 / 1~100）都能自由選擇，配合孩子的程度使用。",
     },
     en: {
       category: "Number Relations",
@@ -412,6 +532,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "우리나라 동전과 지폐의 모양·이름을 익혀요",
       long: "10·50·100·500원 동전과 1,000·5,000·10,000·50,000원 지폐를 그림과 이름으로 짝지으며 자연스럽게 익혀요.",
     },
+    zh: {
+      category: "時鐘・日曆・金錢",
+      subtitle: "在生活中學會時間和金錢",
+      name: "硬幣與紙鈔",
+      short: "認識韓國硬幣與紙鈔的樣子和名稱",
+      long: "把 10、50、100、500 元硬幣和 1,000、5,000、10,000、50,000 元紙鈔的圖案與名稱配成對，自然而然地記住。",
+    },
     en: {
       category: "Time · Calendar · Money",
       subtitle: "Time and money in real life",
@@ -434,6 +561,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "비교하기 기초 1",
       short: "크기·길이·높이·두께·양을 비교하며 수학 언어를 익혀요",
       long: "'더 크다', '더 짧다'를 수학적 개념과 연결해 줘요. 그림으로 직관적으로 보여주기 때문에 글을 읽지 못해도 학습할 수 있습니다.",
+    },
+    zh: {
+      category: "數的關係",
+      subtitle: "讀懂大小與異同的練習",
+      name: "比較 1",
+      short: "比較大小、長短、高低、厚薄與多少，學會數學語言",
+      long: "把「比較大」「比較短」和數學概念連起來。用圖直觀呈現，還不會讀字也能學習。",
     },
     en: {
       category: "Number Relations",
@@ -458,6 +592,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "위·아래·안·밖 등 공간 관계를 비교하며 익혀요",
       long: "위치와 공간 언어를 이해하는 것은 수학 문장제의 기초예요. 도형 그림으로 공간 개념을 자연스럽게 내면화할 수 있습니다.",
     },
+    zh: {
+      category: "數的關係",
+      subtitle: "讀懂大小與異同的練習",
+      name: "比較 2",
+      short: "比較上下、內外等空間關係並熟悉它們",
+      long: "理解位置與空間語言是數學應用題的基礎。透過圖形，把空間概念自然地內化。",
+    },
     en: {
       category: "Number Relations",
       subtitle: "Reading bigger, smaller, same, and different",
@@ -480,6 +621,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "수의 크기",
       short: "수의 크기를 비교하고 부등호로 표현하는 법을 익혀요",
       long: "수의 대소 관계를 수평선과 막대 차트 힌트로 시각적으로 익혀요. 한 자리·두 자리 모두 지원하며 부등호(<, =, >) 학습까지 단계적으로 이어집니다.",
+    },
+    zh: {
+      category: "數的關係",
+      subtitle: "讀懂大小與異同的練習",
+      name: "數的大小",
+      short: "比較數的大小，並學會用不等號表示",
+      long: "用數線與長條圖提示，把數的大小關係看得見。一位數與兩位數都支援，並一路延伸到不等號（<、=、>）的學習。",
     },
     en: {
       category: "Number Relations",
@@ -504,6 +652,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "아날로그·디지털 시계를 읽는 법을 시·30분·15분 단위로 배워요",
       long: "시계 보기는 생활 독립에 꼭 필요한 기술이에요. 정각부터 시작해 30분·15분·45분으로 점점 세밀해지는 단계로 누구나 따라갈 수 있도록 설계되었습니다.",
     },
+    zh: {
+      category: "時鐘・日曆・金錢",
+      subtitle: "在生活中學會時間和金錢",
+      name: "看時鐘",
+      short: "以整點、30 分、15 分為單位，學會看類比與數位時鐘",
+      long: "看時鐘是生活自立必備的能力。從整點開始，再到 30 分、15 分、45 分逐步變細，設計成任何孩子都跟得上的階段。",
+    },
     en: {
       category: "Time · Calendar · Money",
       subtitle: "Time and money in real life",
@@ -526,6 +681,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "달력 보기",
       short: "달력에서 요일·날짜를 고르고 동그라미 친 날을 찾으며 달력 읽기를 익혀요",
       long: "달력 보기는 시간 감각·일정 이해의 기초예요. 요일 모두 고르기, N번째 요일 고르기, 날짜 고르기, 동그라미 친 날 맞추기까지 단계별로 익히도록 설계되었습니다.",
+    },
+    zh: {
+      category: "時鐘・日曆・金錢",
+      subtitle: "在生活中學會時間和金錢",
+      name: "看日曆練習",
+      short: "在日曆上選星期與日期、找出圈起來的日子，學會看日曆",
+      long: "看日曆是時間感與行程理解的基礎。設計成「選出所有的某星期」「選第 N 個某星期」「選日期」「找出圈起來的日子」的分階段學習。",
     },
     en: {
       category: "Time · Calendar · Money",
@@ -550,6 +712,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "배열판·숫자판·랜덤·짝짓기 4가지 모드로 홀수와 짝수를 익혀요",
       long: "홀짝 개념은 수 패턴 인지의 출발점이에요. 배열판에서 짝이 맞는지 시각으로 확인하고, 숫자판에서 모두 고르고, 랜덤 숫자를 판별하고, 같은 종류끼리 짝짓는 4단계 모드로 충분히 반복합니다.",
     },
+    zh: {
+      category: "數的關係",
+      subtitle: "讀懂大小與異同的練習",
+      name: "奇數與偶數",
+      short: "用排列板、數字板、隨機、配對四種模式認識奇數與偶數",
+      long: "奇偶概念是辨識數的規律的起點。在排列板上用眼睛確認能不能兩兩成對、在數字板上全部選出、判別隨機出現的數、把同類配成對——四個階段充分反覆。",
+    },
     en: {
       category: "Number Relations",
       subtitle: "Reading bigger, smaller, same, and different",
@@ -572,6 +741,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "모으기 연습",
       short: "두 수를 합쳐 하나의 수를 만드는 수 합성을 연습해요",
       long: "덧셈의 의미를 '모은다'는 직관으로 이해할 수 있어요. 드래그 인터랙션으로 손과 눈을 동시에 사용해 더 오래 기억됩니다.",
+    },
+    zh: {
+      category: "加法之前",
+      subtitle: "集合與分開，用手感受數",
+      name: "集合",
+      short: "把兩個數合成一個數，練習數的合成",
+      long: "用「集合起來」的直覺理解加法的意義。透過拖曳操作同時用手和眼睛，記得更久。",
     },
     en: {
       category: "Pre-Addition",
@@ -596,6 +772,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "하나의 수를 두 부분으로 나누는 수 분해를 연습해요",
       long: "뺄셈과 덧셈의 기초가 되는 수 분해 개념을 익힐 수 있어요. 2~9까지 세 단계로 나뉘어 아이 수준에 딱 맞는 도전부터 시작할 수 있습니다.",
     },
+    zh: {
+      category: "加法之前",
+      subtitle: "集合與分開，用手感受數",
+      name: "分開",
+      short: "把一個數分成兩部分，練習數的分解",
+      long: "學會數的分解——減法與加法的基礎概念。從 2 到 9 分成三個階段，可以從最適合孩子程度的挑戰開始。",
+    },
     en: {
       category: "Pre-Addition",
       subtitle: "Combining and splitting — feeling numbers",
@@ -618,6 +801,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "보수 연습",
       short: "10을 채우는 짝꿍 수(보수)를 세 가지 방식으로 익혀요",
       long: "10의 보수는 받아올림 덧셈과 뺄셈의 핵심 개념이에요. 충동 억제 기능과 다양한 연습 모드로 충분히 반복해 완전 학습에 도달할 수 있습니다.",
+    },
+    zh: {
+      category: "加法之前",
+      subtitle: "集合與分開，用手感受數",
+      name: "湊十",
+      short: "用三種方式熟悉湊成 10 的好朋友數",
+      long: "湊十是進位加法與退位減法的核心概念。搭配防衝動功能與多種練習模式，充分反覆直到完全學會。",
     },
     en: {
       category: "Pre-Addition",
@@ -642,6 +832,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "수 배열판·순서 예측·무작위 문제로 +1 덧셈을 익혀요",
       long: "'+1은 다음 수'라는 규칙을 수 배열판으로 시각화해 직관적으로 이해할 수 있어요. 1~99 범위까지 단계적으로 넓혀 자신감을 쌓아줍니다.",
     },
+    zh: {
+      category: "加法",
+      subtitle: "從小小的一步開始累積的計算",
+      name: "+1",
+      short: "用數字排列板、順序預測、隨機題目熟悉 +1",
+      long: "用數字排列板把「+1 就是下一個數」這個規則視覺化，直觀好懂。範圍逐步擴展到 1~99，一點一點累積自信。",
+    },
     en: {
       category: "Addition",
       subtitle: "Calculation, built from small steps",
@@ -664,6 +861,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "더하기 2",
       short: "2 더하기를 배열판과 건너뛰기로 시각화해서 배워요",
       long: "수 배열판에서 두 칸 건너뛰는 패턴이 홀짝 개념과 연결되어 확장 학습이 가능해요. 1~98 범위를 단계별로 정복하며 성취감을 경험합니다.",
+    },
+    zh: {
+      category: "加法",
+      subtitle: "從小小的一步開始累積的計算",
+      name: "+2",
+      short: "用排列板與跳格把「加 2」視覺化來學",
+      long: "在數字排列板上跳兩格的規律和奇偶概念相連，可以延伸學習。分階段征服 1~98 的範圍，體驗成就感。",
     },
     en: {
       category: "Addition",
@@ -688,6 +892,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "3 더하기를 여러 학습 모드로 반복 연습해요",
       long: "더하기 1·2를 익힌 후 자연스럽게 이어지는 단계로, 수 배열판 애니메이션이 연산 과정을 생생하게 보여줘요. 무작위 문제로 완전 학습을 지원합니다.",
     },
+    zh: {
+      category: "加法",
+      subtitle: "從小小的一步開始累積的計算",
+      name: "+3",
+      short: "用多種學習模式反覆練習「加 3」",
+      long: "學完加 1、加 2 之後自然銜接的階段，數字排列板的動畫把運算過程生動地呈現出來。用隨機題目支援完全學習。",
+    },
     en: {
       category: "Addition",
       subtitle: "Calculation, built from small steps",
@@ -710,6 +921,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "한 자리 덧셈",
       short: "가장 쉬운 단계부터 시작하는 한 자리 덧셈 연습",
       long: "덧셈이 처음인 아이도 부담 없이 시작할 수 있도록 4단계로 난이도를 조절해요. 충동 억제 모드로 답을 고르기 전에 충분히 생각하는 습관을 만들어줍니다.",
+    },
+    zh: {
+      category: "加法",
+      subtitle: "從小小的一步開始累積的計算",
+      name: "一位數加法",
+      short: "從最簡單的階段開始的一位數加法練習",
+      long: "第一次接觸加法的孩子也能毫無負擔地開始，難度分成四階。防衝動模式讓孩子養成選答案前先充分思考的習慣。",
     },
     en: {
       category: "Addition",
@@ -734,6 +952,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "고르기·쌓기·채우기 세 가지 방식으로 덧셈을 연습해요",
       long: "같은 덧셈을 다양한 형태로 경험해 개념이 더 깊이 자리잡혀요. 시각적 구체물을 활용하기 때문에 추상적 연산이 어려운 아이에게 특히 효과적입니다.",
     },
+    zh: {
+      category: "加法",
+      subtitle: "從小小的一步開始累積的計算",
+      name: "加法練習",
+      short: "用挑選、堆疊、填空三種方式練習加法",
+      long: "以不同形式體驗同一個加法，概念扎得更深。因為用了看得見摸得著的教具，對不擅長抽象運算的孩子特別有效。",
+    },
     en: {
       category: "Addition",
       subtitle: "Calculation, built from small steps",
@@ -756,6 +981,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "받아올림 연습",
       short: "가르기와 배열판으로 10을 만들어 받아올림을 익혀요",
       long: "두 자리 수 덧셈의 핵심인 받아올림을 가르기·보수와 배열판이라는 두 가지 직관적 방법으로 분리해 학습해요. 드래그 인터랙션으로 '10을 만든다'는 감각을 손과 눈으로 함께 익힙니다.",
+    },
+    zh: {
+      category: "加法",
+      subtitle: "從小小的一步開始累積的計算",
+      name: "進位",
+      short: "用分解與排列板湊出 10，學會進位",
+      long: "把兩位數加法的核心——進位——拆成「分解與湊十」和「排列板」兩種直觀方法分別學習。透過拖曳操作，用手和眼睛一起感受「湊出 10」。",
     },
     en: {
       category: "Addition",
@@ -780,6 +1012,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "두 자리 수 세로 덧셈을 일의 자리부터 차근차근 풀어요",
       long: "받아올림을 익힌 다음 단계로, 일의 자리·십의 자리를 분리해 풀이 흐름을 시각적으로 보여줘요. 빈칸이 한 칸씩 늘어나며 아이가 스스로 절차를 익힐 수 있도록 돕습니다.",
     },
+    zh: {
+      category: "加法",
+      subtitle: "從小小的一步開始累積的計算",
+      name: "直式加法",
+      short: "從個位開始，一步步解兩位數的直式加法",
+      long: "學會進位之後的下一階段，把個位與十位分開，把解題流程看得見。空格一格一格增加，幫助孩子自己學會這套步驟。",
+    },
     en: {
       category: "Addition",
       subtitle: "Calculation, built from small steps",
@@ -802,6 +1041,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "돈 계산하기",
       short: "동전과 지폐로 가격을 맞추거나 합계를 골라요",
       long: "교실의 덧셈을 실생활(돈)로 옮긴 응용 단계. 가격표 보고 돈 모으기 / 모은 돈 보고 가격 맞추기 두 방향을 동전만·지폐만·동전과 지폐 세 가지 난이도로 반복 연습해요.",
+    },
+    zh: {
+      category: "時鐘・日曆・金錢",
+      subtitle: "在生活中學會時間和金錢",
+      name: "付出金額",
+      short: "用硬幣和紙鈔湊出價錢，或選出合計金額",
+      long: "把課堂上的加法搬到生活（金錢）的應用階段。看價格湊錢、看湊好的錢選價格兩個方向，各以只用硬幣、只用紙鈔、硬幣加紙鈔三種難度反覆練習。",
     },
     en: {
       category: "Time · Calendar · Money",
@@ -826,6 +1072,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "수 배열판·이전 수 예측·무작위 문제로 -1 뺄셈을 익혀요",
       long: "'-1은 바로 앞 수'라는 규칙을 수 배열판으로 시각화해 직관적으로 이해할 수 있어요. 단계적 범위 확장으로 뺄셈에 대한 부담 없이 익힙니다.",
     },
+    zh: {
+      category: "減法",
+      subtitle: "一步一步拿走的計算",
+      name: "−1",
+      short: "用數字排列板、前一數預測、隨機題目熟悉 −1",
+      long: "用數字排列板把「−1 就是前一個數」這個規則視覺化，直觀好懂。範圍分階段擴展，學減法不再有負擔。",
+    },
     en: {
       category: "Subtraction",
       subtitle: "Calculation, one step removed at a time",
@@ -848,6 +1101,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "빼기 2",
       short: "2 빼기를 배열판과 거꾸로 건너뛰기로 시각화해서 배워요",
       long: "수 배열판에서 두 칸씩 거꾸로 건너뛰는 패턴으로 -2 뺄셈을 직관적으로 이해해요. 단계별 범위 확장으로 자기 속도에 맞게 정복할 수 있습니다.",
+    },
+    zh: {
+      category: "減法",
+      subtitle: "一步一步拿走的計算",
+      name: "−2",
+      short: "用排列板與倒著跳格把「減 2」視覺化來學",
+      long: "在數字排列板上倒著跳兩格的規律，讓 −2 直觀好懂。範圍分階段擴展，可以照自己的速度征服。",
     },
     en: {
       category: "Subtraction",
@@ -872,6 +1132,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "3 빼기를 여러 학습 모드로 반복 연습해요",
       long: "빼기 1·2를 익힌 후 자연스럽게 이어지는 단계로, 수 배열판 애니메이션이 뺄셈 과정을 생생하게 보여줘요. 무작위 문제로 완전 학습을 지원합니다.",
     },
+    zh: {
+      category: "減法",
+      subtitle: "一步一步拿走的計算",
+      name: "−3",
+      short: "用多種學習模式反覆練習「減 3」",
+      long: "學完減 1、減 2 之後自然銜接的階段，數字排列板的動畫把減法過程生動地呈現出來。用隨機題目支援完全學習。",
+    },
     en: {
       category: "Subtraction",
       subtitle: "Calculation, one step removed at a time",
@@ -894,6 +1161,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "한 자리 뺄셈",
       short: "가장 쉬운 단계부터 시작하는 한 자리 뺄셈 연습",
       long: "덜어내는 감각을 그림으로 시각화하며 한 자리 뺄셈의 의미를 자연스럽게 익힐 수 있어요. 4단계 난이도로 부담 없이 시작해 작은 수에서 조금씩 커지는 문제로 뺄셈이라는 새로운 개념에 익숙해져 갑니다.",
+    },
+    zh: {
+      category: "減法",
+      subtitle: "一步一步拿走的計算",
+      name: "一位數減法",
+      short: "從最簡單的階段開始的一位數減法練習",
+      long: "用圖把「拿走」的感覺畫出來，自然理解一位數減法的意義。四段難度讓孩子毫無負擔地開始，從小的數慢慢變大，逐漸熟悉減法這個新概念。",
     },
     en: {
       category: "Subtraction",
@@ -918,6 +1192,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "드래그·묶기·배열판 세 가지 방식으로 한 자리 뺄셈을 익혀요",
       long: "동그라미를 바구니에 옮기거나, 묶어서 빼거나, 배열판에서 사선으로 지우는 세 가지 시각화로 뺄셈의 의미를 다각도로 익혀요. 답 검증이 그림과 함께 이뤄져 손과 눈으로 동시에 학습합니다.",
     },
+    zh: {
+      category: "減法",
+      subtitle: "一步一步拿走的計算",
+      name: "減法練習",
+      short: "用拖曳、圈起來、排列板三種方式熟悉一位數減法",
+      long: "把圓點移到籃子裡、圈起來拿走、在排列板上畫斜線劃掉——三種視覺化從不同角度理解減法的意義。答案的驗證會和圖一起呈現，手和眼睛同時學習。",
+    },
     en: {
       category: "Subtraction",
       subtitle: "Calculation, one step removed at a time",
@@ -940,6 +1221,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "받아내림 연습",
       short: "받아내림이 필요한 뺄셈을 단계별로 차근차근 풀어요",
       long: "두 자리에서 한 자리·두 자리를 뺄 때 받아내림이 어떻게 일어나는지 식의 분해와 묶음 표시로 천천히 보여줘요. 첫 문제는 빈칸 한 칸으로 시작해 점진적으로 빈칸이 늘어나며 풀이 흐름을 스스로 익혀요.",
+    },
+    zh: {
+      category: "減法",
+      subtitle: "一步一步拿走的計算",
+      name: "退位",
+      short: "把需要退位的減法分階段慢慢解開",
+      long: "兩位數減一位數、減兩位數時退位是怎麼發生的，用算式的分解與括弧標示慢慢呈現。第一題只留一個空格，之後空格逐漸增加，讓孩子自己學會解題流程。",
     },
     en: {
       category: "Subtraction",
@@ -964,6 +1252,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "두 자리 수 세로 뺄셈을 일의 자리부터 차근차근 풀어요",
       long: "받아내림 개념을 익힌 다음 단계로, 일의 자리·십의 자리를 분리해 풀이 흐름을 시각적으로 보여줘요. 빈칸이 한 칸씩 늘어나며 절차적 풀이를 스스로 익힐 수 있습니다.",
     },
+    zh: {
+      category: "減法",
+      subtitle: "一步一步拿走的計算",
+      name: "直式減法",
+      short: "從個位開始，一步步解兩位數的直式減法",
+      long: "學會退位概念之後的下一階段，把個位與十位分開，把解題流程看得見。空格一格一格增加，孩子能自己學會這套步驟。",
+    },
     en: {
       category: "Subtraction",
       subtitle: "Calculation, one step removed at a time",
@@ -986,6 +1281,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "거스름돈 계산하기",
       short: "물건값과 낸 돈을 보고 거스름돈을 계산해요",
       long: "뺄셈을 실생활(돈)로 옮긴 응용 단계. 가격과 낸 돈의 차액으로 거스름돈을 직접 골라보며, 동전·지폐 단위 감각과 뺄셈을 함께 익힙니다.",
+    },
+    zh: {
+      category: "時鐘・日曆・金錢",
+      subtitle: "在生活中學會時間和金錢",
+      name: "計算找零",
+      short: "看商品價格和付出的錢，算出要找多少零錢",
+      long: "把減法搬到生活（金錢）的應用階段。用價格與付出金額的差額親自選出零錢，同時培養硬幣、紙鈔的單位感與減法能力。",
     },
     en: {
       category: "Time · Calendar · Money",
@@ -1010,6 +1312,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "2~9단 구구단을 충분한 생각 시간과 함께 천천히 익혀요",
       long: "생각 시간을 충분히 조절할 수 있어 빠른 암기가 어려운 아이도 자기 속도로 구구단을 정복할 수 있어요. 2단부터 9단까지 차례로 밟아가며 각 단을 자기 속도로 하나씩 완성해 나갑니다.",
     },
+    zh: {
+      category: "乘法",
+      subtitle: "理解概念的數的規律",
+      name: "九九乘法",
+      short: "給足思考時間，慢慢熟悉 2~9 的九九乘法",
+      long: "思考時間可以充分調整，不擅長快速背誦的孩子也能照自己的速度征服九九乘法。從 2 的乘法到 9 的乘法依序前進，一段一段照自己的速度完成。",
+    },
     en: {
       category: "Multiplication",
       subtitle: "The number rules behind the concept",
@@ -1032,6 +1341,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "한 자리 곱셈",
       short: "1~5·1~9 곱셈부터 세로 곱셈까지 세 단계로 곱하는 감각을 익혀요",
       long: "가장 쉬운 1~5 범위부터 시작해 1~9로 넓혀가고, 마지막 세로 한 자리 × 한 자리에서는 답의 일의 자리와 십의 자리를 하나씩 골라요. 필기 곱셈과 같은 순서로 진행돼 종이로 옮길 때도 자연스럽습니다.",
+    },
+    zh: {
+      category: "乘法",
+      subtitle: "理解概念的數的規律",
+      name: "一位數乘法",
+      short: "從 1~5、1~9 的乘法到直式乘法，用三個階段培養乘的感覺",
+      long: "從最簡單的 1~5 開始，再擴展到 1~9，最後在一位數 × 一位數的直式裡，把答案的個位與十位一個一個選出來。順序和紙筆乘法一樣，換到紙上時也很自然。",
     },
     en: {
       category: "Multiplication",
@@ -1056,6 +1372,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "한 자리·두 자리 세로 곱셈을 두 줄로 나눠 차근차근 풀어요",
       long: "한 자리 × 한 자리 구구단 단계에서 두 자리 × 한 자리·두 자리 × 두 자리까지 자리수를 넓혀 가요. 큰 수는 일의 자리와 십의 자리를 따로 곱해 두 줄로 쓴 뒤 더하고, 받아올림 값도 위쪽 작은 칸에 먼저 채워요. 필기 곱셈과 같은 순서라 종이로 옮길 때도 자연스럽습니다.",
     },
+    zh: {
+      category: "乘法",
+      subtitle: "理解概念的數的規律",
+      name: "直式乘法",
+      short: "把一位數、兩位數的直式乘法分成兩行，一步步解開",
+      long: "從一位數 × 一位數的九九乘法階段，擴展到兩位數 × 一位數、兩位數 × 兩位數。大的數會把個位與十位分開相乘、寫成兩行再相加，進位的數也先填在上方的小格。順序和紙筆乘法一樣，換到紙上時也很自然。",
+    },
     en: {
       category: "Multiplication",
       subtitle: "The number rules behind the concept",
@@ -1079,6 +1402,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "두 분수 · 네 분수 · 부등호까지 세 방식으로 분수 크기를 비교해요",
       long: "같은 분모끼리 시작해 다른 분모로 넓혀 가며 분수의 크기 감각을 잡아요. 원(면적)·막대(길이)·수직선(위치) 세 가지 힌트가 서로 다른 관점에서 크기를 보여주고, 큰 수·작은 수 → 가장 큰/작은 수 → 부등호(＜ ＝ ＞) 고르기 순서로 난이도가 자연스럽게 올라갑니다.",
     },
+    zh: {
+      category: "數的關係",
+      subtitle: "讀懂大小與異同的練習",
+      name: "分數的大小",
+      short: "用兩個分數、四個分數、不等號三種方式比較分數大小",
+      long: "從同分母開始，再擴展到異分母，抓住分數的大小感。圓（面積）、長條（長度）、數線（位置）三種提示從不同角度呈現大小，並依「較大／較小的數 → 最大／最小的數 → 選不等號（＜ ＝ ＞）」的順序自然提高難度。",
+    },
     en: {
       category: "Number relations",
       subtitle: "Bigger, smaller, same, different",
@@ -1101,6 +1431,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "분수 익히기",
       short: "원·막대·묶음·수직선 네 모양으로 분수를 눈으로 익혀요",
       long: "전체를 몇 개로 똑같이 나눴는지, 그 중 몇 개가 색칠되었는지 두 번 세는 방식으로 분수 감각을 잡아요. 원(넓이)·막대(길이)·묶음(개수)·수직선(위치) 네 모양이 서로 다른 인지 방식을 보완해 주고, 분자 범위(1 → 1~10)를 단계별로 넓혀 가며 익힐 수 있습니다.",
+    },
+    zh: {
+      category: "數的概念",
+      subtitle: "數字開始看起來像「量」的時候",
+      name: "認識分數",
+      short: "用圓、長條、集合、數線四種樣子，用眼睛認識分數",
+      long: "把整體平分成幾份、其中塗了幾份——用數兩次的方式抓住分數感。圓（面積）、長條（長度）、集合（個數）、數線（位置）四種樣子互相補足不同的認知方式，分子的範圍（1 → 1~10）也能分階段擴展。",
     },
     en: {
       category: "Number sense",

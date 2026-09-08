@@ -24,6 +24,25 @@ const C = {
     hashtags1: "#발달지연 #발달장애 #느린학습자 #경계선지능",
     hashtags2: "#학습장애 #ADHD #자폐스펙트럼 #특수교육",
   },
+  zh: {
+    wm: ["Little", "Steps"],
+    tagline1:
+      "為發展遲緩、臨界智能，或任何比同齡孩子學得慢的孩子打造的",
+    tagline2: "簡單卻有力的學習工具",
+    contact: "合作 · 意見回饋",
+    terms: "使用條款",
+    privacy: "隱私權政策",
+    // 번체 법적 고지는 아직 없다 — 영어 페이지로 보낸다
+    termsHref: "/en/terms",
+    privacyHref: "/en/privacy",
+    related: "相關服務",
+    typingLabel: "LittleSteps 打字練習",
+    typingUrl: "typing.slowkids.net",
+    honeypotLabel: "LittleSteps 福利查詢",
+    honeypotUrl: "honeypot.slowkids.net",
+    hashtags1: "#發展遲緩 #臨界智能 #學習較慢的孩子 #特殊教育",
+    hashtags2: "#ADHD #自閉症光譜 #在家自學 #認知訓練",
+  },
   en: {
     wm: ["Little", "Steps"],
     tagline1:

@@ -14,6 +14,7 @@ const OG_IMAGE_JA = `${SITE_URL}/jp/opengraph-image`;
 const APPLE_US =
   "https://apps.apple.com/us/app/slowkids-math-at-kids-pace/id6763979294";
 const APPLE_KR = "https://apps.apple.com/kr/app/id6763979294";
+const APPLE_TW = "https://apps.apple.com/tw/app/id6763979294";
 const APPLE_JP = "https://apps.apple.com/jp/app/id6763979294";
 const PLAY =
   "https://play.google.com/store/apps/details?id=com.everydaysummers.slowkids";
@@ -105,24 +106,28 @@ const JA_DESC: Record<string, string> = {
 type JsonLdNode = Record<string, unknown>;
 
 function localeTag(locale: Locale): string {
+  if (locale === "zh") return "zh-Hant-TW";
   if (locale === "en") return "en-US";
   if (locale === "ja") return "ja-JP";
   return "ko-KR";
 }
 
 function currency(locale: Locale): string {
+  if (locale === "zh") return "TWD";
   if (locale === "en") return "USD";
   if (locale === "ja") return "JPY";
   return "KRW";
 }
 
 function appleStore(locale: Locale): string {
+  if (locale === "zh") return APPLE_TW;
   if (locale === "en") return APPLE_US;
   if (locale === "ja") return APPLE_JP;
   return APPLE_KR;
 }
 
 function pageUrl(locale: Locale): string {
+  if (locale === "zh") return `${SITE_URL}/tw`;
   if (locale === "en") return `${SITE_URL}/en`;
   if (locale === "ja") return `${SITE_URL}/jp`;
   return SITE_URL;
@@ -131,6 +136,25 @@ function pageUrl(locale: Locale): string {
 function organizationLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
   const ja = locale === "ja";
+  const zh = locale === "zh";
+  if (zh) {
+    return {
+      "@type": "Organization",
+      "@id": ORG_ID,
+      name: "LittleSteps",
+      alternateName: ["느린아이", "LittleSteps 系列"],
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/icon.png`,
+        width: 256,
+        height: 256,
+      },
+      description:
+        "為發展遲緩、臨界智能，或任何比同齡孩子學得慢的孩子打造的學習工具 — 讓他們照自己的速度打好認知與數學的基礎。",
+      sameAs: [APPLE_US, PLAY],
+    };
+  }
   return {
     "@type": "Organization",
     "@id": ORG_ID,
@@ -159,6 +183,19 @@ function organizationLd(locale: Locale): JsonLdNode {
 function websiteLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
   const ja = locale === "ja";
+  const zh = locale === "zh";
+  if (zh) {
+    return {
+      "@type": "WebSite",
+      "@id": SITE_ID,
+      name: "LittleSteps",
+      alternateName: "느린아이",
+      url: pageUrl(locale),
+      inLanguage: localeTag(locale),
+      description: "為照自己的速度學習的孩子打造的數學、認知與小肌肉學習工具。",
+      publisher: { "@id": ORG_ID },
+    };
+  }
   return {
     "@type": "WebSite",
     "@id": SITE_ID,
@@ -178,6 +215,31 @@ function websiteLd(locale: Locale): JsonLdNode {
 function appLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
   const ja = locale === "ja";
+  const zh = locale === "zh";
+  if (zh) {
+    return {
+      "@type": "MobileApplication",
+      "@id": APP_ID,
+      name: "LittleSteps — 雖然慢，但方向是對的",
+      operatingSystem: "iOS, Android",
+      applicationCategory: "EducationalApplication",
+      inLanguage: localeTag(locale),
+      description:
+        "為發展遲緩、臨界智能，或任何比同齡孩子學得慢的孩子打造的學習工具 — 一步一步累積數學的基礎。",
+      url: pageUrl(locale),
+      downloadUrl: appleStore(locale),
+      installUrl: appleStore(locale),
+      sameAs: [APPLE_US, PLAY],
+      image: OG_IMAGE,
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: currency(locale),
+      },
+      author: { "@id": ORG_ID },
+      publisher: { "@id": ORG_ID },
+    };
+  }
   return {
     "@type": "MobileApplication",
     "@id": APP_ID,
@@ -212,6 +274,21 @@ function appLd(locale: Locale): JsonLdNode {
 function videoLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
   const ja = locale === "ja";
+  const zh = locale === "zh";
+  if (zh) {
+    return {
+      "@type": "VideoObject",
+      "@id": VIDEO_ID,
+      name: "孩子用 LittleSteps 應用程式學習的樣子",
+      description:
+        "安靜的畫面與小小的反覆 — 孩子照自己的速度動手觸碰、確認的那些瞬間。",
+      thumbnailUrl: [`${SITE_URL}/figma/demo/poster.jpg`],
+      uploadDate: "2026-06-30",
+      contentUrl: `${SITE_URL}/video/landing-4.mp4`,
+      inLanguage: localeTag(locale),
+      publisher: { "@id": ORG_ID },
+    };
+  }
   return {
     "@type": "VideoObject",
     "@id": VIDEO_ID,
@@ -236,24 +313,30 @@ function videoLd(locale: Locale): JsonLdNode {
 function itemListLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
   const ja = locale === "ja";
+  const zh = locale === "zh";
   return {
     "@type": "ItemList",
     "@id": `${pageUrl(locale)}${locale === "ko" ? "/" : ""}#toollist`,
-    name: en
-      ? "LittleSteps learning tools"
-      : ja
-        ? "LittleSteps 学習ツール"
-        : "느린아이 시리즈 학습도구",
-    description: en
-      ? "Math and cognition tools for children with developmental delays, borderline intelligence, or learning difficulties."
-      : ja
-        ? "自分のペースで学ぶ子のための、算数・認知の学習ツール。"
-        : "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지 학습도구",
+    name: zh
+      ? "LittleSteps 學習工具"
+      : en
+        ? "LittleSteps learning tools"
+        : ja
+          ? "LittleSteps 学習ツール"
+          : "느린아이 시리즈 학습도구",
+    description: zh
+      ? "為照自己的速度學習的孩子打造的數學與認知學習工具。"
+      : en
+        ? "Math and cognition tools for children with developmental delays, borderline intelligence, or learning difficulties."
+        : ja
+          ? "自分のペースで学ぶ子のための、算数・認知の学習ツール。"
+          : "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지 학습도구",
     numberOfItems: APP_ORDER.length,
     itemListOrder: "https://schema.org/ItemListOrderAscending",
     itemListElement: APP_ORDER.map((slug, i) => {
       const bare = slug.replace(/^slowmath_/, "");
-      const desc = en ? undefined : ja ? JA_DESC[bare] : KO_DESC[bare];
+      const desc =
+        en || zh ? undefined : ja ? JA_DESC[bare] : KO_DESC[bare];
       return {
         "@type": "ListItem",
         position: i + 1,

@@ -18,6 +18,20 @@ const C = {
     b2Rest: "하고, 그 작은 성공이 독립의 자양분이 되도록 돕습니다.",
     b2Line2: "학부모뿐만 아니라 특수교사·인지치료사의 수업 보조 도구로도 활용됩니다.",
   },
+  zh: {
+    heading: "什麼是 LittleSteps？",
+    emLead: "一般的學習教材進行得太快，孩子跟不上 — ",
+    emStrong: "LittleSteps 就是從家長的這個煩惱開始的。",
+    emRest: "",
+    b1Lead: "LittleSteps 是為 ",
+    b1Strong:
+      "發展遲緩、臨界智能、學習較慢，或任何比同齡孩子學得慢的孩子",
+    b1Rest: " 打造的學習工具集，讓他們能自己掌握認知與數學的基礎。",
+    b2Lead: "透過充分的思考時間、階段式提示與語音引導，",
+    b2Strong: "讓孩子反覆體驗自己完成的經驗",
+    b2Rest: "，而那些小小的成功會成為獨立的養分。",
+    b2Line2: "不只是家長，特教老師與認知治療師也能當成課堂輔助工具使用。",
+  },
   en: {
     heading: "What is LittleSteps?",
     emLead: "Standard learning tools move so fast that children can't keep up — ",

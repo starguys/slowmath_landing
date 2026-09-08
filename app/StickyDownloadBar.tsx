@@ -6,6 +6,7 @@ import { type Locale } from "./_home/apps";
 const IOS_KR = "https://apps.apple.com/kr/app/id6763979294";
 const IOS_US = "https://apps.apple.com/us/app/id6763979294";
 const IOS_JP = "https://apps.apple.com/jp/app/id6763979294";
+const IOS_TW = "https://apps.apple.com/tw/app/id6763979294";
 const PLAY_URL =
   "https://play.google.com/store/apps/details?id=com.everydaysummers.slowkids";
 
@@ -16,18 +17,29 @@ export default function StickyDownloadBar({ locale = "ko" }: { locale?: Locale }
   const [visible, setVisible] = useState(false);
   const isKo = locale === "ko";
   const isJa = locale === "ja";
-  const iosHref = isKo ? IOS_KR : isJa ? IOS_JP : IOS_US;
+  const isZh = locale === "zh";
+  const iosHref = isKo ? IOS_KR : isZh ? IOS_TW : isJa ? IOS_JP : IOS_US;
   const appleAria = isKo
     ? "App Store에서 느린아이 다운로드"
-    : isJa
-      ? "App StoreでLittleStepsをダウンロード"
-      : "Download LittleSteps on the App Store";
+    : isZh
+      ? "在 App Store 下載 LittleSteps"
+      : isJa
+        ? "App StoreでLittleStepsをダウンロード"
+        : "Download LittleSteps on the App Store";
   const googleAria = isKo
     ? "Google Play에서 느린아이 다운로드"
-    : isJa
-      ? "Google PlayでLittleStepsを入手"
-      : "Get LittleSteps on Google Play";
-  const badgeLabel = isKo ? "무료 체험" : isJa ? "無料体験" : "Free trial";
+    : isZh
+      ? "在 Google Play 取得 LittleSteps"
+      : isJa
+        ? "Google PlayでLittleStepsを入手"
+        : "Get LittleSteps on Google Play";
+  const badgeLabel = isKo
+    ? "무료 체험"
+    : isZh
+      ? "免費體驗"
+      : isJa
+        ? "無料体験"
+        : "Free trial";
 
   useEffect(() => {
     const hero = document.getElementById("hero");

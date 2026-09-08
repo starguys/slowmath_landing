@@ -40,6 +40,35 @@ const C = {
       },
     ],
   },
+  zh: {
+    heading: "LittleSteps 學習工具不一樣的地方",
+    items: [
+      {
+        title: "分階段的難度",
+        desc: "從孩子現在的程度開始，累積小小的成功往上走",
+      },
+      {
+        title: "為反覆學習設計",
+        desc: "用多種方式重複同一個概念，記得更久、更深",
+      },
+      {
+        title: "充分的思考時間",
+        desc: "選答案前可以調整思考時間，減少衝動作答",
+      },
+      {
+        title: "支援語音引導",
+        desc: "還不會讀字的孩子，只靠聲音也能自己學習",
+      },
+      {
+        title: "顧及感官的設計",
+        desc: "沒有閃爍、沒有突如其來的聲音，做成安靜的畫面",
+      },
+      {
+        title: "一個畫面，一個活動",
+        desc: "一次只放一個活動，不分心、能專注",
+      },
+    ],
+  },
   en: {
     heading: "Why LittleSteps learning tools are different",
     items: [

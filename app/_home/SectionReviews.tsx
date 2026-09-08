@@ -59,6 +59,11 @@ const C = {
       } as Review,
     ] as (Review | null)[],
   },
+  zh: {
+    heading: "實際使用過的家長怎麼說",
+    empty: "敬請期待",
+    reviews: [null, null, null] as (Review | null)[],
+  },
   en: {
     heading: "What parents actually say",
     empty: "Coming soon",

@@ -1,8 +1,9 @@
 /**
  * Post-build: output: "export" + App Router는 단일 root layout만 가능하므로
- * 정적 빌드된 /en/*.html · /jp/*.html 파일들의 <html lang="ko">를 각 언어로 패치.
+ * 정적 빌드된 /en/*.html · /tw/*.html · /jp/*.html 파일들의 <html lang="ko">를
+ * 각 언어로 패치.
  *
- * Google이 EN·JA 페이지 SSR HTML의 lang 속성을 en/ja로 인식하도록 보장.
+ * Google이 EN·ZH·JA 페이지 SSR HTML의 lang 속성을 en/zh-Hant/ja로 인식하도록 보장.
  */
 import { promises as fs } from "node:fs";
 import path from "node:path";
@@ -16,6 +17,7 @@ const OUT_DIR = path.join(__dirname, "..", "out");
 //  - out/<prefix>/**/*.html   (/<prefix>/privacy 등 하위 라우트)
 const LOCALES = [
   { prefix: "en", lang: "en" },
+  { prefix: "tw", lang: "zh-Hant" },
   { prefix: "jp", lang: "ja" },
 ];
 

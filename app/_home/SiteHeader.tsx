@@ -2,6 +2,7 @@ import { type Locale } from "./apps";
 
 const APPLE_KR = "https://apps.apple.com/kr/app/id6763979294";
 const APPLE_US = "https://apps.apple.com/us/app/id6763979294";
+const APPLE_TW = "https://apps.apple.com/tw/app/id6763979294";
 const APPLE_JP = "https://apps.apple.com/jp/app/id6763979294";
 const GOOGLE_URL =
   "https://play.google.com/store/apps/details?id=com.everydaysummers.slowkids";
@@ -19,6 +20,14 @@ const C = {
     apple: APPLE_KR,
     appleAlt: "App Store에서 느린아이 다운로드",
     googleAlt: "Google Play에서 느린아이 다운로드",
+  },
+  zh: {
+    home: "/tw",
+    homeLabel: "LittleSteps 首頁",
+    wm: ["Little", "Steps", ""],
+    apple: APPLE_TW,
+    appleAlt: "在 App Store 下載 LittleSteps",
+    googleAlt: "在 Google Play 取得 LittleSteps",
   },
   en: {
     home: "/en",
