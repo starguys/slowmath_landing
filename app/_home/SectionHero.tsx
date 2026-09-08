@@ -68,7 +68,7 @@ const C: Record<Locale, HeroCopy> = {
   },
   ja: {
     h1: [
-      ["ゆっくりでも ", "正しい方向", "へ、"],
+      ["ゆっくりでも", "正しい方向", "へ"],
       ["", "一歩ずつ", "進んでいきます"],
     ],
     cardLines: [
@@ -103,7 +103,7 @@ export default function SectionHero({ locale = "ko" }: { locale?: Locale }) {
       <div className="mx-auto flex w-full max-w-[640px] flex-col items-center gap-[48px] px-2 py-[72px]">
         <h1
           id="hero-heading"
-          className="text-center font-bold tracking-[-0.6px] text-[#4a4035] text-[30px] leading-[42px]"
+          className="text-center font-bold tracking-[-0.6px] text-[#4a4035] text-[25px] leading-[35px] min-[360px]:text-[28px] min-[360px]:leading-[40px] min-[375px]:text-[30px] min-[375px]:leading-[42px]"
         >
           <span className="block">
             {t.h1[0][0]}
