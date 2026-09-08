@@ -81,9 +81,11 @@ export const APP_NAMES: Record<
 /** 전체 도구 그리드 노출 순서 (Figma 시안 순서 + verticalmul) */
 export const APP_ORDER: string[] = Object.keys(APP_NAMES);
 
-/** 한국어 학습 전용 앱 — 영어 랜딩 카탈로그에서 제외 */
+/** 한국어 특화 앱 — 영어 랜딩 카탈로그에서 제외
+ *  (한글 숫자·우리말 세기는 한국어 어휘 학습이라 영어 화자에게 부적절) */
 export const APPS_HIDDEN_IN_EN: ReadonlySet<string> = new Set([
   "slowmath_koreannum",
+  "slowmath_counting",
 ]);
 
 /** 한국어 특화 앱 — 번체 랜딩 카탈로그에서 제외 */
@@ -98,6 +100,14 @@ export const APPS_HIDDEN_IN_JA: ReadonlySet<string> = new Set([
   "slowmath_koreannum",
   "slowmath_counting",
 ]);
+
+/** 이 로케일의 카탈로그에서 감출 앱인지 */
+export function isAppHidden(slug: string, locale: Locale): boolean {
+  if (locale === "en") return APPS_HIDDEN_IN_EN.has(slug);
+  if (locale === "zh") return APPS_HIDDEN_IN_ZH.has(slug);
+  if (locale === "ja") return APPS_HIDDEN_IN_JA.has(slug);
+  return false;
+}
 
 export function appName(slug: string, locale: Locale) {
   return APP_NAMES[slug]?.[locale] ?? slug;
@@ -274,9 +284,7 @@ export function appsByCategory(locale: Locale = "ko"): { category: Category; slu
     category: key,
     slugs: APP_ORDER.filter((slug) => {
       if (APP_CATEGORY[slug] !== key) return false;
-      if (locale === "en" && APPS_HIDDEN_IN_EN.has(slug)) return false;
-      if (locale === "zh" && APPS_HIDDEN_IN_ZH.has(slug)) return false;
-      if (locale === "ja" && APPS_HIDDEN_IN_JA.has(slug)) return false;
+      if (isAppHidden(slug, locale)) return false;
       return true;
     }),
   }));

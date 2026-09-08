@@ -1,7 +1,13 @@
 // 페이지별(로케일별) 구조화 데이터(JSON-LD) 빌더.
 // output:"export" + 단일 root layout 이라 layout 에서 넣으면 /en·/jp 도 KO 데이터가 나가므로,
 // 각 랜딩 페이지(/·/en·/jp)가 자기 언어의 @graph 를 직접 렌더한다. (JsonLd 서버 컴포넌트)
-import { APP_NAMES, APP_ORDER, appHref, type Locale } from "../_home/apps";
+import {
+  APP_NAMES,
+  APP_ORDER,
+  appHref,
+  isAppHidden,
+  type Locale,
+} from "../_home/apps";
 
 const SITE_URL = "https://slowkids.net";
 const OG_IMAGE = `${SITE_URL}/og-image-mascot.png?v=20260901c`;
@@ -312,6 +318,9 @@ function itemListLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
   const ja = locale === "ja";
   const zh = locale === "zh";
+  // 카탈로그에서 감춘 한국어 특화 앱은 구조화 데이터에서도 빼야
+  // 페이지에 없는 항목이 검색 결과에 노출되지 않는다.
+  const shown = APP_ORDER.filter((slug) => !isAppHidden(slug, locale));
   return {
     "@type": "ItemList",
     "@id": `${pageUrl(locale)}${locale === "ko" ? "/" : ""}#toollist`,
@@ -329,9 +338,9 @@ function itemListLd(locale: Locale): JsonLdNode {
         : ja
           ? "自分のペースで学ぶ子のための、算数・認知の学習ツール。"
           : "발달 지연·경계선 지능·학습 장애 아동을 위한 수학·인지 학습도구",
-    numberOfItems: APP_ORDER.length,
+    numberOfItems: shown.length,
     itemListOrder: "https://schema.org/ItemListOrderAscending",
-    itemListElement: APP_ORDER.map((slug, i) => {
+    itemListElement: shown.map((slug, i) => {
       const bare = slug.replace(/^slowmath_/, "");
       const desc =
         en || zh ? undefined : ja ? JA_DESC[bare] : KO_DESC[bare];
