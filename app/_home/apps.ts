@@ -7,10 +7,10 @@ export function iconSrc(slug: string) {
   return `/figma/apps/${slug.replace(/^slowmath_/, "")}.svg`;
 }
 
-/** 앱 상세 링크. ko 외 로케일은 ?lang= 을 붙여 서브앱 언어를 지정.
- *  서브앱은 아직 중국어가 번체 하나뿐이라 간체 랜딩도 ?lang=zh 로 보낸다. */
+/** 앱 상세 링크. ko 외 로케일은 ?lang= 을 붙여 서브앱 언어를 지정. */
 export function appHref(slug: string, locale: Locale) {
-  if (locale === "zh" || locale === "zhcn") return `/${slug}/?lang=zh`;
+  if (locale === "zhcn") return `/${slug}/?lang=zhcn`;
+  if (locale === "zh") return `/${slug}/?lang=zh`;
   if (locale === "en") return `/${slug}/?lang=en`;
   if (locale === "ja") return `/${slug}/?lang=ja`;
   return `/${slug}/`;
