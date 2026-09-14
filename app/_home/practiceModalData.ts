@@ -458,6 +458,43 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "身のまわりの物をかぞえる練習で、数の感覚を自然に身につけられます。考える時間を調整することで衝動的な回答を防ぎ、ゆっくり考える習慣を育てます。",
     },
   },
+  slowmath_bundle: {
+    ko: {
+      category: "수 개념",
+      subtitle: "숫자가 ‘양’으로 보이기 시작할 때",
+      name: "묶음 세기",
+      short: "10개씩 묶인 구슬을 보고 묶음·낱개·전체 수를 세어요",
+      long: "10개씩 꿴 구슬 줄과 낱개를 보고 묶음이 몇 개인지, 낱개가 몇 개인지, 모두 몇 개인지 차례로 답해요. 양쪽을 견주어 더 큰 수·작은 수를 고르는 방법도 있어, 자리값의 감각이 자연스럽게 자랍니다.",
+    },
+    zh: {
+      category: "數的概念",
+      subtitle: "數字開始看起來像「量」的時候",
+      name: "十個一數",
+      short: "看十顆一束的珠子，數出束、單顆和總數",
+      long: "看十顆串成一條的珠子和單顆的珠子，依序回答有幾束、單顆有幾個、一共有幾個。還可以比較兩邊，選出比較大或比較小的那一個，位值的感覺自然就長出來了。",
+    },
+    zhcn: {
+      category: "数的概念",
+      subtitle: "数字开始看起来像“量”的时候",
+      name: "十个一数",
+      short: "看十颗一束的珠子，数出束、单颗和总数",
+      long: "看十颗串成一条的珠子和单颗的珠子，依序回答有几束、单颗有几个、一共有几个。还可以比较两边，选出比较大或比较小的那一个，位值的感觉自然就长出来了。",
+    },
+    en: {
+      category: "Number Sense",
+      subtitle: "When numbers start to look like 'amounts'",
+      name: "Count by tens",
+      short: "See beads strung ten to a row and count the tens, the ones, and the total",
+      long: "Looking at rows of ten beads plus loose ones, your child answers in order: how many tens, how many ones, how many altogether. Two more modes put a board on each side to pick the bigger or smaller number, so a feel for place value grows naturally.",
+    },
+    ja: {
+      category: "数の概念",
+      subtitle: "数字が「量」に見え始めるとき",
+      name: "10ずつ かぞえる",
+      short: "10こずつ たばねた ビーズを見て、たば・ばら・ぜんぶの数をかぞえます",
+      long: "ひもに10こずつ通したビーズと ばらのビーズを見て、たばはいくつ、ばらはいくつ、ぜんぶでいくつ、と順番に答えます。左右を見くらべて大きいほう・小さいほうをえらぶ方法もあり、位の感覚が自然に育ちます。",
+    },
+  },
   slowmath_counting: {
     ko: {
       category: "수 개념",
