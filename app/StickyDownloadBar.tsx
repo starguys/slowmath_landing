@@ -18,28 +18,36 @@ export default function StickyDownloadBar({ locale = "ko" }: { locale?: Locale }
   const isKo = locale === "ko";
   const isJa = locale === "ja";
   const isZh = locale === "zh";
+  // 간체(/cn) 는 본토·싱가포르·말레이시아가 섞여 있어 글로벌(US) 스토어로 보낸다
+  const isZhcn = locale === "zhcn";
   const iosHref = isKo ? IOS_KR : isZh ? IOS_TW : isJa ? IOS_JP : IOS_US;
   const appleAria = isKo
     ? "App Store에서 느린아이 다운로드"
     : isZh
       ? "在 App Store 下載 LittleSteps"
-      : isJa
-        ? "App StoreでLittleStepsをダウンロード"
-        : "Download LittleSteps on the App Store";
+      : isZhcn
+        ? "在 App Store 下载 LittleSteps"
+        : isJa
+          ? "App StoreでLittleStepsをダウンロード"
+          : "Download LittleSteps on the App Store";
   const googleAria = isKo
     ? "Google Play에서 느린아이 다운로드"
     : isZh
       ? "在 Google Play 取得 LittleSteps"
-      : isJa
-        ? "Google PlayでLittleStepsを入手"
-        : "Get LittleSteps on Google Play";
+      : isZhcn
+        ? "在 Google Play 获取 LittleSteps"
+        : isJa
+          ? "Google PlayでLittleStepsを入手"
+          : "Get LittleSteps on Google Play";
   const badgeLabel = isKo
     ? "무료 체험"
     : isZh
       ? "免費體驗"
-      : isJa
-        ? "無料体験"
-        : "Free trial";
+      : isZhcn
+        ? "免费体验"
+        : isJa
+          ? "無料体験"
+          : "Free trial";
 
   useEffect(() => {
     const hero = document.getElementById("hero");

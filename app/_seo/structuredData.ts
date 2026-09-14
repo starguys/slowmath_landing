@@ -109,7 +109,18 @@ const JA_DESC: Record<string, string> = {
 
 type JsonLdNode = Record<string, unknown>;
 
+/** 번체(/tw)·간체(/cn) 공통 분기 */
+function isZh(locale: Locale): boolean {
+  return locale === "zh" || locale === "zhcn";
+}
+
+/** 중국어 문안 고르기 — 번체가 기본, 간체 페이지에서만 간체 문안 */
+function zhT(locale: Locale, hant: string, hans: string): string {
+  return locale === "zhcn" ? hans : hant;
+}
+
 function localeTag(locale: Locale): string {
+  if (locale === "zhcn") return "zh-Hans-CN";
   if (locale === "zh") return "zh-Hant-TW";
   if (locale === "en") return "en-US";
   if (locale === "ja") return "ja-JP";
@@ -117,6 +128,7 @@ function localeTag(locale: Locale): string {
 }
 
 function currency(locale: Locale): string {
+  if (locale === "zhcn") return "CNY";
   if (locale === "zh") return "TWD";
   if (locale === "en") return "USD";
   if (locale === "ja") return "JPY";
@@ -124,6 +136,7 @@ function currency(locale: Locale): string {
 }
 
 function appleStore(locale: Locale): string {
+  if (locale === "zhcn") return APPLE_US;
   if (locale === "zh") return APPLE_TW;
   if (locale === "en") return APPLE_US;
   if (locale === "ja") return APPLE_JP;
@@ -131,6 +144,7 @@ function appleStore(locale: Locale): string {
 }
 
 function pageUrl(locale: Locale): string {
+  if (locale === "zhcn") return `${SITE_URL}/cn`;
   if (locale === "zh") return `${SITE_URL}/tw`;
   if (locale === "en") return `${SITE_URL}/en`;
   if (locale === "ja") return `${SITE_URL}/jp`;
@@ -140,7 +154,7 @@ function pageUrl(locale: Locale): string {
 function organizationLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
   const ja = locale === "ja";
-  const zh = locale === "zh";
+  const zh = isZh(locale);
   if (zh) {
     return {
       "@type": "Organization",
@@ -155,7 +169,7 @@ function organizationLd(locale: Locale): JsonLdNode {
         height: 256,
       },
       description:
-        "為發展遲緩、臨界智能，或任何比同齡孩子學得慢的孩子打造的學習工具 — 讓他們照自己的速度打好認知與數學的基礎。",
+        zhT(locale, "為發展遲緩、臨界智能，或任何比同齡孩子學得慢的孩子打造的學習工具 — 讓他們照自己的速度打好認知與數學的基礎。", "为发育迟缓、边缘智力，或任何比同龄孩子学得慢的孩子打造的学习工具 — 让他们照自己的速度打好认知与数学的基础。"),
       sameAs: [APPLE_US, PLAY],
     };
   }
@@ -187,7 +201,7 @@ function organizationLd(locale: Locale): JsonLdNode {
 function websiteLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
   const ja = locale === "ja";
-  const zh = locale === "zh";
+  const zh = isZh(locale);
   if (zh) {
     return {
       "@type": "WebSite",
@@ -196,7 +210,7 @@ function websiteLd(locale: Locale): JsonLdNode {
       alternateName: "느린아이",
       url: pageUrl(locale),
       inLanguage: localeTag(locale),
-      description: "為照自己的速度學習的孩子打造的數學、認知與小肌肉學習工具。",
+      description: zhT(locale, "為照自己的速度學習的孩子打造的數學、認知與小肌肉學習工具。", "为照自己的速度学习的孩子打造的数学、认知与精细动作学习工具。"),
       publisher: { "@id": ORG_ID },
     };
   }
@@ -219,17 +233,17 @@ function websiteLd(locale: Locale): JsonLdNode {
 function appLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
   const ja = locale === "ja";
-  const zh = locale === "zh";
+  const zh = isZh(locale);
   if (zh) {
     return {
       "@type": "MobileApplication",
       "@id": APP_ID,
-      name: "LittleSteps — 雖然慢，但方向是對的",
+      name: zhT(locale, "LittleSteps — 雖然慢，但方向是對的", "LittleSteps — 虽然慢，但方向是对的"),
       operatingSystem: "iOS, Android",
       applicationCategory: "EducationalApplication",
       inLanguage: localeTag(locale),
       description:
-        "為發展遲緩、臨界智能，或任何比同齡孩子學得慢的孩子打造的學習工具 — 一步一步累積數學的基礎。",
+        zhT(locale, "為發展遲緩、臨界智能，或任何比同齡孩子學得慢的孩子打造的學習工具 — 一步一步累積數學的基礎。", "为发育迟缓、边缘智力，或任何比同龄孩子学得慢的孩子打造的学习工具 — 一步一步累积数学的基础。"),
       url: pageUrl(locale),
       downloadUrl: appleStore(locale),
       installUrl: appleStore(locale),
@@ -278,14 +292,14 @@ function appLd(locale: Locale): JsonLdNode {
 function videoLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
   const ja = locale === "ja";
-  const zh = locale === "zh";
+  const zh = isZh(locale);
   if (zh) {
     return {
       "@type": "VideoObject",
       "@id": VIDEO_ID,
-      name: "孩子用 LittleSteps 應用程式學習的樣子",
+      name: zhT(locale, "孩子用 LittleSteps 應用程式學習的樣子", "孩子用 LittleSteps 应用程序学习的样子"),
       description:
-        "安靜的畫面與小小的反覆 — 孩子照自己的速度動手觸碰、確認的那些瞬間。",
+        zhT(locale, "安靜的畫面與小小的反覆 — 孩子照自己的速度動手觸碰、確認的那些瞬間。", "安静的画面与小小的反复 — 孩子照自己的速度动手触碰、确认的那些瞬间。"),
       thumbnailUrl: [`${SITE_URL}/figma/demo/poster.jpg`],
       uploadDate: "2026-06-30",
       contentUrl: `${SITE_URL}/video/landing-4.mp4`,
@@ -317,7 +331,7 @@ function videoLd(locale: Locale): JsonLdNode {
 function itemListLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
   const ja = locale === "ja";
-  const zh = locale === "zh";
+  const zh = isZh(locale);
   // 카탈로그에서 감춘 한국어 특화 앱은 구조화 데이터에서도 빼야
   // 페이지에 없는 항목이 검색 결과에 노출되지 않는다.
   const shown = APP_ORDER.filter((slug) => !isAppHidden(slug, locale));
@@ -325,14 +339,14 @@ function itemListLd(locale: Locale): JsonLdNode {
     "@type": "ItemList",
     "@id": `${pageUrl(locale)}${locale === "ko" ? "/" : ""}#toollist`,
     name: zh
-      ? "LittleSteps 學習工具"
+      ? zhT(locale, "LittleSteps 學習工具", "LittleSteps 学习工具")
       : en
         ? "LittleSteps learning tools"
         : ja
           ? "LittleSteps 学習ツール"
           : "느린아이 시리즈 학습도구",
     description: zh
-      ? "為照自己的速度學習的孩子打造的數學與認知學習工具。"
+      ? zhT(locale, "為照自己的速度學習的孩子打造的數學與認知學習工具。", "为照自己的速度学习的孩子打造的数学与认知学习工具。")
       : en
         ? "Math and cognition tools for children with developmental delays, borderline intelligence, or learning difficulties."
         : ja

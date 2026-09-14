@@ -112,6 +112,20 @@ const C: Record<Locale, DemoCopy> = {
       [[{ t: "孩子自己", a: true }, { t: " 動手觸碰" }], [{ t: "確認的那些瞬間" }]],
     ],
   },
+  zhcn: {
+    h1: "与其多说，",
+    h2: "不如直接看给您！",
+    subA: "慢慢的一步。不是华丽的反应，",
+    subB: "而是孩子 ",
+    subStrong: "照自己的速度往前走的画面",
+    subC: "。",
+    videoLabel: "孩子用 LittleSteps 学习的样子",
+    points: [
+      [[{ t: "安静的画面，" }], [{ t: "充分的 " }, { t: "思考时间", a: true }]],
+      [[{ t: "错了再来，小小地反复" }], [{ t: "累积起来的自信", a: true }]],
+      [[{ t: "孩子自己", a: true }, { t: " 动手触碰" }], [{ t: "确认的那些瞬间" }]],
+    ],
+  },
   en: {
     h1: "Before words,",
     h2: "let us show you!",

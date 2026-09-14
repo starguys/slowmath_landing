@@ -64,6 +64,11 @@ const C = {
     empty: "敬請期待",
     reviews: [null, null, null] as (Review | null)[],
   },
+  zhcn: {
+    heading: "实际使用过的家长怎么说",
+    empty: "敬请期待",
+    reviews: [null, null, null] as (Review | null)[],
+  },
   en: {
     heading: "What parents actually say",
     empty: "Coming soon",

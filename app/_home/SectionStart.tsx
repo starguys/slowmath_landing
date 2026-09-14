@@ -61,6 +61,32 @@ const C = {
       },
     ],
   },
+  zhcn: {
+    heading: "要从哪里开始呢？",
+    subtitle: "马上找到适合孩子现在程度的工具",
+    tiers: [
+      {
+        step: "第 1 阶段",
+        titleLines: ["还不认得数字和颜色"],
+        subLines: ["数感的起点！", "从数字的名称、颜色的名称、", "用眼睛数开始。"],
+      },
+      {
+        step: "第 2 阶段",
+        titleLines: ["握笔和书写很吃力"],
+        subLines: ["写字之前一定需要的", "手部控制与手眼协调，", "一步步培养起来。"],
+      },
+      {
+        step: "第 3 阶段",
+        titleLines: ["比较与找规律", "很困难"],
+        subLines: ["用大小比较、位置语言、", "重复的规律，打好", "数学思考的基础。"],
+      },
+      {
+        step: "第 4 阶段",
+        titleLines: ["认得数字，", "但加法很难"],
+        subLines: ["通过连结数与量、集合与", "分开的经验，累积加法的", "概念。"],
+      },
+    ],
+  },
   en: {
     heading: "Where to start?",
     subtitle: "Find the right tool for where your child is right now",

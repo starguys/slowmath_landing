@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const homeLangs = {
     ko: BASE_URL,
     "zh-Hant": `${BASE_URL}/tw`,
+    "zh-Hans": `${BASE_URL}/cn`,
     en: `${BASE_URL}/en`,
     ja: `${BASE_URL}/jp`,
     "x-default": BASE_URL,
@@ -38,6 +39,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/tw`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: homeLangs },
+    },
+    {
+      url: `${BASE_URL}/cn`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.9,

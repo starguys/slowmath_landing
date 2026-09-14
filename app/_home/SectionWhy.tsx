@@ -69,6 +69,35 @@ const C = {
       },
     ],
   },
+  zhcn: {
+    heading: "LittleSteps 学习工具不一样的地方",
+    items: [
+      {
+        title: "分阶段的难度",
+        desc: "从孩子现在的程度开始，累积小小的成功往上走",
+      },
+      {
+        title: "为反复学习设计",
+        desc: "用多种方式重复同一个概念，记得更久、更深",
+      },
+      {
+        title: "充分的思考时间",
+        desc: "选答案前可以调整思考时间，减少冲动作答",
+      },
+      {
+        title: "支持语音引导",
+        desc: "还不会读字的孩子，只靠声音也能自己学习",
+      },
+      {
+        title: "顾及感官的设计",
+        desc: "没有闪烁、没有突如其来的声音，做成安静的画面",
+      },
+      {
+        title: "一个画面，一个活动",
+        desc: "一次只放一个活动，不分心、能专注",
+      },
+    ],
+  },
   en: {
     heading: "Why LittleSteps learning tools are different",
     items: [

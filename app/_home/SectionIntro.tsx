@@ -32,6 +32,20 @@ const C = {
     b2Rest: "，而那些小小的成功會成為獨立的養分。",
     b2Line2: "不只是家長，特教老師與認知治療師也能當成課堂輔助工具使用。",
   },
+  zhcn: {
+    heading: "什么是 LittleSteps？",
+    emLead: "一般的学习教材进行得太快，孩子跟不上 — ",
+    emStrong: "LittleSteps 就是从家长的这个烦恼开始的。",
+    emRest: "",
+    b1Lead: "LittleSteps 是为 ",
+    b1Strong:
+      "发育迟缓、边缘智力、学习较慢，或任何比同龄孩子学得慢的孩子",
+    b1Rest: " 打造的学习工具集，让他们能自己掌握认知与数学的基础。",
+    b2Lead: "通过充分的思考时间、阶段式提示与语音引导，",
+    b2Strong: "让孩子反复体验自己完成的经验",
+    b2Rest: "，而那些小小的成功会成为独立的养分。",
+    b2Line2: "不只是家长，特教老师与认知治疗师也能当成课堂辅助工具使用。",
+  },
   en: {
     heading: "What is LittleSteps?",
     emLead: "Standard learning tools move so fast that children can't keep up — ",

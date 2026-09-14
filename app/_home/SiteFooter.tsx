@@ -4,7 +4,7 @@ import LangSwitcher from "./LangSwitcher";
 /**
  * 다크 푸터 (Figma 124:5371, PC=MO 동일). 단일 컬럼 중앙정렬(콘텐츠 640px).
  * 브랜드 + 태그라인 → 문의(mailto) → 약관/개인정보 → 구분선 → 해시태그 + KR/EN 토글.
- * ko/en 분기(텍스트·법적 링크 경로·토글 활성 상태).
+ * ko/en 분기(텍스트·법적 링크 경로·토글 활성 상태). 중국어는 번체(zh)·간체(zhcn) 둘.
  */
 const C = {
   ko: {
@@ -42,6 +42,25 @@ const C = {
     honeypotUrl: "honeypot.slowkids.net",
     hashtags1: "#發展遲緩 #臨界智能 #學習較慢的孩子 #特殊教育",
     hashtags2: "#ADHD #自閉症光譜 #在家自學 #認知訓練",
+  },
+  zhcn: {
+    wm: ["Little", "Steps"],
+    tagline1:
+      "为发育迟缓、边缘智力，或任何比同龄孩子学得慢的孩子打造的",
+    tagline2: "简单却有力的学习工具",
+    contact: "合作 · 意见反馈",
+    terms: "使用条款",
+    privacy: "隐私权政策",
+    // 간체 법적 고지는 아직 없다 — 영어 페이지로 보낸다
+    termsHref: "/en/terms",
+    privacyHref: "/en/privacy",
+    related: "相关服务",
+    typingLabel: "LittleSteps 打字练习",
+    typingUrl: "typing.slowkids.net",
+    honeypotLabel: "LittleSteps 福利查询",
+    honeypotUrl: "honeypot.slowkids.net",
+    hashtags1: "#发育迟缓 #边缘智力 #学习较慢的孩子 #特殊教育",
+    hashtags2: "#ADHD #自闭症谱系 #在家自学 #认知训练",
   },
   en: {
     wm: ["Little", "Steps"],

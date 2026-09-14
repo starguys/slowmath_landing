@@ -1,81 +1,83 @@
-// 앱 카탈로그 공유 데이터 — SectionApps / SectionStart 공용 (ko/en/ja 이름, 아이콘, 링크)
-export type Locale = "ko" | "zh" | "en" | "ja";
+// 앱 카탈로그 공유 데이터 — SectionApps / SectionStart 공용 (ko/zh/zhcn/en/ja 이름, 아이콘, 링크)
+// zh = 번체(/tw), zhcn = 간체(/cn)
+export type Locale = "ko" | "zh" | "zhcn" | "en" | "ja";
 
 /** slug(slowmath_ 접두어 제거) → /figma/apps/<key>.svg (Figma 전용 일러스트 아이콘) */
 export function iconSrc(slug: string) {
   return `/figma/apps/${slug.replace(/^slowmath_/, "")}.svg`;
 }
 
-/** 앱 상세 링크. ko 외 로케일은 ?lang= 을 붙여 서브앱 언어를 지정. */
+/** 앱 상세 링크. ko 외 로케일은 ?lang= 을 붙여 서브앱 언어를 지정.
+ *  서브앱은 아직 중국어가 번체 하나뿐이라 간체 랜딩도 ?lang=zh 로 보낸다. */
 export function appHref(slug: string, locale: Locale) {
-  if (locale === "zh") return `/${slug}/?lang=zh`;
+  if (locale === "zh" || locale === "zhcn") return `/${slug}/?lang=zh`;
   if (locale === "en") return `/${slug}/?lang=en`;
   if (locale === "ja") return `/${slug}/?lang=ja`;
   return `/${slug}/`;
 }
 
-/** 학습도구의 한/번체/영/일 이름
+/** 학습도구의 한/번체/간체/영/일 이름
  *  (Figma 124:5255 시안 라벨 + slowmath_all/shell/apps.js 의 nameJa·nameZh 기준) */
 export const APP_NAMES: Record<
   string,
-  { ko: string; zh: string; en: string; ja: string }
+  { ko: string; zh: string; zhcn: string; en: string; ja: string }
 > = {
   // 기초 인지
-  slowmath_color: { ko: "색깔 익히기", zh: "認識顏色", en: "Color recognition", ja: "色を覚える" },
-  slowmath_shape: { ko: "도형 익히기", zh: "認識形狀", en: "Shapes", ja: "形を覚える" },
-  slowmath_linedraw: { ko: "선 긋기", zh: "畫線", en: "Line drawing", ja: "線を引く" },
-  slowmath_shapedraw: { ko: "도형 그리기", zh: "畫圖形", en: "Shape drawing", ja: "図形を描く" },
-  slowmath_dot2dot: { ko: "점선 따라 그리기", zh: "連點成線", en: "Dot to dot", ja: "点をつなぐ" },
-  slowmath_colorcopy: { ko: "똑같이 맞추기", zh: "一模一樣", en: "Pattern copy", ja: "そっくり" },
-  slowmath_oppositematch: { ko: "반대로 맞추기", zh: "相反上色", en: "Opposite match", ja: "反対ぬり" },
-  slowmath_pattern: { ko: "패턴 연습", zh: "規律", en: "Pattern practice", ja: "パターン" },
-  slowmath_sameshape: { ko: "같은 모양 찾기", zh: "找相同形狀", en: "Same shape finder", ja: "同じ形さがし" },
+  slowmath_color: { ko: "색깔 익히기", zh: "認識顏色", zhcn: "认识颜色", en: "Color recognition", ja: "色を覚える" },
+  slowmath_shape: { ko: "도형 익히기", zh: "認識形狀", zhcn: "认识形状", en: "Shapes", ja: "形を覚える" },
+  slowmath_linedraw: { ko: "선 긋기", zh: "畫線", zhcn: "画线", en: "Line drawing", ja: "線を引く" },
+  slowmath_shapedraw: { ko: "도형 그리기", zh: "畫圖形", zhcn: "画图形", en: "Shape drawing", ja: "図形を描く" },
+  slowmath_dot2dot: { ko: "점선 따라 그리기", zh: "連點成線", zhcn: "连点成线", en: "Dot to dot", ja: "点をつなぐ" },
+  slowmath_colorcopy: { ko: "똑같이 맞추기", zh: "一模一樣", zhcn: "一模一样", en: "Pattern copy", ja: "そっくり" },
+  slowmath_oppositematch: { ko: "반대로 맞추기", zh: "相反上色", zhcn: "相反上色", en: "Opposite match", ja: "反対ぬり" },
+  slowmath_pattern: { ko: "패턴 연습", zh: "規律", zhcn: "规律", en: "Pattern practice", ja: "パターン" },
+  slowmath_sameshape: { ko: "같은 모양 찾기", zh: "找相同形狀", zhcn: "找相同形状", en: "Same shape finder", ja: "同じ形さがし" },
   // 시계·달력·화폐
-  slowmath_clock: { ko: "시계 보기", zh: "看時鐘", en: "Reading the clock", ja: "時計の読み方" },
-  slowmath_calendar: { ko: "달력 보기", zh: "看日曆練習", en: "Reading the calendar", ja: "カレンダーの練習" },
-  slowmath_money: { ko: "동전과 지폐", zh: "硬幣與紙鈔", en: "Coins & bills", ja: "硬貨と紙幣" },
-  slowmath_moneycalc: { ko: "돈 계산하기", zh: "付出金額", en: "Pay the price", ja: "金額を払う" },
-  slowmath_changecalc: { ko: "거스름돈 계산하기", zh: "計算找零", en: "Counting change", ja: "おつりの計算" },
+  slowmath_clock: { ko: "시계 보기", zh: "看時鐘", zhcn: "看时钟", en: "Reading the clock", ja: "時計の読み方" },
+  slowmath_calendar: { ko: "달력 보기", zh: "看日曆練習", zhcn: "看日历练习", en: "Reading the calendar", ja: "カレンダーの練習" },
+  slowmath_money: { ko: "동전과 지폐", zh: "硬幣與紙鈔", zhcn: "硬币与纸币", en: "Coins & bills", ja: "硬貨と紙幣" },
+  slowmath_moneycalc: { ko: "돈 계산하기", zh: "付出金額", zhcn: "付出金额", en: "Pay the price", ja: "金額を払う" },
+  slowmath_changecalc: { ko: "거스름돈 계산하기", zh: "計算找零", zhcn: "计算找零", en: "Counting change", ja: "おつりの計算" },
   // 수 개념
-  slowmath_number: { ko: "숫자 익히기", zh: "認識數字", en: "Numbers", ja: "数字を覚える" },
-  slowmath_numberdraw: { ko: "숫자 쓰기", zh: "寫數字", en: "Writing numbers", ja: "数字を書く" },
-  slowmath_koreannum: { ko: "한글 숫자", zh: "韓文數字", en: "Korean numbers", ja: "ハングル数字" },
-  slowmath_dice: { ko: "세기", zh: "數一數", en: "Counting", ja: "かぞえる" },
-  slowmath_counting: { ko: "우리말 세기", zh: "韓語數數", en: "Korean counting", ja: "韓国語の数え方" },
-  slowmath_matching: { ko: "숫자 매칭", zh: "數字配對", en: "Number matching", ja: "数のマッチング" },
-  slowmath_fraction: { ko: "분수 익히기", zh: "認識分數", en: "Fractions", ja: "分数を覚える" },
+  slowmath_number: { ko: "숫자 익히기", zh: "認識數字", zhcn: "认识数字", en: "Numbers", ja: "数字を覚える" },
+  slowmath_numberdraw: { ko: "숫자 쓰기", zh: "寫數字", zhcn: "写数字", en: "Writing numbers", ja: "数字を書く" },
+  slowmath_koreannum: { ko: "한글 숫자", zh: "韓文數字", zhcn: "韩文数字", en: "Korean numbers", ja: "ハングル数字" },
+  slowmath_dice: { ko: "세기", zh: "數一數", zhcn: "数一数", en: "Counting", ja: "かぞえる" },
+  slowmath_counting: { ko: "우리말 세기", zh: "韓語數數", zhcn: "韩语数数", en: "Korean counting", ja: "韓国語の数え方" },
+  slowmath_matching: { ko: "숫자 매칭", zh: "數字配對", zhcn: "数字配对", en: "Number matching", ja: "数のマッチング" },
+  slowmath_fraction: { ko: "분수 익히기", zh: "認識分數", zhcn: "认识分数", en: "Fractions", ja: "分数を覚える" },
   // 수 관계
-  slowmath_comparing: { ko: "비교하기 기초 1", zh: "比較 1", en: "Compare basics 1", ja: "くらべる 1" },
-  slowmath_comparing2: { ko: "비교하기 기초 2", zh: "比較 2", en: "Compare basics 2", ja: "くらべる 2" },
-  slowmath_compare: { ko: "수의 크기", zh: "數的大小", en: "Number size", ja: "数の大小" },
-  slowmath_oddeven: { ko: "홀수 짝수 익히기", zh: "奇數與偶數", en: "Odd & Even", ja: "奇数と偶数" },
-  slowmath_gap: { ko: "수의 간격", zh: "數的間隔", en: "Number gap", ja: "数の間隔" },
-  slowmath_gap2: { ko: "수의 간격 연습", zh: "數的間隔 練習", en: "Number gap practice", ja: "数の間隔 練習" },
-  slowmath_fractioncompare: { ko: "분수의 크기", zh: "分數的大小", en: "Compare fractions", ja: "分数の大小" },
+  slowmath_comparing: { ko: "비교하기 기초 1", zh: "比較 1", zhcn: "比较 1", en: "Compare basics 1", ja: "くらべる 1" },
+  slowmath_comparing2: { ko: "비교하기 기초 2", zh: "比較 2", zhcn: "比较 2", en: "Compare basics 2", ja: "くらべる 2" },
+  slowmath_compare: { ko: "수의 크기", zh: "數的大小", zhcn: "数的大小", en: "Number size", ja: "数の大小" },
+  slowmath_oddeven: { ko: "홀수 짝수 익히기", zh: "奇數與偶數", zhcn: "奇数与偶数", en: "Odd & Even", ja: "奇数と偶数" },
+  slowmath_gap: { ko: "수의 간격", zh: "數的間隔", zhcn: "数的间隔", en: "Number gap", ja: "数の間隔" },
+  slowmath_gap2: { ko: "수의 간격 연습", zh: "數的間隔 練習", zhcn: "数的间隔 练习", en: "Number gap practice", ja: "数の間隔 練習" },
+  slowmath_fractioncompare: { ko: "분수의 크기", zh: "分數的大小", zhcn: "分数的大小", en: "Compare fractions", ja: "分数の大小" },
   // 덧셈 전 개념
-  slowmath_combining: { ko: "모으기 연습", zh: "集合", en: "Combining numbers", ja: "あつめる" },
-  slowmath_splitting: { ko: "가르기 연습", zh: "分開", en: "Splitting numbers", ja: "わける" },
-  slowmath_complement: { ko: "보수 연습", zh: "湊十", en: "Pairs to 10", ja: "10の組" },
+  slowmath_combining: { ko: "모으기 연습", zh: "集合", zhcn: "集合", en: "Combining numbers", ja: "あつめる" },
+  slowmath_splitting: { ko: "가르기 연습", zh: "分開", zhcn: "分开", en: "Splitting numbers", ja: "わける" },
+  slowmath_complement: { ko: "보수 연습", zh: "湊十", zhcn: "凑十", en: "Pairs to 10", ja: "10の組" },
   // 덧셈
-  slowmath_plusone: { ko: "더하기 1", zh: "+1", en: "Plus one (+1)", ja: "+1" },
-  slowmath_plustwo: { ko: "더하기 2", zh: "+2", en: "Plus two (+2)", ja: "+2" },
-  slowmath_plusthree: { ko: "더하기 3", zh: "+3", en: "Plus three (+3)", ja: "+3" },
-  slowmath_easy: { ko: "한 자리 덧셈", zh: "一位數加法", en: "1-digit addition", ja: "1けた たしざん" },
-  slowmath_circle: { ko: "한 자리 덧셈 연습", zh: "加法練習", en: "1-digit addition practice", ja: "たしざん練習" },
-  slowmath_carry: { ko: "받아올림 연습", zh: "進位", en: "Carrying practice", ja: "くりあがり" },
-  slowmath_verticaladd: { ko: "세로 덧셈", zh: "直式加法", en: "Vertical addition", ja: "筆算 たしざん" },
+  slowmath_plusone: { ko: "더하기 1", zh: "+1", zhcn: "+1", en: "Plus one (+1)", ja: "+1" },
+  slowmath_plustwo: { ko: "더하기 2", zh: "+2", zhcn: "+2", en: "Plus two (+2)", ja: "+2" },
+  slowmath_plusthree: { ko: "더하기 3", zh: "+3", zhcn: "+3", en: "Plus three (+3)", ja: "+3" },
+  slowmath_easy: { ko: "한 자리 덧셈", zh: "一位數加法", zhcn: "一位数加法", en: "1-digit addition", ja: "1けた たしざん" },
+  slowmath_circle: { ko: "한 자리 덧셈 연습", zh: "加法練習", zhcn: "加法练习", en: "1-digit addition practice", ja: "たしざん練習" },
+  slowmath_carry: { ko: "받아올림 연습", zh: "進位", zhcn: "进位", en: "Carrying practice", ja: "くりあがり" },
+  slowmath_verticaladd: { ko: "세로 덧셈", zh: "直式加法", zhcn: "竖式加法", en: "Vertical addition", ja: "筆算 たしざん" },
   // 뺄셈
-  slowmath_minusone: { ko: "빼기 1", zh: "−1", en: "Minus one (−1)", ja: "−1" },
-  slowmath_minustwo: { ko: "빼기 2", zh: "−2", en: "Minus two (−2)", ja: "−2" },
-  slowmath_minusthree: { ko: "빼기 3", zh: "−3", en: "Minus three (−3)", ja: "−3" },
-  slowmath_easysub: { ko: "한 자리 뺄셈", zh: "一位數減法", en: "1-digit subtraction", ja: "1けた ひきざん" },
-  slowmath_subtract: { ko: "한 자리 뺄셈 연습", zh: "減法練習", en: "1-digit subtraction practice", ja: "ひきざん練習" },
-  slowmath_borrow: { ko: "받아내림 연습", zh: "退位", en: "Borrowing practice", ja: "くりさがり" },
-  slowmath_verticalsub: { ko: "세로 뺄셈", zh: "直式減法", en: "Vertical subtraction", ja: "筆算 ひきざん" },
+  slowmath_minusone: { ko: "빼기 1", zh: "−1", zhcn: "−1", en: "Minus one (−1)", ja: "−1" },
+  slowmath_minustwo: { ko: "빼기 2", zh: "−2", zhcn: "−2", en: "Minus two (−2)", ja: "−2" },
+  slowmath_minusthree: { ko: "빼기 3", zh: "−3", zhcn: "−3", en: "Minus three (−3)", ja: "−3" },
+  slowmath_easysub: { ko: "한 자리 뺄셈", zh: "一位數減法", zhcn: "一位数减法", en: "1-digit subtraction", ja: "1けた ひきざん" },
+  slowmath_subtract: { ko: "한 자리 뺄셈 연습", zh: "減法練習", zhcn: "减法练习", en: "1-digit subtraction practice", ja: "ひきざん練習" },
+  slowmath_borrow: { ko: "받아내림 연습", zh: "退位", zhcn: "退位", en: "Borrowing practice", ja: "くりさがり" },
+  slowmath_verticalsub: { ko: "세로 뺄셈", zh: "直式減法", zhcn: "竖式减法", en: "Vertical subtraction", ja: "筆算 ひきざん" },
   // 곱셈
-  slowmath_timestables: { ko: "구구단 연습", zh: "九九乘法", en: "Times tables", ja: "九九" },
-  slowmath_easymul: { ko: "한 자리 곱셈", zh: "一位數乘法", en: "1-digit multiplication", ja: "1けた かけざん" },
-  slowmath_verticalmul: { ko: "세로 곱셈", zh: "直式乘法", en: "Vertical multiplication", ja: "筆算 かけざん" },
+  slowmath_timestables: { ko: "구구단 연습", zh: "九九乘法", zhcn: "乘法口诀", en: "Times tables", ja: "九九" },
+  slowmath_easymul: { ko: "한 자리 곱셈", zh: "一位數乘法", zhcn: "一位数乘法", en: "1-digit multiplication", ja: "1けた かけざん" },
+  slowmath_verticalmul: { ko: "세로 곱셈", zh: "直式乘法", zhcn: "竖式乘法", en: "Vertical multiplication", ja: "筆算 かけざん" },
 };
 
 /** 전체 도구 그리드 노출 순서 (Figma 시안 순서 + verticalmul) */
@@ -88,7 +90,7 @@ export const APPS_HIDDEN_IN_EN: ReadonlySet<string> = new Set([
   "slowmath_counting",
 ]);
 
-/** 한국어 특화 앱 — 번체 랜딩 카탈로그에서 제외 */
+/** 한국어 특화 앱 — 번체·간체 랜딩 카탈로그에서 제외 */
 export const APPS_HIDDEN_IN_ZH: ReadonlySet<string> = new Set([
   "slowmath_koreannum",
   "slowmath_counting",
@@ -104,7 +106,7 @@ export const APPS_HIDDEN_IN_JA: ReadonlySet<string> = new Set([
 /** 이 로케일의 카탈로그에서 감출 앱인지 */
 export function isAppHidden(slug: string, locale: Locale): boolean {
   if (locale === "en") return APPS_HIDDEN_IN_EN.has(slug);
-  if (locale === "zh") return APPS_HIDDEN_IN_ZH.has(slug);
+  if (locale === "zh" || locale === "zhcn") return APPS_HIDDEN_IN_ZH.has(slug);
   if (locale === "ja") return APPS_HIDDEN_IN_JA.has(slug);
   return false;
 }
@@ -127,25 +129,27 @@ export type Category =
 /** 카테고리 노출 순서 + 다국어 이름/부제 (부제 문구는 shell/apps.js 와 동일) */
 export const CATEGORIES: {
   key: Category;
-  name: { ko: string; zh: string; en: string; ja: string };
-  desc: { ko: string; zh: string; en: string; ja: string };
+  name: { ko: string; zh: string; zhcn: string; en: string; ja: string };
+  desc: { ko: string; zh: string; zhcn: string; en: string; ja: string };
 }[] = [
   {
     key: "foundations",
-    name: { ko: "기초 인지", zh: "基礎認知", en: "Foundations", ja: "基礎認知" },
+    name: { ko: "기초 인지", zh: "基礎認知", zhcn: "基础认知", en: "Foundations", ja: "基礎認知" },
     desc: {
       ko: "눈과 손이 먼저 익숙해지는 시간",
       zh: "眼睛和雙手先熟悉的時間",
+      zhcn: "眼睛和双手先熟悉的时间",
       en: "Eyes and hands first",
       ja: "目と手が先に慣れていく時間",
     },
   },
   {
     key: "number-sense",
-    name: { ko: "수 개념", zh: "數的概念", en: "Number sense", ja: "数の概念" },
+    name: { ko: "수 개념", zh: "數的概念", zhcn: "数的概念", en: "Number sense", ja: "数の概念" },
     desc: {
       ko: "숫자가 ‘양’으로 보이기 시작할 때",
       zh: "數字開始看起來像「量」的時候",
+      zhcn: "数字开始看起来像“量”的时候",
       en: "When numbers become amounts",
       ja: "数字が「量」に見え始めるとき",
     },
@@ -155,62 +159,69 @@ export const CATEGORIES: {
     name: {
       ko: "시계·달력·화폐",
       zh: "時鐘・日曆・金錢",
+      zhcn: "时钟・日历・金钱",
       en: "Time · Calendar · Money",
       ja: "時計・カレンダー・お金",
     },
     desc: {
       ko: "시간과 돈을 생활 속에서 익히는 시간",
       zh: "在生活中學會時間和金錢",
+      zhcn: "在生活中学会时间和金钱",
       en: "Time and money in real life",
       ja: "時間とお金を暮らしの中で学ぶ時間",
     },
   },
   {
     key: "number-relations",
-    name: { ko: "수 관계", zh: "數的關係", en: "Number relations", ja: "数の関係" },
+    name: { ko: "수 관계", zh: "數的關係", zhcn: "数的关系", en: "Number relations", ja: "数の関係" },
     desc: {
       ko: "크고 작고, 같고 다름을 읽는 연습",
       zh: "讀懂大小與異同的練習",
+      zhcn: "读懂大小与异同的练习",
       en: "Bigger, smaller, same, different",
       ja: "大きさ・同じ・違いを読みとる練習",
     },
   },
   {
     key: "pre-addition",
-    name: { ko: "덧셈 전 개념", zh: "加法之前", en: "Pre-addition", ja: "たしざんの前に" },
+    name: { ko: "덧셈 전 개념", zh: "加法之前", zhcn: "加法之前", en: "Pre-addition", ja: "たしざんの前に" },
     desc: {
       ko: "모으고 가르며 수를 만져보는 경험",
       zh: "集合與分開，用手感受數",
+      zhcn: "集合与分开，用手感受数",
       en: "Combining and splitting numbers",
       ja: "あつめて・わけて、数を手で感じる時間",
     },
   },
   {
     key: "addition",
-    name: { ko: "덧셈", zh: "加法", en: "Addition", ja: "たしざん" },
+    name: { ko: "덧셈", zh: "加法", zhcn: "加法", en: "Addition", ja: "たしざん" },
     desc: {
       ko: "작은 걸음부터 쌓아올리는 계산",
       zh: "從小小的一步開始累積的計算",
+      zhcn: "从小小的一步开始累积的计算",
       en: "Building from small steps",
       ja: "小さな一歩から積み上げる計算",
     },
   },
   {
     key: "subtraction",
-    name: { ko: "뺄셈", zh: "減法", en: "Subtraction", ja: "ひきざん" },
+    name: { ko: "뺄셈", zh: "減法", zhcn: "减法", en: "Subtraction", ja: "ひきざん" },
     desc: {
       ko: "한 걸음씩 덜어내는 계산",
       zh: "一步一步拿走的計算",
+      zhcn: "一步一步拿走的计算",
       en: "Taking away, one step at a time",
       ja: "一歩ずつ取り除いていく計算",
     },
   },
   {
     key: "multiplication",
-    name: { ko: "곱셈", zh: "乘法", en: "Multiplication", ja: "かけざん" },
+    name: { ko: "곱셈", zh: "乘法", zhcn: "乘法", en: "Multiplication", ja: "かけざん" },
     desc: {
       ko: "개념을 이해하는 수의 규칙",
       zh: "理解概念的數的規律",
+      zhcn: "理解概念的数的规律",
       en: "Patterns in numbers",
       ja: "概念で理解する数のきまり",
     },

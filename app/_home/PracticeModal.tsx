@@ -57,7 +57,15 @@ export function PracticeModalProvider({
 
   const content = slug ? MODAL_CONTENT[slug]?.[locale] : null;
   const closeLabel =
-    locale === "en" ? "Close" : locale === "ja" ? "閉じる" : "닫기";
+    locale === "en"
+      ? "Close"
+      : locale === "ja"
+        ? "閉じる"
+        : locale === "zh"
+          ? "關閉"
+          : locale === "zhcn"
+            ? "关闭"
+            : "닫기";
 
   return (
     <PracticeModalContext.Provider value={{ open }}>

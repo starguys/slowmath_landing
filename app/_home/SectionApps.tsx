@@ -16,6 +16,10 @@ const C = {
     heading: "所有學習工具一次看完",
     subtitle: "依分類瀏覽，看到有興趣的就能直接打開",
   },
+  zhcn: {
+    heading: "所有学习工具一次看完",
+    subtitle: "依分类浏览，看到有兴趣的就能直接打开",
+  },
   en: {
     heading: "All learning tools at a glance",
     subtitle: "Browse by category and open any one you'd like to try",

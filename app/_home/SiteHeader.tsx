@@ -10,7 +10,7 @@ const GOOGLE_URL =
 /**
  * 상단 브랜드 바(헤더). 좌측 워드마크 + 우측 앱스토어/구글플레이 배지.
  * 콘텐츠 640px 중앙정렬. 배지는 모바일(<696) 세로 스택 / 데스크탑(696~) 가로.
- * ko/en 분기(워드마크·iOS 지역 URL).
+ * ko/en 분기(워드마크·iOS 지역 URL). 간체(zhcn)는 지역 스토어가 없어 글로벌(US) 주소.
  */
 const C = {
   ko: {
@@ -28,6 +28,14 @@ const C = {
     apple: APPLE_TW,
     appleAlt: "在 App Store 下載 LittleSteps",
     googleAlt: "在 Google Play 取得 LittleSteps",
+  },
+  zhcn: {
+    home: "/cn",
+    homeLabel: "LittleSteps 首页",
+    wm: ["Little", "Steps", ""],
+    apple: APPLE_US,
+    appleAlt: "在 App Store 下载 LittleSteps",
+    googleAlt: "在 Google Play 获取 LittleSteps",
   },
   en: {
     home: "/en",

@@ -52,6 +52,23 @@ const C: Record<Locale, HeroCopy> = {
       [{ t: "認知與數學的基礎。" }],
     ],
   },
+  zhcn: {
+    h1: [
+      ["虽然慢，", "但方向是对的", "，"],
+      ["", "一步一步", "往前走"],
+    ],
+    cardLines: [
+      [{ t: "KAIST 出身、" }],
+      [{ t: "自闭症谱系孩子的爸爸", c: "o" }, { t: "，" }],
+      [{ t: "以自身经验亲手打造的 " }, { t: "LittleSteps", c: "b" }],
+    ],
+    descLines: [
+      [{ t: "发育迟缓、边缘智力，", bold: true }],
+      [{ t: "或任何比同龄孩子学得慢的孩子", bold: true }],
+      [{ t: "都能照自己的速度，一步步练习" }],
+      [{ t: "认知与数学的基础。" }],
+    ],
+  },
   en: {
     h1: [
       ["Steady but in ", "the right direction", ","],
