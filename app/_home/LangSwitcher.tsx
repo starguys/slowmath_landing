@@ -3,8 +3,8 @@
 import { type Locale } from "./apps";
 
 /**
- * 언어 토글 (KR/TW/CN/EN/JP).
- * href 는 canonical 경로(/ · /tw/ · /cn/ · /en/ · /jp/) — Googlebot 이 이 링크를 따라가면 "리디렉션" 리포트에 잡히던
+ * 언어 토글 (KR/CN/TW/JP/EN).
+ * href 는 canonical 경로(/ · /cn/ · /tw/ · /jp/ · /en/) — Googlebot 이 이 링크를 따라가면 "리디렉션" 리포트에 잡히던
  * 문제(?lang= 쿼리 후 layout.tsx 의 replaceState 로 제거됨)를 원천 차단.
  * 사용자가 실제로 클릭할 때만 onClick 에서 localStorage 의 lang-pref 를 세팅해 layout.tsx 스크립트가
  * 다시 자동 리디렉트하지 못하게 한다.
@@ -48,15 +48,6 @@ export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) 
         KR
       </a>
       <a
-        href="/tw/"
-        aria-label="繁體中文"
-        aria-current={locale === "zh" ? "page" : undefined}
-        onClick={() => setPref("zh")}
-        className={cls(locale === "zh")}
-      >
-        TW
-      </a>
-      <a
         href="/cn/"
         aria-label="简体中文"
         aria-current={locale === "zhcn" ? "page" : undefined}
@@ -66,13 +57,13 @@ export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) 
         CN
       </a>
       <a
-        href="/en/"
-        aria-label="English"
-        aria-current={locale === "en" ? "page" : undefined}
-        onClick={() => setPref("en")}
-        className={cls(locale === "en")}
+        href="/tw/"
+        aria-label="繁體中文"
+        aria-current={locale === "zh" ? "page" : undefined}
+        onClick={() => setPref("zh")}
+        className={cls(locale === "zh")}
       >
-        EN
+        TW
       </a>
       <a
         href="/jp/"
@@ -82,6 +73,15 @@ export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) 
         className={cls(locale === "ja")}
       >
         JP
+      </a>
+      <a
+        href="/en/"
+        aria-label="English"
+        aria-current={locale === "en" ? "page" : undefined}
+        onClick={() => setPref("en")}
+        className={cls(locale === "en")}
+      >
+        EN
       </a>
     </nav>
   );
