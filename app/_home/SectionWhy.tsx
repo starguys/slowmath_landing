@@ -49,7 +49,7 @@ const C: Record<Locale, Copy> = {
       },
       {
         title: "학습 세트 구성",
-        desc: "필요한 연습만 골라 묶어 우리 아이만의 학습지를 만들 수 있어요",
+        desc: "필요한 연습만 골라 우리 아이만의 매일 연습 코스를 만들 수 있어요",
         icon: "/figma/why/set.svg",
       },
     ],
