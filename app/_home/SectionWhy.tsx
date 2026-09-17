@@ -1,6 +1,7 @@
 import { type Locale } from "./apps";
 
-// 아이콘은 로케일 공통(Figma /figma/why/*.svg), 텍스트만 ko/en 분기
+// 아이콘은 로케일 공통(Figma /figma/why/*.svg), 텍스트만 로케일별 분기.
+// 항목이 로케일마다 다를 때는 그 항목에 icon 을 직접 달아 이 순서를 덮어쓴다.
 const ICONS = [
   "/figma/why/step.svg",
   "/figma/why/repeat.svg",
@@ -10,7 +11,10 @@ const ICONS = [
   "/figma/why/focus.svg",
 ];
 
-const C = {
+type Item = { title: string; desc: string; icon?: string };
+type Copy = { heading: string; items: Item[] };
+
+const C: Record<Locale, Copy> = {
   ko: {
     heading: "느린아이 학습도구가 다른 이유",
     items: [
@@ -31,8 +35,9 @@ const C = {
         desc: "글을 읽지 못하는 아이도 소리만으로 혼자 학습할 수 있어요",
       },
       {
-        title: "감각 배려 설계",
-        desc: "번쩍임·갑작스러운 소리 없이, 조용한 화면으로 만들었어요",
+        title: "워크북 다운로드",
+        desc: "워크북을 내려받아 인쇄하면 종이에 연필로도 연습할 수 있어요",
+        icon: "/figma/why/workbook.svg",
       },
       {
         title: "한 화면, 한 활동",
@@ -156,7 +161,7 @@ const C = {
       },
     ],
   },
-} as const;
+};
 
 /**
  * "느린아이 학습도구가 다른 이유" (Figma 142:16850).
@@ -185,7 +190,7 @@ export default function SectionWhy({ locale = "ko" }: { locale?: Locale }) {
               className="flex items-center gap-[16px] rounded-[12px] bg-white px-[24px] py-[16px]"
             >
               <img
-                src={ICONS[i]}
+                src={item.icon ?? ICONS[i]}
                 alt=""
                 width={40}
                 height={40}
