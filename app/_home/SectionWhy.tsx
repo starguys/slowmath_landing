@@ -81,6 +81,16 @@ const C: Record<Locale, Copy> = {
         title: "一個畫面，一個活動",
         desc: "一次只放一個活動，不分心、能專注",
       },
+      {
+        title: "學習單下載",
+        desc: "下載學習單列印出來，也能用紙筆做同樣的練習",
+        icon: "/figma/why/workbook.svg",
+      },
+      {
+        title: "每日練習組合",
+        desc: "只挑需要的練習，組成專屬孩子的每日課程",
+        icon: "/figma/why/set.svg",
+      },
     ],
   },
   zhcn: {
@@ -109,6 +119,16 @@ const C: Record<Locale, Copy> = {
       {
         title: "一个画面，一个活动",
         desc: "一次只放一个活动，不分心、能专注",
+      },
+      {
+        title: "学习单下载",
+        desc: "下载学习单打印出来，也能用纸笔做同样的练习",
+        icon: "/figma/why/workbook.svg",
+      },
+      {
+        title: "每日练习组合",
+        desc: "只挑需要的练习，组成专属孩子的每日课程",
+        icon: "/figma/why/set.svg",
       },
     ],
   },
@@ -139,6 +159,16 @@ const C: Record<Locale, Copy> = {
         title: "One screen, one task",
         desc: "Just one activity at a time so attention can settle without competition",
       },
+      {
+        title: "Printable workbooks",
+        desc: "Download and print a workbook to practice the same thing on paper",
+        icon: "/figma/why/workbook.svg",
+      },
+      {
+        title: "Your own daily set",
+        desc: "Pick only the practices you need and build a daily course",
+        icon: "/figma/why/set.svg",
+      },
     ],
   },
   ja: {
@@ -167,6 +197,16 @@ const C: Record<Locale, Copy> = {
       {
         title: "1画面、1つの活動",
         desc: "一度に一つの活動だけ、気が散らず集中できます",
+      },
+      {
+        title: "ワークブックの印刷",
+        desc: "ダウンロードして印刷すれば、紙と鉛筆でも練習できます",
+        icon: "/figma/why/workbook.svg",
+      },
+      {
+        title: "毎日の練習セット",
+        desc: "必要な練習だけを選んで、その子だけの毎日コースを作れます",
+        icon: "/figma/why/set.svg",
       },
     ],
   },
