@@ -21,8 +21,8 @@ export default function PrivacyEnPage() {
   return (
     <>
       <h1>LittleSteps Privacy Policy</h1>
-      <p className="legal-meta"><strong>Effective</strong>: 2026-04-28</p>
-      <p className="legal-meta"><strong>Last revised</strong>: 2026-04-28</p>
+      <p className="legal-meta"><strong>Effective</strong>: 2026-09-21</p>
+      <p className="legal-meta"><strong>Last revised</strong>: 2026-09-21</p>
       <p className="legal-meta" style={{ color: "#8C8070" }}>
         This English version is provided for convenience. In case of any
         discrepancy, the <a href="/privacy">Korean version</a> shall prevail.
@@ -51,17 +51,25 @@ export default function PrivacyEnPage() {
       <h3>2.1 Collected at sign-up</h3>
       <table>
         <thead>
-          <tr><th>Type</th><th>Item</th><th>Method</th></tr>
+          <tr><th>Type</th><th>Item</th><th>Method</th><th>Purpose</th></tr>
         </thead>
         <tbody>
           <tr>
             <td>Required</td>
             <td><strong>Email address</strong></td>
             <td>Automatically transmitted via OAuth at Kakao or Google sign-in</td>
+            <td>Identifying the member, maintaining the account, responding to enquiries</td>
+          </tr>
+          <tr>
+            <td>Required<br />(Kakao sign-in)</td>
+            <td><strong>Phone number</strong></td>
+            <td>Automatically transmitted via OAuth at Kakao sign-in</td>
+            <td>Identifying the member and preventing duplicate accounts, sending essential notices such as payment and refund, responding to enquiries</td>
           </tr>
         </tbody>
       </table>
-      <p>Apart from the email address above, <strong>the Company does not directly collect personally identifying information</strong> such as name, date of birth, or phone number.</p>
+      <p>The phone number is collected <strong>as a required item only when signing up with Kakao</strong>; it is not collected when signing up with Google.</p>
+      <p>Apart from the items above, <strong>the Company does not directly collect personally identifying information</strong> such as name or date of birth.</p>
 
       <h3>2.2 Collected automatically during use</h3>
       <table>
@@ -97,7 +105,7 @@ export default function PrivacyEnPage() {
           <tr><th>Item</th><th>Retention period</th><th>Basis</th></tr>
         </thead>
         <tbody>
-          <tr><td>Member info (email)</td><td>Until withdrawal of membership</td><td>Data-subject consent</td></tr>
+          <tr><td>Member info (email, phone number)</td><td>Until withdrawal of membership</td><td>Data-subject consent</td></tr>
           <tr><td>Learning records</td><td>Until withdrawal of membership</td><td>Service provision</td></tr>
           <tr><td>Abuse records</td><td>1 year</td><td>Abuse prevention</td></tr>
           <tr><td>Payment / refund records</td><td>5 years</td><td>Act on Consumer Protection in Electronic Commerce</td></tr>
@@ -123,7 +131,7 @@ export default function PrivacyEnPage() {
         </thead>
         <tbody>
           <tr><td>Google LLC</td><td>Cloud infrastructure (server hosting), TTS (speech synthesis), OAuth login</td><td>Email, learning records, TTS request text</td></tr>
-          <tr><td>Kakao Corp.</td><td>OAuth login</td><td>Email</td></tr>
+          <tr><td>Kakao Corp.</td><td>OAuth login</td><td>Email, phone number</td></tr>
           <tr><td>Apple Inc. / Google LLC</td><td>In-app purchase, app distribution</td><td>Payment receipts, order IDs</td></tr>
           <tr><td>Vercel Inc.</td><td>Web hosting</td><td>Access logs, IP</td></tr>
         </tbody>

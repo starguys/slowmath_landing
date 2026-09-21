@@ -22,8 +22,8 @@ export default function PrivacyJpPage() {
   return (
     <>
       <h1>LittleSteps プライバシーポリシー</h1>
-      <p className="legal-meta"><strong>施行日</strong>: 2026-04-28</p>
-      <p className="legal-meta"><strong>最終改定日</strong>: 2026-04-28</p>
+      <p className="legal-meta"><strong>施行日</strong>: 2026-09-21</p>
+      <p className="legal-meta"><strong>最終改定日</strong>: 2026-09-21</p>
       <p className="legal-meta" style={{ color: "#8C8070" }}>
         本日本語版は便宜のために提供されるものです。相違がある場合は
         <a href="/privacy">韓国語版</a>が優先します。
@@ -49,17 +49,25 @@ export default function PrivacyJpPage() {
       <h3>2.1 会員登録時に収集</h3>
       <table>
         <thead>
-          <tr><th>区分</th><th>項目</th><th>収集方法</th></tr>
+          <tr><th>区分</th><th>項目</th><th>収集方法</th><th>利用目的</th></tr>
         </thead>
         <tbody>
           <tr>
             <td>必須</td>
             <td><strong>メールアドレス</strong></td>
             <td>KakaoまたはGoogleログイン時、OAuthを通じて自動送信</td>
+            <td>会員の識別、会員資格の維持・管理、お問い合わせ対応</td>
+          </tr>
+          <tr>
+            <td>必須<br />（Kakaoログイン）</td>
+            <td><strong>電話番号</strong></td>
+            <td>Kakaoログイン時、OAuthを通じて自動送信</td>
+            <td>会員の識別および重複登録の防止、決済・返金など重要なお知らせの案内、お問い合わせ対応</td>
           </tr>
         </tbody>
       </table>
-      <p>上記のメールアドレス以外に、<strong>氏名・生年月日・電話番号など追加的な個人識別情報は当社が直接収集しません。</strong></p>
+      <p>電話番号は<strong>Kakaoログインで登録する場合に限り必須項目として収集</strong>し、Googleログインで登録する場合は収集しません。</p>
+      <p>上記の項目以外に、<strong>氏名・生年月日など追加的な個人識別情報は当社が直接収集しません。</strong></p>
 
       <h3>2.2 サービス利用中に自動収集</h3>
       <table>
@@ -95,7 +103,7 @@ export default function PrivacyJpPage() {
           <tr><th>処理項目</th><th>保有期間</th><th>根拠</th></tr>
         </thead>
         <tbody>
-          <tr><td>会員情報 (メール)</td><td>会員退会時まで</td><td>情報主体の同意</td></tr>
+          <tr><td>会員情報 (メール、電話番号)</td><td>会員退会時まで</td><td>情報主体の同意</td></tr>
           <tr><td>学習記録</td><td>会員退会時まで</td><td>サービス提供目的</td></tr>
           <tr><td>不正利用記録</td><td>1年</td><td>不正利用防止</td></tr>
           <tr><td>決済・返金記録</td><td>5年</td><td>「電子商取引等における消費者保護に関する法律」(韓国)</td></tr>
@@ -121,7 +129,7 @@ export default function PrivacyJpPage() {
         </thead>
         <tbody>
           <tr><td>Google LLC</td><td>クラウドインフラ (サーバーホスティング)、TTS (音声合成)、OAuthログイン</td><td>メール、学習記録、TTS要求テキスト</td></tr>
-          <tr><td>Kakao Corp.</td><td>OAuthログイン</td><td>メール</td></tr>
+          <tr><td>Kakao Corp.</td><td>OAuthログイン</td><td>メール、電話番号</td></tr>
           <tr><td>Apple Inc. / Google LLC</td><td>アプリ内課金、アプリ配信</td><td>決済レシート、購入ID</td></tr>
           <tr><td>Vercel Inc.</td><td>Webホスティング</td><td>アクセスログ、IP</td></tr>
         </tbody>

@@ -19,8 +19,8 @@ export default function PrivacyPage() {
   return (
     <>
       <h1>느린아이 개인정보 처리방침</h1>
-      <p className="legal-meta"><strong>시행일</strong>: 2026-04-28</p>
-      <p className="legal-meta"><strong>최종 개정일</strong>: 2026-04-28</p>
+      <p className="legal-meta"><strong>시행일</strong>: 2026-09-21</p>
+      <p className="legal-meta"><strong>최종 개정일</strong>: 2026-09-21</p>
       <hr className="legal-hr" />
 
       <p className="legal-intro">
@@ -42,17 +42,25 @@ export default function PrivacyPage() {
       <h3>2.1 회원 가입 시 수집</h3>
       <table>
         <thead>
-          <tr><th>구분</th><th>항목</th><th>수집 방법</th></tr>
+          <tr><th>구분</th><th>항목</th><th>수집 방법</th><th>이용 목적</th></tr>
         </thead>
         <tbody>
           <tr>
             <td>필수</td>
             <td><strong>이메일 주소</strong></td>
             <td>카카오 로그인 또는 Google 로그인 시 OAuth를 통해 자동 전달</td>
+            <td>회원 식별, 회원자격 유지·관리, 고객 문의 응대</td>
+          </tr>
+          <tr>
+            <td>필수<br />(카카오 로그인)</td>
+            <td><strong>전화번호</strong></td>
+            <td>카카오 로그인 시 OAuth를 통해 자동 전달</td>
+            <td>회원 식별 및 중복 가입 방지, 결제·환불 등 중요 안내 전달, 고객 문의 응대</td>
           </tr>
         </tbody>
       </table>
-      <p>회사는 위 이메일 주소 외에 이름·생년월일·전화번호 등 <strong>추가적인 개인 식별 정보를 직접 수집하지 않습니다.</strong></p>
+      <p>전화번호는 <strong>카카오 로그인으로 가입하는 경우에 한하여 필수 항목으로 수집</strong>하며, Google 로그인으로 가입하는 경우에는 수집하지 않습니다.</p>
+      <p>회사는 위 항목 외에 이름·생년월일 등 <strong>추가적인 개인 식별 정보를 직접 수집하지 않습니다.</strong></p>
 
       <h3>2.2 서비스 이용 과정에서 자동 수집</h3>
       <table>
@@ -88,7 +96,7 @@ export default function PrivacyPage() {
           <tr><th>처리 항목</th><th>보유 기간</th><th>근거</th></tr>
         </thead>
         <tbody>
-          <tr><td>회원 정보(이메일)</td><td>회원 탈퇴 시까지</td><td>정보주체 동의</td></tr>
+          <tr><td>회원 정보(이메일, 전화번호)</td><td>회원 탈퇴 시까지</td><td>정보주체 동의</td></tr>
           <tr><td>학습 기록</td><td>회원 탈퇴 시까지</td><td>서비스 제공 목적</td></tr>
           <tr><td>부정 이용 기록</td><td>1년</td><td>부정 이용 방지</td></tr>
           <tr><td>결제·환불 기록</td><td>5년</td><td>「전자상거래 등에서의 소비자보호에 관한 법률」</td></tr>
@@ -114,7 +122,7 @@ export default function PrivacyPage() {
         </thead>
         <tbody>
           <tr><td>Google LLC</td><td>클라우드 인프라(서버 호스팅), TTS(음성 합성), OAuth 로그인</td><td>이메일, 학습 기록, 음성 합성 요청 텍스트</td></tr>
-          <tr><td>Kakao Corp.</td><td>OAuth 로그인</td><td>이메일</td></tr>
+          <tr><td>Kakao Corp.</td><td>OAuth 로그인</td><td>이메일, 전화번호</td></tr>
           <tr><td>Apple Inc. / Google LLC</td><td>인앱결제, 앱 배포</td><td>결제 영수증·구매 ID</td></tr>
           <tr><td>Vercel Inc.</td><td>웹 호스팅</td><td>접속 로그, IP</td></tr>
         </tbody>
