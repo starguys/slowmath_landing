@@ -126,6 +126,7 @@ function localeTag(locale: Locale): string {
   if (locale === "zh") return "zh-Hant-TW";
   if (locale === "en") return "en-US";
   if (locale === "ja") return "ja-JP";
+  if (locale === "es") return "es-ES";
   return "ko-KR";
 }
 
@@ -134,6 +135,7 @@ function currency(locale: Locale): string {
   if (locale === "zh") return "TWD";
   if (locale === "en") return "USD";
   if (locale === "ja") return "JPY";
+  if (locale === "es") return "EUR";
   return "KRW";
 }
 
@@ -142,6 +144,7 @@ function appleStore(locale: Locale): string {
   if (locale === "zh") return APPLE_TW;
   if (locale === "en") return APPLE_US;
   if (locale === "ja") return APPLE_JP;
+  if (locale === "es") return APPLE_US;
   return APPLE_KR;
 }
 
@@ -149,12 +152,14 @@ function pageUrl(locale: Locale): string {
   if (locale === "zhcn") return `${SITE_URL}/cn`;
   if (locale === "zh") return `${SITE_URL}/tw`;
   if (locale === "en") return `${SITE_URL}/en`;
+  if (locale === "es") return `${SITE_URL}/es`;
   if (locale === "ja") return `${SITE_URL}/jp`;
   return SITE_URL;
 }
 
 function organizationLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
+  const es = locale === "es";
   const ja = locale === "ja";
   const zh = isZh(locale);
   if (zh) {
@@ -178,7 +183,7 @@ function organizationLd(locale: Locale): JsonLdNode {
   return {
     "@type": "Organization",
     "@id": ORG_ID,
-    name: en || ja ? "LittleSteps" : "느린아이",
+    name: en || ja || es ? "LittleSteps" : "느린아이",
     alternateName: en
       ? ["느린아이", "느린아이 시리즈"]
       : ja
@@ -191,7 +196,9 @@ function organizationLd(locale: Locale): JsonLdNode {
       width: 256,
       height: 256,
     },
-    description: en
+    description: es
+      ? "Herramientas de aprendizaje para niños con retraso del desarrollo, discapacidad del desarrollo, funcionamiento intelectual límite, dificultades de aprendizaje o TDAH — para construir las bases de las matemáticas a su propio ritmo."
+      : en
       ? "Learning tools designed for children with developmental delays, developmental disabilities, borderline intelligence, learning disabilities, or ADHD — to build math foundations at their own pace."
       : ja
         ? "発達のゆっくりな子・発達障害・境界知能・学習障害・ADHDのお子さんが、自分のペースで算数の基礎を少しずつ積み上げられるよう設計された学習ツールです。"
@@ -202,6 +209,7 @@ function organizationLd(locale: Locale): JsonLdNode {
 
 function websiteLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
+  const es = locale === "es";
   const ja = locale === "ja";
   const zh = isZh(locale);
   if (zh) {
@@ -219,11 +227,13 @@ function websiteLd(locale: Locale): JsonLdNode {
   return {
     "@type": "WebSite",
     "@id": SITE_ID,
-    name: en || ja ? "LittleSteps" : "느린아이 시리즈",
-    alternateName: en || ja ? "느린아이" : "LittleSteps",
+    name: en || ja || es ? "LittleSteps" : "느린아이 시리즈",
+    alternateName: en || ja || es ? "느린아이" : "LittleSteps",
     url: pageUrl(locale),
     inLanguage: localeTag(locale),
-    description: en
+    description: es
+      ? "Herramientas de matemáticas, cognición y motricidad fina para niños que aprenden a su propio ritmo."
+      : en
       ? "Math, cognition, and fine-motor learning tools for children who learn at their own pace."
       : ja
         ? "自分のペースで学ぶ子のための、算数・認知・小さな筋力の学習ツール。"
@@ -234,6 +244,7 @@ function websiteLd(locale: Locale): JsonLdNode {
 
 function appLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
+  const es = locale === "es";
   const ja = locale === "ja";
   const zh = isZh(locale);
   if (zh) {
@@ -263,7 +274,9 @@ function appLd(locale: Locale): JsonLdNode {
   return {
     "@type": "MobileApplication",
     "@id": APP_ID,
-    name: en
+    name: es
+      ? "LittleSteps — Despacio, pero en la dirección correcta"
+      : en
       ? "LittleSteps — One right step at a time"
       : ja
         ? "LittleSteps — 正しい方向へ、一歩ずつ"
@@ -271,7 +284,9 @@ function appLd(locale: Locale): JsonLdNode {
     operatingSystem: "iOS, Android",
     applicationCategory: "EducationalApplication",
     inLanguage: localeTag(locale),
-    description: en
+    description: es
+      ? "Herramientas de aprendizaje para niños con retraso del desarrollo, funcionamiento intelectual límite o cualquier niño que aprende más despacio que sus compañeros — para construir las bases de las matemáticas paso a paso."
+      : en
       ? "Learning tools for children with developmental delays, developmental disabilities, learning differences, borderline intelligence, and other kids who learn at their own pace — to build math foundations step by step."
       : ja
         ? "発達のゆっくりな子・発達障害・境界知能など、自分のペースで学ぶ子のための、算数の基礎を一歩ずつ積み上げる学習ツールです。"
@@ -293,6 +308,7 @@ function appLd(locale: Locale): JsonLdNode {
 
 function videoLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
+  const es = locale === "es";
   const ja = locale === "ja";
   const zh = isZh(locale);
   if (zh) {
@@ -312,12 +328,16 @@ function videoLd(locale: Locale): JsonLdNode {
   return {
     "@type": "VideoObject",
     "@id": VIDEO_ID,
-    name: en
+    name: es
+      ? "Un niño aprendiendo con la app LittleSteps"
+      : en
       ? "A child learning with the LittleSteps app"
       : ja
         ? "LittleStepsアプリで学ぶ子どもの様子"
         : "느린아이 앱으로 학습하는 아이의 모습",
-    description: en
+    description: es
+      ? "Una pantalla tranquila y pequeñas repeticiones — momentos en los que el niño toca y confirma a su propio ritmo."
+      : en
       ? "A quiet screen and small repetitions — moments where a child taps and confirms at their own pace."
       : ja
         ? "静かな画面と小さなくり返し — 子どもが自分のペースでタッチして確かめる瞬間です。"
@@ -332,6 +352,7 @@ function videoLd(locale: Locale): JsonLdNode {
 
 function itemListLd(locale: Locale): JsonLdNode {
   const en = locale === "en";
+  const es = locale === "es";
   const ja = locale === "ja";
   const zh = isZh(locale);
   // 카탈로그에서 감춘 한국어 특화 앱은 구조화 데이터에서도 빼야
@@ -342,14 +363,18 @@ function itemListLd(locale: Locale): JsonLdNode {
     "@id": `${pageUrl(locale)}${locale === "ko" ? "/" : ""}#toollist`,
     name: zh
       ? zhT(locale, "LittleSteps 學習工具", "LittleSteps 学习工具")
-      : en
+      : es
+        ? "Herramientas de aprendizaje LittleSteps"
+        : en
         ? "LittleSteps learning tools"
         : ja
           ? "LittleSteps 学習ツール"
           : "느린아이 시리즈 학습도구",
     description: zh
       ? zhT(locale, "為照自己的速度學習的孩子打造的數學與認知學習工具。", "为照自己的速度学习的孩子打造的数学与认知学习工具。")
-      : en
+      : es
+        ? "Herramientas de matemáticas y cognición para niños con retraso del desarrollo, funcionamiento intelectual límite o dificultades de aprendizaje."
+        : en
         ? "Math and cognition tools for children with developmental delays, borderline intelligence, or learning difficulties."
         : ja
           ? "自分のペースで学ぶ子のための、算数・認知の学習ツール。"
@@ -359,7 +384,7 @@ function itemListLd(locale: Locale): JsonLdNode {
     itemListElement: shown.map((slug, i) => {
       const bare = slug.replace(/^slowmath_/, "");
       const desc =
-        en || zh ? undefined : ja ? JA_DESC[bare] : KO_DESC[bare];
+        en || zh || es ? undefined : ja ? JA_DESC[bare] : KO_DESC[bare];
       return {
         "@type": "ListItem",
         position: i + 1,

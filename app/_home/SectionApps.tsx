@@ -28,6 +28,10 @@ const C = {
     heading: "すべての学習ツールを一目で",
     subtitle: "カテゴリごとに眺めて、気になるものをそのまま開けます",
   },
+  es: {
+    heading: "Todas las herramientas de un vistazo",
+    subtitle: "Explora por categorías y abre la que quieras probar",
+  },
 } as const;
 
 export default function SectionApps({ locale = "ko" }: { locale?: Locale }) {

@@ -163,6 +163,40 @@ const C = {
       },
     ],
   },
+  es: {
+    heading: "¿Por dónde empezar?",
+    subtitle: "Encuentra la herramienta adecuada para donde está tu hijo ahora",
+    tiers: [
+      {
+        step: "Etapa 1",
+        titleLines: ["Los números y los colores todavía son nuevos"],
+        subLines: [
+          "Donde empieza el sentido numérico — nombres de números, nombres de colores, contar con la vista.",
+        ],
+      },
+      {
+        step: "Etapa 2",
+        titleLines: ["Coger el lápiz y escribir cuesta"],
+        subLines: [
+          "Construir el control de la mano y la coordinación ojo-mano que hacen falta antes de las letras y los números.",
+        ],
+      },
+      {
+        step: "Etapa 3",
+        titleLines: ["Comparar y encontrar patrones cuesta"],
+        subLines: [
+          "Comparar tamaños, palabras de posición y patrones que se repiten — la base del pensamiento matemático.",
+        ],
+      },
+      {
+        step: "Etapa 4",
+        titleLines: ["Conoce los números, pero sumar cuesta"],
+        subLines: [
+          "Unir números con cantidades; componer y descomponer para construir la idea de la suma.",
+        ],
+      },
+    ],
+  },
 } as const;
 
 // 단계별 배지 색상 + 추천 도구 slug (이름/링크/아이콘은 공유 모듈에서 로케일별로 가져옴)

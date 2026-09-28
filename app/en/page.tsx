@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     languages: {
       ko: SITE_URL + "/",
       en: SITE_URL_EN,
+      es: SITE_URL + "/es",
       "x-default": SITE_URL + "/",
     },
   },
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
       "Small math practices for children who pick up concepts at their own pace — from earliest cognition through multiplication tables. Now on iOS and Android.",
     siteName: "LittleSteps",
     locale: "en_US",
-    alternateLocale: ["ko_KR"],
+    alternateLocale: ["ko_KR", "es_ES"],
     type: "website",
     url: SITE_URL_EN,
     images: [OG_IMAGE],

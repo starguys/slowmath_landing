@@ -122,6 +122,37 @@ const C: Record<Locale, HeroCopy> = {
       [{ t: "練習できるよう設計された学習ツールです。" }],
     ],
   },
+  es: {
+    h1: [
+      ["Despacio, pero en ", "la dirección correcta", ","],
+      ["", "un paso", " a la vez"],
+    ],
+    cardLines: [
+      [
+        { t: "Creado por un ingeniero formado en KAIST, " },
+        { t: "padre de un niño en el espectro autista", c: "o" },
+        { t: "," },
+      ],
+      [
+        { t: "que construyó " },
+        { t: "LittleSteps", c: "b" },
+        { t: " desde la experiencia de su propia familia" },
+      ],
+    ],
+    descLines: [
+      [
+        {
+          t: "Niños con retraso del desarrollo, funcionamiento intelectual límite, o cualquier niño que aprende más despacio que sus compañeros",
+          bold: true,
+        },
+      ],
+      [
+        {
+          t: "— herramientas para practicar la cognición básica y las primeras matemáticas paso a paso, a su propio ritmo.",
+        },
+      ],
+    ],
+  },
 };
 
 const ACCENT = { o: "text-[#f0a050]", b: "text-[#6bade8]" } as const;

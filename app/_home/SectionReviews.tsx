@@ -1,5 +1,9 @@
 import { type Locale } from "./apps";
 
+/** 이용자 후기는 실제 사람이 한 말이라 옮기지 않는다 — 한국어 페이지에만 넣는다.
+ *  (en·jp·tw·cn 도 이 대목을 렌더하지 않는다) 스페인어도 같게 둔다. */
+type CopyLocale = Exclude<Locale, "es">;
+
 /**
  * 사용자 후기 밴드 — 3칸 카드 (사진 · 인용문 · 별점 · 프로필).
  * 첫 칸만 실제 후기, 2·3번 칸은 placeholder(추후 추가).
@@ -193,7 +197,7 @@ function ReviewCard({ review, emptyLabel }: { review: Review | null; emptyLabel:
   );
 }
 
-export default function SectionReviews({ locale = "ko" }: { locale?: Locale }) {
+export default function SectionReviews({ locale = "ko" }: { locale?: CopyLocale }) {
   const t = C[locale];
   return (
     <section

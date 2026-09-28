@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       "zh-Hans": "https://slowkids.net/cn",
       en: "https://slowkids.net/en",
       ja: "https://slowkids.net/jp",
+      es: "https://slowkids.net/es",
       "x-default": "https://slowkids.net/",
     },
   },
@@ -116,11 +117,11 @@ export default function RootLayout({
         </noscript>
         {/* 언어 라우팅: 기본은 항상 KO. 브라우저 언어로 자동 전환하지 않고,
             사용자가 명시적으로 고른 경우(?lang= 쿼리 또는 저장된 lang-pref)에만
-            KO(/) ↔ ZH(/tw) ↔ ZH-CN(/cn) ↔ EN(/en) ↔ JA(/jp) 경로를 맞춘다.
-            (외국어 방문자는 /tw·/cn·/en·/jp 링크·hreflang 로 진입) */}
+            KO(/) ↔ ZH(/tw) ↔ ZH-CN(/cn) ↔ EN(/en) ↔ JA(/jp) ↔ ES(/es) 경로를 맞춘다.
+            (외국어 방문자는 /tw·/cn·/en·/jp·/es 링크·hreflang 로 진입) */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var sp=new URLSearchParams(location.search);var q=sp.get('lang');if(q==='ko'||q==='zh'||q==='zhcn'||q==='en'||q==='ja'){localStorage.setItem('lang-pref',q);sp.delete('lang');var qs=sp.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:'')+location.hash);return;}var p=localStorage.getItem('lang-pref');var path=location.pathname;var onEn=path.indexOf('/en')===0;var onJp=path.indexOf('/jp')===0;var onTw=path.indexOf('/tw')===0;var onCn=path.indexOf('/cn')===0;if(p==='ko'&&(onEn||onJp||onTw||onCn)){location.replace(path.replace(/^\\/(en|jp|tw|cn)\\/?/,'/'));return;}if(p==='zh'&&!onTw){var base0=path.replace(/^\\/(en|jp|cn)\\/?/,'/');location.replace('/tw'+(base0==='/'?'':base0));return;}if(p==='zhcn'&&!onCn){var base3=path.replace(/^\\/(en|jp|tw)\\/?/,'/');location.replace('/cn'+(base3==='/'?'':base3));return;}if(p==='en'&&!onEn){var base=path.replace(/^\\/(jp|tw|cn)\\/?/,'/');location.replace('/en'+(base==='/'?'':base));return;}if(p==='ja'&&!onJp){var base2=path.replace(/^\\/(en|tw|cn)\\/?/,'/');location.replace('/jp'+(base2==='/'?'':base2));return;}}catch(e){}})();`,
+            __html: `(function(){try{var sp=new URLSearchParams(location.search);var q=sp.get('lang');if(q==='ko'||q==='zh'||q==='zhcn'||q==='en'||q==='ja'||q==='es'){localStorage.setItem('lang-pref',q);sp.delete('lang');var qs=sp.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:'')+location.hash);return;}var p=localStorage.getItem('lang-pref');var path=location.pathname;var onEn=path.indexOf('/en')===0;var onJp=path.indexOf('/jp')===0;var onTw=path.indexOf('/tw')===0;var onCn=path.indexOf('/cn')===0;var onEs=path.indexOf('/es')===0;if(p==='ko'&&(onEn||onJp||onTw||onCn||onEs)){location.replace(path.replace(/^\\/(en|jp|tw|cn|es)\\/?/,'/'));return;}if(p==='zh'&&!onTw){var base0=path.replace(/^\\/(en|jp|cn|es)\\/?/,'/');location.replace('/tw'+(base0==='/'?'':base0));return;}if(p==='zhcn'&&!onCn){var base3=path.replace(/^\\/(en|jp|tw|es)\\/?/,'/');location.replace('/cn'+(base3==='/'?'':base3));return;}if(p==='en'&&!onEn){var base=path.replace(/^\\/(jp|tw|cn|es)\\/?/,'/');location.replace('/en'+(base==='/'?'':base));return;}if(p==='ja'&&!onJp){var base2=path.replace(/^\\/(en|tw|cn|es)\\/?/,'/');location.replace('/jp'+(base2==='/'?'':base2));return;}if(p==='es'&&!onEs){var base4=path.replace(/^\\/(en|jp|tw|cn)\\/?/,'/');location.replace('/es'+(base4==='/'?'':base4));return;}}catch(e){}})();`,
           }}
         />
         {/* 구조화 데이터(JSON-LD)는 페이지별로 로케일에 맞춰 렌더한다(app/_seo/JsonLd). */}

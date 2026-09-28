@@ -1,5 +1,9 @@
 import { type Locale } from "./apps";
 
+/** 전문가 추천사는 실제 사람이 한 말이라 옮기지 않는다 — 한국어 페이지에만 넣는다.
+ *  (en·jp·tw·cn 도 이 대목을 렌더하지 않는다) 스페인어도 같게 둔다. */
+type CopyLocale = Exclude<Locale, "es">;
+
 /**
  * "특수교육 전문가가 느린아이를 추천하는 이유" 추천사 밴드 (Figma 124:5168, PC=MO 동일).
  * 오렌지(#ffdfa1) 밴드 안 흰 카드 — 제목 + 추천사 본문 + 구분선 + 전문가 프로필. ko/en 분기.
@@ -112,7 +116,7 @@ const C = {
   },
 } as const;
 
-export default function SectionExpert({ locale = "ko" }: { locale?: Locale }) {
+export default function SectionExpert({ locale = "ko" }: { locale?: CopyLocale }) {
   const t = C[locale];
   return (
     <section

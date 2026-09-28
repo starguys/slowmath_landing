@@ -103,6 +103,31 @@ const C = {
     closingStrong: "子どものペースに合わせて、ゆっくり一緒に歩きます",
     cta: "詳しく見る",
   },
+  es: {
+    titleAccent: "Estas frases, ",
+    titleRest1: "¿alguna vez",
+    titleRest2: "se las ha dicho en voz baja?",
+    sub1: "Quizá las haya oído decenas de veces.",
+    sub2: "Pero estas palabras duelen como nuevas cada vez.",
+    tag: "Antes de empezar",
+    worries: [
+      { lead: "Compramos un cuaderno y, ", strong: "a las dos páginas, empiezan las lágrimas." },
+      {
+        lead: "Los números del 1 al 10 — ",
+        strong: "meses después, seguimos en el mismo punto.",
+      },
+      { lead: "Una respuesta mal y ", strong: "ya no quiere volver a intentarlo." },
+      {
+        lead: "Los libros de su edad van demasiado rápido, ",
+        strong: "y los de cursos menores le parecen de bebés.",
+      },
+    ],
+    closingHeading: "Le entendemos.",
+    closingLead: "Por eso hicimos prácticas pequeñas, al ritmo de su hijo.",
+    closingLead2: "Una pantalla, un paso — ",
+    closingStrong: "caminando juntos, al ritmo de su hijo.",
+    cta: "Ver más",
+  },
 } as const;
 
 export default function SectionEmpathy({ locale = "ko" }: { locale?: Locale }) {

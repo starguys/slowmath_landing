@@ -50,6 +50,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "色の名前を見て・聞いて・選びながら、色を認識する力を育てます",
       long: "自分のペースで学ぶ子にとって、色の名前はむずかしいことがあります。単純な認識から順序の記憶まで段階的に挑戦して、色の語彙をしっかり積み上げます。",
     },
+    es: {
+      category: "Cognición básica",
+      subtitle: "Cuando los ojos y las manos se familiarizan primero",
+      name: "Colores",
+      short: "Ver, oír y elegir los nombres de los colores — la percepción del color paso a paso",
+      long: "Los nombres de los colores pueden resultar difíciles para un niño con retraso del desarrollo. Avanzando paso a paso, del simple reconocimiento a recordar una secuencia, se asienta un vocabulario de colores sólido.",
+    },
   },
   slowmath_shape: {
     ko: {
@@ -86,6 +93,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "形を覚える",
       short: "三角・四角・丸の中から、問題と同じ形を選びます",
       long: "同じ大きさで選ぶ基本から、大きさが違ったり回転した形まで4段階に分けて形の感覚を育てます。大きさや向きが変わっても同じ形だと分かる力が、自然と身についていきます。",
+    },
+    es: {
+      category: "Cognición básica",
+      subtitle: "Cuando los ojos y las manos se familiarizan primero",
+      name: "Formas",
+      short: "Elegir la forma que corresponde a la pregunta — triángulo, cuadrado o círculo",
+      long: "Cuatro modos — desde lo básico con el mismo tamaño hasta tamaños distintos y formas giradas — construyen el sentido de la forma paso a paso. El niño aprende con naturalidad que una forma sigue siendo la misma aunque cambie su tamaño o su ángulo.",
     },
   },
   slowmath_linedraw: {
@@ -124,6 +138,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "直線・曲線・らせんをなぞって、手の安定性を育てます",
       long: "文字書きや絵をかく土台となる手の調整力を、楽しくトレーニングします。3段階の難易度と音声ガイドで、子どもがあきらめずに練習を続けられるよう手助けします。",
     },
+    es: {
+      category: "Cognición básica",
+      subtitle: "Cuando los ojos y las manos se familiarizan primero",
+      name: "Líneas",
+      short: "Trazar líneas rectas, curvas y espirales para afirmar la mano",
+      long: "Entrena jugando el control de la mano que hay debajo de la escritura y el dibujo. Tres niveles de dificultad y la guía por voz ayudan a que el niño siga practicando sin abandonar.",
+    },
   },
   slowmath_shapedraw: {
     ko: {
@@ -161,12 +182,19 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "ガイドを見ながら、丸・四角・星などの図形をなぞって描きます",
       long: "8種類の図形から選び、ガイドの上を手でなぞって描きます。うすい線をなぞる方法と、点線をつないで描く方法を選べるので、子どもの手の調整力に合わせて少しずつ進められます。",
     },
+    es: {
+      category: "Cognición básica",
+      subtitle: "Cuando los ojos y las manos se familiarizan primero",
+      name: "Dibujar formas",
+      short: "Trazar círculos, cuadrados, estrellas y más, siguiendo una guía en pantalla",
+      long: "Se elige entre ocho formas y se trazan a mano sobre una guía. Se puede dibujar encima de un contorno suave o unir un camino de puntos, para que el reto suba poco a poco junto con el control de la mano.",
+    },
   },
   slowmath_dot2dot: {
     ko: {
       category: "기초 인지",
       subtitle: "눈과 손이 먼저 익숙해지는 시간",
-      name: "점선 따라 그리기",
+      name: "점 잇기",
       short: "주어진 점과 선을 보고 똑같이 따라 그리며 시지각과 소근육을 키워요",
       long: "예시로 주어진 점-선 연결을 관찰하고 아래 격자에 똑같이 재현하는 활동이에요. 시지각 변별과 손 조절을 동시에 자극하고, 격자 크기·방향 복잡도를 조절해 아이 수준에 맞게 쓸 수 있습니다.",
     },
@@ -197,6 +225,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "点をつなぐ",
       short: "示された点と線をよく見て、同じようになぞりながら視知覚と小さな筋力を育てます",
       long: "見本の点と線のつなぎ方を観察し、下のマスに同じように再現する活動です。視知覚の見分けと手の調整を同時に刺激し、マスの大きさや向きの複雑さを調整して子どもの水準に合わせて使えます。",
+    },
+    es: {
+      category: "Cognición básica",
+      subtitle: "Cuando los ojos y las manos se familiarizan primero",
+      name: "Une los puntos",
+      short: "Mirar un modelo de puntos y líneas y rehacerlo en la cuadrícula de abajo — percepción visual y motricidad fina a la vez",
+      long: "El niño observa un dibujo de puntos y líneas y lo reproduce igual en la cuadrícula de abajo. Estimula a la vez la discriminación visual y el control de la mano, y el tamaño de la cuadrícula y la complejidad de las direcciones se ajustan a su nivel.",
     },
   },
   slowmath_colorcopy: {
@@ -235,6 +270,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "示された色のマス模様をそのまま再現して視知覚を鍛えます",
       long: "視知覚の見分けとワーキングメモリを同時に鍛えます。マスは2×2から5×5まで大きくなり、色の数も調整できるので、お子さんの水準に合わせて使えます。",
     },
+    es: {
+      category: "Cognición básica",
+      subtitle: "Cuando los ojos y las manos se familiarizan primero",
+      name: "Igual",
+      short: "Rehacer el patrón de colores mostrado para entrenar la percepción visual",
+      long: "Entrena al mismo tiempo la discriminación visual y la memoria de trabajo. El tablero crece desde cuatro casillas hasta veinticinco y el número de colores se puede ajustar, para que se adapte al nivel de cada niño.",
+    },
   },
   slowmath_oppositematch: {
     ko: {
@@ -271,6 +313,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "反対ぬり",
       short: "元の絵で空いている場所を見つけて、自分の答えに塗る反転マッチング",
       long: "元の絵で空いているマスを見つけて、自分の答えに塗ります。「何がないか」に気づく視知覚と空間把握を一緒に鍛えます。4マスから25マスまで大きさを増やしながら、子どものペースに合わせます。",
+    },
+    es: {
+      category: "Cognición básica",
+      subtitle: "Cuando los ojos y las manos se familiarizan primero",
+      name: "Opuesto",
+      short: "Encontrar los huecos vacíos del original y rellenarlos en tu tablero",
+      long: "El niño rellena las casillas que estaban vacías en el original. Entrena la percepción visual de 'lo que falta' y la orientación espacial. El tablero crece de cuatro casillas a veinticinco para seguir el ritmo de cada niño.",
     },
   },
   slowmath_pattern: {
@@ -309,6 +358,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "くり返しのきまりから、抜けているものを見つけるパターン認識の練習",
       long: "パターン認識は算数的な思考力の中心です。果物・色・形のパターンを段階的に学び、選択ロック機能で考える力を育てます。",
     },
+    es: {
+      category: "Cognición básica",
+      subtitle: "Cuando los ojos y las manos se familiarizan primero",
+      name: "Patrones",
+      short: "Encontrar lo que falta en una regla que se repite — práctica de reconocer patrones",
+      long: "Reconocer patrones está en el centro del pensamiento matemático. El niño recorre paso a paso patrones de frutas, colores y formas, mientras el bloqueo de la selección le ayuda a razonar antes de responder.",
+    },
   },
   slowmath_sameshape: {
     ko: {
@@ -345,6 +401,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "同じ形さがし",
       short: "たくさんの形の中から同じ形やペアを見つけて、視知覚の見分けを鍛えます",
       long: "四角・三角・丸から星・ハート・五角形まで10種類の形を使って、形を見分ける力を育てます。単一・グループ選び、色の見分け、ペア探しまで段階的に挑戦し、視知覚の処理を鍛えます。",
+    },
+    es: {
+      category: "Cognición básica",
+      subtitle: "Cuando los ojos y las manos se familiarizan primero",
+      name: "Misma forma",
+      short: "Encontrar formas iguales y parejas entre muchas — práctica de discriminación visual",
+      long: "Usa diez formas, del cuadrado, el triángulo y el círculo a la estrella, el corazón y el pentágono, para afinar la discriminación de formas. El niño avanza por selección simple y en grupo, discriminación de color y búsqueda de parejas, entrenando el procesamiento visual.",
     },
   },
   slowmath_number: {
@@ -383,6 +446,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "1から100までの数字を見て・聞いて・選びながら覚えます",
       long: "ヒントと音声ガイドのおかげで、子どもがひとりでも挑戦できます。1から100までの数の順序の概念を少しずつ身につけていくので、就学準備にも役立ちます。",
     },
+    es: {
+      category: "Sentido numérico",
+      subtitle: "Cuando los números empiezan a parecer 'cantidades'",
+      name: "Números",
+      short: "Ver, oír y elegir los números del 1 al 100",
+      long: "Las pistas y la guía por voz permiten que el niño lo intente por su cuenta. Aprender el orden de los números del 1 al 100 paso a paso es una buena preparación para la escuela.",
+    },
   },
   slowmath_numberdraw: {
     ko: {
@@ -419,6 +489,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "数字を書く",
       short: "0〜9の数字を正しい書き順で書く練習をします",
       long: "数字の形を手で書きながら、体で形を覚えていけます。点線ガイドと段階的なフィードバックで、はじめて書く子どもも正しい書き順を自然に身につけられます。",
+    },
+    es: {
+      category: "Sentido numérico",
+      subtitle: "Cuando los números empiezan a parecer 'cantidades'",
+      name: "Escribir números",
+      short: "Practicar la escritura del 0 al 9 con el orden de trazo correcto",
+      long: "Al trazar a mano la forma de cada cifra, el niño la recuerda con el cuerpo. Las guías de puntos y los avisos paso a paso hacen que incluso quien escribe por primera vez tome el orden de trazo correcto con naturalidad.",
     },
   },
   slowmath_dice: {
@@ -457,6 +534,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "指・サイコロ・カードの模様をかぞえながら、数の感覚を育てます",
       long: "身のまわりの物をかぞえる練習で、数の感覚を自然に身につけられます。考える時間を調整することで衝動的な回答を防ぎ、ゆっくり考える習慣を育てます。",
     },
+    es: {
+      category: "Sentido numérico",
+      subtitle: "Cuando los números empiezan a parecer 'cantidades'",
+      name: "Contar",
+      short: "Contar dedos, puntos del dado y figuras de las cartas — así nace el sentido numérico",
+      long: "Contar objetos de cada día hace crecer el sentido numérico con naturalidad. El tiempo de reflexión es ajustable: evita las respuestas impulsivas y afianza el hábito de pensar con calma.",
+    },
   },
   slowmath_bundle: {
     ko: {
@@ -493,6 +577,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "10ずつ かぞえる",
       short: "10こずつ たばねた ビーズを見て、たば・ばら・ぜんぶの数をかぞえます",
       long: "ひもに10こずつ通したビーズと ばらのビーズを見て、たばはいくつ、ばらはいくつ、ぜんぶでいくつ、と順番に答えます。左右を見くらべて大きいほう・小さいほうをえらぶ方法もあり、位の感覚が自然に育ちます。",
+    },
+    es: {
+      category: "Sentido numérico",
+      subtitle: "Cuando los números empiezan a parecer 'cantidades'",
+      name: "Contar de diez",
+      short: "Ver bolitas ensartadas de diez en diez y contar las decenas, las unidades y el total",
+      long: "Mirando filas de diez bolitas más algunas sueltas, el niño responde por orden: cuántas decenas, cuántas unidades, cuántas en total. Otros dos modos ponen un tablero a cada lado para elegir el número mayor o el menor, y así el valor posicional se va sintiendo solo.",
     },
   },
   slowmath_counting: {
@@ -531,6 +622,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "「한 명(1人)」「두 마리(2匹)」など、韓国語の数え方と数字をペアにします",
       long: "韓国語では、人は「명」、動物は「마리」、車は「대」のように、物ごとに数え方が違います。「한 명 ↔ 1명」「두 마리 ↔ 2마리」のように韓国語と数字をペアにしながら自然に身につけます。",
     },
+    es: {
+      category: "Sentido numérico",
+      subtitle: "Cuando los números empiezan a parecer 'cantidades'",
+      name: "Contar en coreano",
+      short: "Unir los clasificadores coreanos — 'una persona, dos animales, tres coches' — con su número",
+      long: "En coreano la palabra para contar cambia según la cosa contada: 'han myeong' para personas, 'han mari' para animales, 'han dae' para coches. El niño aprende con naturalidad uniendo la palabra coreana con su número, como 'han myeong ↔ 1 myeong' o 'du mari ↔ 2 mari'.",
+    },
   },
   slowmath_koreannum: {
     ko: {
@@ -567,6 +665,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "ハングル数字",
       short: "数字と韓国固有語の数(하나・둘・셋・열・스물…)をペアにして覚えます",
       long: "1から100までの数字を韓国語固有の数詞とつなげて覚えます。「하나〜열」から「아흔〜백」まで11段階に分かれているので子どもの水準から始められ、数字→ハングル、ハングル→数字の両方向で交互に練習することで両向きに自然に身につきます。",
+    },
+    es: {
+      category: "Sentido numérico",
+      subtitle: "Cuando los números empiezan a parecer 'cantidades'",
+      name: "Números en coreano",
+      short: "Unir las cifras con las palabras coreanas propias (hana, dul, set, yeol, seumul…)",
+      long: "Conecta las cifras del 1 al 100 con las palabras coreanas propias para los números. Once etapas, de 'hana–yeol' a 'aheun–baek', dejan empezar a cada niño en su nivel, y los ejercicios alternan cifra→palabra y palabra→cifra para que ambos sentidos se asienten.",
     },
   },
   slowmath_matching: {
@@ -605,6 +710,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "数字と丸の個数をつなげて、数と量を結びつけます",
       long: "数字の記号と実際の量を結びつける、数概念の中心をしっかり固めます。順番に並んだ問題から始めて、ランダム配置まで進むことで、数字と個数のつながりが自然に身につきます。",
     },
+    es: {
+      category: "Sentido numérico",
+      subtitle: "Cuando los números empiezan a parecer 'cantidades'",
+      name: "Emparejar",
+      short: "Unir cada número con su cantidad de círculos — símbolo y cantidad, juntos",
+      long: "Afianza el concepto central del número: unir el símbolo escrito con la cantidad real. Empezar con ejercicios ordenados y pasar luego a disposiciones al azar deja que el vínculo entre cifra y cantidad se asiente con naturalidad.",
+    },
   },
   slowmath_gap: {
     ko: {
@@ -641,6 +753,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "数の間隔",
       short: "一定の間隔で空いている数を当ててみましょう",
       long: "抜けている数を見つけながら、数の順序と間隔の感覚を自然に身につけます。慣れた間隔から始めて色々な間隔に広げていき、子どもが自分できまりを見つけられるよう助けます。",
+    },
+    es: {
+      category: "Relaciones numéricas",
+      subtitle: "Leer mayor, menor, igual y distinto",
+      name: "Saltos numéricos",
+      short: "Completar los números que faltan en una fila con saltos iguales",
+      long: "Completar los números que faltan hace crecer el sentido del orden y de la distancia entre números. Empezar por un salto conocido e ir ampliando a otros deja que el niño descubra la regla por su cuenta.",
     },
   },
   slowmath_gap2: {
@@ -679,6 +798,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "見本を見て、同じ間隔で数字表を塗ってみましょう",
       long: "数字表にいくつかのヒントのマスがあらかじめ塗ってあります。同じ間隔で続く残りのマスを色で塗りながら、きまりを自分で見つけられるよう助けます。間隔(1〜10)と範囲(1〜50 / 1〜100)を自由に選べて、お子さんの水準に合わせて使えます。",
     },
+    es: {
+      category: "Relaciones numéricas",
+      subtitle: "Leer mayor, menor, igual y distinto",
+      name: "Práctica de saltos",
+      short: "Mirar las pistas y colorear el resto del tablero con el mismo salto",
+      long: "Algunas casillas vienen coloreadas como pista en el tablero numérico. El niño colorea las demás con el mismo salto y descubre la regla por su cuenta. El salto (1–10) y el rango (1–50 o 1–100) se ajustan a su nivel.",
+    },
   },
   slowmath_money: {
     ko: {
@@ -698,8 +824,8 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
     zhcn: {
       category: "时钟・日历・金钱",
       subtitle: "在生活中学会时间和金钱",
-      name: "硬币与纸币",
-      short: "认识韩国硬币与纸币的样子和名称",
+      name: "硬币与纸钞",
+      short: "认识韩国硬币与纸钞的样子和名称",
       long: "把 10、50、100、500 元硬币和 1,000、5,000、10,000、50,000 元纸币的图案与名称配成对，自然而然地记住。",
     },
     en: {
@@ -715,6 +841,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "硬貨と紙幣",
       short: "韓国の硬貨と紙幣の形と名前を覚えます",
       long: "10・50・100・500ウォンの硬貨と、1,000・5,000・10,000・50,000ウォンの紙幣を、絵と名前でペアにしながら自然に覚えます。",
+    },
+    es: {
+      category: "Hora · Calendario · Dinero",
+      subtitle: "El tiempo y el dinero de la vida real",
+      name: "Monedas y billetes",
+      short: "Aprender la forma y el nombre de las monedas y los billetes coreanos",
+      long: "El niño aprende con naturalidad uniendo las monedas de 10, 50, 100 y 500 wones y los billetes de 1.000, 5.000, 10.000 y 50.000 wones con su imagen y su nombre.",
     },
   },
   slowmath_comparing: {
@@ -753,6 +886,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "大きさ・長さ・高さ・厚さ・量をくらべながら、算数のことばを身につけます",
       long: "「大きい」「短い」を算数の概念とつなげます。絵で直感的に見せるので、文字が読めなくても学習できます。",
     },
+    es: {
+      category: "Relaciones numéricas",
+      subtitle: "Leer mayor, menor, igual y distinto",
+      name: "Comparar 1",
+      short: "Comparar tamaño, longitud, altura, grosor y cantidad — el lenguaje de las matemáticas",
+      long: "Conecta 'más grande' y 'más corto' con los conceptos matemáticos. Como todo se muestra con dibujos, el niño puede aprenderlo incluso antes de saber leer.",
+    },
   },
   slowmath_comparing2: {
     ko: {
@@ -789,6 +929,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "くらべる 2",
       short: "上・下・中・外など、空間の関係をくらべながら覚えます",
       long: "位置や空間のことばを理解することは、算数の文章題の土台になります。形の絵を通して、空間の概念を自然に身につけていけます。",
+    },
+    es: {
+      category: "Relaciones numéricas",
+      subtitle: "Leer mayor, menor, igual y distinto",
+      name: "Comparar 2",
+      short: "Comparar relaciones en el espacio — encima, debajo, dentro, fuera",
+      long: "Entender la posición y el lenguaje del espacio es la base para los problemas con enunciado. Las ilustraciones de formas dejan que el niño interiorice los conceptos espaciales con naturalidad.",
     },
   },
   slowmath_compare: {
@@ -827,6 +974,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "数の大小をくらべて、不等号で表す方法を身につけます",
       long: "数の大小関係を、数直線と棒グラフのヒントで視覚的に身につけます。1桁も2桁も対応していて、不等号(<, =, >)の学習まで段階的につながります。",
     },
+    es: {
+      category: "Relaciones numéricas",
+      subtitle: "Leer mayor, menor, igual y distinto",
+      name: "Tamaño numérico",
+      short: "Comparar el tamaño de los números y expresarlo con signos de desigualdad",
+      long: "El niño aprende las relaciones de mayor y menor de forma visual, con pistas en la recta numérica y en barras. Admite una y dos cifras, y lleva paso a paso hasta los signos de desigualdad (<, =, >).",
+    },
   },
   slowmath_clock: {
     ko: {
@@ -863,6 +1017,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "時計の読み方",
       short: "アナログ・デジタル時計の読み方を、正時・30分・15分の単位で学びます",
       long: "時計を読むことは、生活の自立に欠かせない力です。正時から始めて30分・15分・45分へと少しずつ細かくなる段階で、誰でもついていけるよう設計されています。",
+    },
+    es: {
+      category: "Hora · Calendario · Dinero",
+      subtitle: "El tiempo y el dinero de la vida real",
+      name: "La hora",
+      short: "Leer el reloj de agujas y el digital — en punto, y media, y cuarto",
+      long: "Saber la hora es una destreza imprescindible para la autonomía diaria. Empieza por las horas en punto y se afina con la media, el cuarto y menos cuarto, pensado para que cualquier niño pueda seguirlo.",
     },
   },
   slowmath_calendar: {
@@ -901,6 +1062,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "カレンダーで曜日や日にちを選び、丸の付いた日を見つけながらカレンダーの読み方を覚えます",
       long: "カレンダーを読むことは、時間感覚と予定を理解する土台になります。曜日をすべて選ぶ、N番目の曜日を選ぶ、日にちを選ぶ、丸の付いた日を当てるまで、段階的に身につけられるよう設計されています。",
     },
+    es: {
+      category: "Hora · Calendario · Dinero",
+      subtitle: "El tiempo y el dinero de la vida real",
+      name: "Calendario",
+      short: "Elegir días de la semana y fechas, encontrar el día marcado — leer el calendario",
+      long: "Leer el calendario es la base del sentido del tiempo y de entender una agenda. Avanza eligiendo todos los días de una misma semana, el enésimo día, una fecha concreta y el día marcado con un círculo.",
+    },
   },
   slowmath_oddeven: {
     ko: {
@@ -937,6 +1105,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "奇数と偶数",
       short: "配列盤・数字盤・ランダム・ペア合わせの4モードで、奇数と偶数を身につけます",
       long: "奇数と偶数の概念は、数のパターン認識のスタート地点です。配列盤でペアが合うかを目で確かめ、数字盤ですべて選び、ランダムな数を見分け、同じ種類どうしをペアにする4段階のモードでたっぷりくり返します。",
+    },
+    es: {
+      category: "Relaciones numéricas",
+      subtitle: "Leer mayor, menor, igual y distinto",
+      name: "Pares e impares",
+      short: "Aprender pares e impares con cuatro modos: filas, tablero, al azar y parejas",
+      long: "Par e impar es el punto de partida para reconocer patrones numéricos. El niño repite lo suficiente en cuatro modos: comprobar las parejas mirando una fila, marcarlos todos en el tablero, juzgar números al azar y emparejar iguales con iguales.",
     },
   },
   slowmath_combining: {
@@ -975,6 +1150,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "2つの数を合わせて1つの数にする、数の合成を練習します",
       long: "たし算の意味を「あつめる」という直感で理解できます。ドラッグ操作で手と目を同時に使うので、記憶に長く残ります。",
     },
+    es: {
+      category: "Antes de la suma",
+      subtitle: "Componer y descomponer — sentir los números",
+      name: "Unir",
+      short: "Juntar dos números en uno — composición numérica",
+      long: "El niño capta el sentido de la suma por la intuición de 'juntar'. Arrastrar con el dedo usa la mano y el ojo a la vez, así que se queda más tiempo en la memoria.",
+    },
   },
   slowmath_splitting: {
     ko: {
@@ -1011,6 +1193,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "わける",
       short: "1つの数を2つの部分にわける、数の分解を練習します",
       long: "ひき算とたし算の土台となる、数の分解の概念を身につけられます。2〜9まで3段階に分かれているので、お子さんにちょうどよい挑戦から始められます。",
+    },
+    es: {
+      category: "Antes de la suma",
+      subtitle: "Componer y descomponer — sentir los números",
+      name: "Separar",
+      short: "Separar un número en dos partes — descomposición numérica",
+      long: "Construye el concepto de descomponer números que sostiene tanto la resta como la suma. Dividido en tres niveles del 2 al 9, deja que cada niño empiece justo en el reto que le toca.",
     },
   },
   slowmath_complement: {
@@ -1049,6 +1238,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "10になる相棒の数(補数)を、3つのやり方で身につけます",
       long: "10の補数は、くり上がりのたし算やひき算の中心となる概念です。衝動を抑える機能と多彩な練習モードで、たっぷりくり返して完全な習得までたどりつけます。",
     },
+    es: {
+      category: "Antes de la suma",
+      subtitle: "Componer y descomponer — sentir los números",
+      name: "Pares de 10",
+      short: "Encontrar el número que completa 10 — de tres maneras",
+      long: "Los complementos de 10 son la clave para llevar en la suma y en la resta. El control de impulsos y los distintos modos de práctica dan repeticiones suficientes para dominarlos del todo.",
+    },
   },
   slowmath_plusone: {
     ko: {
@@ -1085,6 +1281,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "+1",
       short: "数の配列盤・順序予測・ランダム問題で+1のたし算を身につけます",
       long: "「+1は次の数」というきまりを数の配列盤で目に見える形にして、直感的に理解できます。1〜99の範囲まで段階的に広げながら、自信を積み上げます。",
+    },
+    es: {
+      category: "Suma",
+      subtitle: "El cálculo, construido con pasos pequeños",
+      name: "+1",
+      short: "Filas de números, predecir el orden y ejercicios al azar — la suma de 1",
+      long: "La regla de que '+1 es el número siguiente' se ve en la fila numérica y se entiende de un vistazo. El rango se amplía paso a paso hasta 1–99, y la confianza crece por el camino.",
     },
   },
   slowmath_plustwo: {
@@ -1123,6 +1326,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "2をたす計算を、配列盤と2つとびで目に見える形にして学びます",
       long: "配列盤で2マスとびのパターンが奇数・偶数の概念とつながり、発展的な学習ができます。1〜98の範囲を段階ごとに攻略しながら、達成感を感じられます。",
     },
+    es: {
+      category: "Suma",
+      subtitle: "El cálculo, construido con pasos pequeños",
+      name: "+2",
+      short: "Ver el +2 en la fila numérica y contar de dos en dos",
+      long: "El salto de dos en dos sobre la fila numérica enlaza con los pares y los impares, y abre camino a más aprendizaje. El niño conquista el rango 1–98 paso a paso y siente que lo ha logrado.",
+    },
   },
   slowmath_plusthree: {
     ko: {
@@ -1159,6 +1369,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "+3",
       short: "3をたす計算を、いくつかの学習モードでくり返し練習します",
       long: "+1・+2を身につけたあと自然につながる段階で、配列盤のアニメーションが計算の流れをいきいきと見せてくれます。ランダム問題で完全な習得まで支えます。",
+    },
+    es: {
+      category: "Suma",
+      subtitle: "El cálculo, construido con pasos pequeños",
+      name: "+3",
+      short: "Practicar el +3 en varios modos de aprendizaje",
+      long: "El paso natural después del +1 y el +2, con una animación en la fila numérica que muestra el cálculo con claridad. Los ejercicios al azar ayudan a dominarlo por completo.",
     },
   },
   slowmath_easy: {
@@ -1197,6 +1414,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "いちばんやさしい段階から始める1桁のたし算練習",
       long: "たし算がはじめての子でも負担なく始められるよう、4段階で難易度を調整します。衝動を抑えるモードで、答えを選ぶ前にじゅうぶんに考える習慣を育てます。",
     },
+    es: {
+      category: "Suma",
+      subtitle: "El cálculo, construido con pasos pequeños",
+      name: "Suma de 1 cifra",
+      short: "Suma de una cifra empezando por el nivel más fácil",
+      long: "Cuatro niveles de dificultad dejan empezar sin presión incluso a quien acaba de conocer la suma. El modo de control de impulsos crea el hábito de pensarlo antes de elegir la respuesta.",
+    },
   },
   slowmath_circle: {
     ko: {
@@ -1233,6 +1457,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "たしざん練習",
       short: "選ぶ・積む・埋める、3つのやり方でたし算を練習します",
       long: "同じたし算をいろいろな形で経験することで、概念がより深く身につきます。目に見える具体物を使うので、抽象的な計算がむずかしい子に特に効果的です。",
+    },
+    es: {
+      category: "Suma",
+      subtitle: "El cálculo, construido con pasos pequeños",
+      name: "Práctica de suma",
+      short: "Elegir, apilar y completar — tres maneras de practicar la suma",
+      long: "Vivir la misma suma de formas distintas deja que el concepto se asiente más hondo. Como usa apoyos visuales concretos, resulta especialmente eficaz para quien se atasca con el cálculo abstracto.",
     },
   },
   slowmath_carry: {
@@ -1271,6 +1502,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "分解と配列盤で10を作りながら、くり上がりを身につけます",
       long: "2桁のたし算の中心となる「くり上がり」を、分解・補数と配列盤という2つの直感的な方法に分けて学びます。ドラッグ操作で「10を作る」感覚を、手と目で一緒に身につけます。",
     },
+    es: {
+      category: "Suma",
+      subtitle: "El cálculo, construido con pasos pequeños",
+      name: "Llevar",
+      short: "Formar 10 descomponiendo y sobre la fila — practicar la llevada",
+      long: "La llevada, el corazón de la suma de dos cifras, se aprende por dos caminos intuitivos que se mantienen separados: descomponer con complementos, y la fila numérica. Arrastrar con el dedo construye la sensación de 'formar 10' con la mano y el ojo a la vez.",
+    },
   },
   slowmath_verticaladd: {
     ko: {
@@ -1307,6 +1545,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "筆算 たしざん",
       short: "2桁の筆算のたし算を、一の位から少しずつ解きます",
       long: "くり上がりを身につけた次の段階で、一の位・十の位を分けて解き方の流れを目に見える形で見せます。空欄が一つずつ増えていくので、子どもが自分で手順を身につけられるよう助けます。",
+    },
+    es: {
+      category: "Suma",
+      subtitle: "El cálculo, construido con pasos pequeños",
+      name: "Suma vertical",
+      short: "Resolver sumas de dos cifras en columna, empezando por las unidades",
+      long: "El paso siguiente a la llevada: las unidades y las decenas se separan para que se vea el recorrido de la solución. Los huecos aumentan de uno en uno, y así el niño domina el procedimiento por su cuenta.",
     },
   },
   slowmath_moneycalc: {
@@ -1345,6 +1590,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "硬貨と紙幣で値段を合わせたり、合計を選んだりします",
       long: "教室でのたし算を実生活(お金)に移した応用の段階。値札を見てお金を集める / 集めたお金を見て値段を当てる、の両方向を、硬貨だけ・紙幣だけ・硬貨と紙幣の3つの難易度でくり返し練習します。",
     },
+    es: {
+      category: "Hora · Calendario · Dinero",
+      subtitle: "El tiempo y el dinero de la vida real",
+      name: "Paga el importe",
+      short: "Pagar un precio con monedas y billetes, o elegir el total",
+      long: "Una etapa de aplicación que lleva la suma del aula a la vida real: el dinero. El niño practica en los dos sentidos — reunir dinero hasta la etiqueta de precio, y elegir el precio que corresponde al dinero reunido — en tres dificultades: solo monedas, solo billetes, y monedas con billetes.",
+    },
   },
   slowmath_minusone: {
     ko: {
@@ -1381,6 +1633,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "−1",
       short: "配列盤・前の数の予測・ランダム問題で−1のひき算を身につけます",
       long: "「−1はすぐ前の数」というきまりを配列盤で目に見える形にして、直感的に理解できます。段階的な範囲の広がりで、ひき算に負担を感じずに身につけられます。",
+    },
+    es: {
+      category: "Resta",
+      subtitle: "El cálculo, quitando de a un paso",
+      name: "−1",
+      short: "Filas de números, predecir el anterior y al azar — la resta de 1",
+      long: "La regla de que '−1 es el número justo anterior' se ve en la fila numérica y se entiende de un vistazo. La ampliación gradual del rango deja aprender la resta sin sentir carga.",
     },
   },
   slowmath_minustwo: {
@@ -1419,6 +1678,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "2をひく計算を、配列盤と逆向きの2つとびで目に見える形にして学びます",
       long: "配列盤で2マスずつ逆向きにとぶパターンで、−2のひき算を直感的に理解できます。段階ごとに範囲を広げていくので、自分のペースで攻略できます。",
     },
+    es: {
+      category: "Resta",
+      subtitle: "El cálculo, quitando de a un paso",
+      name: "−2",
+      short: "Ver el −2 en la fila numérica y contar hacia atrás de dos en dos",
+      long: "El salto hacia atrás de dos en dos sobre la fila numérica hace intuitiva la resta de 2. La ampliación del rango paso a paso deja conquistarla al propio ritmo.",
+    },
   },
   slowmath_minusthree: {
     ko: {
@@ -1455,6 +1721,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "−3",
       short: "3をひく計算を、いくつかの学習モードでくり返し練習します",
       long: "−1・−2を身につけたあと自然につながる段階で、配列盤のアニメーションがひき算の流れをいきいきと見せてくれます。ランダム問題で完全な習得まで支えます。",
+    },
+    es: {
+      category: "Resta",
+      subtitle: "El cálculo, quitando de a un paso",
+      name: "−3",
+      short: "Practicar el −3 en varios modos de aprendizaje",
+      long: "El paso natural después del −1 y el −2, con una animación en la fila numérica que muestra la resta con claridad. Los ejercicios al azar ayudan a dominarla por completo.",
     },
   },
   slowmath_easysub: {
@@ -1493,6 +1766,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "いちばんやさしい段階から始める1桁のひき算練習",
       long: "取り除く感覚を絵で見える形にしながら、1桁のひき算の意味を自然に身につけられます。4段階の難易度で負担なく始められ、小さな数から少しずつ大きくなる問題で、ひき算という新しい概念に慣れていきます。",
     },
+    es: {
+      category: "Resta",
+      subtitle: "El cálculo, quitando de a un paso",
+      name: "Resta de 1 cifra",
+      short: "Resta de una cifra empezando por el nivel más fácil",
+      long: "Muestra la sensación de ir quitando de uno en uno, y así la resta de una cifra se asienta con naturalidad. Cuatro niveles de dificultad acompañan sin presión, creciendo de números muy pequeños a otros mayores hasta que la resta se vuelve una idea conocida.",
+    },
   },
   slowmath_subtract: {
     ko: {
@@ -1529,6 +1809,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "ひきざん練習",
       short: "ドラッグ・くくり・配列盤の3つのやり方で、1桁のひき算を身につけます",
       long: "丸をかごに移す、くくって取り除く、配列盤で斜線で消す、の3つの見せ方でひき算の意味をいろいろな角度から身につけます。答え合わせが絵と一緒に行われるので、手と目で同時に学べます。",
+    },
+    es: {
+      category: "Resta",
+      subtitle: "El cálculo, quitando de a un paso",
+      name: "Práctica de resta",
+      short: "Arrastrar, agrupar y tachar en la fila — tres maneras de restar con una cifra",
+      long: "Tres formas de verlo — mover círculos a una cesta, agrupar y quitar, o tacharlos sobre una fila — enseñan el sentido de la resta desde varios ángulos. La comprobación va junto al dibujo, así que la mano y el ojo aprenden a la vez.",
     },
   },
   slowmath_borrow: {
@@ -1567,6 +1854,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "くり下がりが必要なひき算を、段階ごとに少しずつ解きます",
       long: "2桁から1桁・2桁をひくとき、くり下がりがどのように起きるかを、式の分解とくくりの印でゆっくり見せます。最初の問題は空欄1つから始まり、少しずつ空欄が増えていくので、解き方の流れを自分で身につけていきます。",
     },
+    es: {
+      category: "Resta",
+      subtitle: "El cálculo, quitando de a un paso",
+      name: "Llevadas",
+      short: "La resta con préstamo, resuelta paso a paso",
+      long: "Muestra paso a paso, descomponiendo la operación y agrupando con marcas, cómo ocurre el préstamo al restar una o dos cifras de un número de dos cifras. El primer ejercicio empieza con un solo hueco y va añadiendo más, para que el niño aprenda el recorrido por su cuenta.",
+    },
   },
   slowmath_verticalsub: {
     ko: {
@@ -1603,6 +1897,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "筆算 ひきざん",
       short: "2桁の筆算のひき算を、一の位から少しずつ解きます",
       long: "くり下がりの概念を身につけた次の段階で、一の位・十の位を分けて解き方の流れを目に見える形で見せます。空欄が一つずつ増えていくので、手順に沿った解き方を自分で身につけられます。",
+    },
+    es: {
+      category: "Resta",
+      subtitle: "El cálculo, quitando de a un paso",
+      name: "Resta vertical",
+      short: "Resolver restas de dos cifras en columna, empezando por las unidades",
+      long: "El paso siguiente al préstamo: las unidades y las decenas se separan para que se vea el recorrido de la solución. Los huecos aumentan de uno en uno, y así el niño domina por su cuenta el procedimiento paso a paso.",
     },
   },
   slowmath_changecalc: {
@@ -1641,6 +1942,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "商品の値段と払ったお金を見て、おつりを計算します",
       long: "ひき算を実生活(お金)に移した応用の段階。値段と払ったお金の差額としておつりを自分で選びながら、硬貨・紙幣の単位の感覚とひき算を一緒に身につけます。",
     },
+    es: {
+      category: "Hora · Calendario · Dinero",
+      subtitle: "El tiempo y el dinero de la vida real",
+      name: "Calcular el cambio",
+      short: "Mirar el precio y el dinero entregado, y elegir el cambio",
+      long: "Una etapa de aplicación que lleva la resta a la vida real: el dinero. El niño elige él mismo el cambio como la diferencia entre el precio y lo entregado, y construye el sentido de las unidades de monedas y billetes junto con la resta.",
+    },
   },
   slowmath_timestables: {
     ko: {
@@ -1677,6 +1985,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "九九",
       short: "2の段〜9の段の九九を、じゅうぶんな考える時間と一緒にゆっくり身につけます",
       long: "考える時間をたっぷり調整できるので、すばやい暗記がむずかしい子でも自分のペースで九九を攻略できます。2の段から9の段まで順番に踏んでいきながら、それぞれの段を自分のペースで一つずつ仕上げていきます。",
+    },
+    es: {
+      category: "Multiplicación",
+      subtitle: "Las reglas numéricas detrás del concepto",
+      name: "Tablas",
+      short: "Las tablas del 2 al 9, al propio ritmo y con tiempo de sobra para pensar",
+      long: "El tiempo para pensar se ajusta por completo, así que incluso quien memoriza con dificultad puede dominar las tablas a su ritmo. Recorriendo de la del 2 a la del 9 en orden, cada niño completa una tabla cada vez, a su propio paso.",
     },
   },
   slowmath_easymul: {
@@ -1715,6 +2030,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "1〜5・1〜9のかけ算から筆算のかけ算まで、3段階でかける感覚を身につけます",
       long: "いちばんやさしい1〜5の範囲から始めて1〜9に広げていき、最後の筆算の1桁×1桁では答えの一の位と十の位を一つずつ選びます。筆記のかけ算と同じ順番で進むので、紙に移すときも自然です。",
     },
+    es: {
+      category: "Multiplicación",
+      subtitle: "Las reglas numéricas detrás del concepto",
+      name: "Multiplicación de 1 cifra",
+      short: "Tres pasos — 1–5, 1–9 y en columna — para que crezca el sentido de la multiplicación",
+      long: "Se empieza por el rango más fácil, 1–5, se amplía a 1–9 y se termina con la multiplicación de una cifra en columna, donde el niño elige primero la cifra de las unidades y después la de las decenas. El orden es el mismo que en papel, así que se traslada con naturalidad al cálculo escrito.",
+    },
   },
   slowmath_verticalmul: {
     ko: {
@@ -1751,6 +2073,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "筆算 かけざん",
       short: "1桁・2桁の筆算のかけ算を、2行に分けて少しずつ解きます",
       long: "1桁×1桁の九九の段階から、2桁×1桁・2桁×2桁まで桁数を広げていきます。大きな数は一の位と十の位を別々にかけて2行に書いてからたし合わせ、くり上がりの値も上の小さなマスに先に入れます。筆記のかけ算と同じ順番なので、紙に移すときも自然です。",
+    },
+    es: {
+      category: "Multiplicación",
+      subtitle: "Las reglas numéricas detrás del concepto",
+      name: "Multiplicación vertical",
+      short: "Multiplicación en columna a dos filas — de una cifra a dos cifras",
+      long: "Se crece desde 1 cifra × 1 cifra hasta 2 × 1 y 2 × 2. Con números mayores, las unidades y las decenas se multiplican por separado en dos filas y luego se suman, anotando antes las llevadas en las casillas pequeñas de arriba. El orden es el mismo que en papel, así que se traslada con naturalidad al cálculo escrito.",
     },
   },
   slowmath_fractioncompare: {
@@ -1789,6 +2118,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       short: "2つの分数・4つの分数・不等号まで、3つのやり方で分数の大小をくらべます",
       long: "同じ分母どうしから始めて、違う分母へと広げながら、分数の大小の感覚をつかみます。円(面積)・棒(長さ)・数直線(位置)の3つのヒントが違う観点から大小を見せてくれます。大きい数・小さい数を選ぶ → 4つの中でいちばん大きい/小さいものを選ぶ → 不等号(＜ ＝ ＞)を選ぶ、の順で難易度が自然に上がっていきます。",
     },
+    es: {
+      category: "Relaciones numéricas",
+      subtitle: "Mayor, menor, igual, distinto",
+      name: "Comparar fracciones",
+      short: "Comparar dos, cuatro, o con signo de desigualdad — tres niveles de práctica",
+      long: "Se empieza con parejas del mismo denominador y luego se pasa a denominadores distintos. Tres tipos de pista — círculo (área), barra (longitud) y recta numérica (posición) — muestran el tamaño desde ángulos distintos. La dificultad sube sola: elegir la mayor o la menor, elegir la mayor o la menor de cuatro, y por último escoger el signo correcto (＜ ＝ ＞).",
+    },
   },
   slowmath_fraction: {
     ko: {
@@ -1825,6 +2161,13 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       name: "分数を覚える",
       short: "円・棒・グループ・数直線の4つの形で、分数を目で覚えます",
       long: "全体をいくつに等しく分けたか、その中でいくつが塗られているかを2回かぞえるやり方で、分数の感覚をつかみます。円(面積)・棒(長さ)・グループ(個数)・数直線(位置)の4つの形が違う認知のしかたを補い合い、分子の範囲(1 → 1〜10)を段階的に広げながら身につけます。",
+    },
+    es: {
+      category: "Sentido numérico",
+      subtitle: "Cuando los números se vuelven cantidades",
+      name: "Fracciones",
+      short: "Cuatro formas — círculo, barra, conjunto y recta numérica — para ver las fracciones",
+      long: "El niño aprende las fracciones contando dos veces: en cuántas partes iguales se ha dividido el todo, y cuántas están coloreadas. Cuatro formas — círculo (área), barra (longitud), conjunto (cantidad) y recta numérica (posición) — refuerzan la misma idea desde ángulos distintos, y el rango del numerador (1 → 1–10) se amplía paso a paso.",
     },
   },
 };

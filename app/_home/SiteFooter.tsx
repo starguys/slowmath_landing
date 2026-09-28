@@ -98,6 +98,24 @@ const C = {
     hashtags1: "#発達ゆっくり #発達障害 #境界知能 #学習障害",
     hashtags2: "#ADHD #自閉スペクトラム #特別支援教育 #算数",
   },
+  es: {
+    wm: ["Little", "Steps"],
+    tagline1:
+      "Para niños con retraso del desarrollo, discapacidad del desarrollo, dificultades de aprendizaje, funcionamiento intelectual límite y cualquier niño que aprende a su propio ritmo",
+    tagline2: "Herramientas de aprendizaje sencillas pero potentes",
+    contact: "Colaboraciones · Sugerencias",
+    terms: "Términos",
+    privacy: "Privacidad",
+    termsHref: "/en/terms",
+    privacyHref: "/en/privacy",
+    related: "Relacionado",
+    typingLabel: "LittleSteps — Práctica de mecanografía",
+    typingUrl: "typing.slowkids.net",
+    honeypotLabel: "LittleSteps — Buscador de ayudas",
+    honeypotUrl: "honeypot.slowkids.net",
+    hashtags1: "#RetrasoDelDesarrollo #DiscapacidadDelDesarrollo #DificultadesDeAprendizaje #InteligenciaLímite",
+    hashtags2: "#DificultadDeAprendizaje #TDAH #EspectroAutista #EducaciónEspecial",
+  },
 } as const;
 
 const ACTIVE = "bg-[#f4f4f4] text-[#1c1c1e]";

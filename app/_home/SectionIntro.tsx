@@ -75,6 +75,21 @@ const C = {
     b2Rest: "、その小さな成功が自立の栄養になるよう手助けします。",
     b2Line2: "保護者だけでなく、特別支援の先生・認知療育の先生の授業補助ツールとしても使えます。",
   },
+  es: {
+    heading: "¿Qué es LittleSteps?",
+    emLead: "Los materiales de aprendizaje habituales van tan rápido que el niño no puede seguirlos — ",
+    emStrong: "LittleSteps nació justamente de esa preocupación de las familias.",
+    emRest: "",
+    b1Lead: "LittleSteps es un conjunto de herramientas de aprendizaje pensado para ",
+    b1Strong:
+      "niños con retraso del desarrollo, funcionamiento intelectual límite, o cualquier niño que aprende más despacio que sus compañeros",
+    b1Rest: " para que adquieran por su cuenta las bases de la cognición y de las matemáticas.",
+    b2Lead: "Con tiempo suficiente para pensar, pistas por etapas y guía por voz, ",
+    b2Strong: "el niño llega a hacerlo por sí mismo",
+    b2Rest: " — y ese pequeño logro se convierte en la semilla de su autonomía.",
+    b2Line2:
+      "Lo usan no solo las familias, sino también maestros de educación especial y terapeutas cognitivos como apoyo en el aula.",
+  },
 } as const;
 
 export default function SectionIntro({ locale = "ko" }: { locale?: Locale }) {

@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "zh-Hans": `${BASE_URL}/cn`,
     en: `${BASE_URL}/en`,
     ja: `${BASE_URL}/jp`,
+    es: `${BASE_URL}/es`,
     "x-default": BASE_URL,
   };
   const privacyLangs = {
@@ -60,6 +61,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/jp`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: { languages: homeLangs },
+    },
+    {
+      url: `${BASE_URL}/es`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.9,

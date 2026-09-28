@@ -3,8 +3,8 @@
 import { type Locale } from "./apps";
 
 /**
- * 언어 토글 (KR/CN/TW/JP/EN).
- * href 는 canonical 경로(/ · /cn/ · /tw/ · /jp/ · /en/) — Googlebot 이 이 링크를 따라가면 "리디렉션" 리포트에 잡히던
+ * 언어 토글 (KR/CN/TW/JP/EN/ES).
+ * href 는 canonical 경로(/ · /cn/ · /tw/ · /jp/ · /en/ · /es/) — Googlebot 이 이 링크를 따라가면 "리디렉션" 리포트에 잡히던
  * 문제(?lang= 쿼리 후 layout.tsx 의 replaceState 로 제거됨)를 원천 차단.
  * 사용자가 실제로 클릭할 때만 onClick 에서 localStorage 의 lang-pref 를 세팅해 layout.tsx 스크립트가
  * 다시 자동 리디렉트하지 못하게 한다.
@@ -32,7 +32,9 @@ export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) 
           ? "Language"
           : locale === "ja"
             ? "言語選択"
-            : "언어 선택";
+            : locale === "es"
+              ? "Selección de idioma"
+              : "언어 선택";
   return (
     <nav
       aria-label={label}
@@ -82,6 +84,15 @@ export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) 
         className={cls(locale === "en")}
       >
         EN
+      </a>
+      <a
+        href="/es/"
+        aria-label="Español"
+        aria-current={locale === "es" ? "page" : undefined}
+        onClick={() => setPref("es")}
+        className={cls(locale === "es")}
+      >
+        ES
       </a>
     </nav>
   );

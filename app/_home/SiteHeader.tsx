@@ -53,6 +53,14 @@ const C = {
     appleAlt: "App StoreでLittleStepsをダウンロード",
     googleAlt: "Google PlayでLittleStepsを入手",
   },
+  es: {
+    home: "/es",
+    homeLabel: "Inicio de LittleSteps",
+    wm: ["Little", "Steps", ""],
+    apple: APPLE_US,
+    appleAlt: "Descarga LittleSteps en el App Store",
+    googleAlt: "Consigue LittleSteps en Google Play",
+  },
 } as const;
 
 export default function SiteHeader({ locale = "ko" }: { locale?: Locale }) {

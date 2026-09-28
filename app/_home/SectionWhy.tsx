@@ -210,6 +210,45 @@ const C: Record<Locale, Copy> = {
       },
     ],
   },
+  es: {
+    heading: "Por qué las herramientas de LittleSteps son distintas",
+    items: [
+      {
+        title: "Dificultad por etapas",
+        desc: "Empieza donde está el niño ahora y sube con pequeños logros",
+      },
+      {
+        title: "Repetición pensada",
+        desc: "El mismo concepto practicado desde varios ángulos, para que se asiente más hondo",
+      },
+      {
+        title: "Tiempo suficiente para pensar",
+        desc: "Una espera ajustable antes de responder reduce las elecciones impulsivas",
+      },
+      {
+        title: "Guía por voz",
+        desc: "Las consignas se leen en voz alta, para que quien aún no lee trabaje solo",
+      },
+      {
+        title: "Calma por diseño",
+        desc: "Sin pantallas que parpadean ni efectos de sonido bruscos — una pantalla tranquila",
+      },
+      {
+        title: "Una pantalla, una tarea",
+        desc: "Solo una actividad a la vez, para que la atención se asiente sin competencia",
+      },
+      {
+        title: "Cuadernos para imprimir",
+        desc: "Descarga e imprime un cuaderno para practicar lo mismo en papel",
+        icon: "/figma/why/workbook.svg",
+      },
+      {
+        title: "Tu propia rutina diaria",
+        desc: "Elige solo las prácticas que necesitas y arma un recorrido para cada día",
+        icon: "/figma/why/set.svg",
+      },
+    ],
+  },
 };
 
 /**
