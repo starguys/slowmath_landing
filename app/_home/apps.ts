@@ -32,6 +32,7 @@ export const APP_NAMES: Record<
   slowmath_colorcopy: { ko: "똑같이 맞추기", zh: "一模一樣", zhcn: "一模一样", en: "Pattern copy", ja: "そっくり", es: "Igual" },
   slowmath_oppositematch: { ko: "반대로 맞추기", zh: "相反上色", zhcn: "相反上色", en: "Opposite match", ja: "反対ぬり", es: "Opuesto" },
   slowmath_pattern: { ko: "패턴 연습", zh: "規律", zhcn: "规律", en: "Pattern practice", ja: "パターン", es: "Patrones" },
+  slowmath_memory: { ko: "메모리 게임", zh: "記憶遊戲", zhcn: "记忆游戏", en: "Memory game", ja: "メモリーゲーム", es: "Memoria" },
   slowmath_sameshape: { ko: "같은 모양 찾기", zh: "找相同形狀", zhcn: "找相同形状", en: "Same shape finder", ja: "同じ形さがし", es: "Misma forma" },
   // 시계·달력·화폐
   slowmath_clock: { ko: "시계 보기", zh: "看時鐘", zhcn: "看时钟", en: "Reading the clock", ja: "時計の読み方", es: "La hora" },
@@ -255,6 +256,7 @@ export const APP_CATEGORY: Record<string, Category> = {
   slowmath_colorcopy: "foundations",
   slowmath_oppositematch: "foundations",
   slowmath_pattern: "foundations",
+  slowmath_memory: "foundations",
   slowmath_sameshape: "foundations",
 
   slowmath_clock: "time-calendar-money",

@@ -366,6 +366,50 @@ export const MODAL_CONTENT: Record<string, Record<Locale, ModalText>> = {
       long: "Reconocer patrones está en el centro del pensamiento matemático. El niño recorre paso a paso patrones de frutas, colores y formas, mientras el bloqueo de la selección le ayuda a razonar antes de responder.",
     },
   },
+  slowmath_memory: {
+    ko: {
+      category: "기초 인지",
+      subtitle: "눈과 손이 먼저 익숙해지는 시간",
+      name: "메모리 게임",
+      short: "카드를 뒤집어 짝을 찾고, 본 자리와 차례를 기억하며 작업기억을 훈련해요",
+      long: "뒤집어 짝 찾기·소리 듣고 찾기·순서대로 누르기 세 가지로 기억하는 힘을 키워요. 색깔·모양·점·숫자·한글 자모 중에서 재료를 고르고, 카드 수와 보여주는 시간을 아이에게 맞춰 조절할 수 있어요.",
+    },
+    zh: {
+      category: "基礎認知",
+      subtitle: "眼睛和雙手先熟悉的時間",
+      name: "記憶遊戲",
+      short: "翻牌找配對，記住看過的位置與順序，訓練工作記憶",
+      long: "用翻牌找配對、聽聲音找卡片、照順序點三種方式，培養記憶的能力。可以從顏色、形狀、點的數量、數字中挑選題材，卡片張數與顯示時間也能依孩子的步調調整。",
+    },
+    zhcn: {
+      category: "基础认知",
+      subtitle: "眼睛和双手先熟悉的时间",
+      name: "记忆游戏",
+      short: "翻牌找配对，记住看过的位置与顺序，训练工作记忆",
+      long: "用翻牌找配对、听声音找卡片、照顺序点三种方式，培养记忆的能力。可以从颜色、形状、点的数量、数字中挑选题材，卡片张数与显示时间也能按孩子的步调调整。",
+    },
+    en: {
+      category: "Foundations",
+      subtitle: "Where eyes and hands get familiar first",
+      name: "Memory game",
+      short: "Flip cards to find pairs, and remember where they were and in what order — working memory practice",
+      long: "Three ways to build remembering: flip and match, listen and find, and tap in order. The child picks the material — colors, shapes, dots, or numbers — and both the number of cards and how long they stay visible can be set to the child's pace.",
+    },
+    ja: {
+      category: "基礎認知",
+      subtitle: "目と手が先に慣れていく時間",
+      name: "メモリーゲーム",
+      short: "カードをめくってペアを見つけ、見た場所と順番を覚えるワーキングメモリの練習",
+      long: "めくってペアさがし・音を聞いてさがす・じゅんばんにおす、の三つで覚える力を育てます。いろ・かたち・てんのかず・すうじから題材を選べ、カードの枚数や見せる時間もお子さまに合わせて調整できます。",
+    },
+    es: {
+      category: "Cognición básica",
+      subtitle: "Cuando los ojos y las manos se familiarizan primero",
+      name: "Memoria",
+      short: "Voltear cartas para encontrar parejas y recordar dónde estaban y en qué orden — práctica de memoria de trabajo",
+      long: "Tres maneras de ejercitar la memoria: voltea y empareja, escucha y encuentra, y toca en orden. El niño elige el material — colores, formas, puntos o números — y se puede ajustar cuántas cartas hay y cuánto tiempo se ven, al ritmo de cada niño.",
+    },
+  },
   slowmath_sameshape: {
     ko: {
       category: "기초 인지",
