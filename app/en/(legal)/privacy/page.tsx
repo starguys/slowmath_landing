@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-
-const SITE_URL = "https://slowkids.net";
+import { SITE_URL, EN_BASE } from "@/app/_seo/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | LittleSteps",
   description:
     "LittleSteps Privacy Policy — items collected and purpose of use, retention period, processors, rights of data subjects, contact for the protection officer.",
   alternates: {
-    canonical: `${SITE_URL}/en/privacy`,
+    canonical: `${EN_BASE}/privacy`,
     languages: {
       ko: `${SITE_URL}/privacy`,
-      en: `${SITE_URL}/en/privacy`,
+      en: `${EN_BASE}/privacy`,
       "x-default": `${SITE_URL}/privacy`,
     },
   },

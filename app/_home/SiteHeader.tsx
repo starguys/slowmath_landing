@@ -1,4 +1,5 @@
 import { type Locale } from "./apps";
+import { enHref } from "../_seo/site";
 
 const APPLE_KR = "https://apps.apple.com/kr/app/id6763979294";
 const APPLE_US = "https://apps.apple.com/us/app/id6763979294";
@@ -69,7 +70,7 @@ export default function SiteHeader({ locale = "ko" }: { locale?: Locale }) {
     <header className="w-full border-b border-[#dadada] bg-white">
       <div className="mx-auto flex w-full max-w-[640px] items-center gap-4 px-5 py-[16px]">
         <a
-          href={t.home}
+          href={enHref(t.home)}
           aria-label={t.homeLabel}
           className="min-w-0 flex-1 font-bold tracking-[-0.6px] text-[20px] leading-[28px]"
         >

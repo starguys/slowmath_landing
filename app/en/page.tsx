@@ -13,9 +13,11 @@ import StickyDownloadBar from "../StickyDownloadBar";
 import SetHtmlLang from "./SetHtmlLang";
 import { PracticeModalProvider } from "../_home/PracticeModal";
 import JsonLd from "../_seo/JsonLd";
+import { EN_BASE } from "../_seo/site";
 
 const SITE_URL = "https://slowkids.net";
-const SITE_URL_EN = `${SITE_URL}/en`;
+// 영어판 전용 배포에서는 자기 도메인의 뿌리 — app/_seo/site.ts 참고
+const SITE_URL_EN = EN_BASE;
 // OG 이미지는 네 언어가 같은 마스코트 이미지를 쓴다 (글자가 없어 언어 중립).
 const OG_IMAGE = {
   url: `${SITE_URL}/og-image-mascot.png?v=20260901c`,

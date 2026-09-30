@@ -1,6 +1,7 @@
 "use client";
 
 import { type Locale } from "./apps";
+import { IS_EN_SITE, SITE_URL } from "../_seo/site";
 
 /**
  * 언어 토글 (KR/CN/TW/JP/EN/ES).
@@ -14,6 +15,12 @@ type Props = {
   activeCls: string;
   inactiveCls: string;
 };
+
+// 영어판 전용 배포에는 다른 언어 페이지가 없다(빌드에서 덜어낸다).
+// 그 버튼들은 집이 있는 slowkids.net 을 가리켜야 404 가 되지 않는다.
+const other = (p: string) => (IS_EN_SITE ? `${SITE_URL}${p}` : p);
+// 영어 버튼은 전용 배포에서 자기 뿌리를 가리킨다.
+const enHome = () => (IS_EN_SITE ? "/" : "/en/");
 
 export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) {
   const setPref = (lang: Locale) => {
@@ -41,7 +48,7 @@ export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) 
       className="flex shrink-0 items-center overflow-hidden rounded-[8px]"
     >
       <a
-        href="/"
+        href={other("/")}
         aria-label="한국어"
         aria-current={locale === "ko" ? "page" : undefined}
         onClick={() => setPref("ko")}
@@ -50,7 +57,7 @@ export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) 
         KR
       </a>
       <a
-        href="/cn/"
+        href={other("/cn/")}
         aria-label="简体中文"
         aria-current={locale === "zhcn" ? "page" : undefined}
         onClick={() => setPref("zhcn")}
@@ -59,7 +66,7 @@ export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) 
         CN
       </a>
       <a
-        href="/tw/"
+        href={other("/tw/")}
         aria-label="繁體中文"
         aria-current={locale === "zh" ? "page" : undefined}
         onClick={() => setPref("zh")}
@@ -68,7 +75,7 @@ export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) 
         TW
       </a>
       <a
-        href="/jp/"
+        href={other("/jp/")}
         aria-label="日本語"
         aria-current={locale === "ja" ? "page" : undefined}
         onClick={() => setPref("ja")}
@@ -77,7 +84,7 @@ export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) 
         JP
       </a>
       <a
-        href="/en/"
+        href={enHome()}
         aria-label="English"
         aria-current={locale === "en" ? "page" : undefined}
         onClick={() => setPref("en")}
@@ -86,7 +93,7 @@ export default function LangSwitcher({ locale, activeCls, inactiveCls }: Props) 
         EN
       </a>
       <a
-        href="/es/"
+        href={other("/es/")}
         aria-label="Español"
         aria-current={locale === "es" ? "page" : undefined}
         onClick={() => setPref("es")}

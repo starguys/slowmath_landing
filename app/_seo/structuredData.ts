@@ -9,6 +9,8 @@ import {
   type Locale,
 } from "../_home/apps";
 
+import { EN_BASE } from "./site";
+
 const SITE_URL = "https://slowkids.net";
 const OG_IMAGE = `${SITE_URL}/og-image-mascot.png?v=20260901c`;
 // JA OG 이미지는 app/jp/opengraph-image.tsx 가 빌드 타임에 정적 PNG 로 생성
@@ -151,7 +153,7 @@ function appleStore(locale: Locale): string {
 function pageUrl(locale: Locale): string {
   if (locale === "zhcn") return `${SITE_URL}/cn`;
   if (locale === "zh") return `${SITE_URL}/tw`;
-  if (locale === "en") return `${SITE_URL}/en`;
+  if (locale === "en") return EN_BASE;
   if (locale === "es") return `${SITE_URL}/es`;
   if (locale === "ja") return `${SITE_URL}/jp`;
   return SITE_URL;

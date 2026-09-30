@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-
-const SITE_URL = "https://slowkids.net";
+import { SITE_URL, EN_BASE, enHref } from "@/app/_seo/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service | LittleSteps",
   description:
     "LittleSteps Terms of Service — member rights and obligations, passes and payments, withdrawal of subscription, refunds, dispute resolution.",
   alternates: {
-    canonical: `${SITE_URL}/en/terms`,
+    canonical: `${EN_BASE}/terms`,
     languages: {
       ko: `${SITE_URL}/terms`,
-      en: `${SITE_URL}/en/terms`,
+      en: `${EN_BASE}/terms`,
       "x-default": `${SITE_URL}/terms`,
     },
   },
@@ -211,7 +210,7 @@ export default function TermsEnPage() {
       </ol>
 
       <h2>Article 10 (Protection of personal information)</h2>
-      <p>The Company protects the personal information of Members under applicable law. Details are set out in the separate <a href="/en/privacy">Privacy Policy</a>.</p>
+      <p>The Company protects the personal information of Members under applicable law. Details are set out in the separate <a href={enHref("/en/privacy")}>Privacy Policy</a>.</p>
 
       <h2>Article 11 (Intellectual property)</h2>
       <ol>

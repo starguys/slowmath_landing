@@ -1,5 +1,5 @@
 {
-  "buildCommand": "next build && node scripts/postbuild-set-en-lang.mjs",
+  "buildCommand": "next build && node scripts/postbuild-set-en-lang.mjs && node scripts/build-target.mjs",
   "rewrites": [
     {
       "source": "/slowmath_:app/:path*",
@@ -18,7 +18,10 @@
     {
       "source": "/.well-known/apple-app-site-association",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
       ]
     }
   ]

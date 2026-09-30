@@ -1,4 +1,5 @@
 import { type Locale } from "./apps";
+import { enHref } from "../_seo/site";
 import LangSwitcher from "./LangSwitcher";
 
 /**
@@ -185,13 +186,13 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
         {/* 법적 링크 */}
         <div className="flex w-full items-start gap-2">
           <a
-            href={t.termsHref}
+            href={enHref(t.termsHref)}
             className="rounded-[12px] p-2 text-[14px] font-bold leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
           >
             {t.terms}
           </a>
           <a
-            href={t.privacyHref}
+            href={enHref(t.privacyHref)}
             className="rounded-[12px] p-2 text-[14px] font-bold leading-[20px] tracking-[-0.2px] text-[#dadada] transition-colors hover:text-white"
           >
             {t.privacy}
