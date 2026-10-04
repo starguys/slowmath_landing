@@ -22,8 +22,6 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "느린아이 혜택찾기",
     honeypotUrl: "honeypot.slowkids.net",
-    hashtags1: "#발달지연 #발달장애 #느린학습자 #경계선지능",
-    hashtags2: "#학습장애 #ADHD #자폐스펙트럼 #특수교육",
   },
   zh: {
     wm: ["Little", "Steps"],
@@ -41,8 +39,6 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "LittleSteps 福利查詢",
     honeypotUrl: "honeypot.slowkids.net",
-    hashtags1: "#發展遲緩 #臨界智能 #學習較慢的孩子 #特殊教育",
-    hashtags2: "#ADHD #自閉症光譜 #在家自學 #認知訓練",
   },
   zhcn: {
     wm: ["Little", "Steps"],
@@ -60,8 +56,6 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "LittleSteps 福利查询",
     honeypotUrl: "honeypot.slowkids.net",
-    hashtags1: "#发育迟缓 #边缘智力 #学习较慢的孩子 #特殊教育",
-    hashtags2: "#ADHD #自闭症谱系 #在家自学 #认知训练",
   },
   en: {
     wm: ["Little", "Steps"],
@@ -78,8 +72,6 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "LittleSteps Benefit Finder",
     honeypotUrl: "honeypot.slowkids.net",
-    hashtags1: "#DevelopmentalDelay #DevelopmentalDisability #LearningDifferences #BorderlineIQ",
-    hashtags2: "#LearningDisability #ADHD #AutismSpectrum #SpecialEducation",
   },
   ja: {
     wm: ["Little", "Steps"],
@@ -96,8 +88,6 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "LittleSteps 制度・支援ガイド",
     honeypotUrl: "honeypot.slowkids.net",
-    hashtags1: "#発達ゆっくり #発達障害 #境界知能 #学習障害",
-    hashtags2: "#ADHD #自閉スペクトラム #特別支援教育 #算数",
   },
   es: {
     wm: ["Little", "Steps"],
@@ -114,8 +104,6 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "LittleSteps — Buscador de ayudas",
     honeypotUrl: "honeypot.slowkids.net",
-    hashtags1: "#RetrasoDelDesarrollo #DiscapacidadDelDesarrollo #DificultadesDeAprendizaje #InteligenciaLímite",
-    hashtags2: "#DificultadDeAprendizaje #TDAH #EspectroAutista #EducaciónEspecial",
   },
 } as const;
 
@@ -202,12 +190,8 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
         {/* 구분선 */}
         <div className="h-px w-full bg-[#4f4f4f]" aria-hidden="true" />
 
-        {/* 해시태그 + 언어 토글 */}
-        <div className="flex w-full items-start gap-4">
-          <div className="min-w-0 flex-1 text-[12px] font-light leading-[18px] text-[#8f8f8f]">
-            <p>{t.hashtags1}</p>
-            <p>{t.hashtags2}</p>
-          </div>
+        {/* 언어 토글 — 오른쪽에 둔다 */}
+        <div className="flex w-full items-start justify-end gap-4">
           <LangSwitcher locale={locale} activeCls={ACTIVE} inactiveCls={INACTIVE} />
         </div>
       </div>
