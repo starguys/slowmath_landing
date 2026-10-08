@@ -8,13 +8,14 @@ export function iconSrc(slug: string) {
 }
 
 /** 앱 상세 링크. ko 외 로케일은 ?lang= 을 붙여 서브앱 언어를 지정. */
+/** 랜딩에서 개별 연습으로 들어갈 때는 앱의 스플래시를 띄우지 않는다 (?nosplash=1) */
 export function appHref(slug: string, locale: Locale) {
-  if (locale === "zhcn") return `/${slug}/?lang=zhcn`;
-  if (locale === "zh") return `/${slug}/?lang=zh`;
-  if (locale === "en") return `/${slug}/?lang=en`;
-  if (locale === "ja") return `/${slug}/?lang=ja`;
-  if (locale === "es") return `/${slug}/?lang=es`;
-  return `/${slug}/`;
+  if (locale === "zhcn") return `/${slug}/?lang=zhcn&nosplash=1`;
+  if (locale === "zh") return `/${slug}/?lang=zh&nosplash=1`;
+  if (locale === "en") return `/${slug}/?lang=en&nosplash=1`;
+  if (locale === "ja") return `/${slug}/?lang=ja&nosplash=1`;
+  if (locale === "es") return `/${slug}/?lang=es&nosplash=1`;
+  return `/${slug}/?nosplash=1`;
 }
 
 /** 학습도구의 한/번체/간체/영/일 이름
