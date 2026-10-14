@@ -20,7 +20,7 @@ export default function PrivacyPage() {
     <>
       <h1>느린아이 개인정보 처리방침</h1>
       <p className="legal-meta"><strong>시행일</strong>: 2026-09-21</p>
-      <p className="legal-meta"><strong>최종 개정일</strong>: 2026-09-21</p>
+      <p className="legal-meta"><strong>최종 개정일</strong>: 2026-10-15</p>
       <hr className="legal-hr" />
 
       <p className="legal-intro">
@@ -124,9 +124,11 @@ export default function PrivacyPage() {
           <tr><td>Google LLC</td><td>클라우드 인프라(서버 호스팅), TTS(음성 합성), OAuth 로그인</td><td>이메일, 학습 기록, 음성 합성 요청 텍스트</td></tr>
           <tr><td>Kakao Corp.</td><td>OAuth 로그인</td><td>이메일, 전화번호</td></tr>
           <tr><td>Apple Inc. / Google LLC</td><td>인앱결제, 앱 배포</td><td>결제 영수증·구매 ID</td></tr>
+          <tr><td>주식회사 코리아포트원</td><td>결제 연동 서비스 제공(결제 대행)</td><td>결제 정보(주문 번호, 결제 수단, 결제 금액, 결제 승인 정보)</td></tr>
           <tr><td>Vercel Inc.</td><td>웹 호스팅</td><td>접속 로그, IP</td></tr>
         </tbody>
       </table>
+      <p>결제 과정에서 발생하는 결제 정보는 회사의 업무 수행 목적에 한해 개인정보 처리 수탁자인 주식회사 코리아포트원(포트원)이 회사를 대신하여 결제 연동 업무를 수행하는 범위에서 처리합니다.</p>
       <p>회사는 위탁계약 체결 시 「개인정보 보호법」 제26조에 따라 위탁업무 수행 목적 외 개인정보 처리 금지, 기술적·관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리·감독 등을 계약서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지 감독하고 있습니다.</p>
 
       <h2>제6조 (정보주체와 법정대리인의 권리·의무 및 행사 방법)</h2>
@@ -194,6 +196,7 @@ export default function PrivacyPage() {
 
       <h2>부칙</h2>
       <p>본 개인정보 처리방침은 2026-04-28부터 시행합니다.</p>
+      <p>2026-10-15 개정: 제5조 수탁자에 주식회사 코리아포트원(결제 연동)을 추가하였습니다.</p>
 
       <div className="legal-footer">
         <p><strong>운영자</strong>: 주식회사 에브리데이썸머 / 오홍석</p>

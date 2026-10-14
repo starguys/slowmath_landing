@@ -21,7 +21,7 @@ export default function PrivacyEnPage() {
     <>
       <h1>LittleSteps Privacy Policy</h1>
       <p className="legal-meta"><strong>Effective</strong>: 2026-09-21</p>
-      <p className="legal-meta"><strong>Last revised</strong>: 2026-09-21</p>
+      <p className="legal-meta"><strong>Last revised</strong>: 2026-10-15</p>
       <p className="legal-meta" style={{ color: "#8C8070" }}>
         This English version is provided for convenience. In case of any
         discrepancy, the <a href="/privacy">Korean version</a> shall prevail.
@@ -132,9 +132,11 @@ export default function PrivacyEnPage() {
           <tr><td>Google LLC</td><td>Cloud infrastructure (server hosting), TTS (speech synthesis), OAuth login</td><td>Email, learning records, TTS request text</td></tr>
           <tr><td>Kakao Corp.</td><td>OAuth login</td><td>Email, phone number</td></tr>
           <tr><td>Apple Inc. / Google LLC</td><td>In-app purchase, app distribution</td><td>Payment receipts, order IDs</td></tr>
+          <tr><td>Korea PortOne Co., Ltd.</td><td>Payment gateway integration (payment processing on our behalf)</td><td>Payment details (order ID, payment method, amount, approval data)</td></tr>
           <tr><td>Vercel Inc.</td><td>Web hosting</td><td>Access logs, IP</td></tr>
         </tbody>
       </table>
+      <p>Payment data generated during checkout is processed by Korea PortOne Co., Ltd. (PortOne), a personal information processor acting on the Company&apos;s behalf, solely to the extent needed to perform payment integration for the Company.</p>
       <p>Under Article 26 of the Personal Information Protection Act, the Company specifies in its outsourcing agreements the prohibition of processing personal information beyond the purpose, technical and managerial safeguards, restrictions on subcontracting, and supervision of processors, and monitors whether processors handle personal information safely.</p>
 
       <h2>Article 6 (Rights and obligations of the data subject and the legal guardian)</h2>
@@ -202,6 +204,7 @@ export default function PrivacyEnPage() {
 
       <h2>Supplementary provisions</h2>
       <p>This Privacy Policy takes effect on 2026-04-28.</p>
+      <p>Revised 2026-10-15: added Korea PortOne Co., Ltd. (payment integration) to the processors in Article 5.</p>
 
       <div className="legal-footer">
         <p><strong>Operator</strong>: EverydaySummer Inc. / Hongseok Oh</p>

@@ -23,7 +23,7 @@ export default function PrivacyJpPage() {
     <>
       <h1>LittleSteps プライバシーポリシー</h1>
       <p className="legal-meta"><strong>施行日</strong>: 2026-09-21</p>
-      <p className="legal-meta"><strong>最終改定日</strong>: 2026-09-21</p>
+      <p className="legal-meta"><strong>最終改定日</strong>: 2026-10-15</p>
       <p className="legal-meta" style={{ color: "#8C8070" }}>
         本日本語版は便宜のために提供されるものです。相違がある場合は
         <a href="/privacy">韓国語版</a>が優先します。
@@ -131,9 +131,11 @@ export default function PrivacyJpPage() {
           <tr><td>Google LLC</td><td>クラウドインフラ (サーバーホスティング)、TTS (音声合成)、OAuthログイン</td><td>メール、学習記録、TTS要求テキスト</td></tr>
           <tr><td>Kakao Corp.</td><td>OAuthログイン</td><td>メール、電話番号</td></tr>
           <tr><td>Apple Inc. / Google LLC</td><td>アプリ内課金、アプリ配信</td><td>決済レシート、購入ID</td></tr>
+          <tr><td>Korea PortOne Co., Ltd. (株式会社コリアポートワン)</td><td>決済連携サービスの提供 (決済代行)</td><td>決済情報 (注文番号、決済手段、決済金額、承認情報)</td></tr>
           <tr><td>Vercel Inc.</td><td>Webホスティング</td><td>アクセスログ、IP</td></tr>
         </tbody>
       </table>
+      <p>決済過程で発生する決済情報は、当社の業務遂行の目的に限り、個人情報処理の受託者である株式会社コリアポートワン (PortOne) が当社に代わって決済連携業務を行う範囲で処理します。</p>
       <p>当社は委託契約締結時、韓国「個人情報保護法」第26条に基づき、委託業務の目的以外での個人情報処理禁止、技術的・管理的保護措置、再委託の制限、受託者への監督などを契約書に明記し、受託者が個人情報を安全に処理しているか監督しています。</p>
 
       <h2>第6条 (情報主体および法定代理人の権利・義務および行使方法)</h2>
@@ -201,6 +203,7 @@ export default function PrivacyJpPage() {
 
       <h2>附則</h2>
       <p>本プライバシーポリシーは2026-04-28から施行します。</p>
+      <p>2026-10-15 改定: 第5条の受託者に株式会社コリアポートワン (決済連携) を追加しました。</p>
 
       <div className="legal-footer">
         <p><strong>運営者</strong>: 株式会社エブリデイサマー / オ・ホンソク</p>
