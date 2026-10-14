@@ -4,7 +4,7 @@ import LangSwitcher from "./LangSwitcher";
 
 /**
  * 다크 푸터 (Figma 124:5371, PC=MO 동일). 단일 컬럼 중앙정렬(콘텐츠 640px).
- * 브랜드 + 태그라인 → 문의(mailto) → 약관/개인정보 → 구분선 → 해시태그 + KR/EN 토글.
+ * 브랜드 + 태그라인 → 문의(mailto) → 약관/개인정보 → 사업자 정보 → 구분선 → 해시태그 + KR/EN 토글.
  * ko/en 분기(텍스트·법적 링크 경로·토글 활성 상태). 중국어는 번체(zh)·간체(zhcn) 둘.
  */
 const C = {
@@ -22,6 +22,10 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "느린아이 혜택찾기",
     honeypotUrl: "honeypot.slowkids.net",
+    biz: {
+      company: "상호", ceo: "대표", regNo: "사업자등록번호", ecomNo: "통신판매업 신고번호",
+      companyV: "주식회사 에브리데이썸머", ceoV: "오홍석", regNoV: "847-87-03993", ecomNoV: "제 2026-서울관악-0918 호",
+    },
   },
   zh: {
     wm: ["Little", "Steps"],
@@ -39,6 +43,10 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "LittleSteps 福利查詢",
     honeypotUrl: "honeypot.slowkids.net",
+    biz: {
+      company: "公司", ceo: "代表", regNo: "營業登記號", ecomNo: "網路銷售業申報號",
+      companyV: "EverydaySummer Inc.", ceoV: "Hongseok Oh", regNoV: "847-87-03993", ecomNoV: "2026-Seoul Gwanak-0918",
+    },
   },
   zhcn: {
     wm: ["Little", "Steps"],
@@ -56,6 +64,10 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "LittleSteps 福利查询",
     honeypotUrl: "honeypot.slowkids.net",
+    biz: {
+      company: "公司", ceo: "代表", regNo: "营业登记号", ecomNo: "网络销售业申报号",
+      companyV: "EverydaySummer Inc.", ceoV: "Hongseok Oh", regNoV: "847-87-03993", ecomNoV: "2026-Seoul Gwanak-0918",
+    },
   },
   en: {
     wm: ["Little", "Steps"],
@@ -72,6 +84,10 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "LittleSteps Benefit Finder",
     honeypotUrl: "honeypot.slowkids.net",
+    biz: {
+      company: "Company", ceo: "CEO", regNo: "Business Registration No.", ecomNo: "E-commerce Permit No.",
+      companyV: "EverydaySummer Inc.", ceoV: "Hongseok Oh", regNoV: "847-87-03993", ecomNoV: "2026-Seoul Gwanak-0918",
+    },
   },
   ja: {
     wm: ["Little", "Steps"],
@@ -88,6 +104,10 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "LittleSteps 制度・支援ガイド",
     honeypotUrl: "honeypot.slowkids.net",
+    biz: {
+      company: "商号", ceo: "代表者", regNo: "事業者登録番号", ecomNo: "通信販売業届出番号",
+      companyV: "EverydaySummer Inc.", ceoV: "Hongseok Oh", regNoV: "847-87-03993", ecomNoV: "2026-Seoul Gwanak-0918",
+    },
   },
   es: {
     wm: ["Little", "Steps"],
@@ -104,6 +124,10 @@ const C = {
     typingUrl: "typing.slowkids.net",
     honeypotLabel: "LittleSteps — Buscador de ayudas",
     honeypotUrl: "honeypot.slowkids.net",
+    biz: {
+      company: "Empresa", ceo: "CEO", regNo: "N.º de registro mercantil", ecomNo: "N.º de comercio electrónico",
+      companyV: "EverydaySummer Inc.", ceoV: "Hongseok Oh", regNoV: "847-87-03993", ecomNoV: "2026-Seoul Gwanak-0918",
+    },
   },
 } as const;
 
@@ -185,6 +209,16 @@ export default function SiteFooter({ locale = "ko" }: { locale?: Locale }) {
           >
             {t.privacy}
           </a>
+        </div>
+
+        {/* 사업자 정보 — 사업자등록증·통신판매업신고증 기준 */}
+        <div className="w-full px-2 text-[12px] leading-[18px] tracking-[-0.2px] text-[#b4b4b4]">
+          <p>
+            {t.biz.company}: {t.biz.companyV} · {t.biz.ceo}: {t.biz.ceoV}
+          </p>
+          <p>
+            {t.biz.regNo}: {t.biz.regNoV} · {t.biz.ecomNo}: {t.biz.ecomNoV}
+          </p>
         </div>
 
         {/* 구분선 */}
