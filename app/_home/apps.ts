@@ -39,7 +39,7 @@ export const APP_NAMES: Record<
   slowmath_clock: { ko: "시계 보기", zh: "看時鐘", zhcn: "看时钟", en: "Reading the clock", ja: "時計の読み方", es: "La hora" },
   slowmath_calendar: { ko: "달력 보기", zh: "看日曆練習", zhcn: "看日历练习", en: "Reading the calendar", ja: "カレンダーの練習", es: "Calendario" },
   slowmath_money: { ko: "동전과 지폐", zh: "硬幣與紙鈔", zhcn: "硬币与纸钞", en: "Coins & bills", ja: "硬貨と紙幣", es: "Monedas y billetes" },
-  slowmath_moneycalc: { ko: "돈 계산하기", zh: "付出金額", zhcn: "付出金额", en: "Pay the price", ja: "金額を払う", es: "Paga el importe" },
+  slowmath_moneycalc: { ko: "돈 계산하기", zh: "數錢", zhcn: "数钱", en: "Counting Money", ja: "お金を数えよう", es: "Contar dinero" },
   slowmath_changecalc: { ko: "거스름돈 계산하기", zh: "計算找零", zhcn: "计算找零", en: "Counting change", ja: "おつりの計算", es: "Calcular el cambio" },
   // 수 개념
   slowmath_number: { ko: "숫자 익히기", zh: "認識數字", zhcn: "认识数字", en: "Numbers", ja: "数字を覚える", es: "Números" },
