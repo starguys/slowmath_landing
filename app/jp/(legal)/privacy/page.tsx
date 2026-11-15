@@ -22,7 +22,7 @@ export default function PrivacyJpPage() {
   return (
     <>
       <h1>LittleSteps プライバシーポリシー</h1>
-      <p className="legal-meta"><strong>施行日</strong>: 2026-09-21</p>
+      <p className="legal-meta"><strong>施行日</strong>: 2026-04-28</p>
       <p className="legal-meta"><strong>最終改定日</strong>: 2026-10-15</p>
       <p className="legal-meta" style={{ color: "#8C8070" }}>
         本日本語版は便宜のために提供されるものです。相違がある場合は

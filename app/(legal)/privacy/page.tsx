@@ -19,7 +19,7 @@ export default function PrivacyPage() {
   return (
     <>
       <h1>느린아이 개인정보 처리방침</h1>
-      <p className="legal-meta"><strong>시행일</strong>: 2026-09-21</p>
+      <p className="legal-meta"><strong>시행일</strong>: 2026-04-28</p>
       <p className="legal-meta"><strong>최종 개정일</strong>: 2026-10-15</p>
       <hr className="legal-hr" />
 

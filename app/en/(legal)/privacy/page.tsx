@@ -20,7 +20,7 @@ export default function PrivacyEnPage() {
   return (
     <>
       <h1>LittleSteps Privacy Policy</h1>
-      <p className="legal-meta"><strong>Effective</strong>: 2026-09-21</p>
+      <p className="legal-meta"><strong>Effective</strong>: 2026-04-28</p>
       <p className="legal-meta"><strong>Last revised</strong>: 2026-10-15</p>
       <p className="legal-meta" style={{ color: "#8C8070" }}>
         This English version is provided for convenience. In case of any
